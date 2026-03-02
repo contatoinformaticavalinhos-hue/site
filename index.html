@@ -640,6 +640,71 @@
                 });
             }
         });
+
+        // Função para transformar "Paulo" e "Paulo Fagoto" em links
+        function transformarNomesEmLinks() {
+            const urlDestino = 'https://www.paulofagoto.com.br';
+            // Regex que captura primeiro o nome completo, depois apenas o primeiro nome
+            const regex = /(Paulo Fagoto|Paulo)/g;
+
+            // Caminha por todos os nós de texto no body
+            const walker = document.createTreeWalker(
+                document.body,
+                NodeFilter.SHOW_TEXT,
+                {
+                    acceptNode: function(node) {
+                        // Ignora nós dentro de tags <a>, <script>, <style>, <noscript>, <textarea>
+                        const parent = node.parentElement;
+                        if (!parent) return NodeFilter.FILTER_REJECT;
+                        const tagName = parent.tagName;
+                        if (tagName === 'A' || tagName === 'SCRIPT' || tagName === 'STYLE' || tagName === 'NOSCRIPT' || tagName === 'TEXTAREA') {
+                            return NodeFilter.FILTER_REJECT;
+                        }
+                        // Verifica se o texto contém algum dos nomes
+                        if (regex.test(node.nodeValue)) {
+                            return NodeFilter.FILTER_ACCEPT;
+                        }
+                        return NodeFilter.FILTER_REJECT;
+                    }
+                }
+            );
+
+            const textNodes = [];
+            while (walker.nextNode()) {
+                textNodes.push(walker.currentNode);
+            }
+
+            textNodes.forEach(textNode => {
+                const texto = textNode.nodeValue;
+                const partes = texto.split(regex);
+                // Se não houver match, partes terá apenas um elemento (o texto original)
+                if (partes.length === 1) return;
+
+                const fragment = document.createDocumentFragment();
+                for (let i = 0; i < partes.length; i++) {
+                    const parte = partes[i];
+                    if (i % 2 === 0) {
+                        // Parte de texto normal
+                        if (parte) {
+                            fragment.appendChild(document.createTextNode(parte));
+                        }
+                    } else {
+                        // Parte que corresponde ao nome (match)
+                        const link = document.createElement('a');
+                        link.href = urlDestino;
+                        link.textContent = parte;
+                        link.style.textDecoration = 'underline'; // opcional, para destacar
+                        link.target = '_blank'; // opcional, abre em nova aba
+                        link.rel = 'noopener noreferrer'; // segurança
+                        fragment.appendChild(link);
+                    }
+                }
+                textNode.parentNode.replaceChild(fragment, textNode);
+            });
+        }
+
+        // Executa a transformação após o carregamento do DOM
+        document.addEventListener('DOMContentLoaded', transformarNomesEmLinks);
     </script>
 </body>
 </html>
