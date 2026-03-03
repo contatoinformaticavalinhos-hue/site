@@ -449,6 +449,8 @@
     <footer>
         <div class="container">
             <p>&copy; <span id="current-year"></span> Informática Valinhos • Paulo Fagoto • Todos os direitos reservados.</p>
+            <!-- Link explícito para o site do desenvolvedor (dofollow) -->
+            <p style="margin-top: 0.5rem; font-size: 0.9rem;">Desenvolvido por <a href="https://paulofagoto.com.br" target="_blank" rel="noopener">Paulo Fagoto</a></p>
             <p style="margin-top: 0.5rem;">Rua Santo Tordin, 185 - Jardim dos Manacás - Valinhos/SP - CEP 13273-091</p>
             <p style="margin-top: 0.5rem;">CNPJ: 64.383.742/0001-26 | WhatsApp: <a href="https://wa.me/5519971014540" style="color:#fff;">(19) 97101-4540</a> | <a href="tel:+5519971014540" style="color:#fff;">Ligar</a></p>
             <div class="footer-links">
@@ -642,7 +644,7 @@
 
         // Função para transformar "Paulo" e "Paulo Fagoto" em links
         function transformarNomesEmLinks() {
-            const urlDestino = 'https://www.paulofagoto.com.br';
+            const urlDestino = 'https://paulofagoto.com.br';
             // Regex que captura primeiro o nome completo, depois apenas o primeiro nome
             const regex = /(Paulo Fagoto|Paulo)/g;
 
