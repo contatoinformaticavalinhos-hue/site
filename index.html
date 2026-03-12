@@ -2,6 +2,7 @@
 <html lang="pt-br">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Informática Valinhos - Assistência Técnica Remota</title>
   <meta name="description" content="Assistência técnica remota em informática em Valinhos. Serviços de suporte remoto, remoção de vírus, instalação de software e mais.">
   <meta name="keywords" content="informática, valinhos, assistência técnica, suporte remoto, remoção de vírus, software, hardware, computador">
@@ -16,12 +17,13 @@
       padding: 0;
     }
     #wrapper {
-      width: 800px;
+      max-width: 800px;
+      width: 95%;
       margin: 20px auto;
       background-color: #ffffff;
       border: 2px solid #2a4d6e;
       padding: 10px;
-      /* CSS3: bordas arredondadas (já adicionadas no semestre anterior) */
+      /* CSS3: bordas arredondadas */
       -moz-border-radius: 15px;
       -webkit-border-radius: 15px;
       border-radius: 15px;
@@ -43,7 +45,7 @@
     #header h1 {
       margin: 0;
       font-size: 32px;
-      /* CSS3: sombra no texto (nova em 2010) */
+      /* CSS3: sombra no texto */
       text-shadow: 2px 2px 3px #000000;
     }
     #header p {
@@ -82,7 +84,7 @@
       border-bottom: 1px dashed #f0b000;
       padding-bottom: 5px;
       margin-top: 0;
-      /* CSS3: sombra no texto (nova em 2010) */
+      /* CSS3: sombra no texto */
       text-shadow: 1px 1px 2px #888888;
     }
     .service-list {
@@ -98,7 +100,7 @@
     .service-detail h3 {
       color: #2a4d6e;
       margin-bottom: 5px;
-      /* CSS3: sombra no texto (nova em 2010) */
+      /* CSS3: sombra no texto */
       text-shadow: 1px 1px 2px #aaaaaa;
     }
     .service-detail p {
@@ -106,7 +108,10 @@
       padding-left: 15px;
     }
     .contact-info {
+      /* Fallback para IE8 e anteriores */
       background-color: #f9f9f9;
+      /* Para navegadores modernos: fundo com transparência */
+      background-color: rgba(249, 249, 249, 0.9);
       border: 1px solid #2a4d6e;
       padding: 20px;
       margin: 20px 0;
@@ -135,6 +140,10 @@
       -moz-border-radius: 8px;
       -webkit-border-radius: 8px;
       border-radius: 8px;
+      /* CSS3: transparência sutil */
+      opacity: 0.95;
+      max-width: 90%;
+      word-wrap: break-word;
     }
     .email-large a {
       color: #2a4d6e;
@@ -164,6 +173,8 @@
       background: -webkit-gradient(linear, left top, left bottom, from(#f0b000), to(#d09000));
       background: -webkit-linear-gradient(top, #f0b000, #d09000);
       background: linear-gradient(to bottom, #f0b000, #d09000);
+      /* CSS3: transparência sutil */
+      opacity: 0.95;
     }
     .button:hover {
       background-color: #2a4d6e;
@@ -174,6 +185,7 @@
       background: -webkit-gradient(linear, left top, left bottom, from(#2a4d6e), to(#1a3d5e));
       background: -webkit-linear-gradient(top, #2a4d6e, #1a3d5e);
       background: linear-gradient(to bottom, #2a4d6e, #1a3d5e);
+      opacity: 1;
     }
     #footer {
       background-color: #2a4d6e;
@@ -204,6 +216,59 @@
     }
     .top-link a {
       color: #2a4d6e;
+    }
+    
+    /* CSS3 Media Queries aprimoradas para 2012 */
+    @media screen and (max-width: 800px) {
+      #wrapper {
+        width: 95%;
+        margin: 10px auto;
+      }
+      #header h1 {
+        font-size: 28px;
+      }
+    }
+    
+    @media screen and (max-width: 600px) {
+      #nav a {
+        display: block;
+        border-right: none;
+        border-bottom: 1px solid #2a4d6e;
+        padding: 10px;
+      }
+      #nav a:last-child {
+        border-bottom: none;
+      }
+      .email-large {
+        font-size: 18px;
+        display: block;
+      }
+      .button {
+        display: block;
+        margin: 10px 0;
+        text-align: center;
+      }
+      .service-detail {
+        margin-bottom: 20px;
+      }
+    }
+    
+    @media screen and (max-width: 480px) {
+      #header h1 {
+        font-size: 24px;
+      }
+      #header p {
+        font-size: 13px;
+      }
+      .section {
+        padding: 15px 10px;
+      }
+      .contact-info {
+        padding: 15px 10px;
+      }
+      ul {
+        padding-left: 20px;
+      }
     }
   </style>
 </head>
@@ -300,7 +365,7 @@
     </div>
     
     <div id="footer">
-      <p>&copy; 2010 Informática Valinhos - Todos os direitos reservados.</p>
+      <p>&copy; 2012 Informática Valinhos - Todos os direitos reservados.</p>
       <p>Contato: <a href="mailto:adm@paulofagoto.com.br">adm@paulofagoto.com.br</a></p>
     </div>
   </div>
