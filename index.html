@@ -21,6 +21,10 @@
       background-color: #ffffff;
       border: 2px solid #2a4d6e;
       padding: 10px;
+      /* CSS3: bordas arredondadas (já adicionadas no semestre anterior) */
+      -moz-border-radius: 15px;
+      -webkit-border-radius: 15px;
+      border-radius: 15px;
     }
     #header {
       background-color: #2a4d6e;
@@ -28,10 +32,19 @@
       padding: 15px;
       text-align: center;
       border-bottom: 3px solid #f0b000;
+      /* CSS3: bordas arredondadas no topo */
+      -moz-border-radius-topleft: 10px;
+      -moz-border-radius-topright: 10px;
+      -webkit-border-top-left-radius: 10px;
+      -webkit-border-top-right-radius: 10px;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
     }
     #header h1 {
       margin: 0;
       font-size: 32px;
+      /* CSS3: sombra no texto (nova em 2010) */
+      text-shadow: 2px 2px 3px #000000;
     }
     #header p {
       margin: 5px 0 0;
@@ -69,6 +82,8 @@
       border-bottom: 1px dashed #f0b000;
       padding-bottom: 5px;
       margin-top: 0;
+      /* CSS3: sombra no texto (nova em 2010) */
+      text-shadow: 1px 1px 2px #888888;
     }
     .service-list {
       list-style-type: square;
@@ -83,6 +98,8 @@
     .service-detail h3 {
       color: #2a4d6e;
       margin-bottom: 5px;
+      /* CSS3: sombra no texto (nova em 2010) */
+      text-shadow: 1px 1px 2px #aaaaaa;
     }
     .service-detail p {
       margin-top: 0;
@@ -94,6 +111,13 @@
       padding: 20px;
       margin: 20px 0;
       text-align: center;
+      /* CSS3: bordas arredondadas e sombra */
+      -moz-border-radius: 10px;
+      -webkit-border-radius: 10px;
+      border-radius: 10px;
+      -moz-box-shadow: 3px 3px 5px #ccc;
+      -webkit-box-shadow: 3px 3px 5px #ccc;
+      box-shadow: 3px 3px 5px #ccc;
     }
     .contact-info p {
       font-size: 16px;
@@ -107,6 +131,10 @@
       padding: 10px;
       display: inline-block;
       border: 2px solid #2a4d6e;
+      /* CSS3: bordas arredondadas */
+      -moz-border-radius: 8px;
+      -webkit-border-radius: 8px;
+      border-radius: 8px;
     }
     .email-large a {
       color: #2a4d6e;
@@ -124,11 +152,28 @@
       font-weight: bold;
       border: 2px solid #2a4d6e;
       margin: 5px;
+      /* CSS3: bordas arredondadas, gradiente, sombra */
+      -moz-border-radius: 8px;
+      -webkit-border-radius: 8px;
+      border-radius: 8px;
+      -moz-box-shadow: 2px 2px 3px #999;
+      -webkit-box-shadow: 2px 2px 3px #999;
+      box-shadow: 2px 2px 3px #999;
+      background: #f0b000; /* fallback */
+      background: -moz-linear-gradient(top, #f0b000, #d09000);
+      background: -webkit-gradient(linear, left top, left bottom, from(#f0b000), to(#d09000));
+      background: -webkit-linear-gradient(top, #f0b000, #d09000);
+      background: linear-gradient(to bottom, #f0b000, #d09000);
     }
     .button:hover {
       background-color: #2a4d6e;
       color: #f0b000;
       border-color: #f0b000;
+      background: #2a4d6e; /* fallback */
+      background: -moz-linear-gradient(top, #2a4d6e, #1a3d5e);
+      background: -webkit-gradient(linear, left top, left bottom, from(#2a4d6e), to(#1a3d5e));
+      background: -webkit-linear-gradient(top, #2a4d6e, #1a3d5e);
+      background: linear-gradient(to bottom, #2a4d6e, #1a3d5e);
     }
     #footer {
       background-color: #2a4d6e;
@@ -138,6 +183,13 @@
       font-size: 12px;
       border-top: 3px solid #f0b000;
       margin-top: 10px;
+      /* CSS3: bordas arredondadas no rodapé */
+      -moz-border-radius-bottomleft: 10px;
+      -moz-border-radius-bottomright: 10px;
+      -webkit-border-bottom-left-radius: 10px;
+      -webkit-border-bottom-right-radius: 10px;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
     }
     #footer a {
       color: #f0b000;
@@ -248,7 +300,7 @@
     </div>
     
     <div id="footer">
-      <p>&copy; 2005 Informática Valinhos - Todos os direitos reservados.</p>
+      <p>&copy; 2010 Informática Valinhos - Todos os direitos reservados.</p>
       <p>Contato: <a href="mailto:adm@paulofagoto.com.br">adm@paulofagoto.com.br</a></p>
     </div>
   </div>
