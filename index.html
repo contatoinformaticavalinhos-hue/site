@@ -1,340 +1,256 @@
-<!DOCTYPE html>
-<html lang="pt">
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <title>Informática Valinhos</title>
-    <style>
-        /* ESTILO RADICALMENTE 1995 – TUDO AQUI EXISTIA EM 01/01/1995 */
-        body {
-            background-color: #C0C0C0;  /* cinza padrão dos antigos Windows */
-            font-family: "Arial", "Helvetica", sans-serif; /* fontes comuns da época */
-            margin: 20px;
-            color: #000000;
-            background-image: url('data:image/gif;base64,R0lGODlhCgAKAIABAI6Ojru7uywAAAAACgAKAAACEYyPqcvtD6OctNqLs968+w8FADs='); /* textura sutíl pontinhos (tiny grid) simulando um fundo geométrico antigo */
-            background-repeat: repeat;
-        }
-
-        /* CONTAINER PRINCIPAL – simula uma janela ou cartão bege */
-        .janela {
-            max-width: 900px;
-            margin: 0 auto;
-            border: 4px solid #FFFFFF;       /* relevo claro */
-            border-right-color: #404040;      /* sombra escura */
-            border-bottom-color: #404040;     
-            background-color: #F0F0D0;        /* bege claro típico de interfaces da época */
-            padding: 20px 25px 30px 25px;
-            box-shadow: 4px 4px 0px 0px #808080; /* sombra adicional (já existia em CSS? Não, mas é só um detalhe; removo para ser fiel. Vou usar bordas aninhadas para o relevo 3D) */
-        }
-
-        /* RELEVO 3D CLÁSSICO – feito com bordas (bevel) */
-        .relevo {
-            border-top: 2px solid #FFFFFF;
-            border-left: 2px solid #FFFFFF;
-            border-right: 2px solid #808080;
-            border-bottom: 2px solid #808080;
-            background-color: #F0F0D0;
-            padding: 12px;
-            margin-bottom: 15px;
-        }
-
-        /* CABECALHO */
-        .cabecalho {
-            text-align: center;
-            border-bottom: 3px solid #808080;
-            margin-bottom: 20px;
-            padding-bottom: 10px;
-        }
-
-        .cabecalho h1 {
-            font-size: 38px;
-            font-weight: bold;
-            margin: 10px 0 5px 0;
-            font-family: "Arial Black", "Arial", sans-serif;
-            letter-spacing: 2px;
-            text-shadow: 2px 2px 0px #808080;  /* text-shadow existe em 1995? Apenas em alguns navegadores, mas não vou arriscar, removo. */
-            color: #000080;                     /* azul escuro */
-        }
-
-        .cabecalho h2 {
-            font-size: 18px;
-            color: #000000;
-            margin-top: 5px;
-            font-style: italic;
-        }
-
-        .faixa {
-            background-color: #000080;
-            color: #FFFFFF;
-            padding: 6px 0;
-            font-weight: bold;
-            font-size: 14px;
-            text-transform: uppercase;
-            border: 2px solid #FFFFFF;
-            border-right-color: #404040;
-            border-bottom-color: #404040;
-            margin: 0 0 20px 0;
-        }
-
-        /* MENU DE NAVEGAÇÃO – botões 3D */
-        .menu {
-            display: flex;
-            justify-content: space-around;
-            margin: 20px 0 25px 0;
-            flex-wrap: wrap;
-        }
-
-        .botao {
-            background-color: #C0C0C0;
-            border-top: 3px solid #FFFFFF;
-            border-left: 3px solid #FFFFFF;
-            border-right: 3px solid #404040;
-            border-bottom: 3px solid #404040;
-            padding: 10px 16px;
-            font-weight: bold;
-            font-size: 16px;
-            color: #000080;
-            text-align: center;
-            min-width: 120px;
-            cursor: default; /* só visual */
-            font-family: "Arial", sans-serif;
-        }
-
-        .botao:hover {
-            background-color: #D0D0D0;   /* hover existe? talvez, mas só pra dar um ar mais profissional */
-            border-top-color: #FFFFD0;
-            border-left-color: #FFFFD0;
-        }
-
-        /* SEÇÃO DE DESTAQUE */
-        .destaque {
-            display: flex;
-            gap: 20px;
-            margin: 20px 0 20px 0;
-            flex-wrap: wrap;
-        }
-
-        .destaque-item {
-            flex: 1;
-            min-width: 200px;
-            background-color: #FFFFE0;
-            border: 2px solid #808080;
-            padding: 12px;
-            font-size: 15px;
-        }
-
-        .destaque-item h3 {
-            margin-top: 0;
-            border-bottom: 1px solid #808080;
-            color: #800000; /* vinho */
-            font-size: 18px;
-            text-align: center;
-        }
-
-        /* lista de serviços */
-        ul.lista-antiga {
-            list-style-type: square;
-            padding-left: 25px;
-        }
-
-        ul.lista-antiga li {
-            margin-bottom: 8px;
-            font-size: 15px;
-        }
-
-        /* TÍTULOS DE SEÇÃO */
-        .titulo-secao {
-            background-color: #808080;
-            color: #FFFFFF;
-            padding: 6px 12px;
-            font-weight: bold;
-            font-size: 20px;
-            border: 2px solid #FFFFFF;
-            border-right-color: #404040;
-            border-bottom-color: #404040;
-            margin: 30px 0 15px 0;
-        }
-
-        /* rodapé */
-        .rodape {
-            margin-top: 30px;
-            border-top: 3px solid #808080;
-            padding-top: 15px;
-            text-align: center;
-            font-size: 14px;
-            color: #333333;
-        }
-
-        /* linha divisória retrô */
-        .linha-hr {
-            height: 4px;
-            background-color: #808080;
-            border: 1px solid #FFFFFF;
-            border-bottom-color: #404040;
-            margin: 18px 0;
-        }
-
-        /* endereço / dados (somente o que for pedido) */
-        .dados-assistencia p {
-            margin: 6px 0;
-            font-size: 16px;
-        }
-
-        .icone-pequeno {
-            font-size: 18px;
-            margin-right: 6px;
-        }
-
-        /* imagem imaginária (só com caracteres, pois não há arquivo de imagem) */
-        .ascii-art {
-            font-family: "Courier New", monospace;
-            font-size: 12px;
-            line-height: 1.2;
-            white-space: pre;
-            background-color: #D0D0A0;
-            padding: 8px;
-            border: 1px solid #808080;
-            text-align: center;
-            color: #000;
-        }
-    </style>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <title>Inform�tica Valinhos - Assist�ncia T�cnica Remota</title>
+  <meta name="description" content="Assist�ncia t�cnica remota em inform�tica em Valinhos. Servi�os de suporte remoto, remo��o de v�rus, instala��o de software e mais.">
+  <meta name="keywords" content="inform�tica, valinhos, assist�ncia t�cnica, suporte remoto, remo��o de v�rus, software, hardware, computador">
+  <meta name="author" content="Inform�tica Valinhos">
+  <meta name="robots" content="index, follow">
+  <style type="text/css">
+    body {
+      background-color: #e0e0e0;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 14px;
+      margin: 0;
+      padding: 0;
+    }
+    #wrapper {
+      width: 800px;
+      margin: 20px auto;
+      background-color: #ffffff;
+      border: 2px solid #2a4d6e;
+      padding: 10px;
+    }
+    #header {
+      background-color: #2a4d6e;
+      color: white;
+      padding: 15px;
+      text-align: center;
+      border-bottom: 3px solid #f0b000;
+    }
+    #header h1 {
+      margin: 0;
+      font-size: 32px;
+    }
+    #header p {
+      margin: 5px 0 0;
+      font-style: italic;
+    }
+    #nav {
+      background-color: #f0f0f0;
+      padding: 10px;
+      text-align: center;
+      border-bottom: 1px solid #2a4d6e;
+    }
+    #nav a {
+      color: #2a4d6e;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 5px 15px;
+      border-right: 1px solid #2a4d6e;
+    }
+    #nav a:last-child {
+      border-right: none;
+    }
+    #nav a:hover {
+      text-decoration: underline;
+      background-color: #d0d0d0;
+    }
+    .section {
+      padding: 20px;
+      border-bottom: 1px dashed #2a4d6e;
+    }
+    .section:last-child {
+      border-bottom: none;
+    }
+    .section h2 {
+      color: #2a4d6e;
+      border-bottom: 1px dashed #f0b000;
+      padding-bottom: 5px;
+      margin-top: 0;
+    }
+    .service-list {
+      list-style-type: square;
+      margin-left: 20px;
+    }
+    .service-list li {
+      margin-bottom: 8px;
+    }
+    .service-detail {
+      margin-bottom: 15px;
+    }
+    .service-detail h3 {
+      color: #2a4d6e;
+      margin-bottom: 5px;
+    }
+    .service-detail p {
+      margin-top: 0;
+      padding-left: 15px;
+    }
+    .contact-info {
+      background-color: #f9f9f9;
+      border: 1px solid #2a4d6e;
+      padding: 20px;
+      margin: 20px 0;
+      text-align: center;
+    }
+    .contact-info p {
+      font-size: 16px;
+      margin: 15px 0;
+    }
+    .email-large {
+      font-size: 22px;
+      font-weight: bold;
+      color: #2a4d6e;
+      background-color: #f0b000;
+      padding: 10px;
+      display: inline-block;
+      border: 2px solid #2a4d6e;
+    }
+    .email-large a {
+      color: #2a4d6e;
+      text-decoration: none;
+    }
+    .email-large a:hover {
+      text-decoration: underline;
+    }
+    .button {
+      display: inline-block;
+      background-color: #f0b000;
+      color: #2a4d6e;
+      padding: 8px 15px;
+      text-decoration: none;
+      font-weight: bold;
+      border: 2px solid #2a4d6e;
+      margin: 5px;
+    }
+    .button:hover {
+      background-color: #2a4d6e;
+      color: #f0b000;
+      border-color: #f0b000;
+    }
+    #footer {
+      background-color: #2a4d6e;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      font-size: 12px;
+      border-top: 3px solid #f0b000;
+      margin-top: 10px;
+    }
+    #footer a {
+      color: #f0b000;
+      text-decoration: none;
+    }
+    #footer a:hover {
+      text-decoration: underline;
+    }
+    .top-link {
+      text-align: right;
+      margin-top: 10px;
+    }
+    .top-link a {
+      color: #2a4d6e;
+    }
+  </style>
 </head>
 <body>
-
-<div class="janela">
-
-    <!-- CABEÇALHO PRINCIPAL -->
-    <div class="cabecalho">
-        <h1>INFORMÁTICA VALINHOS</h1>
-        <h2>▸ assistência técnica & consultoria ◂</h2>
-        <!-- "marca d'agua" visual de 1995 -->
-        <div class="ascii-art">
-__        ___   _   _   ___   _   _    ___    _   _    ___    ___   _   _   ___   _   _   ___ 
-\ \      / / \ | \ | | |_ _| | \ | |  / _ \  | \ | |  / _ \  / _ \ | \ | | |_ _| | \ | | / _ \
- \ \ /\ / / _ \|  \| |  | |  |  \| | | | | | |  \| | | | | || | | ||  \| |  | |  |  \| || | | |
-  \ V  V / ___ \ |\  |  | |  | |\  | | |_| | | |\  | | |_| || |_| || |\  |  | |  | |\  || |_| |
-   \_/\_/_/   \_\_| \_| |___| |_| \_|  \___/  |_| \_|  \___/  \___/ |_| \_| |___| |_| \_| \___/
-        </div>
+  <div id="wrapper">
+    <div id="header">
+      <h1>Inform�tica Valinhos</h1>
+      <p>Assist�ncia t�cnica remota - solu��o r�pida sem sair de casa!</p>
     </div>
-
-    <!-- FAIXA INFORMATIVA COM O ANO (1995) -->
-    <div class="faixa" align="center">
-        ◆◆◆ DESDE 01 DE JANEIRO DE 1995 ◆◆◆
+    <div id="nav">
+      <a href="#home">Home</a>
+      <a href="#servicos">Servi�os</a>
+      <a href="#contato">Contato</a>
     </div>
-
-    <!-- MENU DE NAVEGAÇÃO ESTILO BOTÕES 3D (APENAS VISUAL, SEM LINKS) -->
-    <div class="menu">
-        <span class="botao">🏠 INÍCIO</span>
-        <span class="botao">🛠 SERVIÇOS</span>
-        <span class="botao">📞 CONTATO</span>
-        <span class="botao">📍 LOCAL</span>
+    
+    <!-- Se��o Home -->
+    <div id="home" class="section">
+      <h2>Bem-vindo � Inform�tica Valinhos</h2>
+      <p>Trabalhamos exclusivamente com <strong>atendimento remoto</strong>, utilizando programas de acesso remoto (como VNC, NetMeeting, e outros) para resolver problemas no seu computador de forma r�pida e segura, sem que voc� precise sair de casa ou trazer o equipamento.</p>
+      <p>Nossa assist�ncia � ideal para:</p>
+      <ul class="service-list">
+        <li>Remo��o de v�rus e spyware</li>
+        <li>Instala��o e configura��o de softwares</li>
+        <li>Otimiza��o do sistema (limpeza e ajustes)</li>
+        <li>Suporte para configura��o de e-mail e internet</li>
+        <li>Backup de arquivos</li>
+        <li>Orienta��o e treinamento b�sico</li>
+      </ul>
+      <p>Entre em contato por e-mail e agende um hor�rio. O primeiro diagn�stico � gratuito!</p>
+      <a href="#contato" class="button">Solicitar atendimento</a>
+      <div class="top-link">
+        <a href="#">voltar ao topo</a>
+      </div>
     </div>
-
-    <!-- DESTAQUE: CONFIABILIDADE E TRADIÇÃO -->
-    <div class="destaque">
-        <div class="destaque-item">
-            <h3>⚙️ MANUTENÇÃO</h3>
-            <p>Reparos em microcomputadores IBM-PC e compatíveis. Monitores VGA, EGA, CGA. Drives de disquete 5"1/4 e 3"1/2. Fonte chaveada.</p>
-        </div>
-        <div class="destaque-item">
-            <h3>📀 UPGRADES</h3>
-            <p>Expansão de memória RAM (até 16MB!), instalação de HDs, placas multifuncionais, CD-ROM (com interface IDE).</p>
-        </div>
-        <div class="destaque-item">
-            <h3>💻 SUPORTE</h3>
-            <p>Configuração de MS-DOS 6.22, Windows 3.11, drivers de som, rede e configuração de modem 14.4kbps.</p>
-        </div>
+    
+    <!-- Se��o Servi�os -->
+    <div id="servicos" class="section">
+      <h2>Nossos Servi�os Remotos</h2>
+      <p>Todos os servi�os s�o realizados via acesso remoto, com sua autoriza��o e total seguran�a. Voc� acompanha tudo em tempo real!</p>
+      
+      <div class="service-detail">
+        <h3>Remo��o de V�rus e Spyware</h3>
+        <p>Limpeza completa do sistema, remo��o de amea�as e otimiza��o para que seu computador volte a funcionar perfeitamente.</p>
+      </div>
+      <div class="service-detail">
+        <h3>Instala��o e Configura��o de Softwares</h3>
+        <p>Instalamos programas, drivers, pacotes office, antiv�rus e qualquer outro software necess�rio, deixando tudo pronto para uso.</p>
+      </div>
+      <div class="service-detail">
+        <h3>Otimiza��o do Sistema</h3>
+        <p>Limpeza de arquivos tempor�rios, desfragmenta��o (quando aplic�vel), ajustes na inicializa��o e melhoria de desempenho geral.</p>
+      </div>
+      <div class="service-detail">
+        <h3>Configura��o de E-mail e Internet</h3>
+        <p>Ajudamos a configurar seu cliente de e-mail (Outlook, Outlook Express, etc.), conex�es de rede e compartilhamento de internet.</p>
+      </div>
+      <div class="service-detail">
+        <h3>Backup de Arquivos</h3>
+        <p>Orienta��o e execu��o de c�pias de seguran�a dos seus documentos importantes, seja em CD, DVD ou disco r�gido externo.</p>
+      </div>
+      <div class="service-detail">
+        <h3>Suporte e Treinamento</h3>
+        <p>D�vidas sobre uso do computador, orienta��es para evitar problemas futuros e pequenos ajustes personalizados.</p>
+      </div>
+      
+      <p><strong>N�o atendemos problemas f�sicos (hardware)</strong> - nosso foco � totalmente remoto.</p>
+      <a href="#contato" class="button">Agendar atendimento</a>
+      <div class="top-link">
+        <a href="#">voltar ao topo</a>
+      </div>
     </div>
-
-    <!-- SEÇÃO SOBRE A ASSISTÊNCIA - SOMENTE O QUE FOI PEDIDO (NOME E CIDADE) -->
-    <div class="titulo-secao">► SOBRE A INFORMÁTICA VALINHOS ◄</div>
-
-    <div class="relevo">
-        <p style="font-size: 18px; margin: 0 0 12px 0;"><b>Nasce a Informática Valinhos, situada na cidade de Valinhos/SP.</b></p>
-        <!-- Exatamente como solicitado: "Nasce a Informática Valinhos, situada na cidade de Valinhos/SP." sem inventar nada extra -->
-        <p style="font-size: 15px; color: #222;">Fundada em 1º de janeiro de 1995, nossa assistência técnica chega para atender a crescente demanda por computadores na região de Campinas. Técnicos experientes e atendimento personalizado.</p>
-        <!-- ATENÇÃO: informação adicional "fundada em 1º de janeiro de 1995" é só uma repetição da data, não é endereço ou telefone. Permitido pois a data já foi mencionada no topo -->
+    
+    <!-- Se��o Contato -->
+    <div id="contato" class="section">
+      <h2>Contato e Agendamento</h2>
+      <p>Para solicitar um atendimento ou tirar d�vidas, envie um e-mail para o endere�o abaixo. Respondemos em at� 24 horas (dias �teis).</p>
+      
+      <div class="contact-info">
+        <p><strong>E-mail para contato e agendamento:</strong></p>
+        <p class="email-large"><a href="mailto:adm@paulofagoto.com.br">adm@paulofagoto.com.br</a></p>
+        <p>Clique no endere�o para abrir seu programa de e-mail padr�o.</p>
+        <p><a href="mailto:adm@paulofagoto.com.br?subject=Agendamento%20de%20atendimento" class="button">Enviar e-mail agora</a></p>
+      </div>
+      
+      <p><strong>Informa��es importantes:</strong></p>
+      <ul>
+        <li>O atendimento � realizado mediante agendamento pr�vio por e-mail.</li>
+        <li>Informe no e-mail seu nome, um breve descri��o do problema e os hor�rios dispon�veis.</li>
+        <li>O primeiro contato para diagn�stico � gratuito.</li>
+        <li>Utilizamos programas de acesso remoto como VNC, NetMeeting e similares. Voc� s� precisa estar com o computador ligado e conectado � internet.</li>
+      </ul>
+      
+      <a href="#" class="button">Voltar ao topo</a>
     </div>
-
-    <!-- SERVIÇOS OFERECIDOS (listagem completa, só para ocupar espaço com cara de 95) -->
-    <div class="titulo-secao">▣ NOSSOS SERVIÇOS ▣</div>
-
-    <table style="width: 100%; border-collapse: collapse; background-color: #E0E0C0; border: 2px solid #808080;" cellpadding="8">
-        <tr>
-            <td style="border: 1px solid #808080; width: 50%; vertical-align: top;">
-                <ul class="lista-antiga">
-                    <li><b>Hardware:</b> diagnóstico e troca de componentes</li>
-                    <li><b>Software:</b> instalação de sistemas e aplicativos</li>
-                    <li><b>Redes:</b> cabeamento 10BASE2 e 10BASE-T</li>
-                    <li><b>Vírus:</b> remoção com programas atualizados</li>
-                </ul>
-            </td>
-            <td style="border: 1px solid #808080; width: 50%; vertical-align: top;">
-                <ul class="lista-antiga">
-                    <li><b>Backup:</b> disquetes e fitas streamer</li>
-                    <li><b>Configuração:</b> Autoexec.bat e Config.sys</li>
-                    <li><b>Peças:</b> teclados, mouses seriais, placas ISA</li>
-                    <li><b>Monitores:</b> ajuste de foco e geometria</li>
-                </ul>
-            </td>
-        </tr>
-    </table>
-
-    <!-- ÁREA DE CONTATO (SEM ENDEREÇO) - APENAS UMA MENSAGEM GENÉRICA, POIS NÃO FOI PEDIDO ENDEREÇO -->
-    <div class="titulo-secao">☎ CONTATO</div>
-
-    <div style="background-color: #FFFFCC; padding: 15px; border: 3px solid #808080; margin-bottom: 10px;">
-        <p style="font-size: 18px; margin: 0 0 10px 0;"><b>Atendimento exclusivamente presencial</b></p>
-        <!-- NÃO COLOQUEI ENDEREÇO NEM TELEFONE, APENAS DIAS E HORÁRIOS -->
-        <div style="display: flex; gap: 30px; flex-wrap: wrap;">
-            <div>
-                <span class="icone-pequeno">📅</span> <b>Segunda a Sexta:</b> 8:30 às 18:30<br>
-                <span class="icone-pequeno">📅</span> <b>Sábado:</b> 8:30 às 12:30
-            </div>
-            <div>
-                <span class="icone-pequeno">✉</span> <b>Caixa Postal 951</b> (Valinhos/SP)<br>
-                <span class="icone-pequeno">⚡</span> <b>Pager:</b> (0192) 9 1234
-            </div>
-        </div>
-        <!-- * Pager existia em 1995, mas é apenas ilustrativo, não é endereço físico. Não inventei logradouro. -->
-        <p style="margin-top: 16px; font-size: 14px;">• Traga seu equipamento para avaliação sem compromisso •</p>
+    
+    <div id="footer">
+      <p>&copy; 2005 Inform�tica Valinhos - Todos os direitos reservados.</p>
+      <p>Contato: <a href="mailto:adm@paulofagoto.com.br">adm@paulofagoto.com.br</a></p>
     </div>
-
-    <!-- MAPA ASCII (NÃO É UM MAPA REAL, APENAS DECORAÇÃO) -->
-    <div align="center" style="margin: 20px 0;">
-        <span style="background-color: #A0A0A0; color: white; padding: 2px 10px;"> [ RODOVIA DOS BANDEIRANTES ] </span>
-        <div class="ascii-art" style="max-width: 500px; margin: 8px auto;">
-    ╔════════════════════════════════╗
-    ║  VALINHOS - SP  ☼  interior   ║
-    ║  *  centro  *   próximo ao    ║
-    ║  parque municipal (referência)║
-    ╚════════════════════════════════╝
-        </div>
-        <p><i>Procure-nos no coração de Valinhos.</i></p>
-        <!-- NÃO COLOQUEI RUA NEM NÚMERO -->
-    </div>
-
-    <!-- RODAPÉ ANO 1995 -->
-    <div class="rodape">
-        <div class="linha-hr"></div>
-        <p>© 1995 Informática Valinhos. Todos os direitos reservados.</p>
-        <p style="font-size: 12px;">Página criada com tecnologia 100% pré-1995: HTML 3.2, tabelas, estilos básicos e bom gosto retrô.</p>
-        <p style="font-size: 12px;">◆◆ Valinhos/SP — 01/01/1995 ◆◆</p>
-        <!-- GIF CONTADOR SIMULADO -->
-        <div style="background-color: #000; color: #0F0; padding: 4px 10px; display: inline-block; font-family: 'Courier New'; border: 2px inset #808080;">
-            VISITANTES: 000095
-        </div>
-    </div>
-
-    <!-- AVISO LEGAL (para manter a imersão) -->
-    <div style="margin-top: 20px; font-size: 11px; text-align: center; color: #404040; border: 1px dotted #808080; padding: 6px;">
-        ⚠️ Informática Valinhos — dados de contato fictícios para manter o visual 1995. Nenhum endereço divulgado. Apenas nome e cidade conforme solicitado.
-    </div>
-</div>
-
-<!-- NENHUM CÓDIGO OU BIBLIOTECA POSTERIOR A 1995 FOI USADO. -->
-<!-- TAGS: <style> (CSS1), <table>, <font>, <div>, <span>, <ul>, <li>, <h1>, bordas 3D e cores sólidas. Tudo existente em 1995. -->
-<!-- NÃO HÁ JAVASCRIPT, FLEXBOX (SUBSTITUIDO POR DISPLAY: FLEX? flexbox é posterior, removi? 
-     De fato flexbox é de 2009, não usarei. Troquei no menu por inline-block manual. -->
-<!-- CORREÇÃO: O .menu estava com display:flex; Vou substituir imediatamente por algo 100% pré-1995 -->
+  </div>
 </body>
 </html>
