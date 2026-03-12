@@ -9,7 +9,7 @@
   <meta name="author" content="Informática Valinhos">
   <meta name="robots" content="index, follow">
   <style type="text/css">
-    /* CSS reset básico e box-sizing universal (técnica de 2012) */
+    /* CSS reset básico e box-sizing universal */
     * {
       margin: 0;
       padding: 0;
@@ -20,8 +20,10 @@
       background-color: #e0e0e0;
       font-family: Arial, Helvetica, sans-serif;
       font-size: 14px;
+      font-size: 0.875rem; /* 14px com fallback */
       margin: 0;
       padding: 0;
+      line-height: 1.5;
     }
     #wrapper {
       max-width: 800px;
@@ -52,6 +54,7 @@
     #header h1 {
       margin: 0;
       font-size: 32px;
+      font-size: 2rem; /* 32px */
       /* CSS3: sombra no texto */
       text-shadow: 2px 2px 3px #000000;
     }
@@ -93,6 +96,7 @@
       padding-bottom: 5px;
       margin-top: 0;
       margin-bottom: 15px;
+      font-size: 1.5rem; /* 24px */
       /* CSS3: sombra no texto */
       text-shadow: 1px 1px 2px #888888;
     }
@@ -110,6 +114,7 @@
     .service-detail h3 {
       color: #2a4d6e;
       margin-bottom: 5px;
+      font-size: 1.2rem; /* ~19px */
       /* CSS3: sombra no texto */
       text-shadow: 1px 1px 2px #aaaaaa;
     }
@@ -136,10 +141,12 @@
     }
     .contact-info p {
       font-size: 16px;
+      font-size: 1rem; /* 16px */
       margin: 15px 0;
     }
     .email-large {
       font-size: 22px;
+      font-size: 1.375rem; /* 22px */
       font-weight: bold;
       color: #2a4d6e;
       background-color: #f0b000;
@@ -185,6 +192,7 @@
       background: linear-gradient(to bottom, #f0b000, #d09000);
       /* CSS3: transparência sutil */
       opacity: 0.95;
+      font-size: 1rem; /* 16px */
     }
     .button:hover {
       background-color: #2a4d6e;
@@ -203,6 +211,7 @@
       text-align: center;
       padding: 10px;
       font-size: 12px;
+      font-size: 0.75rem; /* 12px */
       border-top: 3px solid #f0b000;
       margin-top: 10px;
       /* CSS3: bordas arredondadas no rodapé */
@@ -228,14 +237,14 @@
       color: #2a4d6e;
     }
     
-    /* CSS3 Media Queries aprimoradas */
+    /* CSS3 Media Queries */
     @media screen and (max-width: 800px) {
       #wrapper {
         width: 95%;
         margin: 10px auto;
       }
       #header h1 {
-        font-size: 28px;
+        font-size: 1.75rem; /* 28px */
       }
     }
     
@@ -250,7 +259,7 @@
         border-bottom: none;
       }
       .email-large {
-        font-size: 18px;
+        font-size: 1.125rem; /* 18px */
         display: block;
       }
       .button {
@@ -265,10 +274,10 @@
     
     @media screen and (max-width: 480px) {
       #header h1 {
-        font-size: 24px;
+        font-size: 1.5rem; /* 24px */
       }
       #header p {
-        font-size: 13px;
+        font-size: 0.8125rem; /* 13px */
       }
       .section {
         padding: 15px 10px;
@@ -375,7 +384,7 @@
     </div>
     
     <div id="footer">
-      <p>&copy; 2012 Informática Valinhos - Todos os direitos reservados.</p>
+      <p>&copy; 2013 Informática Valinhos - Todos os direitos reservados.</p>
       <p>Contato: <a href="mailto:adm@paulofagoto.com.br">adm@paulofagoto.com.br</a></p>
     </div>
   </div>
