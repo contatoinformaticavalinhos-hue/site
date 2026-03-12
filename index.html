@@ -9,6 +9,13 @@
   <meta name="author" content="Informática Valinhos">
   <meta name="robots" content="index, follow">
   <style type="text/css">
+    /* CSS reset básico e box-sizing universal (técnica de 2012) */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
     body {
       background-color: #e0e0e0;
       font-family: Arial, Helvetica, sans-serif;
@@ -64,6 +71,7 @@
       font-weight: bold;
       padding: 5px 15px;
       border-right: 1px solid #2a4d6e;
+      display: inline-block;
     }
     #nav a:last-child {
       border-right: none;
@@ -84,12 +92,14 @@
       border-bottom: 1px dashed #f0b000;
       padding-bottom: 5px;
       margin-top: 0;
+      margin-bottom: 15px;
       /* CSS3: sombra no texto */
       text-shadow: 1px 1px 2px #888888;
     }
     .service-list {
       list-style-type: square;
       margin-left: 20px;
+      margin-bottom: 15px;
     }
     .service-list li {
       margin-bottom: 8px;
@@ -218,7 +228,7 @@
       color: #2a4d6e;
     }
     
-    /* CSS3 Media Queries aprimoradas para 2012 */
+    /* CSS3 Media Queries aprimoradas */
     @media screen and (max-width: 800px) {
       #wrapper {
         width: 95%;
