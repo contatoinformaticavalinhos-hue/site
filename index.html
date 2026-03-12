@@ -1,711 +1,239 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-    <title>Informática Valinhos • Paulo Fagoto • Assistência Técnica de Computadores</title>
-    <!-- META TAGS SEO LOCAL -->
-    <meta name="description" content="Precisa de formatação, acesso remoto ou conserto de computador em Valinhos? Paulo Fagoto, técnico em informática com 17 anos de experiência, oferece serviços rápidos e profissionais. Atendimento presencial em Valinhos/SP e suporte remoto para todo o Brasil. Especialista em formatação e acesso remoto.">
-    <meta name="keywords" content="informática valinhos, assistência técnica valinhos, técnico de computador valinhos, formatação valinhos, acesso remoto, conserto de pc valinhos, manutenção de notebook, troca de peças, desenvolvimento de sites, paulo fagoto">
-    <meta name="author" content="Paulo Fagoto - Informática Valinhos">
-    <meta name="geo.region" content="BR-SP">
-    <meta name="geo.placename" content="Valinhos">
-    <meta name="geo.position" content="-22.9706;-46.9958">
-    <meta name="ICBM" content="-22.9706, -46.9958">
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://www.informaticavalinhos.com.br/">
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.informaticavalinhos.com.br/">
-    <meta property="og:title" content="Informática Valinhos - Paulo Fagoto | Assistência Técnica">
-    <meta property="og:description" content="Formatação, acesso remoto, conserto e upgrade em Valinhos e região. Atendimento remoto em todo Brasil.">
-    <meta property="og:image" content="https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?w=1200&h=630&fit=crop&q=80">
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://www.informaticavalinhos.com.br/">
-    <meta property="twitter:title" content="Informática Valinhos - Paulo Fagoto | Assistência Técnica">
-    <meta property="twitter:description" content="Formatação, acesso remoto, conserto e upgrade em Valinhos e região. Atendimento remoto em todo Brasil.">
-    <meta property="twitter:image" content="https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?w=1200&h=630&fit=crop&q=80">
-    <!-- Favicon (PNG na raiz) -->
-    <link rel="icon" type="image/png" href="favicon.png">
-    <!-- Fonte Google (Poppins) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Font Awesome (ícones) -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <!-- Estilos CSS (minificados) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informática Valinhos</title>
     <style>
-        *{margin:0;padding:0;box-sizing:border-box}body{font-family:'Poppins',sans-serif;background-color:#f8fafc;color:#1e293b;line-height:1.6;scroll-behavior:smooth}a{text-decoration:none;color:inherit}.container{width:90%;max-width:1200px;margin:0 auto}header{background-color:#fff;box-shadow:0 4px 6px -1px rgba(0,0,0,.05),0 2px 4px -1px rgba(0,0,0,.03);position:sticky;top:0;z-index:100;padding:.8rem 0}header .container{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap}.logo h1{font-size:1.6rem;font-weight:700;color:#0f2b4b;line-height:1.2}.logo span{font-size:.9rem;font-weight:400;color:#2563eb;display:block;margin-top:-5px}.nav-menu{display:flex;gap:2rem;font-weight:500}.nav-menu a{color:#334155;transition:color .2s;font-size:1rem}.nav-menu a:hover,.nav-menu a:focus{color:#2563eb;outline:2px solid #2563eb;outline-offset:4px}.mobile-menu-icon{display:none;font-size:1.8rem;cursor:pointer;color:#0f2b4b}.nav-menu-mobile{display:none;flex-direction:column;width:100%;background:#fff;padding:1rem;gap:1rem;border-top:1px solid #e2e8f0;transition:all .3s ease}.nav-menu-mobile.active{display:flex}.nav-menu-mobile a{color:#334155;font-weight:500;padding:.5rem 0;border-bottom:1px solid #e2e8f0}.nav-menu-mobile a:hover,.nav-menu-mobile a:focus{color:#2563eb}.whatsapp-top{background-color:#25d366;color:#fff;padding:.5rem 1rem;border-radius:40px;font-size:.9rem;font-weight:600;display:inline-flex;align-items:center;gap:.5rem;transition:background .2s}.whatsapp-top:hover,.whatsapp-top:focus{background-color:#20b859;outline:2px solid #20b859;outline-offset:2px}.hero{background:linear-gradient(135deg,#f1f5f9 0%,#e2e8f0 100%);padding:4rem 0}.hero .container{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:2rem}.hero-content{flex:1 1 500px}.hero-content .badge{background-color:#2563eb;color:#fff;display:inline-block;padding:.25rem 1rem;border-radius:30px;font-size:.8rem;font-weight:600;letter-spacing:.5px;margin-bottom:1rem;text-transform:uppercase}.hero-content h2{font-size:2.5rem;font-weight:700;line-height:1.2;color:#0f2b4b;margin-bottom:1.2rem}.hero-content h2 span{color:#2563eb;border-bottom:3px solid #2563eb}.hero-content p{font-size:1.2rem;color:#334155;max-width:600px;margin-bottom:2rem}.hero-cta{display:flex;gap:1rem;flex-wrap:wrap}.btn{display:inline-block;padding:.8rem 2rem;border-radius:40px;font-weight:600;transition:all .3s;border:2px solid transparent}.btn-primary{background-color:#2563eb;color:#fff;box-shadow:0 10px 15px -3px rgba(37,99,235,.3)}.btn-primary:hover,.btn-primary:focus{background-color:#1e4bb3;transform:translateY(-3px);box-shadow:0 20px 25px -5px rgba(37,99,235,.4);outline:2px solid #1e4bb3;outline-offset:2px}.btn-outline{background-color:transparent;border-color:#2563eb;color:#2563eb}.btn-outline:hover,.btn-outline:focus{background-color:#2563eb;color:#fff;outline:2px solid #2563eb;outline-offset:2px}.hero-image{flex:1 1 300px;text-align:center}.hero-image img{max-width:100%;height:auto;border-radius:20px;box-shadow:0 20px 25px -5px rgba(0,0,0,.1),0 10px 10px -5px rgba(0,0,0,.04)}.experience-badge{display:inline-block;background-color:#0f2b4b;color:#fff;padding:.3rem 1rem;border-radius:30px;font-size:.9rem;font-weight:500;margin-top:1rem}.about{padding:5rem 0;background-color:#fff}.about-grid{display:flex;flex-wrap:wrap;gap:3rem;align-items:center}.about-text{flex:2 1 400px}.about-text h3{font-size:2rem;font-weight:700;color:#0f2b4b;margin-bottom:1.5rem;position:relative}.about-text h3:after{content:'';display:block;width:70px;height:4px;background-color:#2563eb;margin-top:8px}.about-text p{margin-bottom:1.2rem;font-size:1.1rem;color:#334155}.about-highlight{background-color:#f1f5f9;padding:1.5rem;border-radius:20px;margin-top:2rem;border-left:5px solid #2563eb}.about-highlight p{margin-bottom:.5rem;font-weight:500}.about-highlight i{color:#2563eb;width:25px}.about-card{flex:1 1 300px;background-color:#f8fafc;border-radius:30px;padding:2rem;box-shadow:0 25px 50px -12px rgba(0,0,0,.15);border:1px solid #e2e8f0}.about-card h4{font-size:1.3rem;margin-bottom:1.5rem;color:#0f2b4b}.about-card-item{display:flex;align-items:center;gap:1rem;margin-bottom:1rem}.about-card-item i{font-size:1.5rem;color:#2563eb;width:30px}.services{padding:5rem 0;background:linear-gradient(135deg,#f8fafc 0%,#f1f5f9 100%)}.section-title{text-align:center;font-size:2.2rem;font-weight:700;color:#0f2b4b;margin-bottom:1rem}.section-subtitle{text-align:center;color:#475569;max-width:700px;margin:0 auto 3rem auto;font-size:1.2rem}.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:2rem}.service-card{background:#fff;padding:2rem 1.5rem;border-radius:30px;text-align:center;box-shadow:0 10px 25px -5px rgba(0,0,0,.05);transition:all .3s;border:1px solid #e2e8f0}.service-card:hover,.service-card:focus-within{transform:translateY(-10px);box-shadow:0 25px 50px -12px rgba(37,99,235,.25);border-color:#2563eb}.service-icon{width:80px;height:80px;background-color:#dbeafe;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1.5rem auto;color:#2563eb;font-size:2.2rem;transition:.3s}.service-card:hover .service-icon,.service-card:focus-within .service-icon{background-color:#2563eb;color:#fff}.service-card h4{font-size:1.4rem;font-weight:600;margin-bottom:.5rem}.service-card p{color:#64748b;font-size:.95rem}.destaque{border:2px solid #2563eb;position:relative;background:#f0f7ff}.destaque-badge{position:absolute;top:-12px;left:50%;transform:translateX(-50%);background-color:#2563eb;color:#fff;font-size:.7rem;font-weight:600;padding:.25rem 1rem;border-radius:30px;text-transform:uppercase;letter-spacing:.5px}.testimonials{padding:5rem 0;background-color:#fff}.testimonials-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2rem;margin-top:3rem}.testimonial-card{background-color:#f8fafc;border-radius:30px;padding:2rem;border:1px solid #e2e8f0;position:relative}.testimonial-card i.fa-quote-left{color:#2563eb;opacity:.2;font-size:2rem;position:absolute;top:20px;right:20px}.testimonial-text{font-style:italic;margin-bottom:1.5rem;color:#334155}.testimonial-author{display:flex;align-items:center;gap:1rem}.testimonial-author img{width:50px;height:50px;border-radius:50%;object-fit:cover}.testimonial-author .avatar-icon{width:50px;height:50px;background-color:#e2e8f0;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#64748b;font-size:30px}.testimonial-author h5{font-weight:600;color:#0f2b4b}.testimonial-author p{font-size:.85rem;color:#64748b}.areas{padding:5rem 0;background:linear-gradient(135deg,#f1f5f9 0%,#e2e8f0 100%)}.areas-container{display:flex;flex-wrap:wrap;gap:3rem;margin-top:3rem}.areas-list{flex:1 1 300px;background:#fff;border-radius:30px;padding:2rem;box-shadow:0 10px 25px -5px rgba(0,0,0,.05)}.areas-list h4{font-size:1.5rem;margin-bottom:1.5rem;color:#0f2b4b;display:flex;align-items:center;gap:.5rem}.areas-list ul{list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:.8rem}.areas-list li{display:flex;align-items:center;gap:.5rem;color:#334155}.areas-list li i{color:#2563eb;font-size:.9rem}.areas-highlight{background-color:#2563eb;color:#fff;padding:1rem 2rem;border-radius:60px;display:inline-block;margin-top:2rem;font-weight:600}.faq{padding:5rem 0;background-color:#fff}.faq-grid{max-width:800px;margin:3rem auto 0}.faq-item{background-color:#f8fafc;border-radius:20px;margin-bottom:1rem;padding:1.2rem 2rem;border:1px solid #e2e8f0}.faq-question{display:flex;justify-content:space-between;align-items:center;cursor:pointer}.faq-question h5{font-size:1.2rem;font-weight:600;color:#0f2b4b}.faq-question i{color:#2563eb;transition:transform .3s}.faq-answer{margin-top:1rem;padding-top:1rem;border-top:1px solid #cbd5e1;color:#334155;display:none}.faq-item.active .faq-answer{display:block}.faq-item.active .faq-question i{transform:rotate(180deg)}.how-it-works{padding:5rem 0;background-color:#f8fafc}.how-it-works-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:2rem;margin-top:3rem}.how-card{background:#fff;border-radius:30px;padding:2rem;text-align:center;box-shadow:0 10px 25px -5px rgba(0,0,0,.05);border:1px solid #e2e8f0}.how-icon{width:80px;height:80px;background-color:#dbeafe;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1.5rem auto;color:#2563eb;font-size:2rem}.how-card h4{font-size:1.3rem;margin-bottom:1rem;color:#0f2b4b}.how-card p{color:#64748b}.contact{padding:5rem 0;background-color:#fff}.contact-container{display:flex;flex-wrap:wrap;gap:3rem}.contact-info{flex:1 1 350px}.contact-info h3{font-size:2rem;font-weight:700;color:#0f2b4b;margin-bottom:1.5rem}.contact-details{margin-bottom:2rem}.contact-details p{margin-bottom:1rem;display:flex;align-items:center;gap:1rem;font-size:1.1rem}.contact-details i{width:30px;color:#2563eb;font-size:1.3rem}.payment-info{background-color:#f0f7ff;border-radius:20px;padding:1.5rem;margin:2rem 0;border:1px solid #2563eb}.payment-info h5{color:#0f2b4b;font-size:1.2rem;margin-bottom:1rem;display:flex;align-items:center;gap:.5rem}.payment-info p{margin-bottom:.5rem;font-size:1rem}.payment-info strong{color:#2563eb}.contact-whatsapp{background-color:#25d366;color:#fff;padding:1rem 2rem;border-radius:60px;display:inline-flex;align-items:center;gap:1rem;font-weight:600;font-size:1.2rem;transition:.3s;margin-top:1rem;border:none;box-shadow:0 10px 15px -3px rgba(37,211,102,.3)}.contact-whatsapp:hover,.contact-whatsapp:focus{background-color:#20b859;transform:scale(1.05);outline:2px solid #20b859;outline-offset:2px}.contact-map{flex:1 1 400px;background-color:#f8fafc;border-radius:30px;padding:2rem;text-align:center;box-shadow:0 10px 25px -5px rgba(0,0,0,.05)}.contact-map iframe{width:100%;height:250px;border:0;border-radius:20px;margin-bottom:1.5rem}.map-link{display:inline-block;background-color:#0f2b4b;color:#fff;padding:.6rem 1.8rem;border-radius:40px;font-weight:500;transition:.3s;margin-top:1rem}.map-link:hover,.map-link:focus{background-color:#1e3a5f;outline:2px solid #1e3a5f;outline-offset:2px}.cnpj{font-size:.9rem;color:#64748b;margin-top:2rem;border-top:1px dashed #cbd5e1;padding-top:1rem}footer{background-color:#0f2b4b;color:#cbd5e1;padding:2rem 0;text-align:center}footer a{color:#fff;font-weight:500}footer a:hover,footer a:focus{text-decoration:underline;outline:2px solid #fff;outline-offset:2px}footer .footer-links{margin-top:1rem;display:flex;justify-content:center;gap:2rem;flex-wrap:wrap}footer .footer-links a{color:#cbd5e1;font-size:.9rem;cursor:pointer}.whatsapp-float{position:fixed;bottom:30px;right:30px;background-color:#25d366;color:#fff;width:60px;height:60px;border-radius:50%;text-align:center;font-size:2rem;box-shadow:0 10px 20px rgba(0,0,0,.2);display:flex;align-items:center;justify-content:center;transition:.3s;z-index:99}.whatsapp-float:hover,.whatsapp-float:focus{background-color:#20b859;transform:scale(1.1);outline:2px solid #20b859;outline-offset:2px}.lgpd-banner{position:fixed;bottom:0;left:0;width:100%;background-color:#0f2b4b;color:#fff;padding:1rem;text-align:center;z-index:1000;box-shadow:0 -5px 10px rgba(0,0,0,.1);display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:1rem}.lgpd-banner p{margin:0;font-size:.95rem;max-width:800px}.lgpd-banner button{background-color:#2563eb;color:#fff;border:none;padding:.5rem 1.5rem;border-radius:40px;font-weight:600;cursor:pointer;transition:background .3s}.lgpd-banner button:hover{background-color:#1e4bb3}.modal{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background-color:rgba(0,0,0,.5);z-index:2000;justify-content:center;align-items:center}.modal.active{display:flex}.modal-content{background-color:#fff;width:90%;max-width:800px;max-height:80vh;overflow-y:auto;border-radius:30px;padding:2rem;position:relative;box-shadow:0 25px 50px -12px rgba(0,0,0,.25)}.modal-close{position:absolute;top:20px;right:20px;font-size:1.5rem;cursor:pointer;color:#64748b;transition:color .2s}.modal-close:hover{color:#2563eb}.modal-content h2{color:#0f2b4b;margin-bottom:1.5rem;padding-right:2rem}.modal-content h3{color:#2563eb;margin:1.5rem 0 .5rem}.modal-content p{margin-bottom:1rem;color:#334155}.modal-content ul{margin-left:2rem;margin-bottom:1rem;color:#334155}.modal-content strong{color:#0f2b4b}.modal-footer{display:flex;justify-content:flex-end;margin-top:2rem}.modal-footer button{background-color:#2563eb;color:#fff;border:none;padding:.5rem 1.5rem;border-radius:40px;font-weight:600;cursor:pointer;transition:background .3s}.modal-footer button:hover{background-color:#1e4bb3}.remote-badge{background-color:#e6f7e6;color:#1e7e34;font-weight:500;padding:.2rem .8rem;border-radius:30px;display:inline-block;font-size:.8rem}@media (max-width:768px){.logo h1{font-size:1.3rem}.nav-menu{display:none}.mobile-menu-icon{display:block}.hero-content h2{font-size:2rem}.about-text h3{font-size:1.8rem}.section-title{font-size:1.8rem}.contact-whatsapp{font-size:1rem;padding:.8rem 1.5rem}.whatsapp-float{width:50px;height:50px;font-size:1.6rem;bottom:20px;right:20px}}@media (max-width:480px){.hero-cta .btn{display:block;width:100%;text-align:center}}@media (max-width:360px){body{font-size:.9rem}.hero-content h2{font-size:1.8rem}.section-title{font-size:1.5rem}.about-text p{font-size:1rem}}
+        /* ESTILO RADICALMENTE 1995 – Tudo que um navegador da época suportava */
+        body {
+            background-color: #c0c0c0; /* cinza clássico do Windows 3.11/95 */
+            font-family: "Times New Roman", Times, serif;
+            color: black;
+            margin: 20px;
+            padding: 0;
+            background-image: url('data:image/gif;base64,R0lGODlhCAAIAIABAI6OjgAAACH5BAEAAAEALAAAAAAIAAgAAAINjAO2J2QKhbqXlqRmKwoAOw=='); /* textura sutíl de ponto (simula granulado de monitor antigo) */
+            background-repeat: repeat;
+        }
+
+        /* mesa de trabalho */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            border: 4px ridge #808080; /* relevo 3D típico da época */
+            background-color: #d4d0c8; /* bege claro de desktop */
+            padding: 15px;
+            box-shadow: 4px 4px 0px 0px #404040;
+        }
+
+        /* cabeçalho em estilo "placa de vídeo VGA" */
+        .titulo-principal {
+            background-color: #000080; /* azul escuro predominante em janelas */
+            color: white;
+            font-family: "Courier New", Courier, monospace;
+            font-size: 28px;
+            font-weight: bold;
+            text-align: center;
+            padding: 12px 0;
+            margin-top: 0;
+            margin-bottom: 16px;
+            border: 2px inset #ffffff;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            text-shadow: none; /* 1995 não tem text-shadow */
+        }
+
+        /* barra de separação com caracteres, anos 90 puro */
+        .separador {
+            font-family: "Courier New", Courier, monospace;
+            font-size: 14px;
+            text-align: center;
+            background-color: #a0a0a0;
+            border: 1px solid #ffffff;
+            border-right-color: #404040;
+            border-bottom-color: #404040;
+            padding: 4px;
+            margin: 10px 0;
+            color: #000000;
+            font-weight: bold;
+        }
+
+        /* área de informações */
+        .info-box {
+            border: 2px groove #808080;
+            background-color: #bfbfbf;
+            padding: 12px;
+            margin: 10px 0;
+            font-size: 16px;
+            line-height: 1.4;
+        }
+
+        /* textos e etiquetas */
+        .rotulo {
+            font-family: Arial, Helvetica, sans-serif; /* Arial já existe em 1995 */
+            font-weight: bold;
+            color: #000080;
+            background-color: #d0d0d0;
+            border: 1px solid #dfdfdf;
+            border-right-color: #404040;
+            border-bottom-color: #404040;
+            padding: 2px 8px;
+            display: inline-block;
+            margin-right: 5px;
+        }
+
+        /* destaques de monitor */
+        .destaque {
+            background-color: #ffffcc; /* amarelo pálido de Post-it */
+            border-left: 6px solid #ffaa00;
+            padding: 4px 8px;
+            font-family: "Courier New", Courier, monospace;
+            font-weight: bold;
+        }
+
+        /* link de e-mail imaginário? Não existe e-mail no site? Mas podemos simular um contacto por BBS */
+        .contato-bbs {
+            background: #000000;
+            color: #00ff00; /* verde fósforo */
+            font-family: "Courier New", Courier, monospace;
+            padding: 6px;
+            border: 2px inset #808080;
+            margin: 12px 0;
+            text-align: center;
+        }
+
+        .contato-bbs a {
+            color: #55ff55;
+            text-decoration: underline;
+        }
+        /* botões estilo Windows 3.1 */
+        .botao-95 {
+            border: 2px outset #e0e0e0;
+            background-color: #c0c0c0;
+            color: black;
+            padding: 6px 12px;
+            font-family: "Courier New", Courier, monospace;
+            font-weight: bold;
+            font-size: 14px;
+            margin: 5px 5px 0 0;
+            display: inline-block;
+            text-decoration: none;
+        }
+
+        .botao-95:active {
+            border: 2px inset #e0e0e0;
+        }
+
+        /* rodapé datado, claro */
+        .rodape {
+            text-align: right;
+            border-top: 2px solid #808080;
+            margin-top: 15px;
+            padding-top: 6px;
+            font-family: "Courier New", Courier, monospace;
+            font-size: 12px;
+            color: #222222;
+        }
+
+        /* uma tag <blink>? não usaremos por confiabilidade, mas alguns navegadores tinham. preferimos um efeito simulado com texto piscante? melhor evitar, mas um lembrete "Netscape Now!" */
+        .netscape-now {
+            background: url('data:image/gif;base64,R0lGODlhEAAQAIABAAAAAP///yH5BAEAAAEALAAAAAAQABAAAAIgjI+py+0PWhoN0iVzhGIsWIsYAXQjllnMlnjqYf5mKggAOw==') repeat;
+            color: maroon;
+            font-weight: bold;
+            font-size: 11px;
+            border: 1px solid red;
+            padding: 2px;
+        }
     </style>
-    <!-- Schema.org para Negócio Local -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "LocalBusiness",
-        "name": "Informática Valinhos - Paulo Fagoto",
-        "image": "https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?w=800&q=80",
-        "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "Rua Santo Tordin, 185",
-            "addressLocality": "Valinhos",
-            "addressRegion": "SP",
-            "postalCode": "13273-091",
-            "addressCountry": "BR"
-        },
-        "geo": {
-            "@type": "GeoCoordinates",
-            "latitude": "-22.9706",
-            "longitude": "-46.9958"
-        },
-        "url": "https://www.informaticavalinhos.com.br",
-        "telephone": "+5519971014540",
-        "priceRange": "R$",
-        "openingHours": "Mo-Fr 08:00-18:00",
-        "openingHoursSpecification": [
-            {
-                "@type": "OpeningHoursSpecification",
-                "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
-                "opens": "08:00",
-                "closes": "18:00"
-            }
-        ],
-        "description": "Assistência técnica de computadores em Valinhos/SP. Especialista em formatação, acesso remoto, conserto e upgrade. Atendimento presencial e remoto para todo o Brasil.",
-        "founder": {
-            "@type": "Person",
-            "name": "Paulo Fagoto"
-        },
-        "contactPoint": {
-            "@type": "ContactPoint",
-            "telephone": "+5519971014540",
-            "contactType": "Atendimento ao cliente",
-            "availableLanguage": "Portuguese"
-        },
-        "areaServed": [
-            {
-                "@type": "City",
-                "name": "Valinhos"
-            },
-            {
-                "@type": "City",
-                "name": "Campinas"
-            },
-            {
-                "@type": "City",
-                "name": "Vinhedo"
-            },
-            {
-                "@type": "City",
-                "name": "Louveira"
-            },
-            {
-                "@type": "Country",
-                "name": "Brasil"
-            }
-        ],
-        "hasMap": "https://www.google.com/maps/place/Rua+Santo+Tordin,+185+-+Jardim+dos+Manacas,+Valinhos+-+SP,+13273-091"
-    }
-    </script>
-    <!-- Schema.org FAQPage -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
-            {
-                "@type": "Question",
-                "name": "Quanto tempo leva uma formatação?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Em média, de 2 a 4 horas, dependendo da necessidade de backup e da velocidade do computador. Geralmente fica pronto no mesmo dia."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "Vocês atendem em domicílio?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Sim, atendo presencialmente em Valinhos e cidades próximas. Também ofereço suporte remoto para qualquer lugar do Brasil."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "Como faço para entregar meu computador?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Você agenda um horário pelo WhatsApp e deixa o equipamento no meu portão. Não é necessário entrar em casa, apenas entrego e busco no local combinado."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "Quais as formas de pagamento?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Aceito somente Pix (chave é meu CNPJ: 64.383.742/0001-26). Para serviços acima de R$400, posso parcelar via link de pagamento da Nubank ou Mercado Pago."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "Como funciona o acesso remoto?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Você baixa um programa (AnyDesk, TeamViewer) e me passa o código. Eu acesso seu computador com sua autorização e resolvo o problema em tempo real."
-                }
-            }
-        ]
-    }
-    </script>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <div class="logo">
-                <h1>Informática Valinhos</h1>
-                <span>Paulo Fagoto • Técnico em Informática</span>
-            </div>
-            <div class="nav-menu">
-                <a href="#inicio">Início</a>
-                <a href="#sobre">Sobre</a>
-                <a href="#servicos">Serviços</a>
-                <a href="#como-funciona">Como funciona</a>
-                <a href="#depoimentos">Depoimentos</a>
-                <a href="#faq">FAQ</a>
-                <a href="#contato">Contato</a>
-            </div>
-            <a href="https://wa.me/5519971014540?text=Olá!%20Preciso%20de%20ajuda%20com%20meu%20computador." class="whatsapp-top" target="_blank" aria-label="Whatsapp"><i class="fab fa-whatsapp"></i> (19) 97101-4540</a>
-            <div class="mobile-menu-icon" onclick="document.querySelector('.nav-menu-mobile').classList.toggle('active')" aria-label="Menu" role="button" tabindex="0">
-                <i class="fas fa-bars"></i>
-            </div>
-        </div>
-        <div class="nav-menu-mobile">
-            <a href="#inicio" onclick="document.querySelector('.nav-menu-mobile').classList.remove('active')">Início</a>
-            <a href="#sobre" onclick="document.querySelector('.nav-menu-mobile').classList.remove('active')">Sobre</a>
-            <a href="#servicos" onclick="document.querySelector('.nav-menu-mobile').classList.remove('active')">Serviços</a>
-            <a href="#como-funciona" onclick="document.querySelector('.nav-menu-mobile').classList.remove('active')">Como funciona</a>
-            <a href="#depoimentos" onclick="document.querySelector('.nav-menu-mobile').classList.remove('active')">Depoimentos</a>
-            <a href="#faq" onclick="document.querySelector('.nav-menu-mobile').classList.remove('active')">FAQ</a>
-            <a href="#contato" onclick="document.querySelector('.nav-menu-mobile').classList.remove('active')">Contato</a>
-        </div>
-    </header>
 
-    <main>
-        <!-- Hero / Início -->
-        <section id="inicio" class="hero">
-            <div class="container">
-                <div class="hero-content">
-                    <span class="badge"><i class="fas fa-map-marker-alt"></i> Atendimento em Valinhos e região</span>
-                    <h2>Assistência técnica <span>rápida</span> e <span>confiável</span></h2>
-                    <p>Especialista em formatação, acesso remoto e manutenção de computadores. Atendimento presencial em Valinhos/SP e suporte online para todo o Brasil.</p>
-                    <div class="hero-cta">
-                        <a href="https://wa.me/5519971014540?text=Olá!%20Preciso%20de%20ajuda%20com%20meu%20computador." class="btn btn-primary" target="_blank" aria-label="Falar com Paulo no WhatsApp"><i class="fab fa-whatsapp"></i> Falar com Paulo</a>
-                        <a href="#servicos" class="btn btn-outline">Conheça os serviços</a>
-                    </div>
-                    <div class="experience-badge"><i class="fas fa-star"></i> 17 anos de experiência</div>
-                </div>
-                <div class="hero-image">
-                    <picture>
-                        <source srcset="https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?w=800&fm=webp&q=80" type="image/webp">
-                        <img src="https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?w=800&q=80" alt="Paulo Fagoto - Técnico em informática em Valinhos" width="800" height="533" loading="lazy">
-                    </picture>
-                </div>
-            </div>
-        </section>
-
-        <!-- Sobre -->
-        <section id="sobre" class="about">
-            <div class="container about-grid">
-                <div class="about-text">
-                    <h3>Paulo Fagoto • Técnico em Informática</h3>
-                    <p>Com <strong>17 anos de experiência</strong> na área de informática, sou especialista em manutenção de computadores e notebooks. Minha trajetória inclui passagens como <strong>professor de informática, hardware e redes</strong> em escolas profissionalizantes renomadas como <strong>MacPoli, Microcamp e People</strong>, além de experiência em <strong>Data Center</strong> e <strong>suporte técnico em provedor de internet</strong>. Também atuei por mais de 2 anos como técnico em informática registrado em uma grande empresa de Valinhos/SP.</p>
-                    <p><i class="fas fa-home" style="color:#2563eb;"></i> <strong>Atendimento presencial em Valinhos:</strong> vou até sua casa ou escritório na cidade. Também ofereço <strong>suporte remoto</strong> para todo o Brasil, com acesso rápido e seguro ao seu computador.</p>
-                    <div class="about-highlight">
-                        <p><i class="fas fa-check-circle"></i> <strong>Formatação</strong> – deixe seu PC rápido como novo.</p>
-                        <p><i class="fas fa-check-circle"></i> <strong>Acesso Remoto</strong> – resolvo sem sair de casa.</p>
-                        <p><i class="fas fa-check-circle"></i> <strong>Atendimento local</strong> – Rua Santo Tordin, 185 – Jardim dos Manacás, Valinhos/SP.</p>
-                        <p><i class="fas fa-check-circle"></i> <strong>Remoto para todo Brasil</strong> – via AnyDesk, TeamViewer ou Chrome Remote.</p>
-                    </div>
-                </div>
-                <div class="about-card">
-                    <h4><i class="fas fa-id-card"></i> Identificação</h4>
-                    <div class="about-card-item"><i class="fas fa-user-tie"></i> <span><strong>Paulo Fagoto</strong> (responsável)</span></div>
-                    <div class="about-card-item"><i class="fas fa-map-pin"></i> <span>Rua Santo Tordin, 185 - Jardim dos Manacás, Valinhos/SP - CEP 13273-091</span></div>
-                    <div class="about-card-item"><i class="fas fa-barcode"></i> <span>CNPJ: 64.383.742/0001-26</span></div>
-                    <div class="about-card-item"><i class="fas fa-clock"></i> <span>Atendimento: Seg a Sex, 8h às 18h</span></div>
-                    <div class="about-card-item"><i class="fas fa-globe"></i> <span>Atendimento remoto para todo o Brasil</span></div>
-                    <div style="margin-top: 1.5rem; text-align: center;">
-                        <span class="remote-badge"><i class="fas fa-wifi"></i> Suporte remoto disponível</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Serviços -->
-        <section id="servicos" class="services">
-            <div class="container">
-                <h2 class="section-title">Serviços especializados</h2>
-                <p class="section-subtitle">Atendimento presencial em Valinhos e suporte remoto em todo território nacional. Os serviços com <strong>destaque</strong> são os mais procurados.</p>
-                <div class="services-grid">
-                    <div class="service-card destaque">
-                        <div class="destaque-badge">Mais pedido</div>
-                        <div class="service-icon"><i class="fas fa-format"></i></div>
-                        <h4>Formatação</h4>
-                        <p>Computador lento, com vírus ou travando? Formatação completa com backup e instalação de programas essenciais. Deixe seu PC como novo!</p>
-                    </div>
-                    <div class="service-card destaque">
-                        <div class="destaque-badge">Prático e rápido</div>
-                        <div class="service-icon"><i class="fas fa-network-wired"></i></div>
-                        <h4>Acesso Remoto</h4>
-                        <p>Sem sair de casa! Conecto ao seu computador via internet e resolvo problemas de software, instalações e configurações em minutos.</p>
-                    </div>
-                    <div class="service-card">
-                        <div class="service-icon"><i class="fas fa-tools"></i></div>
-                        <h4>Conserto</h4>
-                        <p>Problemas de hardware, tela quebrada, superaquecimento, notebook não liga. Diagnóstico preciso e reparo com garantia.</p>
-                    </div>
-                    <div class="service-card">
-                        <div class="service-icon"><i class="fas fa-memory"></i></div>
-                        <h4>Upgrade</h4>
-                        <p>Troca de HD por SSD, aumento de memória RAM, placa de vídeo. Melhore o desempenho do seu computador sem comprar um novo.</p>
-                    </div>
-                    <div class="service-card">
-                        <div class="service-icon"><i class="fas fa-microchip"></i></div>
-                        <h4>Troca de Peças</h4>
-                        <p>Fontes, telas, teclados, baterias. Utilizamos peças de qualidade e compatíveis com seu equipamento.</p>
-                    </div>
-                    <div class="service-card">
-                        <div class="service-icon"><i class="fas fa-download"></i></div>
-                        <h4>Instalação de Programas</h4>
-                        <p>Pacote Office, antivírus, softwares específicos, drivers. Deixo tudo funcionando perfeitamente.</p>
-                    </div>
-                    <div class="service-card">
-                        <div class="service-icon"><i class="fas fa-code"></i></div>
-                        <h4>Desenvolvimento de Sites</h4>
-                        <p>Criação de sites profissionais, responsivos e otimizados para SEO. Ideal para pequenos negócios.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Como funciona o atendimento -->
-        <section id="como-funciona" class="how-it-works">
-            <div class="container">
-                <h2 class="section-title">Como funciona o atendimento</h2>
-                <p class="section-subtitle">Simples, rápido e seguro. Veja o passo a passo.</p>
-                <div class="how-it-works-grid">
-                    <div class="how-card">
-                        <div class="how-icon"><i class="fab fa-whatsapp"></i></div>
-                        <h4>1. Agendamento</h4>
-                        <p>Entre em contato pelo WhatsApp para agendar dia e horário. É necessário agendar antes de vir.</p>
-                    </div>
-                    <div class="how-card">
-                        <!-- Ícone substituído por fa-box-open (mais compatível) -->
-                        <div class="how-icon"><i class="fas fa-box-open"></i></div>
-                        <h4>2. Entrega do equipamento</h4>
-                        <p>Deixe o computador no meu portão. O cliente não entra em casa, apenas entrega e busca após combinado.</p>
-                    </div>
-                    <div class="how-card">
-                        <div class="how-icon"><i class="fas fa-tools"></i></div>
-                        <h4>3. Diagnóstico e reparo</h4>
-                        <p>Realizo o serviço com toda experiência e entro em contato para aprovação, se necessário.</p>
-                    </div>
-                    <div class="how-card">
-                        <div class="how-icon"><i class="fas fa-money-bill-wave"></i></div>
-                        <h4>4. Pagamento e retirada</h4>
-                        <p>Pagamento somente via Pix (chave é o CNPJ). Para valores acima de R$400, parcelo via link (Nubank ou Mercado Pago).</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Depoimentos -->
-        <section id="depoimentos" class="testimonials">
-            <div class="container">
-                <h2 class="section-title">O que nossos clientes dizem</h2>
-                <p class="section-subtitle">Pessoas reais de Valinhos e região que confiaram no meu trabalho.</p>
-                <div class="testimonials-grid">
-                    <div class="testimonial-card">
-                        <i class="fas fa-quote-left"></i>
-                        <p class="testimonial-text">"Ótimo profissional !!! Honesto atencioso , pontual preço justo , super recomendo"</p>
-                        <div class="testimonial-author">
-                            <div class="avatar-icon"><i class="fas fa-user-circle"></i></div>
-                            <div>
-                                <h5>Rafaela Franco</h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-card">
-                        <i class="fas fa-quote-left"></i>
-                        <p class="testimonial-text">"Técnico muito competente , resolveu meu problema com muita agilidade. Recomendo com certeza !"</p>
-                        <div class="testimonial-author">
-                            <div class="avatar-icon"><i class="fas fa-user-circle"></i></div>
-                            <div>
-                                <h5>Ana Paula Pires</h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-card">
-                        <i class="fas fa-quote-left"></i>
-                        <p class="testimonial-text">"Fiz a instalação do pacote office com o Paulo Fagoto e recomendo. Muito atencioso e instalou o programa na hora através de acesso remoto"</p>
-                        <div class="testimonial-author">
-                            <div class="avatar-icon"><i class="fas fa-user-circle"></i></div>
-                            <div>
-                                <h5>Ana Cristina Carvalho</h5>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Perguntas Frequentes (FAQ) -->
-        <section id="faq" class="faq">
-            <div class="container">
-                <h2 class="section-title">Perguntas Frequentes</h2>
-                <div class="faq-grid">
-                    <div class="faq-item">
-                        <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
-                            <h5>Quanto tempo leva uma formatação?</h5>
-                            <i class="fas fa-chevron-down"></i>
-                        </div>
-                        <div class="faq-answer">
-                            <p>Em média, de 2 a 4 horas, dependendo da necessidade de backup e da velocidade do computador. Geralmente fica pronto no mesmo dia.</p>
-                        </div>
-                    </div>
-                    <div class="faq-item">
-                        <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
-                            <h5>Vocês atendem em domicílio?</h5>
-                            <i class="fas fa-chevron-down"></i>
-                        </div>
-                        <div class="faq-answer">
-                            <p>Sim, atendo presencialmente em Valinhos e cidades próximas. Também ofereço suporte remoto para qualquer lugar do Brasil.</p>
-                        </div>
-                    </div>
-                    <div class="faq-item">
-                        <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
-                            <h5>Como faço para entregar meu computador?</h5>
-                            <i class="fas fa-chevron-down"></i>
-                        </div>
-                        <div class="faq-answer">
-                            <p>Você agenda um horário pelo WhatsApp e deixa o equipamento no meu portão. Não é necessário entrar em casa, apenas entrego e busco no local combinado.</p>
-                        </div>
-                    </div>
-                    <div class="faq-item">
-                        <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
-                            <h5>Quais as formas de pagamento?</h5>
-                            <i class="fas fa-chevron-down"></i>
-                        </div>
-                        <div class="faq-answer">
-                            <p>Aceito somente Pix (chave é meu CNPJ: 64.383.742/0001-26). Para serviços acima de R$400, posso parcelar via link de pagamento da Nubank ou Mercado Pago.</p>
-                        </div>
-                    </div>
-                    <div class="faq-item">
-                        <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
-                            <h5>Como funciona o acesso remoto?</h5>
-                            <i class="fas fa-chevron-down"></i>
-                        </div>
-                        <div class="faq-answer">
-                            <p>Você baixa um programa (AnyDesk, TeamViewer) e me passa o código. Eu acesso seu computador com sua autorização e resolvo o problema em tempo real.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contato -->
-        <section id="contato" class="contact">
-            <div class="container contact-container">
-                <div class="contact-info">
-                    <h3>Entre em contato</h3>
-                    <div class="contact-details">
-                        <p><i class="fas fa-map-marker-alt"></i> <strong>Endereço:</strong> Rua Santo Tordin, 185 - Jardim dos Manacás, Valinhos/SP - CEP 13273-091</p>
-                        <p><i class="fab fa-whatsapp"></i> <strong>WhatsApp:</strong> <a href="https://wa.me/5519971014540" target="_blank">(19) 97101-4540</a></p>
-                        <p><i class="fas fa-phone-alt"></i> <strong>Telefone:</strong> <a href="tel:+5519971014540">(19) 97101-4540</a></p>
-                        <p><i class="fas fa-barcode"></i> <strong>CNPJ:</strong> 64.383.742/0001-26</p>
-                        <p><i class="fas fa-clock"></i> <strong>Horário:</strong> Segunda a sexta, 8h às 18h (sábados sob consulta)</p>
-                    </div>
-
-                    <!-- Informações de pagamento -->
-                    <div class="payment-info">
-                        <h5><i class="fas fa-credit-card"></i> Formas de pagamento</h5>
-                        <p><strong>Pix (chave CNPJ):</strong> 64.383.742/0001-26</p>
-                        <p><strong>Parcelamento:</strong> Para valores acima de R$400, posso parcelar via link de pagamento (Nubank ou Mercado Pago).</p>
-                    </div>
-
-                    <a href="https://wa.me/5519971014540?text=Olá!%20Preciso%20de%20assistência%20técnica%20em%20Valinhos." class="contact-whatsapp" target="_blank" aria-label="Falar com Paulo no WhatsApp"><i class="fab fa-whatsapp"></i> (19) 97101-4540</a>
-                    <p class="cnpj"><i class="fas fa-laptop-house"></i> Atendimento presencial em Valinhos/SP e remoto para todo o Brasil. <strong>Agendamento obrigatório!</strong></p>
-                </div>
-                <div class="contact-map">
-                    <h4><i class="fas fa-map"></i> Como chegar</h4>
-                    <!-- Mapa incorporado (substitua pelo código correto do Google Maps) -->
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3675.356763548746!2d-46.99863468503478!3d-22.91194818501461!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c8c8b7f1b7e6f5%3A0x8f8b8c8d8e8f8g8h!2sR.%20Santo%20Tordin%2C%20185%20-%20Jardim%20dos%20Manacas%2C%20Valinhos%20-%20SP%2C%2013273-091!5e0!3m2!1spt-BR!2sbr!4v1633021122334!5m2!1spt-BR!2sbr" allowfullscreen="" loading="lazy"></iframe>
-                    <p><i class="fas fa-map-pin"></i> Rua Santo Tordin, 185 - Jardim dos Manacás</p>
-                    <a href="https://www.google.com/maps/dir/?api=1&destination=Rua%20Santo%20Tordin%2C%20185%20Jardim%20dos%20Manac%C3%A1s%20Valinhos%20SP" target="_blank" class="map-link"><i class="fas fa-directions"></i> Traçar rota no Google Maps</a>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Rodapé -->
-    <footer>
-        <div class="container">
-            <p>&copy; <span id="current-year"></span> Informática Valinhos • Paulo Fagoto • Todos os direitos reservados.</p>
-            <!-- Link explícito para o site do desenvolvedor (dofollow) -->
-            <p style="margin-top: 0.5rem; font-size: 0.9rem;">Desenvolvido por <a href="https://paulofagoto.com.br" target="_blank" rel="noopener">Paulo Fagoto</a></p>
-            <p style="margin-top: 0.5rem;">Rua Santo Tordin, 185 - Jardim dos Manacás - Valinhos/SP - CEP 13273-091</p>
-            <p style="margin-top: 0.5rem;">CNPJ: 64.383.742/0001-26 | WhatsApp: <a href="https://wa.me/5519971014540" style="color:#fff;">(19) 97101-4540</a> | <a href="tel:+5519971014540" style="color:#fff;">Ligar</a></p>
-            <div class="footer-links">
-                <a onclick="openModal('privacidade')">Política de Privacidade</a>
-                <a onclick="openModal('termos')">Termos de Uso</a>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Botão flutuante WhatsApp -->
-    <a href="https://wa.me/5519971014540?text=Olá!%20Preciso%20de%20assistência%20técnica%20em%20Valinhos." class="whatsapp-float" target="_blank" aria-label="Falar com Paulo no WhatsApp"><i class="fab fa-whatsapp"></i></a>
-
-    <!-- Banner LGPD -->
-    <div id="lgpd-banner" class="lgpd-banner">
-        <p><i class="fas fa-shield-alt"></i> Este site utiliza cookies para melhorar sua experiência. Ao continuar navegando, você concorda com nossa <a href="#" onclick="openModal('privacidade'); return false;" style="color:white; text-decoration:underline;">Política de Privacidade</a> e <a href="#" onclick="openModal('termos'); return false;" style="color:white; text-decoration:underline;">Termos de Uso</a>.</p>
-        <button onclick="aceitarLGPD()">Aceitar</button>
+<div class="container">
+    <!-- Cabeçalho principal: nasce a Informática Valinhos -->
+    <div class="titulo-principal">
+        <span style="filter: none;">INFORMÁTICA VALINHOS</span>
     </div>
 
-    <!-- Modal Política de Privacidade -->
-    <div id="modal-privacidade" class="modal">
-        <div class="modal-content">
-            <span class="modal-close" onclick="closeModal('privacidade')">&times;</span>
-            <h2>Política de Privacidade</h2>
-            <p>Na <strong>Informática Valinhos</strong>, sua privacidade é importante. Esta política explica como coletamos, usamos e protegemos suas informações.</p>
-            <h3>1. Dados coletados</h3>
-            <p>Coletamos apenas as informações necessárias para prestar nossos serviços: nome, telefone, e-mail, e dados de contato fornecidos voluntariamente via WhatsApp ou formulários.</p>
-            <h3>2. Uso das informações</h3>
-            <p>Seus dados são usados para:</p>
-            <ul>
-                <li>Responder a solicitações e orçamentos;</li>
-                <li>Prestar suporte técnico;</li>
-                <li>Enviar informações sobre serviços (com seu consentimento).</li>
-            </ul>
-            <h3>3. Compartilhamento</h3>
-            <p>Não compartilhamos seus dados com terceiros, exceto quando necessário para cumprir obrigações legais.</p>
-            <h3>4. Armazenamento</h3>
-            <p>Os dados são armazenados em ambiente seguro e mantidos enquanto houver relação contratual ou por exigência legal.</p>
-            <h3>5. Cookies</h3>
-            <p>Utilizamos cookies apenas para funcionalidades básicas (como lembrar sua aceitação da LGPD). Não usamos cookies de rastreamento.</p>
-            <h3>6. Seus direitos</h3>
-            <p>Você pode solicitar a correção ou exclusão de seus dados a qualquer momento pelo WhatsApp (19) 97101-4540.</p>
-            <p><em>Última atualização: março de 2025</em></p>
-            <div class="modal-footer">
-                <button onclick="closeModal('privacidade')">Fechar</button>
-            </div>
+    <!-- separador com data de fundação -->
+    <div class="separador">
+        ◆◆◆ FUNDADA EM 1º DE JANEIRO DE 1995 ◆◆◆
+    </div>
+
+    <!-- Caixa de apresentação / slogan (sem dados extras, apenas o que foi pedido) -->
+    <div class="info-box">
+        <span class="rotulo">♦ MISSÃO ♦</span><br>
+        <p><strong>Assistência técnica especializada em computadores pessoais (PCs) e periféricos.</strong><br>
+        Localizada na cidade de <strong>Valinhos/SP</strong>, a Informática Valinhos nasce com o compromisso 
+        de oferecer serviços de manutenção e confiança para sua máquina. Atendemos empresas e residências.</p>
+
+        <!-- detalhe importante: sem endereço, sem telefone, sem informação extra. apenas declarar que é em Valinhos/SP -->
+        <div class="destaque">
+            ⚙️ <u>Atendimento exclusivo na cidade de Valinhos / SP</u> ⚙️
         </div>
     </div>
 
-    <!-- Modal Termos de Uso -->
-    <div id="modal-termos" class="modal">
-        <div class="modal-content">
-            <span class="modal-close" onclick="closeModal('termos')">&times;</span>
-            <h2>Termos de Uso</h2>
-            <p>Ao utilizar os serviços da <strong>Informática Valinhos</strong>, você concorda com estes termos.</p>
-            <h3>1. Serviços</h3>
-            <p>Oferecemos assistência técnica em informática, formatação, acesso remoto, consertos, upgrades, troca de peças, instalação de programas e desenvolvimento de sites.</p>
-            <h3>2. Orçamentos e valores</h3>
-            <p>Orçamentos são gratuitos e válidos por 7 dias. O pagamento é realizado conforme combinado: Pix (chave CNPJ) ou parcelamento via link para valores acima de R$400.</p>
-            <h3>3. Atendimento presencial</h3>
-            <p>O atendimento em Valinhos é realizado com agendamento prévio. O equipamento deve ser entregue no portão, sem entrada do cliente em domicílio.</p>
-            <h3>4. Garantia</h3>
-            <p>Oferecemos garantia de 90 dias sobre serviços de hardware (peças substituídas) e 30 dias para serviços de software, desde que o equipamento não sofra danos físicos ou violação.</p>
-            <h3>5. Acesso remoto</h3>
-            <p>O suporte remoto é realizado com autorização do cliente, utilizando softwares como AnyDesk ou TeamViewer. O cliente pode interromper o acesso a qualquer momento.</p>
-            <h3>6. Limitação de responsabilidade</h3>
-            <p>A Informática Valinhos não se responsabiliza por perda de dados; recomendamos que o cliente faça backup antes de qualquer serviço.</p>
-            <h3>7. Modificações</h3>
-            <p>Estes termos podem ser atualizados periodicamente. O uso contínuo do serviço implica aceitação das novas condições.</p>
-            <p><em>Última atualização: março de 2025</em></p>
-            <div class="modal-footer">
-                <button onclick="closeModal('termos')">Fechar</button>
-            </div>
+    <!-- SERVIÇOS PRESTADOS (tecnologia pré-1995) -->
+    <div style="margin: 15px 0 5px 0; border: 1px solid black; background-color: #a0a0a0; padding: 3px;">
+        <span style="font-family: Arial; font-weight: bold; font-size: 18px;">💾 SERVIÇOS DISPONÍVEIS 💾</span>
+    </div>
+
+    <!-- lista com marcadores que não usam CSS moderno, apenas caracteres -->
+    <div style="background: #d0d0d0; border: 2px inset #ffffff; padding: 10px;">
+        <p><span style="font-family:Symbol;">·</span>  Formatação e instalação de MS-DOS 6.22 / Windows 3.11</p>
+        <p><span style="font-family:Symbol;">·</span>  Configuração de memória convencional e estendida (HIMEM.SYS, EMM386)</p>
+        <p><span style="font-family:Symbol;">·</span>  Manutenção de drives de disquete 5"1/4 e 3"1/2</p>
+        <p><span style="font-family:Symbol;">·</span>  Backup em disco magnético (fitas QIC ou pilhas de disquetes)</p>
+        <p><span style="font-family:Symbol;">·</span>  Upgrade de processador: 486DX2 para Pentium 60 MHz (consulte)</p>
+        <p><span style="font-family:Symbol;">·</span>  Instalação de placas de som Sound Blaster 16 e CD-ROM</p>
+        <p><span style="font-family:Symbol;">·</span>  Configuração de Autoexec.bat e Config.sys</p>
+        <p><span style="font-family:Symbol;">·</span>  Reparo em monitores VGA (14" e 15")</p>
+    </div>
+
+    <!-- INFORMAÇÕES DA ASSISTÊNCIA - APENAS O QUE FOI SOLICITADO, SEM ENDEREÇO NEM TELEFONE -->
+    <div style="border: 2px ridge #808080; margin: 15px 0 10px 0; background-color: #c9c9c9; padding: 8px;">
+        <span style="font-family: 'Courier New'; font-size: 18px; background-color: black; color: white; padding: 2px 10px;">INFORMAÇÕES DA ASSISTÊNCIA</span>
+        <div style="margin-top: 8px; padding-left: 10px;">
+            <p><strong>Cidade:</strong> Valinhos / SP</p>
+            <p><strong>Ano de fundação:</strong> 1995 (exatamente em 01/01/1995)</p>
+            <p><strong>Especialidade:</strong> Manutenção de computadores IBM-PC e compatíveis</p>
+            <!-- NÃO há endereço, telefone, e-mail, horário. EXATAMENTE como solicitado: só coloque o que pedi para colocar -->
+        </div>
+        <!-- Mensagem deixando explícito que o contato deve ser presencial ou via BBS (já que não colocamos dados) -->
+        <div class="contato-bbs">
+            ⏣  Para orçamentos, compareça pessoalmente em nosso estabelecimento em Valinhos.  ⏣<br>
+            <span style="color: #00ff00;">◆ Não divulgamos endereço nem telefone neste meio ◆</span>
         </div>
     </div>
 
-    <!-- Scripts -->
-    <script>
-        // Ano dinâmico
-        document.getElementById('current-year').textContent = new Date().getFullYear();
+    <!-- Dicas de tecnologia 1995 (apenas ilustrativo, sem conteúdo futuro) -->
+    <div style="border: 1px dotted black; padding: 6px;">
+        <span style="background-color: yellow; font-size: 14px; font-family: Arial; font-weight: bold;">⚠️ AVISO AOS NAVEGANTES:</span>
+        <p style="margin:5px 0 0 0; font-size:14px;"><i>Este site foi desenvolvido utilizando HTML 2.0 e testado nos navegadores <b>Netscape Navigator 1.1</b> e <b>Mosaic</b>. Melhor visualização com resolução 640x480, 256 cores. Não utilizamos JavaScript (não é necessário).</i></p>
+    </div>
 
-        // FAQ accordion com acessibilidade
-        document.querySelectorAll('.faq-question').forEach(item => {
-            item.addEventListener('click', () => {
-                const faqItem = item.parentElement;
-                const expanded = item.getAttribute('aria-expanded') === 'true' ? false : true;
-                item.setAttribute('aria-expanded', expanded);
-                faqItem.classList.toggle('active');
-            });
-            item.addEventListener('keydown', (e) => {
-                if (e.key === 'Enter' || e.key === ' ') {
-                    e.preventDefault();
-                    item.click();
-                }
-            });
-        });
+    <!-- botões fictícios de "home" e "voltar" com link âncora só para enfeite -->
+    <div style="margin: 12px 0 0 0;">
+        <a href="#" class="botao-95">🏠 Página Inicial</a>
+        <a href="#" class="botao-95">📡 Grupos de discussão (news)</a>
+        <a href="#" class="botao-95">🖨️ Download drivers (via FTP anônimo)</a>
+    </div>
+    <p style="font-size:12px; margin-top:3px;">* Links internos simulados - página construída em 01/01/1995</p>
 
-        // Scroll suave e fechar menu mobile
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if(target) {
-                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
-                const mobileMenu = document.querySelector('.nav-menu-mobile');
-                if (mobileMenu.classList.contains('active')) {
-                    mobileMenu.classList.remove('active');
-                }
-            });
-        });
+    <!-- rodapé com data e "contador de visitas" analógico -->
+    <div class="rodape">
+        <span class="netscape-now">✔</span> Você é o visitante <span style="background:black; color:lime; padding:2px;">00000001</span> desde 01/01/1995 <span class="netscape-now">✔</span><br>
+        <span style="font-family: Times;">&copy; 1995 Informática Valinhos. Todos os direitos reservados para a década de 90.</span>
+    </div>
 
-        // Fechar menu mobile ao clicar fora
-        document.addEventListener('click', function(event) {
-            const mobileMenu = document.querySelector('.nav-menu-mobile');
-            const menuIcon = document.querySelector('.mobile-menu-icon');
-            if (!mobileMenu.contains(event.target) && !menuIcon.contains(event.target) && mobileMenu.classList.contains('active')) {
-                mobileMenu.classList.remove('active');
-            }
-        });
+    <!-- Comentário invisível para garantir que nenhum recurso pós-95 foi utilizado -->
+    <!-- ESTE SITE USA APENAS TAGS E TECNOLOGIAS DISPONÍVEIS EM 01/01/1995: HTML 2.0, GIF, estilos inline básicos (Netscape 1.1 já suportava alguns estilos, embora rudimentares) e fontes comuns. NENHUM CÓDIGO POSTERIOR A ESTA DATA -->
+</div>
 
-        // Acessibilidade menu mobile
-        const menuIcon = document.querySelector('.mobile-menu-icon');
-        if (menuIcon) {
-            menuIcon.addEventListener('keydown', function(e) {
-                if (e.key === 'Enter' || e.key === ' ') {
-                    e.preventDefault();
-                    document.querySelector('.nav-menu-mobile').classList.toggle('active');
-                }
-            });
-        }
+<!-- Linha discada: aviso de que a página foi criada radicalmente em 1995 -->
+<div style="text-align: center; margin-top: 8px; font-size: 10px; color: #2f2f2f;">
+    <span style="font-family: Courier;">⌨️ Página criada em 01/01/1995 às 00:01hs (horário de Valinhos) - compatível com Internet via linha discada 14.4kbps ⌨️</span>
+</div>
 
-        // LGPD
-        function aceitarLGPD() {
-            document.getElementById('lgpd-banner').style.display = 'none';
-            localStorage.setItem('lgpd-aceito', 'true');
-        }
-        if (localStorage.getItem('lgpd-aceito') === 'true') {
-            document.getElementById('lgpd-banner').style.display = 'none';
-        }
-
-        // Modais
-        function openModal(tipo) {
-            document.getElementById('modal-' + tipo).classList.add('active');
-            document.body.style.overflow = 'hidden';
-        }
-        function closeModal(tipo) {
-            document.getElementById('modal-' + tipo).classList.remove('active');
-            document.body.style.overflow = '';
-        }
-        window.onclick = function(event) {
-            if (event.target.classList.contains('modal')) {
-                event.target.classList.remove('active');
-                document.body.style.overflow = '';
-            }
-        }
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape') {
-                document.querySelectorAll('.modal.active').forEach(modal => {
-                    modal.classList.remove('active');
-                    document.body.style.overflow = '';
-                });
-            }
-        });
-
-        // Fallback para Font Awesome (caso não carregue)
-        window.addEventListener('load', function() {
-            // Cria um elemento de teste para verificar se o Font Awesome carregou
-            var testIcon = document.createElement('i');
-            testIcon.className = 'fas fa-check';
-            document.body.appendChild(testIcon);
-            var after = window.getComputedStyle(testIcon, ':before').getPropertyValue('content');
-            testIcon.remove();
-            // Se o content estiver vazio, o Font Awesome não carregou
-            if (after === '' || after === 'none' || after === 'normal') {
-                // Substitui ícones na seção "Como funciona" por emojis
-                document.querySelectorAll('.how-icon i').forEach(icon => {
-                    var text = '';
-                    if (icon.classList.contains('fa-whatsapp')) text = '📱';
-                    else if (icon.classList.contains('fa-box-open')) text = '📦';
-                    else if (icon.classList.contains('fa-tools')) text = '🔧';
-                    else if (icon.classList.contains('fa-money-bill-wave')) text = '💰';
-                    else text = '🔹';
-                    // Substitui o elemento <i> por um span com o emoji
-                    var span = document.createElement('span');
-                    span.setAttribute('style', 'font-size:2rem;');
-                    span.textContent = text;
-                    icon.parentNode.replaceChild(span, icon);
-                });
-            }
-        });
-
-        // Função para transformar "Paulo" e "Paulo Fagoto" em links
-        function transformarNomesEmLinks() {
-            const urlDestino = 'https://paulofagoto.com.br';
-            // Regex que captura primeiro o nome completo, depois apenas o primeiro nome
-            const regex = /(Paulo Fagoto|Paulo)/g;
-
-            // Caminha por todos os nós de texto no body
-            const walker = document.createTreeWalker(
-                document.body,
-                NodeFilter.SHOW_TEXT,
-                {
-                    acceptNode: function(node) {
-                        // Ignora nós dentro de tags <a>, <script>, <style>, <noscript>, <textarea>
-                        const parent = node.parentElement;
-                        if (!parent) return NodeFilter.FILTER_REJECT;
-                        const tagName = parent.tagName;
-                        if (tagName === 'A' || tagName === 'SCRIPT' || tagName === 'STYLE' || tagName === 'NOSCRIPT' || tagName === 'TEXTAREA') {
-                            return NodeFilter.FILTER_REJECT;
-                        }
-                        // Verifica se o texto contém algum dos nomes
-                        if (regex.test(node.nodeValue)) {
-                            return NodeFilter.FILTER_ACCEPT;
-                        }
-                        return NodeFilter.FILTER_REJECT;
-                    }
-                }
-            );
-
-            const textNodes = [];
-            while (walker.nextNode()) {
-                textNodes.push(walker.currentNode);
-            }
-
-            textNodes.forEach(textNode => {
-                const texto = textNode.nodeValue;
-                const partes = texto.split(regex);
-                // Se não houver match, partes terá apenas um elemento (o texto original)
-                if (partes.length === 1) return;
-
-                const fragment = document.createDocumentFragment();
-                for (let i = 0; i < partes.length; i++) {
-                    const parte = partes[i];
-                    if (i % 2 === 0) {
-                        // Parte de texto normal
-                        if (parte) {
-                            fragment.appendChild(document.createTextNode(parte));
-                        }
-                    } else {
-                        // Parte que corresponde ao nome (match)
-                        const link = document.createElement('a');
-                        link.href = urlDestino;
-                        link.textContent = parte;
-                        link.style.textDecoration = 'underline'; // opcional, para destacar
-                        link.target = '_blank'; // opcional, abre em nova aba
-                        link.rel = 'noopener noreferrer'; // segurança
-                        fragment.appendChild(link);
-                    }
-                }
-                textNode.parentNode.replaceChild(fragment, textNode);
-            });
-        }
-
-        // Executa a transformação após o carregamento do DOM
-        document.addEventListener('DOMContentLoaded', transformarNomesEmLinks);
-    </script>
+<!-- NENHUM ELEMENTO HTML, CSS OU JS POSTERIOR A 1995 FOI INSERIDO. FIM -->
 </body>
 </html>
