@@ -88,8 +88,13 @@
       if (document.lastModified) {
         document.write("Última modificação: " + document.lastModified);
       } else {
-        document.write("Última modificação: 10/02/2000");
+        document.write("Última modificação: 20/02/2000");
       }
+    }
+
+    // Função para imprimir a página
+    function imprimirPagina() {
+      window.print();
     }
     // -->
   </script>
@@ -122,24 +127,25 @@
       <td width="40%" style="background-color: #FAFAFA;">
         <div class="section-title">Contato</div>
         <p><strong>E-mail:</strong> <a href="mailto:adm@paulofagoto.com.br">adm@paulofagoto.com.br</a></p>
-        <!-- Telefone adicionado conforme nova informação fornecida -->
         <p><strong>Telefone:</strong> (19) 97101-4540</p>
         <p><em>Atendimento exclusivamente remoto, sem deslocamento.</em></p>
         <hr noshade size="1">
         <p><strong>Horário de atendimento:</strong><br>
         Segunda a sexta, das 9h às 18h.</p>
         <p><em>Entre em contato por e-mail ou telefone para agendar um atendimento.</em></p>
-        <!-- Links adicionais para contato -->
         <hr noshade size="1">
         <p><a href="mailto:adm@paulofagoto.com.br?subject=Contato%20pelo%20site">Envie uma mensagem para Paulo</a></p>
         <p><a href="mailto:?subject=Recomendação: Informática Valinhos&body=Recomendo o site da Informática Valinhos, assistência técnica remota em Valinhos/SP. Contato: adm@paulofagoto.com.br">Recomende este site para um amigo</a></p>
+        <!-- Novo recurso: link para imprimir a página -->
+        <hr noshade size="1">
+        <p><a href="javascript:imprimirPagina()">Imprimir esta página</a></p>
       </td>
     </tr>
     <!-- Linha de rodapé com informações de copyright e data de atualização -->
     <tr>
       <td colspan="2" class="footer">
         <p>© 2000 Informática Valinhos - Todos os direitos reservados.</p>
-        <p>Site desenvolvido de acordo com as tecnologias disponíveis em 10/02/2000.</p>
+        <p>Site desenvolvido de acordo com as tecnologias disponíveis em 20/02/2000.</p>
         <!-- Exibição da data de modificação via JavaScript -->
         <p>
           <script type="text/javascript">
@@ -148,7 +154,7 @@
             // -->
           </script>
           <noscript>
-            Última modificação: 10/02/2000 (JavaScript desabilitado)
+            Última modificação: 20/02/2000 (JavaScript desabilitado)
           </noscript>
         </p>
       </td>
@@ -170,11 +176,12 @@
           <li><strong>20/01/2000</strong> - Adicionado link "Voltar ao topo" e funcionalidade de indicação por e-mail; ajustada data no rodapé para 20/01/2000.</li>
           <li><strong>30/01/2000</strong> - Incluída exibição dinâmica da data da última modificação via JavaScript; adicionado link direto "Envie uma mensagem para Paulo" e suporte a &lt;noscript&gt;; atualizada data no rodapé para 30/01/2000.</li>
           <li><strong>10/02/2000</strong> - Adicionado telefone (19) 97101-4540 conforme nova informação; ajustada data no rodapé para 10/02/2000 e pequenas adequações no texto de contato.</li>
+          <li><strong>20/02/2000</strong> - Adicionado link "Imprimir esta página" via JavaScript para conveniência do usuário; atualizada data no rodapé para 20/02/2000.</li>
         </ul>
         <p class="small-note">* Esta seção registra todas as modificações realizadas no site ao longo do tempo, mantendo o histórico completo.</p>
       </td>
     </tr>
   </table>
-  <!-- Comentário: código compatível com as limitações de 2000: uso de tabelas, cores seguras, meta tags, JavaScript básico e mailto. -->
+  <!-- Comentário: código compatível com as limitações de 2000: uso de tabelas, cores seguras, meta tags, JavaScript básico, mailto e função de impressão. -->
 </body>
 </html>
