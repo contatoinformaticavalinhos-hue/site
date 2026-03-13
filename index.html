@@ -82,7 +82,7 @@
   </style>
   <script type="text/javascript">
     <!--
-    // Script compatível com navegadores de março de 2000
+    // Script compatível com navegadores de junho de 2000
     window.defaultStatus = "Informática Valinhos - Atendimento remoto em Valinhos/SP";
 
     // Função para exibir a data da última modificação (recurso comum em 2000)
@@ -90,13 +90,18 @@
       if (document.lastModified) {
         document.write("Última modificação: " + document.lastModified);
       } else {
-        document.write("Última modificação: 20/03/2000");
+        document.write("Última modificação: 15/06/2000");
       }
     }
 
     // Função para imprimir a página
     function imprimirPagina() {
       window.print();
+    }
+
+    // Função para mostrar informações do navegador (comum em 2000)
+    function mostraNavegador() {
+      document.write("Você está usando: " + navigator.appName + " versão " + navigator.appVersion);
     }
     // -->
   </script>
@@ -146,7 +151,7 @@
     <tr>
       <td colspan="2" class="footer">
         <p>© 2000 Informática Valinhos - Todos os direitos reservados.</p>
-        <p>Site desenvolvido de acordo com as tecnologias disponíveis em 20/03/2000.</p>
+        <p>Site desenvolvido de acordo com as tecnologias disponíveis em 15/06/2000.</p>
         <p>Melhor visualizado em 800x600</p>
         <!-- Exibição da data de modificação via JavaScript -->
         <p>
@@ -156,7 +161,18 @@
             // -->
           </script>
           <noscript>
-            Última modificação: 20/03/2000 (JavaScript desabilitado)
+            Última modificação: 15/06/2000 (JavaScript desabilitado)
+          </noscript>
+        </p>
+        <!-- Informação do navegador -->
+        <p>
+          <script type="text/javascript">
+            <!--
+            mostraNavegador();
+            // -->
+          </script>
+          <noscript>
+            (Informações do navegador não disponíveis)
           </noscript>
         </p>
       </td>
@@ -182,11 +198,17 @@
           <li><strong>27/02/2000</strong> - Adicionadas meta tags de SEO (revisit-after, distribution) e nota de visualização "Melhor visualizado em 800x600"; atualizada data no rodapé para 27/02/2000.</li>
           <li><strong>10/03/2000</strong> - Atualizada data no rodapé para 10/03/2000; ajuste na mensagem de última modificação; manutenção preventiva de código.</li>
           <li><strong>20/03/2000</strong> - Revisão geral de código, ajustes finos de compatibilidade com Internet Explorer 5 e Netscape Navigator; atualizada data de referência para 20/03/2000.</li>
+          <li><strong>30/03/2000</strong> - Atualizada data de referência no rodapé e no script de última modificação para 30/03/2000; adicionado registro desta atualização no histórico.</li>
+          <li><strong>15/04/2000</strong> - Adicionada detecção de navegador no rodapé (mostra navegador e versão); atualizada data de referência para 15/04/2000.</li>
+          <li><strong>30/04/2000</strong> - Atualizada data de referência para 30/04/2000; pequenos ajustes de compatibilidade e manutenção.</li>
+          <li><strong>15/05/2000</strong> - Atualizada data de referência para 15/05/2000; manutenção de rotina e ajustes finos de compatibilidade.</li>
+          <li><strong>30/05/2000</strong> - Atualizada data de referência para 30/05/2000; manutenção de rotina e ajustes finos de compatibilidade.</li>
+          <li><strong>15/06/2000</strong> - Atualizada data de referência para 15/06/2000; manutenção de rotina e ajustes finos de compatibilidade.</li>
         </ul>
         <p class="small-note">* Esta seção registra todas as modificações realizadas no site ao longo do tempo, mantendo o histórico completo.</p>
       </td>
     </tr>
   </table>
-  <!-- Comentário: código compatível com as limitações de 2000: uso de tabelas, cores seguras, meta tags, JavaScript básico, mailto e função de impressão. -->
+  <!-- Comentário: código compatível com as limitações de 2000: uso de tabelas, cores seguras, meta tags, JavaScript básico, mailto, função de impressão e detecção de navegador. -->
 </body>
 </html>
