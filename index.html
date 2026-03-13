@@ -7,6 +7,7 @@
   <meta name="keywords" content="informática, assistência técnica, manutenção, computadores, Valinhos, Jardim dos Manacás">
   <meta name="robots" content="index, follow">
   <meta name="author" content="Informática Valinhos">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   <style type="text/css">
     /* Estilos compatíveis com navegadores de 2005 (IE5.5+, Firefox 1.0, Netscape, Opera) */
     body {
@@ -23,8 +24,8 @@
       margin: 20px auto;     /* centraliza */
       background-color: #FFFFFF;
       border: 1px solid #CCCCCC;
-      padding: 15px;         /* pequeno ajuste para melhor legibilidade */
-      text-align: left;      /* alinhamento interno volta ao normal */
+      padding: 15px;
+      text-align: left;
     }
     h1 {
       font-size: 24px;
@@ -54,15 +55,33 @@
     .email {
       font-weight: bold;
       color: #006600;
-      background-color: #FFFFE0; /* leve destaque adicional */
+      background-color: #FFFFE0;
       padding: 2px 4px;
     }
     a {
       color: #003399;
       text-decoration: underline;
     }
+    a:visited {
+      color: #660099;
+    }
     a:hover {
       color: #FF6600;
+    }
+    .servicos {
+      background-color: #FFFFFF;
+      padding: 5px 15px;
+      border-left: 3px solid #003399;
+      margin: 15px 0;
+    }
+    .servicos ul {
+      list-style-type: disc;
+      margin-left: 20px;
+    }
+    .topo-link {
+      font-size: 12px;
+      text-align: right;
+      margin-top: 5px;
     }
     .historico {
       font-size: 12px;
@@ -84,9 +103,28 @@
       margin-top: 20px;
       padding-top: 8px;
     }
-    /* estilo para garantir que links de email não quebrem */
-    a:link, a:visited {
-      color: #003399;
+    .lastmod {
+      font-size: 10px;
+      color: #999999;
+      display: block;
+      margin-top: 5px;
+    }
+    .recomendacao {
+      font-size: 10px;
+      color: #666;
+      background-color: #EFEFEF;
+      padding: 3px;
+      margin-top: 10px;
+      border: 1px solid #DDD;
+      text-align: center;
+    }
+    .w3c {
+      margin-top: 8px;
+      text-align: center;
+    }
+    .w3c a {
+      text-decoration: none;
+      border: none;
     }
   </style>
 </head>
@@ -101,8 +139,23 @@
     <p><strong>E-mail:</strong> <a href="mailto:adm@paulofagoto.com.br" class="email">adm@paulofagoto.com.br</a></p>
   </div>
 
-  <h2>Sobre nossos serviços</h2>
-  <p>Realizamos diagnóstico, limpeza, formatação, troca de peças e otimização de sistemas. Atendemos em domicílio no Jardim dos Manacás e região central de Valinhos. Entre em contato por e-mail para agendar um horário.</p>
+  <h2>Nossos serviços</h2>
+  <div class="servicos">
+    <ul>
+      <li>Formatação e reinstalação de sistemas (Windows 98/XP)</li>
+      <li>Remoção de vírus, spywares e cavalos de tróia</li>
+      <li>Troca e upgrade de memória, HD e placa-mãe</li>
+      <li>Limpeza interna e manutenção preventiva</li>
+      <li>Configuração de redes residenciais e compartilhamento de internet</li>
+    </ul>
+  </div>
+
+  <h2>Sobre nossa assistência</h2>
+  <p>Atendemos em domicílio no Jardim dos Manacás e região central de Valinhos. Entre em contato por e-mail para agendar um horário. Orçamento sem compromisso.</p>
+
+  <div class="topo-link">
+    <a href="#container">Voltar ao topo</a>
+  </div>
 
   <!-- Seção obrigatória de histórico -->
   <div class="historico">
@@ -110,15 +163,48 @@
     <ul>
       <li><strong>01/01/2005</strong> - Versão inicial do site. Informações básicas e contato por e-mail.</li>
       <li><strong>02/01/2005</strong> - Pequenos ajustes no CSS para melhor visualização no Internet Explorer 6; destaque adicional no e-mail e aumento do espaçamento interno.</li>
-      <!-- Novas atualizações serão acrescentadas abaixo, mantendo as antigas -->
+      <li><strong>10/01/2005</strong> - Adicionada lista de serviços mais detalhada e incluída exibição da data da última modificação via JavaScript (compatível com navegadores da época).</li>
+      <li><strong>20/01/2005</strong> - Adicionado favicon, link "Voltar ao topo", selo de validação HTML 4.01 e mensagem de resolução recomendada (800x600).</li>
     </ul>
   </div>
 
+  <div class="recomendacao">
+    &#10022; Site otimizado para resolução 800x600 &#10022;
+  </div>
+
   <div class="rodape">
-    Informática Valinhos - 2005. Site desenvolvido de acordo com as tecnologias da época.
+    Informática Valinhos - 2005.
+    <span class="lastmod" id="lastmod"></span>
+    <div class="w3c">
+      <a href="http://validator.w3.org/check?uri=referente" target="_blank">
+        <img src="http://www.w3.org/Icons/valid-html401" alt="Valid HTML 4.01 Transitional" width="88" height="31" border="0">
+      </a>
+    </div>
   </div>
 </div>
 
-<!-- Comentário: código compatível com IE5.5, IE6, Firefox 1.0, Netscape 7, Opera 7. Resolução mínima 800x600. Data da simulação: 02/01/2005 -->
+<script type="text/javascript">
+  // Função compatível com IE5+ e Netscape para exibir a data da última modificação
+  function mostrarUltimaModificacao() {
+    var elemento = document.getElementById("lastmod");
+    if (elemento) {
+      var dataMod = document.lastModified;
+      // Extrai apenas a data (ignora hora) para ficar mais limpo
+      var dataPart = dataMod.split(" ")[0];
+      elemento.innerHTML = "Última atualização: " + dataPart;
+    }
+  }
+  // Executa após o carregamento da página
+  if (window.addEventListener) {
+    window.addEventListener("load", mostrarUltimaModificacao, false);
+  } else if (window.attachEvent) {
+    window.attachEvent("onload", mostrarUltimaModificacao);
+  } else {
+    // fallback para navegadores muito antigos
+    window.onload = mostrarUltimaModificacao;
+  }
+</script>
+
+<!-- Comentário: código compatível com IE5.5, IE6, Firefox 1.0, Netscape 7, Opera 7. Resolução mínima 800x600. Data da simulação: 20/01/2005 -->
 </body>
 </html>
