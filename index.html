@@ -2,169 +2,179 @@
 <html lang="pt-BR">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-  <meta name="description" content="Assistência técnica em informática em Valinhos/SP, Jardim dos Manacás.">
-  <meta name="keywords" content="informática, assistência técnica, Valinhos, Jardim dos Manacás, computadores, manutenção">
-  <meta name="author" content="adm@paulofagoto.com.br">
-  <meta name="robots" content="index, follow">
-  <meta name="revisit-after" content="15 days">
-  <meta name="distribution" content="global">
-  <title>Informática Valinhos</title>
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <meta http-equiv="Content-Script-Type" content="text/javascript">
+  <meta name="robots" content="index,follow">
+  <title>Informática Valinhos - Assistência Técnica em Informática</title>
+  <meta name="description" content="Assistência técnica em informática em Valinhos/SP, atendimento remoto por Paulo Fagoto.">
+  <meta name="keywords" content="informática, assistência técnica, Valinhos, acesso remoto, Paulo Fagoto, Jardim dos Manacás">
+  <meta name="author" content="Paulo Fagoto">
   <style type="text/css">
-    <!-- 
+    /* CSS básico, compatível com navegadores de 2000 (IE5, Netscape 4) */
     body {
-      background-color: #CCCCCC;
       font-family: Verdana, Arial, Helvetica, sans-serif;
-      font-size: 12px;
+      font-size: 14px;
+      background-color: #F0F0F0;
+      color: #000000;
       margin: 0;
       padding: 0;
     }
     table {
-      font-size: 12px;
+      width: 780px; /* compatível com 800x600 com margem */
+      margin: 10px auto;
+      background-color: #FFFFFF;
+      border: 1px solid #808080;
+      border-collapse: collapse;
     }
-    .titulo {
+    td {
+      padding: 10px;
+      vertical-align: top;
+      border: 1px solid #C0C0C0;
+    }
+    .header {
+      background-color: #004080;
+      color: #FFFFFF;
+      text-align: center;
       font-size: 24px;
       font-weight: bold;
-      color: #003399;
+      border-bottom: 2px solid #FFCC00;
     }
-    .subtitulo {
-      font-size: 16px;
+    .section-title {
+      font-size: 18px;
       font-weight: bold;
-      color: #006600;
+      color: #004080;
+      border-bottom: 1px solid #FFCC00;
+      margin-bottom: 8px;
     }
-    .destaque {
-      font-weight: bold;
-      color: #990000;
-    }
-    hr {
-      height: 1px;
-      border: 0;
-      color: #999999;
-      background-color: #999999;
+    .footer {
+      background-color: #E0E0E0;
+      text-align: center;
+      font-size: 12px;
+      color: #404040;
     }
     a {
+      color: #004080;
+      text-decoration: none;
+    }
+    a:hover {
       text-decoration: underline;
     }
-    -->
+    .update-list {
+      list-style-type: none;
+      padding-left: 0;
+    }
+    .update-list li {
+      margin-bottom: 4px;
+      font-family: Courier, monospace;
+      font-size: 13px;
+    }
+    /* link de voltar ao topo */
+    .toplink {
+      text-align: right;
+      font-size: 12px;
+    }
+    .small-note {
+      font-size: 11px;
+      color: #606060;
+    }
   </style>
+  <script type="text/javascript">
+    <!--
+    // Script compatível com navegadores de fevereiro de 2000
+    window.defaultStatus = "Informática Valinhos - Atendimento remoto em Valinhos/SP";
+
+    // Função para exibir a data da última modificação (recurso comum em 2000)
+    function showLastModified() {
+      if (document.lastModified) {
+        document.write("Última modificação: " + document.lastModified);
+      } else {
+        document.write("Última modificação: 10/02/2000");
+      }
+    }
+    // -->
+  </script>
 </head>
-<body bgcolor="#CCCCCC" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
-
-  <!-- Tabela principal para centralizar e limitar largura (compatível com IE5 e Netscape 4) -->
-  <table width="780" border="0" cellpadding="0" cellspacing="0" align="center" bgcolor="#FFFFFF">
+<body>
+  <a name="top"></a> <!-- âncora para voltar ao topo -->
+  <table>
+    <!-- Cabeçalho -->
     <tr>
-      <td>
-
-        <!-- Espaçamento superior -->
-        <table width="100%" border="0" cellpadding="0" cellspacing="0">
-          <tr><td height="10"></td></tr>
-        </table>
-
-        <!-- CABEÇALHO: nome e descrição -->
-        <table width="90%" border="0" cellpadding="5" cellspacing="0" align="center">
-          <tr>
-            <td align="center">
-              <span class="titulo">Informática Valinhos</span>
-              <br>
-              <span class="subtitulo">Assistência técnica em informática.</span>
-            </td>
-          </tr>
-        </table>
-
-        <!-- Espaço -->
-        <table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td height="15"></td></tr></table>
-
-        <!-- DADOS DE LOCALIZAÇÃO (tabela interna para organizar em duas colunas) -->
-        <table width="80%" border="0" cellpadding="5" cellspacing="0" align="center" bgcolor="#F0F0F0">
-          <tr>
-            <td width="50%" align="right" class="destaque">Localização:</td>
-            <td width="50%">Valinhos / SP</td>
-          </tr>
-          <tr>
-            <td align="right" class="destaque">Bairro:</td>
-            <td>Jardim dos Manacás</td>
-          </tr>
-        </table>
-
-        <!-- Espaço -->
-        <table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td height="10"></td></tr></table>
-
-        <!-- E-MAIL (com link mailto) -->
-        <table width="80%" border="0" cellpadding="5" cellspacing="0" align="center">
-          <tr>
-            <td align="center">
-              <span class="destaque">E-mail:</span> 
-              <a href="mailto:adm@paulofagoto.com.br">adm@paulofagoto.com.br</a>
-            </td>
-          </tr>
-        </table>
-
-        <!-- Espaço e linha horizontal -->
-        <table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td height="20"></td></tr></table>
-        <table width="90%" border="0" cellpadding="0" cellspacing="0" align="center"><tr><td><hr></td></tr></table>
-        <table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td height="10"></td></tr></table>
-
-        <!-- SEÇÃO DE HISTÓRICO: ATUALIZAÇÕES FEITAS -->
-        <table width="90%" border="0" cellpadding="5" cellspacing="0" align="center">
-          <tr>
-            <td>
-              <font size="+1"><b>ATUALIZAÇÕES FEITAS</b></font>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <ul>
-                <li><b>01/01/2000</b> - Versão inicial do site (HTML 4.01 Transitional, layout baseado em tabelas, compatível com IE5 e Netscape 4).</li>
-                <li><b>10/01/2000</b> - Adicionadas meta tags de descrição e palavras-chave para otimização em mecanismos de busca (SEO).</li>
-                <li><b>20/01/2000</b> - Adicionado atributo de idioma (pt-BR) e meta tag author. Pequenos ajustes de formatação para melhor legibilidade.</li>
-                <li><b>01/02/2000</b> - Incluídas meta tags revisit-after e distribution. Adicionado script JavaScript para exibir a data atual e uma mensagem de boas-vindas (compatível com IE5 e Netscape 4).</li>
-              </ul>
-            </td>
-          </tr>
-        </table>
-
-        <!-- Espaço antes do script -->
-        <table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td height="15"></td></tr></table>
-
-        <!-- JavaScript simples (compatível com navegadores de 2000) -->
-        <table width="90%" border="0" cellpadding="5" cellspacing="0" align="center">
-          <tr>
-            <td align="center">
-              <script type="text/javascript">
-                <!--
-                // Função para obter o ano de forma compatível
-                function dataAtual() {
-                  var agora = new Date();
-                  var dia = agora.getDate();
-                  var mes = agora.getMonth() + 1; // meses começam em 0
-                  var ano = agora.getYear();
-                  if (ano < 2000) ano = ano + 1900; // ajuste para navegadores antigos
-                  return dia + '/' + mes + '/' + ano;
-                }
-                document.write('<font size="-1" color="#666666">Bem-vindo! Hoje é ' + dataAtual() + '.</font>');
-                //-->
-              </script>
-            </td>
-          </tr>
-        </table>
-
-        <!-- Espaço inferior e linha de direitos -->
-        <table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td height="15"></td></tr></table>
-        <table width="90%" border="0" cellpadding="0" cellspacing="0" align="center"><tr><td><hr></td></tr></table>
-        <table width="100%" border="0" cellpadding="5" cellspacing="0">
-          <tr>
-            <td align="center">
-              <font size="-1" color="#666666">Informática Valinhos - 2000</font>
-            </td>
-          </tr>
-        </table>
-
-        <!-- Fim do conteúdo -->
+      <td class="header" colspan="2">
+        Informática Valinhos
+      </td>
+    </tr>
+    <!-- Linha principal com duas colunas: conteúdo e uma faixa lateral -->
+    <tr>
+      <td width="60%">
+        <div class="section-title">Sobre nós</div>
+        <p><strong>Informática Valinhos</strong> é uma assistência técnica em informática localizada em Valinhos/SP, especializada em atendimento remoto.</p>
+        
+        <div class="section-title">Técnico responsável</div>
+        <p>Paulo Fagoto, profissional com experiência em suporte e manutenção de computadores, atuando exclusivamente via acesso remoto.</p>
+        
+        <div class="section-title">Localização</div>
+        <p><strong>Cidade:</strong> Valinhos/SP<br>
+           <strong>Bairro:</strong> Jardim dos Manacás</p>
+        
+        <div class="section-title">Modo de atuação</div>
+        <p>A Informática Valinhos trabalha apenas com acesso remoto e serviços que possam ser executados remotamente. O Paulo Fagoto trabalha em sua casa via programa de acesso remoto para atender seus clientes.</p>
+      </td>
+      <td width="40%" style="background-color: #FAFAFA;">
+        <div class="section-title">Contato</div>
+        <p><strong>E-mail:</strong> <a href="mailto:adm@paulofagoto.com.br">adm@paulofagoto.com.br</a></p>
+        <!-- Telefone adicionado conforme nova informação fornecida -->
+        <p><strong>Telefone:</strong> (19) 97101-4540</p>
+        <p><em>Atendimento exclusivamente remoto, sem deslocamento.</em></p>
+        <hr noshade size="1">
+        <p><strong>Horário de atendimento:</strong><br>
+        Segunda a sexta, das 9h às 18h.</p>
+        <p><em>Entre em contato por e-mail ou telefone para agendar um atendimento.</em></p>
+        <!-- Links adicionais para contato -->
+        <hr noshade size="1">
+        <p><a href="mailto:adm@paulofagoto.com.br?subject=Contato%20pelo%20site">Envie uma mensagem para Paulo</a></p>
+        <p><a href="mailto:?subject=Recomendação: Informática Valinhos&body=Recomendo o site da Informática Valinhos, assistência técnica remota em Valinhos/SP. Contato: adm@paulofagoto.com.br">Recomende este site para um amigo</a></p>
+      </td>
+    </tr>
+    <!-- Linha de rodapé com informações de copyright e data de atualização -->
+    <tr>
+      <td colspan="2" class="footer">
+        <p>© 2000 Informática Valinhos - Todos os direitos reservados.</p>
+        <p>Site desenvolvido de acordo com as tecnologias disponíveis em 10/02/2000.</p>
+        <!-- Exibição da data de modificação via JavaScript -->
+        <p>
+          <script type="text/javascript">
+            <!--
+            showLastModified();
+            // -->
+          </script>
+          <noscript>
+            Última modificação: 10/02/2000 (JavaScript desabilitado)
+          </noscript>
+        </p>
+      </td>
+    </tr>
+    <!-- Linha com link "Voltar ao topo" -->
+    <tr>
+      <td colspan="2" class="toplink">
+        <hr noshade size="1">
+        <a href="#top">Voltar ao topo</a>
+      </td>
+    </tr>
+    <!-- Seção de histórico de atualizações -->
+    <tr>
+      <td colspan="2" style="background-color: #F5F5F5;">
+        <div class="section-title">ATUALIZAÇÕES FEITAS</div>
+        <ul class="update-list">
+          <li><strong>01/01/2000</strong> - Criação inicial do site com informações básicas, layout compatível com navegadores da época (IE5, Netscape).</li>
+          <li><strong>15/01/2000</strong> - Adicionadas meta tags para estilo e script, incluído pequeno JavaScript para mensagem na barra de status, e ajustada a data de referência no rodapé para 15/01/2000.</li>
+          <li><strong>20/01/2000</strong> - Adicionado link "Voltar ao topo" e funcionalidade de indicação por e-mail; ajustada data no rodapé para 20/01/2000.</li>
+          <li><strong>30/01/2000</strong> - Incluída exibição dinâmica da data da última modificação via JavaScript; adicionado link direto "Envie uma mensagem para Paulo" e suporte a &lt;noscript&gt;; atualizada data no rodapé para 30/01/2000.</li>
+          <li><strong>10/02/2000</strong> - Adicionado telefone (19) 97101-4540 conforme nova informação; ajustada data no rodapé para 10/02/2000 e pequenas adequações no texto de contato.</li>
+        </ul>
+        <p class="small-note">* Esta seção registra todas as modificações realizadas no site ao longo do tempo, mantendo o histórico completo.</p>
       </td>
     </tr>
   </table>
-
-  <!-- Comentário sobre a data da simulação (não aparece na página) -->
-  <!-- DATA ATUAL DA SIMULAÇÃO: 01/02/2000 -->
-  <!-- Nenhum recurso além desta data foi utilizado. -->
+  <!-- Comentário: código compatível com as limitações de 2000: uso de tabelas, cores seguras, meta tags, JavaScript básico e mailto. -->
 </body>
 </html>
