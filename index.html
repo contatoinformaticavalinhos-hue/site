@@ -6,6 +6,8 @@
   <meta name="keywords" content="informática, assistência técnica, Valinhos, Jardim dos Manacás, computadores, manutenção">
   <meta name="author" content="adm@paulofagoto.com.br">
   <meta name="robots" content="index, follow">
+  <meta name="revisit-after" content="15 days">
+  <meta name="distribution" content="global">
   <title>Informática Valinhos</title>
   <style type="text/css">
     <!-- 
@@ -114,12 +116,38 @@
                 <li><b>01/01/2000</b> - Versão inicial do site (HTML 4.01 Transitional, layout baseado em tabelas, compatível com IE5 e Netscape 4).</li>
                 <li><b>10/01/2000</b> - Adicionadas meta tags de descrição e palavras-chave para otimização em mecanismos de busca (SEO).</li>
                 <li><b>20/01/2000</b> - Adicionado atributo de idioma (pt-BR) e meta tag author. Pequenos ajustes de formatação para melhor legibilidade.</li>
+                <li><b>01/02/2000</b> - Incluídas meta tags revisit-after e distribution. Adicionado script JavaScript para exibir a data atual e uma mensagem de boas-vindas (compatível com IE5 e Netscape 4).</li>
               </ul>
             </td>
           </tr>
         </table>
 
-        <!-- Espaço inferior e linha de direitos (apenas para fechar, sem informação extra) -->
+        <!-- Espaço antes do script -->
+        <table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td height="15"></td></tr></table>
+
+        <!-- JavaScript simples (compatível com navegadores de 2000) -->
+        <table width="90%" border="0" cellpadding="5" cellspacing="0" align="center">
+          <tr>
+            <td align="center">
+              <script type="text/javascript">
+                <!--
+                // Função para obter o ano de forma compatível
+                function dataAtual() {
+                  var agora = new Date();
+                  var dia = agora.getDate();
+                  var mes = agora.getMonth() + 1; // meses começam em 0
+                  var ano = agora.getYear();
+                  if (ano < 2000) ano = ano + 1900; // ajuste para navegadores antigos
+                  return dia + '/' + mes + '/' + ano;
+                }
+                document.write('<font size="-1" color="#666666">Bem-vindo! Hoje é ' + dataAtual() + '.</font>');
+                //-->
+              </script>
+            </td>
+          </tr>
+        </table>
+
+        <!-- Espaço inferior e linha de direitos -->
         <table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td height="15"></td></tr></table>
         <table width="90%" border="0" cellpadding="0" cellspacing="0" align="center"><tr><td><hr></td></tr></table>
         <table width="100%" border="0" cellpadding="5" cellspacing="0">
@@ -129,12 +157,14 @@
             </td>
           </tr>
         </table>
+
+        <!-- Fim do conteúdo -->
       </td>
     </tr>
   </table>
 
   <!-- Comentário sobre a data da simulação (não aparece na página) -->
-  <!-- DATA ATUAL DA SIMULAÇÃO: 20/01/2000 -->
+  <!-- DATA ATUAL DA SIMULAÇÃO: 01/02/2000 -->
   <!-- Nenhum recurso além desta data foi utilizado. -->
 </body>
 </html>
