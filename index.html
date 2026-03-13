@@ -2,391 +2,123 @@
 <html lang="pt-br">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Informática Valinhos - Assistência Técnica Remota</title>
-  <meta name="description" content="Assistência técnica remota em informática em Valinhos. Serviços de suporte remoto, remoção de vírus, instalação de software e mais.">
-  <meta name="keywords" content="informática, valinhos, assistência técnica, suporte remoto, remoção de vírus, software, hardware, computador">
-  <meta name="author" content="Informática Valinhos">
+  <title>Informática Valinhos - Assistência Técnica</title>
+  <meta name="description" content="Assistência técnica em informática em Valinhos/SP, Jardim dos Manacás. Consertos e manutenção de computadores.">
+  <meta name="keywords" content="informática, assistência técnica, manutenção, computadores, Valinhos, Jardim dos Manacás">
   <meta name="robots" content="index, follow">
+  <meta name="author" content="Informática Valinhos">
   <style type="text/css">
-    /* CSS reset básico e box-sizing universal */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    
+    /* Estilos compatíveis com navegadores de 2005 (IE5.5+, Firefox 1.0, Netscape, Opera) */
     body {
-      background-color: #e0e0e0;
-      font-family: Arial, Helvetica, sans-serif;
+      font-family: Verdana, Arial, Helvetica, sans-serif;
       font-size: 14px;
-      font-size: 0.875rem; /* 14px com fallback */
+      background-color: #F0F0F0;
       margin: 0;
       padding: 0;
-      line-height: 1.5;
+      color: #333;
+      text-align: center; /* centraliza o conteúdo em IE antigo */
     }
-    #wrapper {
-      max-width: 800px;
-      width: 95%;
-      margin: 20px auto;
-      background-color: #ffffff;
-      border: 2px solid #2a4d6e;
-      padding: 10px;
-      /* CSS3: bordas arredondadas */
-      -moz-border-radius: 15px;
-      -webkit-border-radius: 15px;
-      border-radius: 15px;
+    #container {
+      width: 780px;          /* confortável para 800x600 */
+      margin: 20px auto;     /* centraliza */
+      background-color: #FFFFFF;
+      border: 1px solid #CCCCCC;
+      padding: 15px;         /* pequeno ajuste para melhor legibilidade */
+      text-align: left;      /* alinhamento interno volta ao normal */
     }
-    #header {
-      background-color: #2a4d6e;
-      color: white;
-      padding: 15px;
-      text-align: center;
-      border-bottom: 3px solid #f0b000;
-      /* CSS3: bordas arredondadas no topo */
-      -moz-border-radius-topleft: 10px;
-      -moz-border-radius-topright: 10px;
-      -webkit-border-top-left-radius: 10px;
-      -webkit-border-top-right-radius: 10px;
-      border-top-left-radius: 10px;
-      border-top-right-radius: 10px;
-    }
-    #header h1 {
-      margin: 0;
-      font-size: 32px;
-      font-size: 2rem; /* 32px */
-      /* CSS3: sombra no texto */
-      text-shadow: 2px 2px 3px #000000;
-    }
-    #header p {
-      margin: 5px 0 0;
-      font-style: italic;
-    }
-    #nav {
-      background-color: #f0f0f0;
-      padding: 10px;
-      text-align: center;
-      border-bottom: 1px solid #2a4d6e;
-    }
-    #nav a {
-      color: #2a4d6e;
-      text-decoration: none;
-      font-weight: bold;
-      padding: 5px 15px;
-      border-right: 1px solid #2a4d6e;
-      display: inline-block;
-    }
-    #nav a:last-child {
-      border-right: none;
-    }
-    #nav a:hover {
-      text-decoration: underline;
-      background-color: #d0d0d0;
-    }
-    .section {
-      padding: 20px;
-      border-bottom: 1px dashed #2a4d6e;
-    }
-    .section:last-child {
-      border-bottom: none;
-    }
-    .section h2 {
-      color: #2a4d6e;
-      border-bottom: 1px dashed #f0b000;
-      padding-bottom: 5px;
-      margin-top: 0;
-      margin-bottom: 15px;
-      font-size: 1.5rem; /* 24px */
-      /* CSS3: sombra no texto */
-      text-shadow: 1px 1px 2px #888888;
-    }
-    .service-list {
-      list-style-type: square;
-      margin-left: 20px;
-      margin-bottom: 15px;
-    }
-    .service-list li {
-      margin-bottom: 8px;
-    }
-    .service-detail {
-      margin-bottom: 15px;
-    }
-    .service-detail h3 {
-      color: #2a4d6e;
+    h1 {
+      font-size: 24px;
+      color: #003399;
+      margin-top: 5px;
       margin-bottom: 5px;
-      font-size: 1.2rem; /* ~19px */
-      /* CSS3: sombra no texto */
-      text-shadow: 1px 1px 2px #aaaaaa;
+      border-bottom: 2px solid #003399;
+      padding-bottom: 5px;
     }
-    .service-detail p {
-      margin-top: 0;
-      padding-left: 15px;
+    h2 {
+      font-size: 18px;
+      color: #003399;
+      margin-top: 15px;
+      margin-bottom: 10px;
+      border-bottom: 1px dashed #CCCCCC;
+      padding-bottom: 3px;
     }
-    .contact-info {
-      /* Fallback para IE8 e anteriores */
-      background-color: #f9f9f9;
-      /* Para navegadores modernos: fundo com transparência */
-      background-color: rgba(249, 249, 249, 0.9);
-      border: 1px solid #2a4d6e;
-      padding: 20px;
-      margin: 20px 0;
-      text-align: center;
-      /* CSS3: bordas arredondadas e sombra */
-      -moz-border-radius: 10px;
-      -webkit-border-radius: 10px;
-      border-radius: 10px;
-      -moz-box-shadow: 3px 3px 5px #ccc;
-      -webkit-box-shadow: 3px 3px 5px #ccc;
-      box-shadow: 3px 3px 5px #ccc;
-    }
-    .contact-info p {
-      font-size: 16px;
-      font-size: 1rem; /* 16px */
+    .info {
+      background-color: #F9F9F9;
+      padding: 10px;
+      border: 1px solid #DDDDDD;
       margin: 15px 0;
     }
-    .email-large {
-      font-size: 22px;
-      font-size: 1.375rem; /* 22px */
+    .info p {
+      margin: 8px 0;
+    }
+    .email {
       font-weight: bold;
-      color: #2a4d6e;
-      background-color: #f0b000;
-      padding: 10px;
-      display: inline-block;
-      border: 2px solid #2a4d6e;
-      /* CSS3: bordas arredondadas */
-      -moz-border-radius: 8px;
-      -webkit-border-radius: 8px;
-      border-radius: 8px;
-      /* CSS3: transparência sutil */
-      opacity: 0.95;
-      max-width: 90%;
-      word-wrap: break-word;
+      color: #006600;
+      background-color: #FFFFE0; /* leve destaque adicional */
+      padding: 2px 4px;
     }
-    .email-large a {
-      color: #2a4d6e;
-      text-decoration: none;
-    }
-    .email-large a:hover {
+    a {
+      color: #003399;
       text-decoration: underline;
     }
-    .button {
-      display: inline-block;
-      background-color: #f0b000;
-      color: #2a4d6e;
-      padding: 8px 15px;
-      text-decoration: none;
-      font-weight: bold;
-      border: 2px solid #2a4d6e;
-      margin: 5px;
-      /* CSS3: bordas arredondadas, gradiente, sombra */
-      -moz-border-radius: 8px;
-      -webkit-border-radius: 8px;
-      border-radius: 8px;
-      -moz-box-shadow: 2px 2px 3px #999;
-      -webkit-box-shadow: 2px 2px 3px #999;
-      box-shadow: 2px 2px 3px #999;
-      background: #f0b000; /* fallback */
-      background: -moz-linear-gradient(top, #f0b000, #d09000);
-      background: -webkit-gradient(linear, left top, left bottom, from(#f0b000), to(#d09000));
-      background: -webkit-linear-gradient(top, #f0b000, #d09000);
-      background: linear-gradient(to bottom, #f0b000, #d09000);
-      /* CSS3: transparência sutil */
-      opacity: 0.95;
-      font-size: 1rem; /* 16px */
+    a:hover {
+      color: #FF6600;
     }
-    .button:hover {
-      background-color: #2a4d6e;
-      color: #f0b000;
-      border-color: #f0b000;
-      background: #2a4d6e; /* fallback */
-      background: -moz-linear-gradient(top, #2a4d6e, #1a3d5e);
-      background: -webkit-gradient(linear, left top, left bottom, from(#2a4d6e), to(#1a3d5e));
-      background: -webkit-linear-gradient(top, #2a4d6e, #1a3d5e);
-      background: linear-gradient(to bottom, #2a4d6e, #1a3d5e);
-      opacity: 1;
-    }
-    #footer {
-      background-color: #2a4d6e;
-      color: white;
-      text-align: center;
-      padding: 10px;
+    .historico {
       font-size: 12px;
-      font-size: 0.75rem; /* 12px */
-      border-top: 3px solid #f0b000;
-      margin-top: 10px;
-      /* CSS3: bordas arredondadas no rodapé */
-      -moz-border-radius-bottomleft: 10px;
-      -moz-border-radius-bottomright: 10px;
-      -webkit-border-bottom-left-radius: 10px;
-      -webkit-border-bottom-right-radius: 10px;
-      border-bottom-left-radius: 10px;
-      border-bottom-right-radius: 10px;
+      background-color: #F5F5F5;
+      border: 1px solid #CCCCCC;
+      padding: 8px;
+      margin-top: 25px;
     }
-    #footer a {
-      color: #f0b000;
-      text-decoration: none;
+    .historico ul {
+      list-style: square;
+      margin: 5px 0 5px 20px;
+      padding: 0;
     }
-    #footer a:hover {
-      text-decoration: underline;
+    .rodape {
+      font-size: 11px;
+      text-align: center;
+      color: #777777;
+      border-top: 1px solid #CCCCCC;
+      margin-top: 20px;
+      padding-top: 8px;
     }
-    .top-link {
-      text-align: right;
-      margin-top: 10px;
-    }
-    .top-link a {
-      color: #2a4d6e;
-    }
-    
-    /* CSS3 Media Queries */
-    @media screen and (max-width: 800px) {
-      #wrapper {
-        width: 95%;
-        margin: 10px auto;
-      }
-      #header h1 {
-        font-size: 1.75rem; /* 28px */
-      }
-    }
-    
-    @media screen and (max-width: 600px) {
-      #nav a {
-        display: block;
-        border-right: none;
-        border-bottom: 1px solid #2a4d6e;
-        padding: 10px;
-      }
-      #nav a:last-child {
-        border-bottom: none;
-      }
-      .email-large {
-        font-size: 1.125rem; /* 18px */
-        display: block;
-      }
-      .button {
-        display: block;
-        margin: 10px 0;
-        text-align: center;
-      }
-      .service-detail {
-        margin-bottom: 20px;
-      }
-    }
-    
-    @media screen and (max-width: 480px) {
-      #header h1 {
-        font-size: 1.5rem; /* 24px */
-      }
-      #header p {
-        font-size: 0.8125rem; /* 13px */
-      }
-      .section {
-        padding: 15px 10px;
-      }
-      .contact-info {
-        padding: 15px 10px;
-      }
-      ul {
-        padding-left: 20px;
-      }
+    /* estilo para garantir que links de email não quebrem */
+    a:link, a:visited {
+      color: #003399;
     }
   </style>
 </head>
 <body>
-  <div id="wrapper">
-    <div id="header">
-      <h1>Informática Valinhos</h1>
-      <p>Assistência técnica remota - solução rápida sem sair de casa!</p>
-    </div>
-    <div id="nav">
-      <a href="#home">Home</a>
-      <a href="#servicos">Serviços</a>
-      <a href="#contato">Contato</a>
-    </div>
-    
-    <!-- Seção Home -->
-    <div id="home" class="section">
-      <h2>Bem-vindo à Informática Valinhos</h2>
-      <p>Trabalhamos exclusivamente com <strong>atendimento remoto</strong>, utilizando programas de acesso remoto (como VNC, NetMeeting, e outros) para resolver problemas no seu computador de forma rápida e segura, sem que você precise sair de casa ou trazer o equipamento.</p>
-      <p>Nossa assistência é ideal para:</p>
-      <ul class="service-list">
-        <li>Remoção de vírus e spyware</li>
-        <li>Instalação e configuração de softwares</li>
-        <li>Otimização do sistema (limpeza e ajustes)</li>
-        <li>Suporte para configuração de e-mail e internet</li>
-        <li>Backup de arquivos</li>
-        <li>Orientação e treinamento básico</li>
-      </ul>
-      <p>Entre em contato por e-mail e agende um horário. O primeiro diagnóstico é gratuito!</p>
-      <a href="#contato" class="button">Solicitar atendimento</a>
-      <div class="top-link">
-        <a href="#">voltar ao topo</a>
-      </div>
-    </div>
-    
-    <!-- Seção Serviços -->
-    <div id="servicos" class="section">
-      <h2>Nossos Serviços Remotos</h2>
-      <p>Todos os serviços são realizados via acesso remoto, com sua autorização e total segurança. Você acompanha tudo em tempo real!</p>
-      
-      <div class="service-detail">
-        <h3>Remoção de Vírus e Spyware</h3>
-        <p>Limpeza completa do sistema, remoção de ameaças e otimização para que seu computador volte a funcionar perfeitamente.</p>
-      </div>
-      <div class="service-detail">
-        <h3>Instalação e Configuração de Softwares</h3>
-        <p>Instalamos programas, drivers, pacotes office, antivírus e qualquer outro software necessário, deixando tudo pronto para uso.</p>
-      </div>
-      <div class="service-detail">
-        <h3>Otimização do Sistema</h3>
-        <p>Limpeza de arquivos temporários, desfragmentação (quando aplicável), ajustes na inicialização e melhoria de desempenho geral.</p>
-      </div>
-      <div class="service-detail">
-        <h3>Configuração de E-mail e Internet</h3>
-        <p>Ajudamos a configurar seu cliente de e-mail (Outlook, Outlook Express, etc.), conexões de rede e compartilhamento de internet.</p>
-      </div>
-      <div class="service-detail">
-        <h3>Backup de Arquivos</h3>
-        <p>Orientação e execução de cópias de segurança dos seus documentos importantes, seja em CD, DVD ou disco rígido externo.</p>
-      </div>
-      <div class="service-detail">
-        <h3>Suporte e Treinamento</h3>
-        <p>Dúvidas sobre uso do computador, orientações para evitar problemas futuros e pequenos ajustes personalizados.</p>
-      </div>
-      
-      <p><strong>Não atendemos problemas físicos (hardware)</strong> - nosso foco é totalmente remoto.</p>
-      <a href="#contato" class="button">Agendar atendimento</a>
-      <div class="top-link">
-        <a href="#">voltar ao topo</a>
-      </div>
-    </div>
-    
-    <!-- Seção Contato -->
-    <div id="contato" class="section">
-      <h2>Contato e Agendamento</h2>
-      <p>Para solicitar um atendimento ou tirar dúvidas, envie um e-mail para o endereço abaixo. Respondemos em até 24 horas (dias úteis).</p>
-      
-      <div class="contact-info">
-        <p><strong>E-mail para contato e agendamento:</strong></p>
-        <p class="email-large"><a href="mailto:adm@paulofagoto.com.br">adm@paulofagoto.com.br</a></p>
-        <p>Clique no endereço para abrir seu programa de e-mail padrão.</p>
-        <p><a href="mailto:adm@paulofagoto.com.br?subject=Agendamento%20de%20atendimento" class="button">Enviar e-mail agora</a></p>
-      </div>
-      
-      <p><strong>Informações importantes:</strong></p>
-      <ul>
-        <li>O atendimento é realizado mediante agendamento prévio por e-mail.</li>
-        <li>Informe no e-mail seu nome, um breve descrição do problema e os horários disponíveis.</li>
-        <li>O primeiro contato para diagnóstico é gratuito.</li>
-        <li>Utilizamos programas de acesso remoto como VNC, NetMeeting e similares. Você só precisa estar com o computador ligado e conectado à internet.</li>
-      </ul>
-      
-      <a href="#" class="button">Voltar ao topo</a>
-    </div>
-    
-    <div id="footer">
-      <p>&copy; 2013 Informática Valinhos - Todos os direitos reservados.</p>
-      <p>Contato: <a href="mailto:adm@paulofagoto.com.br">adm@paulofagoto.com.br</a></p>
-    </div>
+
+<div id="container">
+  <h1>Informática Valinhos</h1>
+  <p><strong>Assistência técnica em informática</strong> - especializada em manutenção de computadores e notebooks.</p>
+
+  <div class="info">
+    <p><strong>Localização:</strong> Valinhos/SP - Jardim dos Manacás</p>
+    <p><strong>E-mail:</strong> <a href="mailto:adm@paulofagoto.com.br" class="email">adm@paulofagoto.com.br</a></p>
   </div>
+
+  <h2>Sobre nossos serviços</h2>
+  <p>Realizamos diagnóstico, limpeza, formatação, troca de peças e otimização de sistemas. Atendemos em domicílio no Jardim dos Manacás e região central de Valinhos. Entre em contato por e-mail para agendar um horário.</p>
+
+  <!-- Seção obrigatória de histórico -->
+  <div class="historico">
+    <h2 style="border-bottom: none; margin-top: 0;">ATUALIZAÇÕES FEITAS</h2>
+    <ul>
+      <li><strong>01/01/2005</strong> - Versão inicial do site. Informações básicas e contato por e-mail.</li>
+      <li><strong>02/01/2005</strong> - Pequenos ajustes no CSS para melhor visualização no Internet Explorer 6; destaque adicional no e-mail e aumento do espaçamento interno.</li>
+      <!-- Novas atualizações serão acrescentadas abaixo, mantendo as antigas -->
+    </ul>
+  </div>
+
+  <div class="rodape">
+    Informática Valinhos - 2005. Site desenvolvido de acordo com as tecnologias da época.
+  </div>
+</div>
+
+<!-- Comentário: código compatível com IE5.5, IE6, Firefox 1.0, Netscape 7, Opera 7. Resolução mínima 800x600. Data da simulação: 02/01/2005 -->
 </body>
 </html>
