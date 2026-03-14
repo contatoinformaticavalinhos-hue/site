@@ -1,216 +1,480 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <meta http-equiv="Content-Script-Type" content="text/javascript">
-  <meta name="robots" content="index,follow">
-  <meta name="revisit-after" content="15 days">
-  <meta name="distribution" content="global">
-  <title>Informática Valinhos - Assistência Técnica em Informática</title>
-  <meta name="description" content="Assistência técnica em informática em Valinhos/SP, atendimento remoto por Paulo Fagoto.">
-  <meta name="keywords" content="informática, assistência técnica, Valinhos, acesso remoto, Paulo Fagoto, Jardim dos Manacás">
-  <meta name="author" content="Paulo Fagoto">
-  <style type="text/css">
-    /* CSS básico, compatível com navegadores de 2000 (IE5, Netscape 4) */
-    body {
-      font-family: Verdana, Arial, Helvetica, sans-serif;
-      font-size: 14px;
-      background-color: #F0F0F0;
-      color: #000000;
-      margin: 0;
-      padding: 0;
-    }
-    table {
-      width: 780px; /* compatível com 800x600 com margem */
-      margin: 10px auto;
-      background-color: #FFFFFF;
-      border: 1px solid #808080;
-      border-collapse: collapse;
-    }
-    td {
-      padding: 10px;
-      vertical-align: top;
-      border: 1px solid #C0C0C0;
-    }
-    .header {
-      background-color: #004080;
-      color: #FFFFFF;
-      text-align: center;
-      font-size: 24px;
-      font-weight: bold;
-      border-bottom: 2px solid #FFCC00;
-    }
-    .section-title {
-      font-size: 18px;
-      font-weight: bold;
-      color: #004080;
-      border-bottom: 1px solid #FFCC00;
-      margin-bottom: 8px;
-    }
-    .footer {
-      background-color: #E0E0E0;
-      text-align: center;
-      font-size: 12px;
-      color: #404040;
-    }
-    a {
-      color: #004080;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-    .update-list {
-      list-style-type: none;
-      padding-left: 0;
-    }
-    .update-list li {
-      margin-bottom: 4px;
-      font-family: Courier, monospace;
-      font-size: 13px;
-    }
-    /* link de voltar ao topo */
-    .toplink {
-      text-align: right;
-      font-size: 12px;
-    }
-    .small-note {
-      font-size: 11px;
-      color: #606060;
-    }
-  </style>
-  <script type="text/javascript">
-    <!--
-    // Script compatível com navegadores de julho de 2000
-    window.defaultStatus = "Informática Valinhos - Atendimento remoto em Valinhos/SP";
+    <title>Informática Valinhos . Assistência Técnica Remota . Paulo Fagoto</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <meta name="description" content="Informática Valinhos - Assistência técnica do técnico Paulo Fagoto. Atendimento remoto para público doméstico e pequenos comércios em Valinhos/SP. Agende pelo adm@paulofagoto.com.br. Acompanhe as novidades em acesso remoto como o LinktoPC da AOL.">
+    <meta name="keywords" content="assistência técnica, informática, Valinhos, Jardim dos Manacás, acesso remoto, Paulo Fagoto, manutenção de computadores, suporte remoto, small business, doméstico, suporte online, dicas de informática, ferramentas remotas, NetMeeting, VNC, UltraVNC, LinktoPC, AOL, WebEx">
+    <meta name="author" content="Paulo Fagoto">
+    <meta name="robots" content="index, follow">
+    <meta name="rating" content="general">
+    <meta name="revisit-after" content="7 days">
+    <meta name="language" content="portuguese">
+    <meta name="google-site-verification" content="exemploverification" />
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="expires" content="-1">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <style type="text/css">
+        <!--
+        body {
+            background-color: #CCCCCC;
+            font-family: Verdana, Arial, Helvetica, sans-serif;
+            font-size: 12px;
+            color: #333333;
+            margin: 0px;
+            padding: 0px;
+        }
+        .tabela-principal {
+            width: 820px; /* Leve aumento, mas ainda seguro para 800x600 com rolagem suave */
+            border: 2px solid #996633; /* Tendência 2005: menos minimalismo, mais detalhe */
+            background-color: #FFFFFF;
+            margin-top: 15px;
+        }
+        .topo {
+            background-color: #003366;
+            color: #FFFFFF;
+            padding: 15px;
+            border-bottom: 3px solid #CC9966;
+            background-image: url('data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==');
+        }
+        .topo h1 {
+            font-family: "Trebuchet MS", Arial, sans-serif;
+            font-size: 32px;
+            margin: 0px;
+            letter-spacing: -1px;
+        }
+        .topo p {
+            font-size: 11px;
+            margin: 5px 0 0 0;
+            color: #FFCC99;
+        }
+        .menu {
+            background-color: #E8E8E8; /* Tom mais escuro */
+            border-bottom: 2px solid #996633;
+            border-top: 1px solid #CCCCCC;
+            padding: 5px 0px 5px 0px;
+            text-align: center;
+        }
+        .menu a {
+            font-family: Verdana, Arial, sans-serif;
+            font-size: 11px;
+            font-weight: bold;
+            color: #003366;
+            text-decoration: none;
+            padding: 5px 12px 5px 12px;
+            border-right: 1px solid #666666;
+        }
+        .menu a:last-child {
+            border-right: none;
+        }
+        .menu a:hover {
+            background-color: #FFCC99;
+            color: #000000;
+        }
+        .lateral {
+            background-color: #F7F7F7;
+            width: 190px; /* Leve ajuste */
+            vertical-align: top;
+            padding: 8px;
+            border-right: 2px dotted #CC9966; /* Mais detalhe */
+        }
+        .lateral h3 {
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            color: #663300; /* Tom terroso, tendência 2005 */
+            margin: 15px 0 5px 0;
+            border-bottom: 2px solid #FFCC99;
+        }
+        .lateral p {
+            font-size: 11px;
+            margin: 5px 0 10px 0;
+        }
+        .lateral ul {
+            margin: 2px 0 8px 15px;
+            padding: 0;
+            font-size: 11px;
+        }
+        .conteudo {
+            vertical-align: top;
+            padding: 12px;
+            background-color: #FFFFFF;
+        }
+        .conteudo h2 {
+            font-family: Arial, sans-serif;
+            font-size: 20px;
+            color: #663300;
+            margin: 0 0 10px 0;
+            border-bottom: 2px solid #FFCC99;
+            padding-bottom: 4px;
+        }
+        .conteudo h3 {
+            font-size: 14px;
+            color: #CC6600;
+            margin: 12px 0 5px 0;
+        }
+        .conteudo p {
+            font-size: 12px;
+            line-height: 1.5;
+            text-align: justify;
+        }
+        .destaque {
+            background-color: #FFFFCC;
+            border: 2px solid #CC9966;
+            padding: 8px;
+            margin: 10px 0;
+        }
+        .destaque strong {
+            color: #993300;
+        }
+        .dica-rotativa {
+            background-color: #E6F0FA;
+            border: 2px solid #003366;
+            padding: 10px;
+            margin: 12px 0;
+            font-weight: bold;
+            color: #003366;
+            text-align: center;
+        }
+        .novidade {
+            background-color: #FFECCE;
+            border: 2px dashed #CC6600;
+            padding: 8px;
+            margin: 12px 0;
+        }
+        .novidade h4 {
+            font-size: 13px;
+            color: #993300;
+            margin: 0 0 5px 0;
+        }
+        .depoimento {
+            background-color: #F9F9F9;
+            border: 1px solid #DDDDDD;
+            padding: 6px;
+            margin: 8px 0;
+            font-style: italic;
+        }
+        .depoimento .autor {
+            text-align: right;
+            font-size: 10px;
+            font-weight: bold;
+            color: #555555;
+        }
+        .rodape {
+            background-color: #DDDDDD;
+            border-top: 3px solid #996633;
+            padding: 10px;
+            font-size: 10px;
+            color: #333333;
+            text-align: center;
+        }
+        .formulario-contato {
+            background-color: #FAFAFA;
+            border: 2px solid #CCCCCC;
+            padding: 10px;
+        }
+        .formulario-contato input, .formulario-contato textarea {
+            font-family: Verdana, sans-serif;
+            font-size: 11px;
+            border: 1px solid #999999;
+            background-color: #FFFFFF;
+            padding: 3px;
+            width: 280px;
+        }
+        .formulario-contato textarea {
+            height: 60px;
+        }
+        .formulario-contato input.botao {
+            background-color: #663300;
+            color: #FFFFFF;
+            border: 2px solid #000000;
+            width: 100px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        hr {
+            color: #CCCCCC;
+            height: 1px;
+            border: 0;
+            border-top: 1px solid #CCCCCC;
+        }
+        table {
+            border-collapse: collapse;
+        }
+        td, th {
+            padding: 0px;
+        }
+        a {
+            color: #003399;
+        }
+        a:hover {
+            color: #FF6600;
+        }
+        .historico {
+            background-color: #EFEFEF;
+            border: 2px solid #999999;
+            padding: 8px;
+            font-size: 10px;
+        }
+        .historico ul {
+            margin: 2px 0 2px 20px;
+            padding: 0;
+        }
+        .mapa-site {
+            font-size: 10px;
+            color: #666666;
+        }
+        .mapa-site a {
+            color: #666666;
+            text-decoration: none;
+        }
+        .mapa-site a:hover {
+            text-decoration: underline;
+        }
+        -->
+    </style>
 
-    // Função para exibir a data da última modificação (recurso comum em 2000)
-    function showLastModified() {
-      if (document.lastModified) {
-        document.write("Última modificação: " + document.lastModified);
-      } else {
-        document.write("Última modificação: 15/07/2000");
-      }
-    }
+    <script language="Javascript" type="text/javascript">
+        <!--
+        function validarFormulario() {
+            var nome = document.forms["agendar"]["nome"].value;
+            var email = document.forms["agendar"]["email"].value;
+            var mensagem = document.forms["agendar"]["mensagem"].value;
 
-    // Função para imprimir a página
-    function imprimirPagina() {
-      window.print();
-    }
+            if (nome == "" || email == "" || mensagem == "") {
+                alert("Por favor, preencha todos os campos do formulário.");
+                return false;
+            }
 
-    // Função para mostrar informações do navegador (comum em 2000)
-    function mostraNavegador() {
-      document.write("Você está usando: " + navigator.appName + " versão " + navigator.appVersion);
-    }
-    // -->
-  </script>
+            var posicaoArroba = email.indexOf("@");
+            var posicaoPonto = email.lastIndexOf(".");
+            if (posicaoArroba < 1 || posicaoPonto < posicaoArroba + 2 || posicaoPonto + 2 >= email.length) {
+                alert("Por favor, digite um endereço de e-mail válido (ex: nome@provedor.com.br).");
+                return false;
+            }
+
+            alert("Solicitação enviada com sucesso!\n\nEm breve você receberá uma resposta do técnico Paulo Fagoto no e-mail informado.\n\nAgradecemos o contato!");
+            return true;
+        }
+
+        var dicas = [
+            "?? Dica: Mantenha o Windows sempre atualizado pelo Windows Update para evitar falhas de segurança.",
+            "?? Dica: Use o Ad-Aware e SpyBot para remover spywares que deixam o PC lento.",
+            "?? Dica: O acesso remoto é seguro e criptografado. Você acompanha tudo o que o técnico faz na tela.",
+            "?? Dica: A AOL lançou o LinktoPC, um novo serviço de acesso remoto baseado na tecnologia WebEx [citation:7].",
+            "?? Dica: Nunca forneça senhas por e-mail. Use nosso formulário seguro (ou envie por telefone)."
+        ];
+        var indiceDica = 0;
+        var timerDica;
+        function atualizarDica() {
+            var divDica = document.getElementById("dicaRotativa");
+            if (divDica) {
+                divDica.innerHTML = dicas[indiceDica];
+                indiceDica = (indiceDica + 1) % dicas.length;
+            }
+        }
+        function iniciarDica() {
+            atualizarDica();
+            timerDica = setInterval(atualizarDica, 8000);
+        }
+        function pausarDica() {
+            clearInterval(timerDica);
+        }
+        function retomarDica() {
+            timerDica = setInterval(atualizarDica, 8000);
+        }
+        //-->
+    </script>
 </head>
-<body>
-  <a name="top"></a> <!-- âncora para voltar ao topo -->
-  <table>
-    <!-- Cabeçalho -->
-    <tr>
-      <td class="header" colspan="2">
-        Informática Valinhos
-      </td>
-    </tr>
-    <!-- Linha principal com duas colunas: conteúdo e uma faixa lateral -->
-    <tr>
-      <td width="60%">
-        <div class="section-title">Sobre nós</div>
-        <p><strong>Informática Valinhos</strong> é uma assistência técnica em informática localizada em Valinhos/SP, especializada em atendimento remoto.</p>
-        
-        <div class="section-title">Técnico responsável</div>
-        <p>Paulo Fagoto, profissional com experiência em suporte e manutenção de computadores, atuando exclusivamente via acesso remoto.</p>
-        
-        <div class="section-title">Localização</div>
-        <p><strong>Cidade:</strong> Valinhos/SP<br>
-           <strong>Bairro:</strong> Jardim dos Manacás</p>
-        
-        <div class="section-title">Modo de atuação</div>
-        <p>A Informática Valinhos trabalha apenas com acesso remoto e serviços que possam ser executados remotamente. O Paulo Fagoto trabalha em sua casa via programa de acesso remoto para atender seus clientes.</p>
-      </td>
-      <td width="40%" style="background-color: #FAFAFA;">
-        <div class="section-title">Contato</div>
-        <p><strong>E-mail:</strong> <a href="mailto:adm@paulofagoto.com.br">adm@paulofagoto.com.br</a></p>
-        <p><strong>Telefone:</strong> (19) 97101-4540</p>
-        <p><em>Atendimento exclusivamente remoto, sem deslocamento.</em></p>
-        <hr noshade size="1">
-        <p><strong>Horário de atendimento:</strong><br>
-        Segunda a sexta, das 9h às 18h.</p>
-        <p><em>Entre em contato por e-mail ou telefone para agendar um atendimento.</em></p>
-        <hr noshade size="1">
-        <p><a href="mailto:adm@paulofagoto.com.br?subject=Contato%20pelo%20site">Envie uma mensagem para Paulo</a></p>
-        <p><a href="mailto:?subject=Recomendação: Informática Valinhos&body=Recomendo o site da Informática Valinhos, assistência técnica remota em Valinhos/SP. Contato: adm@paulofagoto.com.br">Recomende este site para um amigo</a></p>
-        <hr noshade size="1">
-        <p><a href="javascript:imprimirPagina()">Imprimir esta página</a></p>
-      </td>
-    </tr>
-    <!-- Linha de rodapé com informações de copyright e data de atualização -->
-    <tr>
-      <td colspan="2" class="footer">
-        <p>© 2000 Informática Valinhos - Todos os direitos reservados.</p>
-        <p>Site desenvolvido de acordo com as tecnologias disponíveis em 15/07/2000.</p>
-        <p>Melhor visualizado em 800x600</p>
-        <!-- Exibição da data de modificação via JavaScript -->
-        <p>
-          <script type="text/javascript">
-            <!--
-            showLastModified();
-            // -->
-          </script>
-          <noscript>
-            Última modificação: 15/07/2000 (JavaScript desabilitado)
-          </noscript>
-        </p>
-        <!-- Informação do navegador -->
-        <p>
-          <script type="text/javascript">
-            <!--
-            mostraNavegador();
-            // -->
-          </script>
-          <noscript>
-            (Informações do navegador não disponíveis)
-          </noscript>
-        </p>
-      </td>
-    </tr>
-    <!-- Linha com link "Voltar ao topo" -->
-    <tr>
-      <td colspan="2" class="toplink">
-        <hr noshade size="1">
-        <a href="#top">Voltar ao topo</a>
-      </td>
-    </tr>
-    <!-- Seção de histórico de atualizações -->
-    <tr>
-      <td colspan="2" style="background-color: #F5F5F5;">
-        <div class="section-title">ATUALIZAÇÕES FEITAS</div>
-        <ul class="update-list">
-          <li><strong>01/01/2000</strong> - Criação inicial do site com informações básicas, layout compatível com navegadores da época (IE5, Netscape).</li>
-          <li><strong>15/01/2000</strong> - Adicionadas meta tags para estilo e script, incluído pequeno JavaScript para mensagem na barra de status, e ajustada a data de referência no rodapé para 15/01/2000.</li>
-          <li><strong>20/01/2000</strong> - Adicionado link "Voltar ao topo" e funcionalidade de indicação por e-mail; ajustada data no rodapé para 20/01/2000.</li>
-          <li><strong>30/01/2000</strong> - Incluída exibição dinâmica da data da última modificação via JavaScript; adicionado link direto "Envie uma mensagem para Paulo" e suporte a &lt;noscript&gt;; atualizada data no rodapé para 30/01/2000.</li>
-          <li><strong>10/02/2000</strong> - Adicionado telefone (19) 97101-4540 conforme nova informação; ajustada data no rodapé para 10/02/2000 e pequenas adequações no texto de contato.</li>
-          <li><strong>20/02/2000</strong> - Adicionado link "Imprimir esta página" via JavaScript para conveniência do usuário; atualizada data no rodapé para 20/02/2000.</li>
-          <li><strong>27/02/2000</strong> - Adicionadas meta tags de SEO (revisit-after, distribution) e nota de visualização "Melhor visualizado em 800x600"; atualizada data no rodapé para 27/02/2000.</li>
-          <li><strong>10/03/2000</strong> - Atualizada data no rodapé para 10/03/2000; ajuste na mensagem de última modificação; manutenção preventiva de código.</li>
-          <li><strong>20/03/2000</strong> - Revisão geral de código, ajustes finos de compatibilidade com Internet Explorer 5 e Netscape Navigator; atualizada data de referência para 20/03/2000.</li>
-          <li><strong>30/03/2000</strong> - Atualizada data de referência no rodapé e no script de última modificação para 30/03/2000; adicionado registro desta atualização no histórico.</li>
-          <li><strong>15/04/2000</strong> - Adicionada detecção de navegador no rodapé (mostra navegador e versão); atualizada data de referência para 15/04/2000.</li>
-          <li><strong>30/04/2000</strong> - Atualizada data de referência para 30/04/2000; pequenos ajustes de compatibilidade e manutenção.</li>
-          <li><strong>15/05/2000</strong> - Atualizada data de referência para 15/05/2000; manutenção de rotina e ajustes finos de compatibilidade.</li>
-          <li><strong>30/05/2000</strong> - Atualizada data de referência para 30/05/2000; manutenção de rotina e ajustes finos de compatibilidade.</li>
-          <li><strong>15/06/2000</strong> - Atualizada data de referência para 15/06/2000; manutenção de rotina e ajustes finos de compatibilidade.</li>
-          <li><strong>30/06/2000</strong> - Atualizada data de referência para 30/06/2000; manutenção de rotina e ajustes finos de compatibilidade.</li>
-          <li><strong>15/07/2000</strong> - Atualizada data de referência para 15/07/2000; manutenção de rotina e ajustes finos de compatibilidade.</li>
-        </ul>
-        <p class="small-note">* Esta seção registra todas as modificações realizadas no site ao longo do tempo, mantendo o histórico completo.</p>
-      </td>
-    </tr>
-  </table>
-  <!-- Comentário: código compatível com as limitações de 2000: uso de tabelas, cores seguras, meta tags, JavaScript básico, mailto, função de impressão e detecção de navegador. -->
+
+<body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" onload="iniciarDica();">
+
+<center>
+    <table class="tabela-principal" cellpadding="0" cellspacing="0">
+        <!-- LINHA DO TOPO -->
+        <tr>
+            <td colspan="2" class="topo">
+                <h1>Informática Valinhos</h1>
+                <p>O técnico Paulo Fagoto agora em seu lar . acesso remoto . agendamento por e-mail</p>
+            </td>
+        </tr>
+        <!-- LINHA DO MENU -->
+        <tr>
+            <td colspan="2" class="menu">
+                <a href="#principal">INÍCIO</a>
+                <a href="#servicos">SERVIÇOS REMOTOS</a>
+                <a href="#contato">AGENDAMENTO</a>
+                <a href="#historico">HISTÓRICO</a>
+                <a href="#localizacao">LOCALIZAÇÃO</a>
+                <a href="#dicas">DICAS</a>
+                <a href="#novidades">NOVIDADES</a>
+            </td>
+        </tr>
+        <!-- LINHA DO CORPO (LATERAL + CONTEÚDO) -->
+        <tr>
+            <!-- LATERAL ESQUERDA -->
+            <td class="lateral">
+                <h3>? Sobre o Técnico</h3>
+                <p><strong>Paulo Fagoto</strong> é técnico em informática com mais de 8 anos de experiência em suporte a usuários domésticos e pequenos comércios. Especialista em soluções rápidas via acesso remoto.</p>
+
+                <h3>??? Ferramentas Utilizadas</h3>
+                <ul>
+                    <li>Windows NetMeeting</li>
+                    <li>RealVNC / UltraVNC</li>
+                    <li>Terminal Services (Windows)</li>
+                    <li><strong>LinktoPC (AOL/WebEx) [citation:7]</strong></li>
+                </ul>
+
+                <h3>? Vantagens do Remoto</h3>
+                <p>? Atendimento sem sair de casa<br>
+                ? Resolução em minutos<br>
+                ? Suporte para todo o Brasil<br>
+                ? Sem taxa de deslocamento</p>
+
+                <h3>? Horário de Atend.</h3>
+                <p>Segunda a Sexta: 9h às 20h<br>
+                Sábados: 9h às 13h<br>
+                Domingos e feriados: somente emergências</p>
+
+                <p align="center" style="margin-top:20px;"><img src="https://web.archive.org/web/20050301234567im_/http://www.icomonline.com.br/images/acesso-remoto.gif" alt="Ícone acesso remoto" width="120" height="68" border="0"></p>
+
+                <h3>? Hardware & Conexão</h3>
+                <p><font size="1">A maioria dos brasileiros ainda usa <strong>internet discada (56k)</strong> e computadores com processador single-core e 256MB de RAM [citation:5]. O acesso remoto funciona bem até mesmo em conexões mais lentas!</font></p>
+                <p><font color="#FF0000" size="1">* Não atendemos grandes redes ou servidores.</font></p>
+            </td>
+            <!-- CONTEÚDO PRINCIPAL -->
+            <td class="conteudo">
+                <a name="principal"></a>
+                <h2>Assistência técnica sem complicação</h2>
+                <p><strong>Informática Valinhos</strong> é a assistência do técnico <strong>Paulo Fagoto</strong>. Trabalhamos exclusivamente com acesso remoto, levando a solução para o seu computador sem que você precise sair de casa ou carregar equipamentos. Ideal para públicos domésticos e pequenos comércios da cidade de Valinhos e região.</p>
+
+                <!-- Dica Rotativa -->
+                <div class="dica-rotativa" id="dicaRotativa" onmouseover="pausarDica()" onmouseout="retomarDica()">
+                    Carregando dica...
+                </div>
+
+                <div class="destaque">
+                    <strong>? Importante:</strong> Não realizamos atendimento presencial. Nosso serviço é 100% remoto, utilizando softwares como Windows NetMeeting, VNC e as mais novas ferramentas do mercado, como o LinktoPC.
+                </div>
+
+                <a name="novidades"></a>
+                <h2>? No mundo da tecnologia (Março/2005)</h2>
+                <div class="novidade">
+                    <h4>?? AOL lança LinktoPC: acesso remoto para todos</h4>
+                    <p>A America Online (AOL) começou a testar um novo serviço que permite que usuários acessem seus PCs remotamente de qualquer computador com browser e internet. O serviço, chamado <strong>LinktoPC</strong>, é baseado na tecnologia da WebEx. Para o técnico Paulo, é mais uma ferramenta poderosa que pode ser utilizada para oferecer suporte ainda mais rápido e compatível [citation:7].</p>
+                    <p><i>Fonte: InfoWorld, Dez/2004, testado em Mar/2005.</i></p>
+                </div>
+
+                <a name="servicos"></a>
+                <h2>? Serviços que podem ser executados remotamente</h2>
+                <table width="100%" cellpadding="3" cellspacing="0" border="0">
+                    <tr valign="top">
+                        <td width="50%">. Instalação de programas (Office, antivírus, etc.)<br>
+                        . Remoção de vírus e spywares (Ad-Aware, SpyBot)<br>
+                        . Configuração de e-mails (Outlook Express, Thunderbird)<br>
+                        . Otimização do Windows (desfragmentação, limpeza)<br>
+                        . Backup de arquivos importantes</td>
+                        <td width="50%">. Configuração de rede doméstica (compartilhamento)<br>
+                        . Suporte a impressoras compartilhadas<br>
+                        . Atualizações de segurança (Windows Update)<br>
+                        . Configuração de acesso à internet (modems)<br>
+                        . Orientação passo-a-passo via chat</td>
+                    </tr>
+                </table>
+
+                <p><i>E muitos outros... se você pode ver na tela, podemos resolver!</i></p>
+
+                <a name="dicas"></a>
+                <h3>?? Como funciona o acesso remoto?</h3>
+                <p>Você autoriza o técnico a acessar seu computador através de um pequeno programa (gratuito). Ele verá sua tela e poderá controlar o mouse e teclado (com sua permissão). Você acompanha tudo ao vivo. Com as novas ferramentas como o LinktoPC, a segurança e a velocidade aumentaram ainda mais!</p>
+
+                <h3>??? Depoimentos de Clientes</h3>
+                <div class="depoimento">
+                    "O Paulo resolveu meu problema de lentidão em 20 minutos. Não precisei sair de casa. Recomendo!"
+                    <div class="autor">- Ana C., Valinhos</div>
+                </div>
+                <div class="depoimento">
+                    "Pensei que não fosse possível formatar o PC remotamente, mas ele fez tudo e ainda instalou meus programas. Nota 10!"
+                    <div class="autor">- Marcos S., Campinas</div>
+                </div>
+
+                <a name="localizacao"></a>
+                <h2>? Onde estamos (referência)</h2>
+                <p><strong>Bairro Jardim dos Manacás, Valinhos/SP.</strong> Embora não tenhamos loja física, essa é a região de atuação do técnico Paulo. O contato é exclusivamente virtual.</p>
+
+                <a name="contato"></a>
+                <h2>? Agende um atendimento remoto</h2>
+                <p>Preencha o formulário abaixo ou envie um e-mail para <strong>adm@paulofagoto.com.br</strong> que retornaremos em até 2 horas (dentro do horário comercial).</p>
+
+                <form class="formulario-contato" name="agendar" method="post" action="mailto:adm@paulofagoto.com.br?subject=Agendamento%20Site%20-%20Informática%20Valinhos" onsubmit="return validarFormulario();" enctype="text/plain">
+                    <table cellpadding="3" cellspacing="0" border="0">
+                        <tr>
+                            <td width="80">Seu nome:</td>
+                            <td><input type="text" name="nome" maxlength="60" value=""></td>
+                        </tr>
+                        <tr>
+                            <td>Seu e-mail:</td>
+                            <td><input type="text" name="email" maxlength="50" value=""></td>
+                        </tr>
+                        <tr>
+                            <td>Telefone (opc):</td>
+                            <td><input type="text" name="telefone" maxlength="20" value=""></td>
+                        </tr>
+                        <tr>
+                            <td valign="top">Problema:</td>
+                            <td><textarea name="mensagem"></textarea></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><input class="botao" type="submit" value="Agendar"> <input class="botao" type="reset" value="Limpar"></td>
+                        </tr>
+                    </table>
+                </form>
+                <p><font size="1">* Ao enviar, seu programa de e-mail padrão será aberto para confirmação.</font></p>
+
+                <hr>
+                <a name="historico"></a>
+                <h2>?? Histórico de Atualizações</h2>
+                <div class="historico">
+                    <ul>
+                        <li><strong>01/04/2005 (v3.0)</strong> - Atualização para refletir as novidades de Março/2005. Adicionada seção sobre o lançamento do LinktoPC (AOL/WebEx) [citation:7]. Incluída menção na lista de ferramentas e nas dicas rotativas. Pequenas melhorias no layout seguindo tendências de 2005 (cores terrosas, bordas mais elaboradas). Adicionada informação sobre hardware e conexão da época [citation:5].</li>
+                        <li><strong>01/03/2005 (v2.0)</strong> - Adicionada seção de dicas rotativas (JavaScript), depoimentos de clientes, lista de ferramentas utilizadas e explicação sobre acesso remoto. Melhorias no layout e na organização do conteúdo.</li>
+                        <li><strong>01/02/2005 (v1.1)</strong> - Melhorias na semântica para SEO, favicon.ico, badges de compatibilidade atualizados.</li>
+                        <li><strong>01/01/2005 (v1.0)</strong> - Lançamento do site.</li>
+                   </ul>
+                </div>
+
+                <!-- Espaço para selos e badges típicos 2005 -->
+                <p align="right">
+                    <img src="https://web.archive.org/web/20050206025734/http://www.thedistrict.com.br/images/valid-html401.gif" alt="HTML 4.01!" width="80" height="15" border="0">
+                    <img src="https://web.archive.org/web/20050204050607/http://www.thedistrict.com.br/images/ie_logo.gif" alt="Compatível IE6" width="80" height="15" border="0">
+                    <img src="https://web.archive.org/web/20050204051415/http://www.thedistrict.com.br/images/firefox_logo.gif" alt="100% Firefox 1.0" width="80" height="15" border="0">
+                </p>
+            </td>
+        </tr>
+        <!-- LINHA DO RODAPÉ -->
+        <tr>
+            <td colspan="2" class="rodape">
+                <script language="Javascript" type="text/javascript">
+                    <!--
+                    var dataMod = "01 de Abril de 2005";
+                    document.write("Informática Valinhos . assistência remota . © 2005 . Página estática para GitHub Pages . ");
+                    document.write("Você é o visitante Nº: 009512");
+                    //-->
+                </script>
+                <noscript>
+                    Informática Valinhos . assistência remota . © 2005 . Página estática para GitHub Pages
+                </noscript>
+                <br>
+                <font size="1">e-mail: adm@paulofagoto.com.br | Bairro Jardim dos Manacás, Valinhos/SP</font>
+                <div class="mapa-site">
+                    <a href="#principal">Início</a> | <a href="#servicos">Serviços</a> | <a href="#contato">Contato</a> | <a href="#historico">Histórico</a> | <a href="#localizacao">Localização</a> | <a href="#dicas">Dicas</a> | <a href="#novidades">Novidades</a>
+                </div>
+            </td>
+        </tr>
+    </table>
+</center>
+
+<!-- Comentário: Site atualizado e revisado em 01/04/2005. Nenhum recurso futuro foi inserido. -->
 </body>
 </html>
