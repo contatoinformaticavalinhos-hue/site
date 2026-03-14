@@ -1,770 +1,660 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="pt-br" xmlns:v="http://rdf.data-vocabulary.org/#" xmlns:foaf="http://xmlns.com/foaf/0.1/">
 <head>
-    <!-- 
-        SITE ATUALIZADO EM 01/08/1997
-        NENHUMA TECNOLOGIA OU REFERÊNCIA POSTERIOR A ESTA DATA FOI UTILIZADA.
-        HARDWARE ALVO: PROCESSADOR 486/PENTIUM, 8-16MB RAM, MODEM 28.8-33.6 Kbps,
-        MONITOR 640x480 (16 ou 256 cores).
-        NAVEGADORES: NETSCAPE NAVIGATOR 3.x / 4.0, MICROSOFT INTERNET EXPLORER 3.x / 4.0 BETA.
-        NOVIDADES: CALCULADORA DE DOWNLOAD, SOFTWARES RECOMENDADOS, CONTADOR DE CARACTERES,
-        NOTÍCIAS ATUALIZADAS, MELHORIAS NO LAYOUT.
-    -->
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta http-equiv="Content-Language" content="pt-br">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Cache-Control" content="public, max-age=43200">
+<meta http-equiv="Pragma" content="public">
+<meta http-equiv="Expires" content="Sat, 07 Jan 2005 00:00:00 GMT">
+<meta http-equiv="X-UA-Compatible" content="IE=5">
 
-    <title>Informática Valinhos - Assistência Remota do Técnico Paulo Fagoto</title>
-    <meta name="description" content="Informática Valinhos - Assistência técnica em informática via acesso remoto. Atendimento para público doméstico e pequenos comércios em Valinhos/SP. Técnico Paulo Fagoto.">
-    <meta name="keywords" content="assistência técnica informática Valinhos, acesso remoto, suporte computador, técnico Paulo Fagoto, manutenção PC, pequeno comércio, Jardim dos Manacás, Windows 95, Netscape 4, IE4, download, software">
-    <meta name="author" content="Paulo Fagoto">
-    <meta name="robots" content="index,follow">
-    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<!-- P3P Privacy Policy (existente em 2005) -->
+<meta http-equiv="P3P" content='CP="IDC DSP COR ADM DEVi TAIi PSA PSD IVAi IVDi CONi HIS TELi OUR IND CNT"'>
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Default-Style" content="principal">
 
+<!-- Meta tags para WAP (navegadores de celular) -->
+<meta name="viewport" content="width=device-width">
+<meta name="HandheldFriendly" content="true">
+<meta name="MobileOptimized" content="240">
+
+<!-- Dublin Core Metadata (existente desde 1995, popular em 2005) -->
+<meta name="DC.title" content="Paulo Henrique Fagoto - Técnico em Informática">
+<meta name="DC.creator" content="Paulo Henrique Fagoto">
+<meta name="DC.subject" content="Técnico em informática em Valinhos/SP">
+<meta name="DC.description" content="Página profissional de técnico em informática em Valinhos">
+<meta name="DC.publisher" content="Paulo Henrique Fagoto">
+<meta name="DC.contributor" content="Paulo Henrique Fagoto">
+<meta name="DC.date" content="2005-01-06">
+<meta name="DC.type" content="Text">
+<meta name="DC.format" content="text/html">
+<meta name="DC.identifier" content="http://www.paulohenrique.tec.br">
+<meta name="DC.language" content="pt">
+<meta name="DC.rights" content="Copyright 2005 Paulo Henrique Fagoto">
+
+<!-- Meta tags tradicionais melhoradas -->
+<meta name="author" content="Paulo Henrique Fagoto">
+<meta name="robots" content="index, follow, all, archive, snippet">
+<meta name="description" content="Paulo Henrique Fagoto - Técnico em informática em Valinhos/SP - Atendimento profissional em informática - Manutenção de computadores e suporte técnico">
+<meta name="keywords" content="técnico em informática, Valinhos, SP, suporte técnico, manutenção de computadores, assistência técnica, informática, microcomputadores, técnico em Valinhos, manutenção de PCs, hardware, software, redes, internet, Valinhos São Paulo">
+<meta name="rating" content="general">
+<meta name="distribution" content="global">
+<meta name="revisit-after" content="3 days">
+<meta name="generator" content="Macromedia Dreamweaver MX 2004 + TopStyle Pro">
+<meta name="copyright" content="Paulo Henrique Fagoto 2005">
+<meta name="language" content="pt-br">
+<meta name="doc-type" content="Web Page">
+<meta name="doc-class" content="Completed">
+<meta name="doc-rights" content="Public">
+<meta name="target" content="all">
+<meta name="audience" content="all">
+<meta name="page-type" content="Professional Profile">
+
+<!-- Favicon com fallback para IE (técnica de 2005) -->
+<link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD8A/gAAAAD8A/wD8AAAAAA" type="image/x-icon">
+<link rel="icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD8A/gAAAAD8A/wD8AAAAAA" type="image/x-icon">
+
+<!-- RDF Metadata (Web Semântica) -->
+<link rel="meta" type="application/rdf+xml" title="FOAF" href="#foaf">
+<link rel="meta" type="application/rdf+xml" title="RDF" href="#rdf">
+
+<!-- CSS principal otimizado -->
+<style type="text/css" title="principal">
+<!--
+
+/* === RESET E CONFIGURAÇÕES GLOBAIS === */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #F5F5F5 url('data:image/gif;base64,R0lGODlhAQBkAIAAAP///wAAACH5BAEAAAAALAAAAAABAGQAAAIDhI9W') repeat-x;
+    font-family: 'Lucida Grande', Verdana, Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: #222222;
+    text-align: center;
+    line-height: 1.6;
+}
+
+/* === CONTAINER PRINCIPAL - CSS SPRITE (técnica emergente) === */
+.container {
+    width: 740px;
+    margin: 60px auto 30px;
+    text-align: left;
+    background: #FFFFFF url('data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==') repeat-y right;
+    padding: 35px 35px 25px;
+    border: 1px solid #DDDDDD;
+    border-top: 4px solid #444444;
+    position: relative;
+}
+
+/* === CONTEÚDO PRINCIPAL COM DESTAQUE === */
+.conteudo {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 22px;
+    line-height: 1.8;
+    color: #111111;
+    padding: 15px 20px;
+    background: #FEFEFE;
+    border-left: 4px solid #666666;
+    margin: 5px 0 10px 5px;
+    text-shadow: #CCCCCC 1px 1px 0;
+}
+
+/* === LINHA DIVISÓRIA DECORATIVA === */
+hr {
+    height: 0;
+    background: transparent;
+    border: 0;
+    border-top: 1px solid #E0E0E0;
+    border-bottom: 1px solid #F8F8F8;
+    margin: 25px 0 25px;
+    clear: both;
+}
+
+/* === HISTÓRICO DE ATUALIZAÇÕES - DESIGN REFINADO === */
+.historico {
+    font-size: 12px;
+    color: #333333;
+    margin: 25px 0 20px;
+    border: 1px solid #EEEEEE;
+    padding: 20px 20px 15px;
+    background: #FAFAFA;
+}
+
+.historico h3 {
+    font-size: 14px;
+    color: #333333;
+    font-weight: bold;
+    margin-bottom: 15px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #DDDDDD;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: 'Lucida Grande', Arial, sans-serif;
+}
+
+.historico table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 11px;
+    margin: 5px 0;
+}
+
+.historico th {
+    text-align: left;
+    font-weight: normal;
+    color: #666666;
+    font-size: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #CCCCCC;
+    display: none;
+}
+
+.historico td {
+    padding: 10px 0;
+    border-bottom: 1px solid #E8E8E8;
+    vertical-align: top;
+}
+
+.historico .data {
+    font-weight: bold;
+    width: 75px;
+    color: #222222;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 11px;
+    background: transparent;
+    padding-left: 0;
+}
+
+.historico .descricao {
+    color: #444444;
+    padding-left: 15px;
+    padding-right: 5px;
+    border-left: 1px solid #DDDDDD;
+}
+
+.historico tr:hover td {
+    background-color: #F5F5F5;
+}
+
+.historico tr:last-child td {
+    border-bottom: none;
+}
+
+/* === RODAPÉ COM INFORMAÇÕES COMPLETAS === */
+.rodape {
+    font-size: 10px;
+    color: #666666;
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 15px;
+    border-top: 2px solid #EEEEEE;
+    clear: both;
+}
+
+.rodape p {
+    margin: 5px 0;
+    line-height: 1.5;
+}
+
+.validador {
+    margin-top: 15px;
+    font-size: 9px;
+    color: #888888;
+}
+
+.validador a {
+    color: #555555;
+    text-decoration: none;
+    border-bottom: 1px dotted #AAAAAA;
+    padding-bottom: 1px;
+    margin: 0 5px;
+}
+
+.validador a:hover {
+    color: #003399;
+    border-bottom: 1px solid #003399;
+}
+
+/* === LINKS COM ESTADOS COMPLETOS === */
+a:link {
+    color: #003366;
+    text-decoration: underline;
+}
+
+a:visited {
+    color: #663399;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: #CC3300;
+    text-decoration: underline;
+}
+
+a:active {
+    color: #FF0000;
+    text-decoration: underline;
+}
+
+/* === CLASSES DE UTILIDADE === */
+.clear {
+    clear: both;
+    height: 1px;
+    font-size: 1px;
+    line-height: 1px;
+    visibility: hidden;
+}
+
+/* === MICROFORMATAÇÃO AVANÇADA === */
+.vcard {
+    display: inline;
+}
+
+.fn {
+    font-weight: normal;
+}
+
+.locality {
+    font-style: normal;
+}
+
+/* === ESTILO PARA IMPRESSÃO MELHORADO === */
+@media print {
+    body {
+        background: white;
+        font-size: 12pt;
+        font-family: 'Times New Roman', Times, serif;
+        color: black;
+        line-height: 1.4;
+    }
+    .container {
+        width: 100%;
+        margin: 0.25in 0;
+        padding: 0.1in;
+        border: none;
+        background: white;
+    }
+    .conteudo {
+        font-size: 16pt;
+        border-left: none;
+        padding-left: 0;
+        margin-left: 0;
+        text-shadow: none;
+        background: white;
+    }
+    .rodape, .validador, hr {
+        display: none;
+    }
+    .historico {
+        border: 1pt solid #CCCCCC;
+        background: white;
+        page-break-inside: avoid;
+    }
+    .historico td {
+        border-bottom: 1pt solid #CCCCCC;
+    }
+    .historico .descricao {
+        border-left: 1pt solid #CCCCCC;
+    }
+    a {
+        color: black;
+        text-decoration: none;
+    }
+    a:after {
+        content: " (" attr(href) ")";
+        font-size: 10pt;
+        font-style: italic;
+    }
+}
+
+/* === ESTILO PARA DISPOSITIVOS MÓVEIS (WAP 2.0) === */
+@media handheld, only screen and (max-width: 480px) {
+    body {
+        font-size: 12px;
+        background: #FFFFFF;
+    }
+    .container {
+        width: 95%;
+        margin: 10px auto;
+        padding: 10px;
+        border-top: 2px solid #666666;
+    }
+    .conteudo {
+        font-size: 16px;
+        border-left-width: 2px;
+        padding: 10px;
+        margin: 0;
+    }
+    .historico table, .historico td, .historico .data, .historico .descricao {
+        display: block;
+        width: 100%;
+        border-left: none;
+        padding-left: 0;
+    }
+    .historico .data {
+        font-weight: bold;
+        margin-top: 10px;
+    }
+    .historico .descricao {
+        margin-bottom: 10px;
+    }
+    .validador a {
+        display: inline-block;
+        margin: 2px;
+    }
+}
+
+/* === SUPORTE A TELAS MAIORES (1024x768+) === */
+@media screen and (min-width: 1024px) {
+    .container {
+        width: 960px;
+        margin-top: 80px;
+    }
+    .conteudo {
+        font-size: 24px;
+    }
+}
+
+/* === CSS SPRITE (técnica de otimização) === */
+.sprite {
+    background-image: url('data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==');
+    background-repeat: no-repeat;
+    display: inline-block;
+}
+
+-->
+</style>
+
+<!-- Estilo alternativo (prática de acessibilidade) -->
+<style type="text/css" title="alto-contraste">
+<!--
+body, .container, .conteudo, .historico {
+    background: #000000 !important;
+    color: #FFFF00 !important;
+    border-color: #FFFFFF !important;
+}
+a {
+    color: #00FFFF !important;
+}
+-->
+</style>
+
+<!-- Versão alternativa para IE 5/6 com hacks específicos -->
+<!--[if lte IE 6]>
+<style type="text/css">
+.container {
+    width: 780px;
+    margin-top: 60px;
+    padding: 25px 25px 20px;
+    background-image: none;
+}
+.conteudo {
+    border-left: 2px solid #999999;
+    padding-left: 10px;
+    text-shadow: none;
+}
+.historico {
+    background: #FFFFFF;
+}
+.historico td {
+    border-bottom: 1px solid #CCCCCC;
+}
+.historico .descricao {
+    border-left: 1px solid #CCCCCC;
+}
+body {
+    background-image: none;
+    background-color: #EEEEEE;
+}
+</style>
+<![endif]-->
+
+<!-- Estilos específicos para IE 5.5 e anteriores (box model hack) -->
+<!--[if lt IE 5.5]>
+<style type="text/css">
+.container {
+    width: 95%;
+    padding: 15px;
+}
+.conteudo {
+    border-left: 0;
+    padding-left: 0;
+}
+</style>
+<![endif]-->
+
+<!-- Estilos para IE 4 (sem suporte a CSS avançado) -->
+<!--[if IE 4]>
+<style type="text/css">
+body {
+    font-size: 12px;
+    background: #FFFFFF;
+}
+.container {
+    width: 95%;
+    margin: 20px auto;
+}
+.historico table {
+    width: 100%;
+}
+</style>
+<![endif]-->
+
+<!-- Detecção inteligente de navegadores -->
+<script language="JavaScript" type="text/javascript">
+<!--
+(function() {
+    var ua = navigator.userAgent.toLowerCase();
+    var app = navigator.appName;
+    var ver = parseInt(navigator.appVersion);
+    
+    // Netscape 4
+    if (app == "Netscape" && ver == 4) {
+        document.write('<style type="text/css">\n');
+        document.write('body { font-size: 12px; background: #FFFFFF; }\n');
+        document.write('.container { width: 90%; margin: 30px auto; border: 1px solid #999999; }\n');
+        document.write('.conteudo { font-size: 18px; border-left: 0; }\n');
+        document.write('.historico { border: 1px solid #CCCCCC; }\n');
+        document.write('<\/style>');
+    }
+    
+    // Opera antigo (pré-7)
+    if (ua.indexOf('opera') != -1 && ua.indexOf('opera 7') == -1) {
+        document.write('<style type="text/css">\n');
+        document.write('.container { width: 750px; }\n');
+        document.write('<\/style>');
+    }
+    
+    // Safari 1.x
+    if (ua.indexOf('safari') != -1 && ua.indexOf('safari/') != -1) {
+        var safariVer = parseFloat(ua.split('safari/')[1]);
+        if (safariVer < 312) {
+            document.write('<style type="text/css">\n');
+            document.write('.conteudo { font-family: Times, serif; }\n');
+            document.write('<\/style>');
+        }
+    }
+    
+    // Detecção de celulares (WAP)
+    if (ua.indexOf('nokia') != -1 || ua.indexOf('ericsson') != -1 || ua.indexOf('motorola') != -1) {
+        document.write('<style type="text/css">\n');
+        document.write('body { font-size: 11px; }\n');
+        document.write('.container { width: 95%; margin: 5px auto; padding: 5px; }\n');
+        document.write('.conteudo { font-size: 14px; }\n');
+        document.write('.validador { display: none; }\n');
+        document.write('<\/style>');
+    }
+})();
+//-->
+</script>
+
+<!-- Fallback para navegadores sem JavaScript -->
+<noscript>
     <style type="text/css">
-        <!-- 
-        /* CSS1 atualizado com tons de azul */
-        body {
-            font-family: Verdana, Arial, Helvetica, sans-serif;
-            font-size: 10pt;
-            color: #000000;
-            background-color: #B0C4DE; /* Azul claro estilo LightSteelBlue */
-            margin: 10px;
-        }
-        .fonte-pequena { font-size: 9pt; }
-        .fonte-normal { font-size: 10pt; }
-        .fonte-grande { font-size: 12pt; }
-        .fonte-muito-grande { font-size: 14pt; }
-
-        .titulo-principal {
-            font-size: 20pt;
-            font-weight: bold;
-            color: #003366;
-            letter-spacing: 1px;
-        }
-        .subtitulo {
-            font-size: 12pt;
-            font-weight: bold;
-            color: #993333;
-            font-style: italic;
-        }
-        .destaque { font-weight: bold; color: #006600; }
-
-        .historico-item {
-            font-size: 9pt;
-            color: #404040;
-            margin-bottom: 10px;
-            border-bottom: 1px dotted #808080;
-            padding-bottom: 5px;
-        }
-        .data-topo {
-            font-size: 8pt;
-            color: #FFFFCC;
-            text-align: right;
-            border-bottom: 1px solid #C0C0C0;
-            padding-bottom: 2px;
-            margin-bottom: 5px;
-        }
-        .dica-box {
-            background-color: #FFFFE0;
-            border: 2px solid #C0C0C0;
-            padding: 8px;
-            margin: 10px 0;
-            font-size: 9pt;
-            text-align: center;
-        }
-        .depoimento {
-            background-color: #F0F0F0;
-            border: 1px solid #808080;
-            padding: 6px;
-            margin: 5px 0;
-            font-size: 9pt;
-            font-style: italic;
-        }
-        .depoimento-autor {
-            text-align: right;
-            font-weight: bold;
-            font-size: 8pt;
-        }
-        .tabela-3d {
-            border: 2px outset #E0E0E0;
-            background-color: #FFFFFF;
-        }
-        .compat-badge {
-            background-color: #C0C0C0;
-            border: 2px groove #404040;
-            padding: 3px;
-            font-size: 8pt;
-            text-align: center;
-            width: 200px;
-        }
-        .noticia {
-            background-color: #E0E0E0;
-            border: 1px solid #404040;
-            padding: 4px;
-            margin: 5px 0;
-            font-size: 9pt;
-        }
-        .noticia-data {
-            font-weight: bold;
-            color: #800000;
-        }
-        .relogio {
-            font-size: 8pt;
-            color: #FFFFCC;
-            background-color: #404040;
-            padding: 2px 4px;
-            border: 1px solid #C0C0C0;
-            display: inline-block;
-        }
-        .soft-list {
-            background-color: #F8F8FF;
-            border: 1px solid #808080;
-            padding: 5px;
-            margin: 5px 0;
-            font-size: 9pt;
-        }
-        .soft-item {
-            font-weight: bold;
-            color: #000080;
-        }
-        .calc-box {
-            background-color: #E0E0E0;
-            border: 1px solid #404040;
-            padding: 8px;
-            margin: 10px 0;
-        }
-        .novo {
-            color: #FF0000;
-            font-weight: bold;
-            font-size: 8pt;
-        }
-        a:link { color: #0000CC; }
-        a:visited { color: #660099; }
-        a:active { color: #FF0000; }
-        a:hover { text-decoration: underline; color: #FF6600; }
-        -->
+    <!--
+    body { background: #FFFFFF; }
+    .container { border: 1px solid #CCCCCC; }
+    .conteudo { border-left: 2px solid #999999; }
+    -->
     </style>
+</noscript>
 
-    <script language="JavaScript"><!--
-        // Array de dicas (expandido)
-        var dicas = [
-            "Para acesso remoto, recomendo o WinVNC (gratuito) ou o PCAnywhere (comercial).",
-            "Mantenha seu Windows 95 atualizado com o Service Pack 1 da Microsoft.",
-            "Antes da conexão, feche todos os programas desnecessários para liberar memória.",
-            "Conexões discadas funcionam melhor com modems de 33.6 Kbps ou mais.",
-            "Anote seu número de série do Windows, pode ser útil.",
-            "Se possível, tenha um telefone por perto durante o atendimento remoto.",
-            "O backup de seus documentos é sempre recomendado antes de qualquer manutenção.",
-            "Vírus de macro em documentos do Word são comuns; evite abrir anexos suspeitos.",
-            "O Windows 95 OSR2 (com FAT32) já está disponível em alguns computadores novos.",
-            "Para segurança, evite usar disquetes de procedência duvidosa.",
-            "Netscape Communicator 4.0 já está disponível! O site é compatível.",
-            "Internet Explorer 4.0 beta 2 funciona bem; a versão final deve sair em breve.",
-            "Mantenha seu antivírus atualizado; novos vírus aparecem toda semana.",
-            "Modems de 56k estão chegando! A conexão será ainda mais rápida.",
-            "Sites como Tucows e Shareware.com são ótimos para baixar softwares."
-        ];
-
-        function mostraDicaDoDia() {
-            var agora = new Date();
-            var dia = agora.getDate();
-            var indice = (dia - 1) % dicas.length;
-            document.write("<div class='dica-box'><b>Dica do dia " + dia + ":</b> " + dicas[indice] + "</div>");
-        }
-
-        // Cookies
-        function setCookie(nome, valor, dias) {
-            var dataExpiracao = new Date();
-            dataExpiracao.setDate(dataExpiracao.getDate() + dias);
-            document.cookie = nome + "=" + escape(valor) + "; expires=" + dataExpiracao.toGMTString() + "; path=/";
-        }
-
-        function getCookie(nome) {
-            var cookies = document.cookie.split('; ');
-            for (var i = 0; i < cookies.length; i++) {
-                var cookie = cookies[i].split('=');
-                if (cookie[0] == nome) return unescape(cookie[1]);
-            }
-            return null;
-        }
-
-        function mostraSaudacaoPersonalizada() {
-            var agora = new Date();
-            var diasSemana = new Array("Domingo", "Segunda-feira", "Terça-feira", "Quarta-feira", "Quinta-feira", "Sexta-feira", "Sábado");
-            var meses = new Array("janeiro", "fevereiro", "março", "abril", "maio", "junho", "julho", "agosto", "setembro", "outubro", "novembro", "dezembro");
-            var diaSemana = diasSemana[agora.getDay()];
-            var diaMes = agora.getDate();
-            var mes = meses[agora.getMonth()];
-            var ano = agora.getFullYear();
-            if (ano > 1997) ano = 1997;
-
-            var nomeVisitante = getCookie("nomeVisitante");
-            var saudacaoExtra = "";
-            if (nomeVisitante) {
-                saudacaoExtra = " - Bem-vindo de volta, " + nomeVisitante + "!";
-            } else {
-                saudacaoExtra = " - Bem-vindo! Se preferir, preencha seu nome no formulário para ser lembrado.";
-            }
-
-            document.write("<div class='data-topo'>" + diaSemana + ", " + diaMes + " de " + mes + " de " + ano + saudacaoExtra + "</div>");
-        }
-
-        function mostraContadorVisitas() {
-            var visitas = getCookie("contadorVisitas");
-            if (visitas == null) {
-                visitas = 1;
-            } else {
-                visitas = parseInt(visitas) + 1;
-            }
-            setCookie("contadorVisitas", visitas, 365);
-            document.write("<span class='data-topo' style='float:left;'>Visitas: " + visitas + "</span>");
-        }
-
-        // Relógio
-        function atualizaRelogio() {
-            var agora = new Date();
-            var horas = agora.getHours();
-            var minutos = agora.getMinutes();
-            var segundos = agora.getSeconds();
-            if (horas < 10) horas = "0" + horas;
-            if (minutos < 10) minutos = "0" + minutos;
-            if (segundos < 10) segundos = "0" + segundos;
-            var horario = horas + ":" + minutos + ":" + segundos;
-            if (document.getElementById) {
-                var relogioSpan = document.getElementById("relogio");
-                if (relogioSpan) relogioSpan.innerHTML = horario;
-            } else {
-                document.write("<span class='relogio'>" + horario + "</span>");
-            }
-            setTimeout("atualizaRelogio()", 1000);
-        }
-
-        function mostraRelogio() {
-            document.write("<span id='relogio' class='relogio'></span>");
-            setTimeout("atualizaRelogio()", 500);
-        }
-
-        // Calculadora de tempo de download
-        function calcularDownload() {
-            var tamanho = parseFloat(document.forms["calcForm"]["tamanho"].value);
-            var velocidade = parseFloat(document.forms["calcForm"]["velocidade"].value);
-            if (isNaN(tamanho) || tamanho <= 0 || isNaN(velocidade) || velocidade <= 0) {
-                alert("Por favor, preencha valores válidos (maiores que zero).");
-                return;
-            }
-            // Converter MB para kilobits: 1 MB = 8 * 1024 = 8192 Kb
-            var tamanhoKb = tamanho * 8192;
-            var tempoSegundos = tamanhoKb / velocidade;
-            var horas = Math.floor(tempoSegundos / 3600);
-            var minutos = Math.floor((tempoSegundos % 3600) / 60);
-            var segundos = Math.floor(tempoSegundos % 60);
-            var resultado = "";
-            if (horas > 0) resultado += horas + " hora(s) ";
-            if (minutos > 0) resultado += minutos + " minuto(s) ";
-            resultado += segundos + " segundo(s)";
-            document.getElementById("resultadoDownload").innerHTML = resultado;
-        }
-
-        // Contador de caracteres da mensagem
-        function atualizaContador() {
-            var msg = document.forms["contatoForm"]["mensagem"].value;
-            var cont = msg.length;
-            document.getElementById("contadorMsg").innerHTML = cont + " caracteres (máx 500)";
-            if (cont > 500) {
-                document.getElementById("contadorMsg").style.color = "#FF0000";
-            } else {
-                document.getElementById("contadorMsg").style.color = "#000000";
-            }
-        }
-
-        // Função de validação do formulário (adaptada)
-        function validaForm() {
-            var nome = document.forms["contatoForm"]["nome"].value;
-            var email = document.forms["contatoForm"]["email"].value;
-            var mensagem = document.forms["contatoForm"]["mensagem"].value;
-            var telefone = document.forms["contatoForm"]["telefone"].value;
-            var lembrar = document.forms["contatoForm"]["lembrar"].checked;
-
-            if (nome == "" || email == "" || mensagem == "") {
-                alert("Por favor, preencha os campos Nome, E-mail e Mensagem.");
-                return false;
-            }
-            if (email.indexOf('@') == -1 || email.indexOf('.') == -1 || email.length < 5) {
-                alert("Insira um endereço de e-mail válido (ex: nome@provedor.com.br).");
-                return false;
-            }
-            if (telefone != "" && telefone.length < 8) {
-                alert("Se informar telefone, use pelo menos 8 dígitos (com DDD).");
-                return false;
-            }
-            if (mensagem.length > 500) {
-                alert("Sua mensagem excedeu 500 caracteres. Por favor, resuma.");
-                return false;
-            }
-            if (lembrar) {
-                setCookie("nomeVisitante", nome, 30);
-            }
-            alert("Formulário válido! Seu programa de e-mail será aberto para envio.");
-            return true;
-        }
-
-        function mostraFAQ(id) {
-            if (document.getElementById) {
-                var elem = document.getElementById(id);
-                if (elem.style.display == "none") {
-                    elem.style.display = "";
-                } else {
-                    elem.style.display = "none";
-                }
-            } else {
-                alert("Seu navegador não suporta este recurso. Acesse a FAQ diretamente.");
-            }
-        }
-
-        function mudaFonte(tamanho) {
-            document.body.className = "";
-            if (tamanho == 'pequena') {
-                document.body.className = "fonte-pequena";
-            } else if (tamanho == 'normal') {
-                document.body.className = "fonte-normal";
-            } else if (tamanho == 'grande') {
-                document.body.className = "fonte-grande";
-            } else if (tamanho == 'muito-grande') {
-                document.body.className = "fonte-muito-grande";
-            }
-            setCookie("tamanhoFonte", tamanho, 30);
-        }
-
-        function carregaFonte() {
-            var tamanho = getCookie("tamanhoFonte");
-            if (tamanho) {
-                mudaFonte(tamanho);
-            }
-        }
-
-        function adicionarBookmark() {
-            var titulo = document.title;
-            var url = window.location.href;
-            if (window.sidebar && window.sidebar.addPanel) {
-                window.sidebar.addPanel(titulo, url, "");
-            } else if (window.external && window.external.AddFavorite) {
-                window.external.AddFavorite(url, titulo);
-            } else {
-                alert("Pressione Ctrl+D (Windows) ou Command+D (Mac) para adicionar aos favoritos.");
-            }
-        }
-
-        function enviarPorEmail() {
-            var assunto = "Recomendo: Informática Valinhos";
-            var corpo = "Olá! Vi este site de assistência técnica remota e achei que poderia te interessar: " + window.location.href;
-            window.location.href = "mailto:?subject=" + escape(assunto) + "&body=" + escape(corpo);
-        }
-
-        function overLink(el) {
-            el.style.color = "#FF6600";
-        }
-        function outLink(el) {
-            el.style.color = "#0000CC";
-        }
-    //--></script>
+<!-- RDF/FOAF embutido (Web Semântica) -->
+<script type="application/rdf+xml" id="foaf">
+<!--
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:foaf="http://xmlns.com/foaf/0.1/">
+  <foaf:Person>
+    <foaf:name>Paulo Henrique Fagoto</foaf:name>
+    <foaf:title>Técnico em Informática</foaf:title>
+    <foaf:based_near rdf:resource="http://www.geonames.org/3445609/"/>
+    <foaf:mbox_sha1sum>3e4c5a5b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f</foaf:mbox_sha1sum>
+    <foaf:homepage rdf:resource="http://www.paulohenrique.tec.br"/>
+  </foaf:Person>
+</rdf:RDF>
+-->
+</script>
 
 </head>
 
-<body bgcolor="#B0C4DE" text="#000000" link="#0000CC" vlink="#660099" alink="#FF0000" onload="carregaFonte();">
+<body>
 
-    <center>
-        <table width="600" border="0" cellpadding="4" cellspacing="2" bgcolor="#FFFFFF" class="tabela-3d">
-            <tr><td bgcolor="#C0C0C0" height="2" colspan="2"></td></tr>
-            <tr>
-                <td>
-                    <table width="100%" border="0" cellpadding="8" cellspacing="0" bgcolor="#FFFFFF">
-                        <tr>
-                            <td>
-
-                                <!-- TOPO -->
-                                <table width="100%" border="0" cellpadding="2" cellspacing="0">
-                                    <tr>
-                                        <td width="30%" valign="top">
-                                            <script language="JavaScript"><!--
-                                                mostraContadorVisitas();
-                                            //--></script>
-                                            <br>
-                                            <script language="JavaScript"><!--
-                                                mostraRelogio();
-                                            //--></script>
-                                            <noscript><span class="relogio">[Relógio]</span></noscript>
-                                        </td>
-                                        <td width="70%" valign="top">
-                                            <script language="JavaScript"><!--
-                                                mostraSaudacaoPersonalizada();
-                                            //--></script>
-                                            <noscript><div class="data-topo">1º de agosto de 1997 - <i>Bem-vindo!</i></div></noscript>
-                                        </td>
-                                    </tr>
-                                </table>
-
-                                <!-- CABEÇALHO -->
-                                <table width="100%" border="0" cellpadding="0" cellspacing="0">
-                                    <tr>
-                                        <td>
-                                            <h1 class="titulo-principal">Informática Valinhos</h1>
-                                            <h2 class="subtitulo">Técnico Paulo Fagoto</h2>
-                                        </td>
-                                        <td align="right" valign="top">
-                                            <font size="-2">
-                                                <b>Fonte:</b>
-                                                <a href="#" onClick="mudaFonte('pequena'); return false;" onmouseover="overLink(this)" onmouseout="outLink(this)">A-</a>
-                                                <a href="#" onClick="mudaFonte('normal'); return false;" onmouseover="overLink(this)" onmouseout="outLink(this)">A</a>
-                                                <a href="#" onClick="mudaFonte('grande'); return false;" onmouseover="overLink(this)" onmouseout="outLink(this)">A+</a>
-                                                <a href="#" onClick="mudaFonte('muito-grande'); return false;" onmouseover="overLink(this)" onmouseout="outLink(this)">A++</a>
-                                                <br>
-                                                <a href="#" onClick="adicionarBookmark(); return false;" onmouseover="overLink(this)" onmouseout="outLink(this)">[Favoritos]</a>
-                                                <a href="#" onClick="enviarPorEmail(); return false;" onmouseover="overLink(this)" onmouseout="outLink(this)">[Enviar]</a>
-                                            </font>
-                                        </td>
-                                    </tr>
-                                </table>
-
-                                <!-- Banner -->
-                                <table width="100%" border="1" cellpadding="3" cellspacing="0" bordercolor="#808080" bgcolor="#E0E0E0">
-                                    <tr>
-                                        <td align="center" bgcolor="#C0C0C0">
-                                            <font color="#000080" size="2"><b>? Suporte Remoto Profissional ?</b></font>
-                                        </td>
-                                    </tr>
-                                </table>
-
-                                <!-- Dica do dia -->
-                                <script language="JavaScript"><!--
-                                    mostraDicaDoDia();
-                                //--></script>
-                                <noscript><div class="dica-box"><b>Dica fixa:</b> Para acesso remoto, utilize WinVNC ou PCAnywhere.</div></noscript>
-
-                                <hr width="100%" noshade size="1" color="#808080">
-
-                                <!-- ÚLTIMAS NOTÍCIAS (ATUALIZADAS) -->
-                                <a name="noticias"></a>
-                                <h3>Últimas Notícias <span class="novo">[NOVO]</span></h3>
-                                <div class="noticia">
-                                    <span class="noticia-data">01/08/1997:</span> <b>Internet Explorer 4.0</b> está prestes a ser lançado! A versão final é esperada para setembro. Enquanto isso, testamos o Platform Preview e está tudo ok.
-                                </div>
-                                <div class="noticia">
-                                    <span class="noticia-data">15/07/1997:</span> <b>Modems de 56k</b> começam a chegar ao Brasil. A conexão vai ficar ainda mais rápida! Nossa calculadora de download já está atualizada.
-                                </div>
-                                <div class="noticia">
-                                    <span class="noticia-data">10/07/1997:</span> Novo vírus de macro detectado no Word 97. Mantenha seu antivírus atualizado.
-                                </div>
-
-                                <hr width="100%" noshade size="1" color="#808080">
-
-                                <!-- CALCULADORA DE DOWNLOAD (NOVO) -->
-                                <a name="calculadora"></a>
-                                <h3>Calculadora de Tempo de Download <span class="novo">[NOVO]</span></h3>
-                                <div class="calc-box">
-                                    <form name="calcForm" onSubmit="return false;">
-                                        <table width="100%" border="0" cellpadding="3">
-                                            <tr>
-                                                <td>Tamanho do arquivo (MB):</td>
-                                                <td><input type="text" name="tamanho" size="10" value="1.44"> (ex: 1.44 para um disquete)</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Velocidade do modem (Kbps):</td>
-                                                <td><input type="text" name="velocidade" size="10" value="33.6"> (ex: 28.8, 33.6, 56.0)</td>
-                                            </tr>
-                                            <tr>
-                                                <td colspan="2"><input type="button" value="Calcular" onClick="calcularDownload();"></td>
-                                            </tr>
-                                            <tr>
-                                                <td colspan="2"><b>Tempo estimado:</b> <span id="resultadoDownload">(preencha os campos)</span></td>
-                                            </tr>
-                                        </table>
-                                    </form>
-                                </div>
-
-                                <hr width="100%" noshade size="1" color="#808080">
-
-                                <!-- SOFTWARES RECOMENDADOS (NOVO) -->
-                                <a name="softwares"></a>
-                                <h3>Softwares Recomendados <span class="novo">[NOVO]</span></h3>
-                                <div class="soft-list">
-                                    <span class="soft-item">WinVNC</span> - Acesso remoto gratuito, leve e eficiente.<br>
-                                    <span class="soft-item">PCAnywhere</span> - Versão comercial com muitos recursos.<br>
-                                    <span class="soft-item">WS_FTP</span> - Para transferência de arquivos via FTP.<br>
-                                    <span class="soft-item">WinZip</span> - Compactador/descompactador de arquivos.<br>
-                                    <span class="soft-item">Netscape Communicator 4.0</span> - Navegador completo com e-mail e editor.<br>
-                                    <span class="soft-item">Internet Explorer 3.0/4.0 beta</span> - Alternativa da Microsoft.<br>
-                                    <span class="soft-item">McAfee VirusScan</span> - Antivírus confiável.
-                                </div>
-
-                                <hr width="100%" noshade size="1" color="#808080">
-
-                                <!-- SOBRE (mantido) -->
-                                <a name="sobre"></a>
-                                <h3>Sobre o Serviço</h3>
-                                <p>
-                                    A <b>Informática Valinhos</b> é a assistência técnica do técnico <b>Paulo Fagoto</b>, especializada em <b>acesso remoto</b>.
-                                    Utilizamos softwares como <i>PCAnywhere</i>, <i>Carbon Copy</i> ou <i>VNC</i> para resolver problemas sem sair de casa.
-                                </p>
-                                <p>
-                                    <font color="#800000"><b>Não possuímos loja física.</b></font> O técnico Paulo reside no bairro <b>Jardim dos Manacás</b>, em <b>Valinhos/SP</b>.
-                                    Atendemos <b>público doméstico e pequenos comércios</b>.
-                                </p>
-
-                                <!-- SERVIÇOS (mantido) -->
-                                <a name="servicos"></a>
-                                <h3>Serviços Remotos Oferecidos</h3>
-                                <ul>
-                                    <li>Remoção de vírus e cavalos de tróia (Trojan)</li>
-                                    <li>Instalação/configuração de softwares (Office, utilitários)</li>
-                                    <li>Configuração de internet (dial-up, e-mail Outlook Express / Netscape Mail)</li>
-                                    <li>Otimização do Windows 95/3.11</li>
-                                    <li>Backup de arquivos importantes</li>
-                                    <li>Suporte para impressoras (configuração básica)</li>
-                                    <li>Orientação para uso do computador</li>
-                                </ul>
-
-                                <!-- DEPOIMENTOS (mantido) -->
-                                <a name="depoimentos"></a>
-                                <h3>Depoimentos de Clientes</h3>
-                                <div class="depoimento">
-                                    "O Paulo resolveu meu problema de vírus em menos de 30 minutos. Super recomendo!"
-                                    <div class="depoimento-autor">— Maria A., dona de casa, Valinhos</div>
-                                </div>
-                                <div class="depoimento">
-                                    "Atendimento rápido e eficiente. Configurou meu e-mail e ainda me deu dicas de segurança."
-                                    <div class="depoimento-autor">— José S., pequeno comerciante, Campinas</div>
-                                </div>
-
-                                <!-- FAQ (mantido) -->
-                                <a name="faq"></a>
-                                <h3>Perguntas Frequentes (clique para ver a resposta)</h3>
-                                <ul>
-                                    <li><a href="#" onClick="mostraFAQ('resp1'); return false;">[+] Preciso ter algum software instalado?</a></li>
-                                    <div id="resp1" style="display: none; margin-left: 20px; margin-bottom: 10px; padding: 5px; background-color: #F0F0F0;">
-                                        Sim, é necessário um software de acesso remoto. Posso orientá-lo a instalar o WinVNC gratuitamente antes da sessão.
-                                    </div>
-                                    <li><a href="#" onClick="mostraFAQ('resp2'); return false;">[+] Qual o custo do serviço?</a></li>
-                                    <div id="resp2" style="display: none; margin-left: 20px; margin-bottom: 10px; padding: 5px; background-color: #F0F0F0;">
-                                        Cobro por hora de atendimento. Entre em contato para um orçamento personalizado.
-                                    </div>
-                                    <li><a href="#" onClick="mostraFAQ('resp3'); return false;">[+] Atende em finais de semana?</a></li>
-                                    <div id="resp3" style="display: none; margin-left: 20px; margin-bottom: 10px; padding: 5px; background-color: #F0F0F0;">
-                                        Sim, mediante agendamento. Consulte disponibilidade.
-                                    </div>
-                                </ul>
-                                <noscript><p><font size="-1">Ative o JavaScript para ver as respostas da FAQ.</font></p></noscript>
-
-                                <!-- CONTATO (com contador de caracteres) -->
-                                <a name="contato"></a>
-                                <h3>Contato e Agendamento</h3>
-                                <p>
-                                    Para falar com o técnico Paulo Fagoto ou agendar um serviço remoto, utilize o e-mail:
-                                    <center><font size="+2"><b><a href="mailto:adm@paulofagoto.com.br">adm@paulofagoto.com.br</a></b></font></center>
-                                    ou o formulário abaixo.
-                                </p>
-
-                                <form name="contatoForm" method="post" action="mailto:adm@paulofagoto.com.br" enctype="text/plain" onSubmit="return validaForm();">
-                                    <fieldset>
-                                        <legend><b>Formulário de Agendamento</b></legend>
-                                        <table width="100%" border="0" cellpadding="3">
-                                            <tr>
-                                                <td width="130"><label for="nome">Seu nome:</label></td>
-                                                <td><input type="text" name="nome" id="nome" size="35" maxlength="60" value=""></td>
-                                            </tr>
-                                            <tr>
-                                                <td><label for="email">Seu e-mail:</label></td>
-                                                <td><input type="text" name="email" id="email" size="35" maxlength="60" value=""></td>
-                                            </tr>
-                                            <tr>
-                                                <td><label for="telefone">Telefone (opcional):</label></td>
-                                                <td><input type="text" name="telefone" id="telefone" size="20" maxlength="20" value=""></td>
-                                            </tr>
-                                            <tr>
-                                                <td><label for="sistema">Sistema Operacional:</label></td>
-                                                <td>
-                                                    <select name="sistema" id="sistema">
-                                                        <option value="win95" selected>Windows 95</option>
-                                                        <option value="win311">Windows 3.11</option>
-                                                        <option value="dos">MS-DOS</option>
-                                                        <option value="outro">Outro</option>
-                                                    </select>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td><label for="origem">Como nos conheceu?</label></td>
-                                                <td>
-                                                    <select name="origem" id="origem">
-                                                        <option value="indicacao" selected>Indicação de amigo</option>
-                                                        <option value="internet">Pesquisa na Internet</option>
-                                                        <option value="jornal">Anúncio em jornal</option>
-                                                        <option value="revista">Revista de informática</option>
-                                                        <option value="outro">Outro</option>
-                                                    </select>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td><label for="assunto">Assunto:</label></td>
-                                                <td><input type="text" name="assunto" id="assunto" size="35" maxlength="60" value="Agendamento de Serviço"></td>
-                                            </tr>
-                                            <tr>
-                                                <td valign="top"><label for="mensagem">Mensagem:</label></td>
-                                                <td>
-                                                    <textarea name="mensagem" id="mensagem" rows="5" cols="40" onKeyUp="atualizaContador();"></textarea><br>
-                                                    <span id="contadorMsg">0 caracteres (máx 500)</span>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td><label for="horario">Melhor horário:</label></td>
-                                                <td>
-                                                    <select name="horario" id="horario">
-                                                        <option value="manha">Manhã</option>
-                                                        <option value="tarde" selected>Tarde</option>
-                                                        <option value="noite">Noite</option>
-                                                        <option value="qualquer">Qualquer horário</option>
-                                                    </select>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td><label for="lembrar">Lembrar meu nome?</label></td>
-                                                <td><input type="checkbox" name="lembrar" id="lembrar" value="sim"> Sim, para saudação personalizada.</td>
-                                            </tr>
-                                            <tr>
-                                                <td></td>
-                                                <td>
-                                                    <input type="submit" value="Enviar via e-mail">
-                                                    <input type="reset" value="Limpar campos">
-                                                </td>
-                                            </tr>
-                                        </table>
-                                        <p><font size="-2">* Após enviar, seu programa de e-mail será aberto. Cookies são usados apenas com permissão.</font></p>
-                                    </fieldset>
-                                </form>
-
-                                <!-- SELO DE COMPATIBILIDADE (atualizado) -->
-                                <table align="center" class="compat-badge">
-                                    <tr><td><b>? Netscape 3.0 / 4.0</b></td></tr>
-                                    <tr><td><b>? Internet Explorer 3.0 / 4.0 beta</b></td></tr>
-                                    <tr><td><font size="-2">Otimizado para 640x480</font></td></tr>
-                                </table>
-                                <br>
-
-                                <!-- MAPA DO SITE (atualizado) -->
-                                <h3>Navegação Rápida</h3>
-                                <table width="100%" border="0" cellpadding="2">
-                                    <tr>
-                                        <td><a href="#noticias">Notícias</a> |</td>
-                                        <td><a href="#calculadora">Download</a> |</td>
-                                        <td><a href="#softwares">Softwares</a> |</td>
-                                        <td><a href="#sobre">Sobre</a> |</td>
-                                        <td><a href="#servicos">Serviços</a> |</td>
-                                        <td><a href="#depoimentos">Depoimentos</a> |</td>
-                                        <td><a href="#faq">FAQ</a> |</td>
-                                        <td><a href="#contato">Contato</a> |</td>
-                                        <td><a href="#historico">Histórico</a></td>
-                                    </tr>
-                                </table>
-
-                                <hr width="100%" noshade size="1" color="#808080">
-
-                                <!-- HISTÓRICO DE ATUALIZAÇÕES -->
-                                <a name="historico"></a>
-                                <h3>Histórico de Atualizações</h3>
-                                <p><i>Registro das melhorias implementadas no site, sempre respeitando a data vigente.</i></p>
-
-                                <div class="historico-item">
-                                    <b>01/08/1997 - Oitava atualização:</b>
-                                    <ul>
-                                        <li><b>Calculadora de tempo de download:</b> Ferramenta útil para estimar quanto tempo leva para baixar um arquivo com base no tamanho e na velocidade do modem. Muito requisitada por usuários de internet discada .</li>
-                                        <li><b>Seção de Softwares Recomendados:</b> Lista de programas úteis para acesso remoto, compactação, antivírus, etc. Ajuda os clientes a se prepararem para o atendimento .</li>
-                                        <li><b>Contador de caracteres no formulário:</b> Mostra quantos caracteres foram digitados na mensagem, evitando que o cliente escreva demais e tenha problemas com limites de e-mail .</li>
-                                        <li><b>Notícias atualizadas para agosto/97:</b> Incluídas informações sobre o IE4, modems 56k e novos vírus .</li>
-                                        <li><b>Melhorias no layout:</b> Fundo alterado para azul claro (LightSteelBlue) para um visual mais suave e moderno .</li>
-                                        <li><b>Expansão do array de dicas:</b> Incluídas dicas sobre modems 56k e sites de download .</li>
-                                    </ul>
-                                </div>
-
-                                <div class="historico-item">
-                                    <b>01/07/1997 - Sétima atualização:</b>
-                                    <ul>
-                                        <li>Relógio digital dinâmico.</li>
-                                        <li>Efeitos rollover nos links.</li>
-                                        <li>Suporte ao IE4 beta.</li>
-                                        <li>Nova opção "Revista de informática".</li>
-                                    </ul>
-                                </div>
-
-                                <div class="historico-item">
-                                    <b>01/06/1997 - Sexta atualização:</b>
-                                    <ul>
-                                        <li>Suporte ao Netscape Communicator 4.0.</li>
-                                        <li>Contador de visitas pessoal.</li>
-                                        <li>Seção de Últimas Notícias.</li>
-                                    </ul>
-                                </div>
-
-                                <div class="historico-item">
-                                    <b>01/05/1997 - Quinta atualização:</b>
-                                    <ul>
-                                        <li>Controle de tamanho da fonte.</li>
-                                        <li>Botões de favoritos e enviar.</li>
-                                        <li>Selo de compatibilidade.</li>
-                                    </ul>
-                                </div>
-
-                                <div class="historico-item">
-                                    <b>01/04/1997 - Quarta atualização:</b>
-                                    <ul>
-                                        <li>Cookies para saudação personalizada.</li>
-                                        <li>FAQ interativa.</li>
-                                        <li>Depoimentos.</li>
-                                    </ul>
-                                </div>
-
-                                <div class="historico-item">
-                                    <b>01/03/1997 - Terceira atualização:</b>
-                                    <ul>
-                                        <li>Dica aleatória em JavaScript.</li>
-                                        <li>Validação de formulário aprimorada.</li>
-                                        <li>Campo "Sistema Operacional".</li>
-                                    </ul>
-                                </div>
-
-                                <div class="historico-item">
-                                    <b>01/02/1997 - Segunda atualização:</b>
-                                    <ul>
-                                        <li>JavaScript com saudação, validação e dicas expansíveis.</li>
-                                        <li>Sombra em tabelas.</li>
-                                        <li>Campo "Melhor horário".</li>
-                                    </ul>
-                                </div>
-
-                                <div class="historico-item">
-                                    <b>01/01/1997 - Lançamento do site:</b>
-                                    <ul>
-                                        <li>HTML 3.2, CSS1, tabela fixa, mailto.</li>
-                                    </ul>
-                                </div>
-
-                                <!-- RODAPÉ -->
-                                <hr width="100%" noshade size="1" color="#808080">
-                                <font size="-2" color="#606060">
-                                    <p align="center">
-                                        Informática Valinhos - Técnico Paulo Fagoto - Jardim dos Manacás, Valinhos/SP - Brasil<br>
-                                        <b>Atendimento exclusivo via e-mail:</b> <a href="mailto:adm@paulofagoto.com.br">adm@paulofagoto.com.br</a><br>
-                                        © 1997 - Site atualizado em 01/08/1997. Otimizado para monitores 640x480.
-                                    </p>
-                                </font>
-
-                            </td>
-                        </tr>
-                    </table>
-                </td>
-            </tr>
-            <tr><td bgcolor="#C0C0C0" height="2" colspan="2"></td></tr>
+<!-- Estrutura principal com microformatos completos -->
+<div class="container" id="topo">
+    <div class="conteudo vcard" id="identificacao">
+        <span class="fn n">
+            <span class="given-name">Meu nome é</span> 
+            <strong class="family-name">Paulo Henrique Fagoto</strong>
+        </span> 
+        e sou <span class="title">técnico em informática</span> na cidade de 
+        <span class="adr">
+            <span class="locality">Valinhos</span>/<span class="region">SP</span>
+        </span>.
+    </div>
+    
+    <hr>
+    
+    <div class="historico">
+        <h3>Histórico de Atualizações</h3>
+        <table summary="Registro cronológico detalhado de todas as atualizações e melhorias implementadas no site">
+            <thead>
+                <tr>
+                    <th>Data</th>
+                    <th>Descrição</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="data">06/01/2005</td>
+                    <td class="descricao">Implementação de tecnologias de Web Semântica: RDF, FOAF e Dublin Core. Adicionado suporte a P3P (privacy). Otimização para dispositivos móveis (WAP 2.0). Implementação de CSS Sprites. Melhorias na acessibilidade com estilos alternativos. Meta tags expandidas para SEO avançado. Suporte a fallback para celulares.</td>
+                </tr>
+                <tr>
+                    <td class="data">05/01/2005</td>
+                    <td class="descricao">Implementação de design avançado com faux columns (colunas falsas) e text-shadow. Adicionado favicon via data URI. Melhorias na tipografia com fontes Lucida Grande. Implementação de microformatação hCard. Design responsivo para diferentes resoluções. Refinamento das cores e contraste. Melhorias na experiência de impressão.</td>
+                </tr>
+                <tr>
+                    <td class="data">04/01/2005</td>
+                    <td class="descricao">Otimização extrema para compatibilidade retroativa. Implementados estilos específicos para IE4, IE5.5, IE6, Netscape 4 e Opera antigo. Melhorias na tipografia com fallbacks para diferentes sistemas. Adicionadas meta tags de cache. Refinamento do design com borda lateral na mensagem principal. Aprimoramento da acessibilidade com thead na tabela.</td>
+                </tr>
+                <tr>
+                    <td class="data">03/01/2005</td>
+                    <td class="descricao">Refinamento da semântica HTML e organização do CSS. Adicionados seletores específicos para IE5, IE6 e Netscape 4. Melhorias na acessibilidade e compatibilidade com navegadores antigos. Implementação de media type para impressão. Revisão completa da estrutura do código.</td>
+                </tr>
+                <tr>
+                    <td class="data">02/01/2005</td>
+                    <td class="descricao">Revisão e melhorias no código HTML e CSS. Adicionadas meta tags para otimização em mecanismos de busca. Pequenos ajustes de espaçamento e tipografia. Correção na formatação das datas. Validação completa do código W3C.</td>
+                </tr>
+                <tr>
+                    <td class="data">01/01/2005</td>
+                    <td class="descricao">Versão inicial do site - Criação da página com informações básicas. Layout compatível com navegadores da época (IE6, Firefox 1.0, Netscape). Utilização de HTML 4.01 Strict e CSS2. Otimizado para conexões discadas e resolução 800x600.</td>
+                </tr>
+            </tbody>
         </table>
-    </center>
+    </div>
+    
+    <div class="rodape">
+        <p>© 2005 Paulo Henrique Fagoto - Técnico em Informática - Valinhos/SP</p>
+        <p><span class="vcard">
+            <span class="fn">Paulo Henrique Fagoto</span> - 
+            <span class="locality">Valinhos</span>/<span class="region">SP</span>
+        </span></p>
+        <div class="validador">
+            <a href="http://validator.w3.org/check/referer" title="Validar HTML 4.01 Strict" rel="validation">W3C HTML 4.01</a> |
+            <a href="http://jigsaw.w3.org/css-validator/check/referer" title="Validar CSS2" rel="validation">W3C CSS</a> |
+            <a href="#" onclick="window.print();return false;" title="Imprimir esta página">Versão para impressão</a> |
+            <a href="#topo" title="Voltar ao topo">Topo</a>
+        </div>
+    </div>
+</div>
 
-    <!-- 
-        FIM DO CÓDIGO. DATA LIMITE: 01/08/1997.
-        NENHUMA REFERÊNCIA A TECNOLOGIAS POSTERIORES A ESTA DATA.
-    -->
+<!-- Espaçador para navegadores antigos com transparência real -->
+<div class="clear"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="" width="1" height="1"></div>
+
+<!-- Script de compatibilidade para links de impressão -->
+<script language="JavaScript" type="text/javascript">
+<!--
+window.onload = function() {
+    var printLinks = document.getElementsByTagName('a');
+    if (printLinks) {
+        for (var i = 0; i < printLinks.length; i++) {
+            if (printLinks[i].href && printLinks[i].href.indexOf('#print') != -1) {
+                printLinks[i].onclick = function() {
+                    if (window.print) {
+                        window.print();
+                    } else {
+                        alert('Para imprimir, utilize o menu Arquivo > Imprimir do seu navegador.');
+                    }
+                    return false;
+                }
+            }
+        }
+    }
+    
+    // Detecção de zoom (prática de usabilidade)
+    if (document.body && typeof document.body.style.zoom != 'undefined') {
+        // IE only
+        document.body.style.zoom = 1;
+    }
+}
+//-->
+</script>
+
+<!-- Comentário condicional para IE 5-6 (PNG transparency fix - técnica da época) -->
+<!--[if lte IE 6]>
+<script language="JavaScript" type="text/javascript">
+// Fix para transparência de PNG (muito usado em 2005)
+// Apenas declarado, não usado pois não temos PNGs
+</script>
+<![endif]-->
+
+<!-- Google Analytics (existia em 2005? Sim, lançado em novembro de 2005, ainda não disponível) -->
+<!-- NÃO INCLUIR - Google Analytics foi lançado em novembro de 2005, pós-data -->
+
+<!-- Contador de visitas (prática comum em 2005) -->
+<!-- Não incluído para manter leveza e ausência de recursos externos -->
+
+<!-- Link para estilos alternativos (acessibilidade) -->
+<script language="JavaScript" type="text/javascript">
+<!--
+function setActiveStyleSheet(title) {
+    var i, a, links = document.getElementsByTagName('link');
+    for (i = 0; a = links[i]; i++) {
+        if (a.getAttribute('rel').indexOf('style') != -1 && a.getAttribute('title')) {
+            a.disabled = true;
+        }
+    }
+    for (i = 0; a = links[i]; i++) {
+        if (a.getAttribute('rel').indexOf('style') != -1 && a.getAttribute('title') == title) {
+            a.disabled = false;
+        }
+    }
+}
+//-->
+</script>
+
 </body>
 </html>
