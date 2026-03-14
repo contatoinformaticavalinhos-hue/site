@@ -2,46 +2,37 @@
 <html>
 <head>
     <!-- 
-        SITE ATUALIZADO EM 01/07/1997
+        SITE ATUALIZADO EM 01/08/1997
         NENHUMA TECNOLOGIA OU REFERÊNCIA POSTERIOR A ESTA DATA FOI UTILIZADA.
         HARDWARE ALVO: PROCESSADOR 486/PENTIUM, 8-16MB RAM, MODEM 28.8-33.6 Kbps,
         MONITOR 640x480 (16 ou 256 cores).
         NAVEGADORES: NETSCAPE NAVIGATOR 3.x / 4.0, MICROSOFT INTERNET EXPLORER 3.x / 4.0 BETA.
-        NOVIDADES: RELÓGIO DIGITAL, ROLLOVER NOS LINKS, SUPORTE A IE4 BETA, 
-        NOVAS DICAS E NOTÍCIAS, LAYOUT REFINADO.
+        NOVIDADES: CALCULADORA DE DOWNLOAD, SOFTWARES RECOMENDADOS, CONTADOR DE CARACTERES,
+        NOTÍCIAS ATUALIZADAS, MELHORIAS NO LAYOUT.
     -->
 
     <title>Informática Valinhos - Assistência Remota do Técnico Paulo Fagoto</title>
     <meta name="description" content="Informática Valinhos - Assistência técnica em informática via acesso remoto. Atendimento para público doméstico e pequenos comércios em Valinhos/SP. Técnico Paulo Fagoto.">
-    <meta name="keywords" content="assistência técnica informática Valinhos, acesso remoto, suporte computador, técnico Paulo Fagoto, manutenção PC, pequeno comércio, Jardim dos Manacás, Windows 95, Netscape 4, IE4 beta">
+    <meta name="keywords" content="assistência técnica informática Valinhos, acesso remoto, suporte computador, técnico Paulo Fagoto, manutenção PC, pequeno comércio, Jardim dos Manacás, Windows 95, Netscape 4, IE4, download, software">
     <meta name="author" content="Paulo Fagoto">
     <meta name="robots" content="index,follow">
     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
 
     <style type="text/css">
         <!-- 
-        /* 
-            CSS1 COM NOVAS CORES E AJUSTES.
-        */
+        /* CSS1 atualizado com tons de azul */
         body {
             font-family: Verdana, Arial, Helvetica, sans-serif;
             font-size: 10pt;
             color: #000000;
-            background-color: #A0A0A0; /* Tom mais claro que o anterior */
+            background-color: #B0C4DE; /* Azul claro estilo LightSteelBlue */
             margin: 10px;
         }
-        .fonte-pequena {
-            font-size: 9pt;
-        }
-        .fonte-normal {
-            font-size: 10pt;
-        }
-        .fonte-grande {
-            font-size: 12pt;
-        }
-        .fonte-muito-grande {
-            font-size: 14pt;
-        }
+        .fonte-pequena { font-size: 9pt; }
+        .fonte-normal { font-size: 10pt; }
+        .fonte-grande { font-size: 12pt; }
+        .fonte-muito-grande { font-size: 14pt; }
+
         .titulo-principal {
             font-size: 20pt;
             font-weight: bold;
@@ -54,10 +45,8 @@
             color: #993333;
             font-style: italic;
         }
-        .destaque {
-            font-weight: bold;
-            color: #006600;
-        }
+        .destaque { font-weight: bold; color: #006600; }
+
         .historico-item {
             font-size: 9pt;
             color: #404040;
@@ -67,7 +56,7 @@
         }
         .data-topo {
             font-size: 8pt;
-            color: #FFFFCC; /* Amarelo claro */
+            color: #FFFFCC;
             text-align: right;
             border-bottom: 1px solid #C0C0C0;
             padding-bottom: 2px;
@@ -96,7 +85,7 @@
         }
         .tabela-3d {
             border: 2px outset #E0E0E0;
-            background-color: #FFFFFF; /* Fundo branco para a tabela principal */
+            background-color: #FFFFFF;
         }
         .compat-badge {
             background-color: #C0C0C0;
@@ -104,7 +93,7 @@
             padding: 3px;
             font-size: 8pt;
             text-align: center;
-            width: 200px; /* Mais largo */
+            width: 200px;
         }
         .noticia {
             background-color: #E0E0E0;
@@ -125,6 +114,28 @@
             border: 1px solid #C0C0C0;
             display: inline-block;
         }
+        .soft-list {
+            background-color: #F8F8FF;
+            border: 1px solid #808080;
+            padding: 5px;
+            margin: 5px 0;
+            font-size: 9pt;
+        }
+        .soft-item {
+            font-weight: bold;
+            color: #000080;
+        }
+        .calc-box {
+            background-color: #E0E0E0;
+            border: 1px solid #404040;
+            padding: 8px;
+            margin: 10px 0;
+        }
+        .novo {
+            color: #FF0000;
+            font-weight: bold;
+            font-size: 8pt;
+        }
         a:link { color: #0000CC; }
         a:visited { color: #660099; }
         a:active { color: #FF0000; }
@@ -133,7 +144,7 @@
     </style>
 
     <script language="JavaScript"><!--
-        // Array de dicas (expandido com novidades de julho)
+        // Array de dicas (expandido)
         var dicas = [
             "Para acesso remoto, recomendo o WinVNC (gratuito) ou o PCAnywhere (comercial).",
             "Mantenha seu Windows 95 atualizado com o Service Pack 1 da Microsoft.",
@@ -146,8 +157,10 @@
             "O Windows 95 OSR2 (com FAT32) já está disponível em alguns computadores novos.",
             "Para segurança, evite usar disquetes de procedência duvidosa.",
             "Netscape Communicator 4.0 já está disponível! O site é compatível.",
-            "Internet Explorer 4.0 beta 2 acaba de ser lançado; testamos e funciona bem.",
-            "Mantenha seu antivírus atualizado; novos vírus aparecem toda semana."
+            "Internet Explorer 4.0 beta 2 funciona bem; a versão final deve sair em breve.",
+            "Mantenha seu antivírus atualizado; novos vírus aparecem toda semana.",
+            "Modems de 56k estão chegando! A conexão será ainda mais rápida.",
+            "Sites como Tucows e Shareware.com são ótimos para baixar softwares."
         ];
 
         function mostraDicaDoDia() {
@@ -157,7 +170,7 @@
             document.write("<div class='dica-box'><b>Dica do dia " + dia + ":</b> " + dicas[indice] + "</div>");
         }
 
-        // Funções para cookies
+        // Cookies
         function setCookie(nome, valor, dias) {
             var dataExpiracao = new Date();
             dataExpiracao.setDate(dataExpiracao.getDate() + dias);
@@ -205,7 +218,7 @@
             document.write("<span class='data-topo' style='float:left;'>Visitas: " + visitas + "</span>");
         }
 
-        // Relógio digital atualizado a cada segundo
+        // Relógio
         function atualizaRelogio() {
             var agora = new Date();
             var horas = agora.getHours();
@@ -219,7 +232,6 @@
                 var relogioSpan = document.getElementById("relogio");
                 if (relogioSpan) relogioSpan.innerHTML = horario;
             } else {
-                // fallback para navegadores sem getElementById (IE3)
                 document.write("<span class='relogio'>" + horario + "</span>");
             }
             setTimeout("atualizaRelogio()", 1000);
@@ -227,11 +239,43 @@
 
         function mostraRelogio() {
             document.write("<span id='relogio' class='relogio'></span>");
-            // Chama a atualização após a página carregar
             setTimeout("atualizaRelogio()", 500);
         }
 
-        // Função de validação do formulário
+        // Calculadora de tempo de download
+        function calcularDownload() {
+            var tamanho = parseFloat(document.forms["calcForm"]["tamanho"].value);
+            var velocidade = parseFloat(document.forms["calcForm"]["velocidade"].value);
+            if (isNaN(tamanho) || tamanho <= 0 || isNaN(velocidade) || velocidade <= 0) {
+                alert("Por favor, preencha valores válidos (maiores que zero).");
+                return;
+            }
+            // Converter MB para kilobits: 1 MB = 8 * 1024 = 8192 Kb
+            var tamanhoKb = tamanho * 8192;
+            var tempoSegundos = tamanhoKb / velocidade;
+            var horas = Math.floor(tempoSegundos / 3600);
+            var minutos = Math.floor((tempoSegundos % 3600) / 60);
+            var segundos = Math.floor(tempoSegundos % 60);
+            var resultado = "";
+            if (horas > 0) resultado += horas + " hora(s) ";
+            if (minutos > 0) resultado += minutos + " minuto(s) ";
+            resultado += segundos + " segundo(s)";
+            document.getElementById("resultadoDownload").innerHTML = resultado;
+        }
+
+        // Contador de caracteres da mensagem
+        function atualizaContador() {
+            var msg = document.forms["contatoForm"]["mensagem"].value;
+            var cont = msg.length;
+            document.getElementById("contadorMsg").innerHTML = cont + " caracteres (máx 500)";
+            if (cont > 500) {
+                document.getElementById("contadorMsg").style.color = "#FF0000";
+            } else {
+                document.getElementById("contadorMsg").style.color = "#000000";
+            }
+        }
+
+        // Função de validação do formulário (adaptada)
         function validaForm() {
             var nome = document.forms["contatoForm"]["nome"].value;
             var email = document.forms["contatoForm"]["email"].value;
@@ -249,6 +293,10 @@
             }
             if (telefone != "" && telefone.length < 8) {
                 alert("Se informar telefone, use pelo menos 8 dígitos (com DDD).");
+                return false;
+            }
+            if (mensagem.length > 500) {
+                alert("Sua mensagem excedeu 500 caracteres. Por favor, resuma.");
                 return false;
             }
             if (lembrar) {
@@ -310,7 +358,6 @@
             window.location.href = "mailto:?subject=" + escape(assunto) + "&body=" + escape(corpo);
         }
 
-        // Funções para rollover nos links (fallback para navegadores antigos)
         function overLink(el) {
             el.style.color = "#FF6600";
         }
@@ -321,9 +368,8 @@
 
 </head>
 
-<body bgcolor="#A0A0A0" text="#000000" link="#0000CC" vlink="#660099" alink="#FF0000" onload="carregaFonte();">
+<body bgcolor="#B0C4DE" text="#000000" link="#0000CC" vlink="#660099" alink="#FF0000" onload="carregaFonte();">
 
-    <!-- TABELA PRINCIPAL -->
     <center>
         <table width="600" border="0" cellpadding="4" cellspacing="2" bgcolor="#FFFFFF" class="tabela-3d">
             <tr><td bgcolor="#C0C0C0" height="2" colspan="2"></td></tr>
@@ -333,7 +379,7 @@
                         <tr>
                             <td>
 
-                                <!-- TOPO: CONTADOR, RELÓGIO E SAUDAÇÃO -->
+                                <!-- TOPO -->
                                 <table width="100%" border="0" cellpadding="2" cellspacing="0">
                                     <tr>
                                         <td width="30%" valign="top">
@@ -344,22 +390,18 @@
                                             <script language="JavaScript"><!--
                                                 mostraRelogio();
                                             //--></script>
-                                            <noscript>
-                                                <span class="relogio">[Relógio desativado]</span>
-                                            </noscript>
+                                            <noscript><span class="relogio">[Relógio]</span></noscript>
                                         </td>
                                         <td width="70%" valign="top">
                                             <script language="JavaScript"><!--
                                                 mostraSaudacaoPersonalizada();
                                             //--></script>
-                                            <noscript>
-                                                <div class="data-topo">1º de julho de 1997 - <i>Bem-vindo!</i></div>
-                                            </noscript>
+                                            <noscript><div class="data-topo">1º de agosto de 1997 - <i>Bem-vindo!</i></div></noscript>
                                         </td>
                                     </tr>
                                 </table>
 
-                                <!-- CABEÇALHO COM CONTROLES DE FONTE E BOOKMARK (COM ROLLOVER) -->
+                                <!-- CABEÇALHO -->
                                 <table width="100%" border="0" cellpadding="0" cellspacing="0">
                                     <tr>
                                         <td>
@@ -381,7 +423,7 @@
                                     </tr>
                                 </table>
 
-                                <!-- Banner 3D -->
+                                <!-- Banner -->
                                 <table width="100%" border="1" cellpadding="3" cellspacing="0" bordercolor="#808080" bgcolor="#E0E0E0">
                                     <tr>
                                         <td align="center" bgcolor="#C0C0C0">
@@ -390,29 +432,71 @@
                                     </tr>
                                 </table>
 
-                                <!-- DICA DO DIA -->
+                                <!-- Dica do dia -->
                                 <script language="JavaScript"><!--
                                     mostraDicaDoDia();
                                 //--></script>
-                                <noscript>
-                                    <div class="dica-box"><b>Dica fixa:</b> Para acesso remoto, utilize WinVNC ou PCAnywhere.</div>
-                                </noscript>
+                                <noscript><div class="dica-box"><b>Dica fixa:</b> Para acesso remoto, utilize WinVNC ou PCAnywhere.</div></noscript>
 
                                 <hr width="100%" noshade size="1" color="#808080">
 
                                 <!-- ÚLTIMAS NOTÍCIAS (ATUALIZADAS) -->
                                 <a name="noticias"></a>
-                                <h3>Últimas Notícias</h3>
+                                <h3>Últimas Notícias <span class="novo">[NOVO]</span></h3>
                                 <div class="noticia">
-                                    <span class="noticia-data">01/07/1997:</span> Acaba de ser lançado o <b>Internet Explorer 4.0 beta 2</b>! Nosso site foi testado e está totalmente compatível com esta versão. Aproveite para conhecer as novidades.
+                                    <span class="noticia-data">01/08/1997:</span> <b>Internet Explorer 4.0</b> está prestes a ser lançado! A versão final é esperada para setembro. Enquanto isso, testamos o Platform Preview e está tudo ok.
                                 </div>
                                 <div class="noticia">
-                                    <span class="noticia-data">15/06/1997:</span> O <b>Netscape Communicator 4.0</b> já está disponível. Se você ainda não atualizou, visite o site da Netscape.
+                                    <span class="noticia-data">15/07/1997:</span> <b>Modems de 56k</b> começam a chegar ao Brasil. A conexão vai ficar ainda mais rápida! Nossa calculadora de download já está atualizada.
+                                </div>
+                                <div class="noticia">
+                                    <span class="noticia-data">10/07/1997:</span> Novo vírus de macro detectado no Word 97. Mantenha seu antivírus atualizado.
                                 </div>
 
                                 <hr width="100%" noshade size="1" color="#808080">
 
-                                <!-- SOBRE -->
+                                <!-- CALCULADORA DE DOWNLOAD (NOVO) -->
+                                <a name="calculadora"></a>
+                                <h3>Calculadora de Tempo de Download <span class="novo">[NOVO]</span></h3>
+                                <div class="calc-box">
+                                    <form name="calcForm" onSubmit="return false;">
+                                        <table width="100%" border="0" cellpadding="3">
+                                            <tr>
+                                                <td>Tamanho do arquivo (MB):</td>
+                                                <td><input type="text" name="tamanho" size="10" value="1.44"> (ex: 1.44 para um disquete)</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Velocidade do modem (Kbps):</td>
+                                                <td><input type="text" name="velocidade" size="10" value="33.6"> (ex: 28.8, 33.6, 56.0)</td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="2"><input type="button" value="Calcular" onClick="calcularDownload();"></td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="2"><b>Tempo estimado:</b> <span id="resultadoDownload">(preencha os campos)</span></td>
+                                            </tr>
+                                        </table>
+                                    </form>
+                                </div>
+
+                                <hr width="100%" noshade size="1" color="#808080">
+
+                                <!-- SOFTWARES RECOMENDADOS (NOVO) -->
+                                <a name="softwares"></a>
+                                <h3>Softwares Recomendados <span class="novo">[NOVO]</span></h3>
+                                <div class="soft-list">
+                                    <span class="soft-item">WinVNC</span> - Acesso remoto gratuito, leve e eficiente.<br>
+                                    <span class="soft-item">PCAnywhere</span> - Versão comercial com muitos recursos.<br>
+                                    <span class="soft-item">WS_FTP</span> - Para transferência de arquivos via FTP.<br>
+                                    <span class="soft-item">WinZip</span> - Compactador/descompactador de arquivos.<br>
+                                    <span class="soft-item">Netscape Communicator 4.0</span> - Navegador completo com e-mail e editor.<br>
+                                    <span class="soft-item">Internet Explorer 3.0/4.0 beta</span> - Alternativa da Microsoft.<br>
+                                    <span class="soft-item">McAfee VirusScan</span> - Antivírus confiável.
+                                </div>
+
+                                <hr width="100%" noshade size="1" color="#808080">
+
+                                <!-- SOBRE (mantido) -->
                                 <a name="sobre"></a>
                                 <h3>Sobre o Serviço</h3>
                                 <p>
@@ -424,7 +508,7 @@
                                     Atendemos <b>público doméstico e pequenos comércios</b>.
                                 </p>
 
-                                <!-- SERVIÇOS -->
+                                <!-- SERVIÇOS (mantido) -->
                                 <a name="servicos"></a>
                                 <h3>Serviços Remotos Oferecidos</h3>
                                 <ul>
@@ -437,7 +521,7 @@
                                     <li>Orientação para uso do computador</li>
                                 </ul>
 
-                                <!-- DEPOIMENTOS -->
+                                <!-- DEPOIMENTOS (mantido) -->
                                 <a name="depoimentos"></a>
                                 <h3>Depoimentos de Clientes</h3>
                                 <div class="depoimento">
@@ -449,7 +533,7 @@
                                     <div class="depoimento-autor">— José S., pequeno comerciante, Campinas</div>
                                 </div>
 
-                                <!-- FAQ INTERATIVA -->
+                                <!-- FAQ (mantido) -->
                                 <a name="faq"></a>
                                 <h3>Perguntas Frequentes (clique para ver a resposta)</h3>
                                 <ul>
@@ -466,11 +550,9 @@
                                         Sim, mediante agendamento. Consulte disponibilidade.
                                     </div>
                                 </ul>
-                                <noscript>
-                                    <p><font size="-1">Ative o JavaScript para ver as respostas da FAQ.</font></p>
-                                </noscript>
+                                <noscript><p><font size="-1">Ative o JavaScript para ver as respostas da FAQ.</font></p></noscript>
 
-                                <!-- CONTATO -->
+                                <!-- CONTATO (com contador de caracteres) -->
                                 <a name="contato"></a>
                                 <h3>Contato e Agendamento</h3>
                                 <p>
@@ -479,7 +561,6 @@
                                     ou o formulário abaixo.
                                 </p>
 
-                                <!-- FORMULÁRIO (MANTIDO) -->
                                 <form name="contatoForm" method="post" action="mailto:adm@paulofagoto.com.br" enctype="text/plain" onSubmit="return validaForm();">
                                     <fieldset>
                                         <legend><b>Formulário de Agendamento</b></legend>
@@ -525,7 +606,10 @@
                                             </tr>
                                             <tr>
                                                 <td valign="top"><label for="mensagem">Mensagem:</label></td>
-                                                <td><textarea name="mensagem" id="mensagem" rows="5" cols="40"></textarea></td>
+                                                <td>
+                                                    <textarea name="mensagem" id="mensagem" rows="5" cols="40" onKeyUp="atualizaContador();"></textarea><br>
+                                                    <span id="contadorMsg">0 caracteres (máx 500)</span>
+                                                </td>
                                             </tr>
                                             <tr>
                                                 <td><label for="horario">Melhor horário:</label></td>
@@ -554,7 +638,7 @@
                                     </fieldset>
                                 </form>
 
-                                <!-- SELO DE COMPATIBILIDADE ATUALIZADO (COM IE4 BETA) -->
+                                <!-- SELO DE COMPATIBILIDADE (atualizado) -->
                                 <table align="center" class="compat-badge">
                                     <tr><td><b>? Netscape 3.0 / 4.0</b></td></tr>
                                     <tr><td><b>? Internet Explorer 3.0 / 4.0 beta</b></td></tr>
@@ -562,11 +646,13 @@
                                 </table>
                                 <br>
 
-                                <!-- MAPA DO SITE -->
+                                <!-- MAPA DO SITE (atualizado) -->
                                 <h3>Navegação Rápida</h3>
                                 <table width="100%" border="0" cellpadding="2">
                                     <tr>
                                         <td><a href="#noticias">Notícias</a> |</td>
+                                        <td><a href="#calculadora">Download</a> |</td>
+                                        <td><a href="#softwares">Softwares</a> |</td>
                                         <td><a href="#sobre">Sobre</a> |</td>
                                         <td><a href="#servicos">Serviços</a> |</td>
                                         <td><a href="#depoimentos">Depoimentos</a> |</td>
@@ -584,14 +670,24 @@
                                 <p><i>Registro das melhorias implementadas no site, sempre respeitando a data vigente.</i></p>
 
                                 <div class="historico-item">
+                                    <b>01/08/1997 - Oitava atualização:</b>
+                                    <ul>
+                                        <li><b>Calculadora de tempo de download:</b> Ferramenta útil para estimar quanto tempo leva para baixar um arquivo com base no tamanho e na velocidade do modem. Muito requisitada por usuários de internet discada .</li>
+                                        <li><b>Seção de Softwares Recomendados:</b> Lista de programas úteis para acesso remoto, compactação, antivírus, etc. Ajuda os clientes a se prepararem para o atendimento .</li>
+                                        <li><b>Contador de caracteres no formulário:</b> Mostra quantos caracteres foram digitados na mensagem, evitando que o cliente escreva demais e tenha problemas com limites de e-mail .</li>
+                                        <li><b>Notícias atualizadas para agosto/97:</b> Incluídas informações sobre o IE4, modems 56k e novos vírus .</li>
+                                        <li><b>Melhorias no layout:</b> Fundo alterado para azul claro (LightSteelBlue) para um visual mais suave e moderno .</li>
+                                        <li><b>Expansão do array de dicas:</b> Incluídas dicas sobre modems 56k e sites de download .</li>
+                                    </ul>
+                                </div>
+
+                                <div class="historico-item">
                                     <b>01/07/1997 - Sétima atualização:</b>
                                     <ul>
-                                        <li><b>Relógio digital dinâmico:</b> Adicionado um relógio que atualiza a cada segundo, mostrando a hora do cliente. Muito comum em sites pessoais da época .</li>
-                                        <li><b>Efeitos rollover nos links de controle:</b> Os links de fonte, favoritos e enviar agora mudam de cor ao passar o mouse, melhorando a usabilidade em navegadores antigos (fallback com JavaScript) .</li>
-                                        <li><b>Suporte ao Internet Explorer 4.0 beta 2:</b> Selo de compatibilidade atualizado e notícia sobre o lançamento. O site foi testado e funciona perfeitamente no novo browser .</li>
-                                        <li><b>Expansão do array de dicas:</b> Incluídas dicas sobre IE4 beta e segurança, totalizando 13 dicas .</li>
-                                        <li><b>Nova opção no campo "Como nos conheceu?":</b> Adicionada a opção "Revista de informática" para melhor segmentação .</li>
-                                        <li><b>Ajustes de layout:</b> Fundo da página mais claro (#A0A0A0) e pequenas melhorias visuais.</li>
+                                        <li>Relógio digital dinâmico.</li>
+                                        <li>Efeitos rollover nos links.</li>
+                                        <li>Suporte ao IE4 beta.</li>
+                                        <li>Nova opção "Revista de informática".</li>
                                     </ul>
                                 </div>
 
@@ -599,9 +695,8 @@
                                     <b>01/06/1997 - Sexta atualização:</b>
                                     <ul>
                                         <li>Suporte ao Netscape Communicator 4.0.</li>
-                                        <li>Contador de visitas pessoal (cookie).</li>
+                                        <li>Contador de visitas pessoal.</li>
                                         <li>Seção de Últimas Notícias.</li>
-                                        <li>Melhorias de acessibilidade com labels.</li>
                                     </ul>
                                 </div>
 
@@ -609,9 +704,8 @@
                                     <b>01/05/1997 - Quinta atualização:</b>
                                     <ul>
                                         <li>Controle de tamanho da fonte.</li>
-                                        <li>Botões de favoritos e enviar por e-mail.</li>
-                                        <li>Selo de compatibilidade Netscape 3/IE 3.</li>
-                                        <li>Dica do dia baseada na data.</li>
+                                        <li>Botões de favoritos e enviar.</li>
+                                        <li>Selo de compatibilidade.</li>
                                     </ul>
                                 </div>
 
@@ -621,7 +715,6 @@
                                         <li>Cookies para saudação personalizada.</li>
                                         <li>FAQ interativa.</li>
                                         <li>Depoimentos.</li>
-                                        <li>Layout 3D.</li>
                                     </ul>
                                 </div>
 
@@ -656,7 +749,7 @@
                                     <p align="center">
                                         Informática Valinhos - Técnico Paulo Fagoto - Jardim dos Manacás, Valinhos/SP - Brasil<br>
                                         <b>Atendimento exclusivo via e-mail:</b> <a href="mailto:adm@paulofagoto.com.br">adm@paulofagoto.com.br</a><br>
-                                        © 1997 - Site atualizado em 01/07/1997. Otimizado para monitores 640x480.
+                                        © 1997 - Site atualizado em 01/08/1997. Otimizado para monitores 640x480.
                                     </p>
                                 </font>
 
@@ -670,7 +763,7 @@
     </center>
 
     <!-- 
-        FIM DO CÓDIGO. DATA LIMITE: 01/07/1997.
+        FIM DO CÓDIGO. DATA LIMITE: 01/08/1997.
         NENHUMA REFERÊNCIA A TECNOLOGIAS POSTERIORES A ESTA DATA.
     -->
 </body>
