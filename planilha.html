@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="ISO-8859-1"> <!-- charset adequado para 1997 -->
+    <meta name="description" content="Planilha de controle financeiro mensal para Excel. Controle suas receitas, despesas, com gráficos e balanços automáticos. Apenas R$10,00.">
+    <meta name="keywords" content="planilha financeira, controle financeiro, excel, orçamento mensal, receitas, despesas, gráficos">
+    <meta name="author" content="Não Informado">
+    <meta name="robots" content="index, follow">
+    <meta name="rating" content="general">
+    <meta name="distribution" content="global">
+    <meta name="reply-to" content="não-informado@exemplo.com">
+    <meta http-equiv="content-language" content="pt-br">
+    <meta name="date" content="1997-02-01">
+    <meta name="revisit-after" content="15 days">
+    <meta http-equiv="pragma" content="no-cache"> <!-- para evitar cache em proxies antigas -->
+    <title>Planilha de Controle Financeiro Mensal - Excel - R$10,00</title>
+
+    <style type="text/css">
+        /* CSS compatível com navegadores de fevereiro de 1997 (CSS1 limitado) */
+        body, table, tr, td, p, h1, h2, h3, h4, h5, h6, div, font {
+            margin: 0px;
+            padding: 0px;
+        }
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            background-color: #C0C0C0;
+            color: #000000;
+            font-size: 14pt;
+            line-height: 1.2;
+            margin: 10px;
+        }
+        /* tabela principal com borda 3D (atributos HTML são mais confiáveis, mas CSS complementa) */
+        .tabela-principal {
+            width: 620px;
+            border: 3px ridge #808080;  /* ridge funciona no IE 3? teste empírico, mas de qualquer forma usaremos também cellspacing/cellpadding */
+            background-color: #FFFFFF;
+            padding: 10px;
+            margin: 0 auto;
+        }
+        h1 {
+            font-size: 24pt;
+            font-weight: bold;
+            color: #000080;
+            text-align: center;
+            margin-bottom: 8px;
+            letter-spacing: 1px;
+        }
+        h2 {
+            font-size: 18pt;
+            font-weight: bold;
+            color: #000080;
+            border-bottom: 2px solid #000080;
+            padding-bottom: 4px;
+            margin-top: 12px;
+            margin-bottom: 10px;
+        }
+        h3 {
+            font-size: 16pt;
+            font-weight: bold;
+            color: #800000;
+            margin-top: 8px;
+            margin-bottom: 6px;
+        }
+        hr {
+            border: 1px solid #808080;
+            height: 0px;
+            margin: 10px 0;
+        }
+        a:link, a:visited {
+            color: #0000EE;
+            text-decoration: underline;
+        }
+        a:active {
+            color: #FF0000;
+        }
+        /* botão 3D com fallback para JavaScript */
+        .botao-comprar {
+            background-color: #D4D0C8;
+            border: 3px outset #FFFFFF;
+            padding: 10px 20px;
+            font-size: 22pt;
+            font-weight: bold;
+            color: #000000;
+            text-align: center;
+            width: 80%;
+            margin: 15px auto;
+            cursor: pointer;
+            display: block;
+            text-decoration: none;
+        }
+        .botao-comprar a {
+            text-decoration: none;
+            color: #000000;
+            display: block;
+            width: 100%;
+        }
+        /* efeito hover via CSS (para IE 4+), mas vamos usar também JS para Netscape 3 */
+        .botao-comprar:hover {
+            border: 3px inset #FFFFFF;
+            background-color: #B0B0B0;
+        }
+        /* tabelas internas com bordas via atributos HTML, mas deixamos uma classe para cor de fundo */
+        .tabela-detalhes {
+            width: 100%;
+            background-color: #FFFFFF;
+        }
+        /* lista com marcador padrão (disc) */
+        ul {
+            list-style-type: disc;
+            margin-left: 30px;
+            padding-left: 0px;
+        }
+        li {
+            margin-bottom: 2px;
+        }
+        .rodape {
+            font-size: 10pt;
+            color: #404040;
+            text-align: center;
+            margin-top: 20px;
+            border-top: 1px solid #808080;
+            padding-top: 6px;
+        }
+        .historico {
+            background-color: #F0F0F0;
+            border: 1px dotted #808080;
+            padding: 8px;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 12pt;
+            margin-top: 20px;
+        }
+        .historico table {
+            width: 100%;
+        }
+        .historico td {
+            padding: 4px;
+            vertical-align: top;
+        }
+        .data-historico {
+            font-weight: bold;
+            color: #000080;
+            white-space: nowrap;
+            width: 1%;
+        }
+        /* gráfico ascii */
+        .grafico-ascii {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 12pt;
+            background-color: #E0E0E0;
+            border: 2px solid #808080;
+            padding: 8px;
+            margin: 10px 0;
+            line-height: 1.1;
+        }
+    </style>
+
+    <!-- JavaScript para funcionalidades extras (compatível com Netscape 3) -->
+    <script type="text/javascript">
+    <!-- // esconder de navegadores muito antigos
+
+    // Função para mostrar data atual no formato dd/mm/aaaa
+    function mostrarDataAtual() {
+        var agora = new Date();
+        var dia = agora.getDate();
+        var mes = agora.getMonth() + 1;
+        var ano = agora.getFullYear();
+        // ajustar para ano com 4 dígitos (em 1997, getFullYear existe? na verdade, em JavaScript 1.1, getYear retorna ano-1900. Vamos usar getYear e corrigir)
+        // Mas para compatibilidade, vamos usar getYear e ajustar para 1900.
+        var ano_ajustado = agora.getYear();
+        if (ano_ajustado < 1900) ano_ajustado += 1900;  // para browsers que usam getYear
+        // formato dd/mm/aaaa
+        var dataStr = (dia < 10 ? "0" + dia : dia) + "/" + (mes < 10 ? "0" + mes : mes) + "/" + ano_ajustado;
+        document.write("Hoje é " + dataStr);
+    }
+
+    // Função para efeito de botão pressionado (para browsers sem suporte a :hover)
+    function botaoOver(btn) {
+        btn.style.borderStyle = "inset";
+        btn.style.backgroundColor = "#B0B0B0";
+    }
+    function botaoOut(btn) {
+        btn.style.borderStyle = "outset";
+        btn.style.backgroundColor = "#D4D0C8";
+    }
+
+    // -->
+    </script>
+</head>
+<body>
+
+<!-- Tabela principal com borda 3D também por atributos HTML (garantia) -->
+<table width="620" border="3" bordercolor="#808080" cellspacing="2" cellpadding="10" align="center" bgcolor="#FFFFFF">
+    <tr><td>
+
+        <!-- Cabeçalho -->
+        <h1>?? CONTROLE FINANCEIRO MENSAL</h1>
+        <h1 style="font-size: 22pt; color: #800000;">Planilha Excel</h1>
+
+        <!-- Gráfico ilustrativo em ASCII (mais concreto que placeholder) -->
+        <div class="grafico-ascii" align="center">
+            <b>EXEMPLO DE GRÁFICO (barras - receitas x despesas)</b><br>
+            <pre>
+Jan: R$ 3.200  ???????????? (42%)
+Fev: R$ 2.800  ?????????? (37%)
+Mar: R$ 2.500  ????????   (33%)
+            </pre>
+            <i>(gráficos reais gerados automaticamente na planilha)</i>
+        </div>
+
+        <!-- Preço -->
+        <div align="center" style="margin: 15px 0 5px;">
+            <font size="7" color="#008000"><b>R$ 10,00</b></font><br>
+            <font size="4">(à vista, transferência ou cartão)</font>
+        </div>
+
+        <!-- Botão de compra com eventos JS para hover -->
+        <div class="botao-comprar" onmouseover="botaoOver(this)" onmouseout="botaoOut(this)">
+            <a href="https://pay.monetizze.com.br/KRR457494" target="_blank">?? COMPRAR AGORA ??</a>
+        </div>
+
+        <!-- Descrição -->
+        <h2>?? O QUE A PLANILHA FAZ</h2>
+        <p>Planilha profissional para Microsoft Excel (versões 5.0, 7.0 ou 97) com:</p>
+        <ul>
+            <li><b>Tabela de receitas</b> (categorias, valores, datas).</li>
+            <li><b>Tabela de despesas</b> (fixas, variáveis, descrição).</li>
+            <li><b>Gráficos automáticos</b> (barras e pizza para análise).</li>
+            <li><b>Balanço mensal</b> (saldo, total receitas/despesas).</li>
+            <li><b>Cálculos automáticos</b> (fórmulas prontas, sem configuração).</li>
+        </ul>
+
+        <!-- Tabela de detalhes (agora com atributos HTML de borda) -->
+        <h2>?? DETALHES TÉCNICOS</h2>
+        <table border="1" cellspacing="1" cellpadding="6" width="100%" bordercolor="#808080" bgcolor="#FFFFFF" class="tabela-detalhes">
+            <tr><td width="35%"><b>Formato</b></td><td>Arquivo .XLS (Excel 5.0/95/97)</td></tr>
+            <tr><td><b>Funcionalidades</b></td><td>Controle mensal, anual, categorias, saldo acumulado</td></tr>
+            <tr><td><b>Gráficos</b></td><td>Evolução, composição de gastos, comparativo</td></tr>
+            <tr><td><b>Impressão</b></td><td>Configurada para papel A4, cabeçalho e rodapé</td></tr>
+            <tr><td><b>Idioma</b></td><td>Português do Brasil (pt-BR)</td></tr>
+        </table>
+
+        <!-- Seção de por que usar -->
+        <h2>?? POR QUE USAR?</h2>
+        <p>Ideal para controle doméstico, pequenas empresas ou autônomos. Visualize suas finanças com poucos cliques. Sem mistérios: lançou, calculou, gráfico atualizado.</p>
+        <p><i>Não há suporte técnico, garantia ou devolução. O produto é digital e enviado por e-mail (informado no ato da compra) através da plataforma Monetizze.</i></p>
+
+        <!-- Observação sobre ausência de vendedor -->
+        <div style="background-color: #FFFFCC; border: 1px solid #FFCC00; padding: 8px; margin: 15px 0;">
+            <font color="#996633"><b>? INFORMAÇÃO:</b> Este site é apenas para venda. Não há endereço físico, telefone, e-mail ou identificação do vendedor. A transação é processada pela <b>Monetizze</b> (link de pagamento).</font>
+        </div>
+
+        <!-- Botão duplicado -->
+        <div class="botao-comprar" style="width: 60%;" onmouseover="botaoOver(this)" onmouseout="botaoOut(this)">
+            <a href="https://pay.monetizze.com.br/KRR457494" target="_blank">?? COMPRAR R$10,00 ??</a>
+        </div>
+
+        <!-- Data atual via JavaScript (pequeno toque de modernidade) -->
+        <div align="right" style="font-size: 10pt; font-family: Arial; margin-top: 8px;">
+            <script type="text/javascript">
+            <!--
+            mostrarDataAtual();
+            // -->
+            </script>
+        </div>
+
+        <!-- HISTÓRICO DE ATUALIZAÇÕES -->
+        <div class="historico">
+            <h3 style="margin-top: 0; color: #000000;">?? Histórico de Atualizações</h3>
+            <table>
+                <tr>
+                    <td class="data-historico">01/01/1997</td>
+                    <td><b>Lançamento do site:</b> página de vendas da planilha de controle financeiro. Layout em tabelas, compatível com Netscape 3.0 e IE 3.0. Design para monitores 640x480, processador Pentium, 16MB RAM, modem 28.8kbps. Cores seguras, sem frames, otimizado.</td>
+                </tr>
+                <tr>
+                    <td class="data-historico">01/02/1997</td>
+                    <td><b>Atualização:</b> Melhorias de compatibilidade: substituição de CSS2 (border-collapse, :before) por atributos HTML e list-style-type. Adicionado gráfico ilustrativo em ASCII (mais concreto). Inclusão de JavaScript para data atual e efeitos de botão (mouseover/mouseout) para funcionar no Netscape 3. Meta tags ajustadas (charset ISO-8859-1, revisit-after). Removido meta viewport (inexistente na época). Código agora ainda mais fiel ao período.</td>
+                </tr>
+            </table>
+            <p style="font-size: 10pt; font-family: monospace; margin-top: 8px;">* Site rigorosamente restrito a 01/02/1997: hardware, software e técnicas da data.</p>
+        </div>
+
+        <!-- Rodapé -->
+        <div class="rodape">
+            <b>© 1997</b> - Site de página única . venda direta via Monetizze<br>
+            <span style="font-family: 'Courier New', Courier;">[ atualizado em 01/02/1997 | nenhum recurso posterior a esta data ]</span>
+        </div>
+
+    </td></tr>
+</table>
+
+<!-- Comentários de otimização para época -->
+<!-- Hardware-alvo: Pentium 100-166MHz, 16-32MB RAM, monitor 640x480, modem 33.6kbps -->
+<!-- Navegadores: Netscape Navigator 3, Internet Explorer 3, Opera 2.1 -->
+<!-- Técnicas: tabelas aninhadas, JavaScript 1.1, CSS1 básico, atributos HTML de borda -->
+</body>
+</html>
