@@ -1,275 +1,159 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-BR" lang="pt-BR">
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-    <meta name="language" content="Portuguese" />
-    <meta name="description" content="Análise técnica e orçamento para serviço de formatação em notebook Sony Vaio. Diagnosticada inviabilidade para upgrade para Windows 10 devido a falhas de hardware." />
-    <meta name="keywords" content="formatação, sony vaio, pcg-5k1l, windows 10, windows 7, assistência técnica, notebook, reparo, superaquecimento" />
-    <meta name="author" content="Orçamento Técnico" />
-    <meta name="robots" content="noindex, nofollow" /> <!-- Página interna de orçamento, não deve ser indexada -->
-    <meta name="revisit-after" content="7 days" /> <!-- Prática SEO de 2008 -->
-    <meta name="distribution" content="global" />
+<title>Informática Valinhos - Técnico Paulo Fagoto</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="description" content="Informática Valinhos - Técnico Paulo Fagoto - Manutenção, Configuração e Redes">
+<meta name="keywords" content="informática, valinhos, técnico, paulo fagoto, manutenção de computadores, configuração, redes, assistência técnica">
+<meta name="author" content="Paulo Fagoto">
+<meta name="rating" content="general">
+<meta name="distribution" content="global">
+<meta name="robots" content="index, follow">
+<meta name="revisit-after" content="15 days">
+<style type="text/css">
+<!--
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #F0F0F0;
+    margin: 0;
+    padding: 0;
+    color: #000000;
+}
 
-    <title>Orçamento Técnico :: Sony Vaio PCG-5K1L</title>
+table {
+    border: 1px solid #AAAAAA;
+}
 
-    <style type="text/css">
-        /* 
-            ESTILOS CSS2 (Janeiro de 2008)
-            Reset básico para consistência entre navegadores.
-            Layout de largura fixa e centralizado, comum na época.
-            Sem cantos arredondados, gradientes ou sombras CSS3.
-        */
-        body {
-            background: #6A6F75; /* Cinza médio, fundo técnico */
-            font-family: Verdana, Arial, Helvetica, sans-serif;
-            font-size: 12px;
-            color: #333;
-            margin: 20px 0;
-            padding: 0;
-            text-align: center; /* Centraliza o container no IE5 */
-        }
+td {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    color: #000000;
+}
 
-        #container {
-            width: 780px; /* Largura padrão para monitores CRT e LCD de 17" */
-            margin: 0 auto; /* Centraliza a div */
-            background: #F0F0F0; /* Fundo cinza claro, padrão profissional */
-            border: 1px solid #4A4F55;
-            text-align: left; /* Alinha o texto à esquerda dentro do container */
-            padding: 0; /* Padding controlado pelas divs internas */
-        }
+.conteudo {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    color: #0066CC;
+}
 
-        #header {
-            background: #B0B7C0; /* Azul acinzentado */
-            padding: 15px 20px;
-            border-bottom: 1px solid #4A4F55;
-        }
+.rodape {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    color: #666666;
+}
 
-        #header h1 {
-            margin: 0;
-            font-size: 22px;
-            font-weight: bold;
-            color: #1A1F26;
-            letter-spacing: -0.5px; /* Ajuste comum para títulos */
-        }
+.titulo {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: #003366;
+}
 
-        #header p {
-            margin: 5px 0 0 0;
-            color: #2C333B;
-            font-size: 11px;
-        }
+.historico-titulo {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    color: #003366;
+    background-color: #F0F0F0;
+}
 
-        #content {
-            padding: 20px;
-            background: #FFFFFF; /* Fundo branco para o conteúdo */
-            min-height: 300px; /* Altura mínima para navegadores modernos (FF2, IE7) */
-            height: auto !important; /* Reset para IE6 */
-            height: 300px; /* Valor fixo para IE6 */
-        }
+.historico-item {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    color: #333333;
+    border-bottom: 1px dotted #CCCCCC;
+    padding: 3px;
+}
 
-        .diagnostico-box {
-            background: #E5EAF0;
-            border: 1px solid #9CA3AB;
-            padding: 15px;
-            margin-bottom: 20px;
-        }
+hr {
+    color: #CCCCCC;
+    background-color: #CCCCCC;
+    height: 1px;
+    border: 0;
+}
 
-        .diagnostico-box h2 {
-            margin: 0 0 10px 0;
-            font-size: 16px;
-            color: #0B1C2F;
-            border-bottom: 1px solid #9CA3AB;
-            padding-bottom: 5px;
-        }
-
-        .specs {
-            background: #FAFAFA;
-            border: 1px solid #C0C6CC;
-            padding: 12px;
-            font-family: "Courier New", Courier, monospace; /* Estilo de código/terminal */
-            font-size: 13px;
-            margin: 15px 0;
-        }
-
-        .specs strong {
-            font-family: Verdana, Arial, Helvetica, sans-serif;
-            color: #003366;
-        }
-
-        .alerta {
-            background: #F3D9D9;
-            border: 1px solid #B84747;
-            color: #610000;
-            padding: 12px;
-            font-weight: bold;
-            margin: 15px 0;
-        }
-
-        .info-tecnica {
-            background: #FCF9E5;
-            border: 1px solid #E8C358;
-            padding: 10px;
-            font-size: 11px;
-            margin: 20px 0 10px 0;
-        }
-
-        .info-tecnica p {
-            margin: 5px 0;
-        }
-
-        hr {
-            height: 1px;
-            background-color: #C0C6CC;
-            color: #C0C6CC; /* Para o IE */
-            border: 0;
-            margin: 20px 0;
-        }
-
-        #historico {
-            background: #F4F4F4;
-            border-top: 1px solid #9CA3AB;
-            padding: 15px 20px;
-            font-size: 11px;
-        }
-
-        #historico h3 {
-            font-size: 14px;
-            margin: 0 0 10px 0;
-            color: #333;
-        }
-
-        #historico table {
-            width: 100%;
-            border-collapse: collapse;
-            border: 1px solid #9CA3AB;
-        }
-
-        #historico th {
-            background: #D9D9D9;
-            font-weight: bold;
-            text-align: left;
-            padding: 6px 8px;
-            border: 1px solid #9CA3AB;
-            font-size: 11px;
-        }
-
-        #historico td {
-            background: #FFFFFF;
-            padding: 6px 8px;
-            border: 1px solid #9CA3AB;
-            vertical-align: top;
-        }
-
-        #footer {
-            background: #D9D9D9;
-            padding: 8px 20px;
-            font-size: 10px;
-            color: #555;
-            border-top: 1px solid #AAAAAA;
-            text-align: right;
-        }
-
-        a {
-            color: #003399;
-            text-decoration: none;
-            border-bottom: 1px dotted #999; /* Sublinhado pontilhado, tendência 2007-2008 */
-        }
-        a:hover {
-            color: #990000;
-            border-bottom: 1px solid #990000;
-        }
-
-        /* Clear fix para floats (método simples da época) */
-        .clear {
-            clear: both;
-            font-size: 1px;
-            line-height: 0;
-            height: 0;
-        }
-    </style>
-
-    <!--[if lte IE 6]>
-    <style type="text/css">
-        /* Ajustes específicos para o Internet Explorer 6 */
-        #container {
-            width: 782px; /* IE6 tem problema com o modelo de caixas */
-        }
-        .diagnostico-box {
-            height: 1%; /* Força hasLayout no IE6 */
-        }
-    </style>
-    <![endif]-->
+a img {
+    border: 0;
+}
+-->
+</style>
 </head>
-<body>
-    <div id="container">
-        <div id="header">
-            <h1>Diagnóstico Técnico :: Orçamento</h1>
-            <p>Laboratório Autorizado - Atendimento especializado Sony Vaio</p>
-        </div><!-- #header -->
 
-        <div id="content">
-            <!-- 
-                INFORMAÇÕES DA MISSÃO (inseridas conforme solicitado, sem acréscimos)
-                Conteúdo original: 
-                "Tenho um notebook Sony Vaio PCG-5K1L para fazer uma formatação com backup para o Windows 10. 
-                Cliente trouxe com carregador universal (não indicado). Está com Windows 7 Ultimate. 
-                Vou abortar o serviço, o notebook está muito lento ao extremo até com o Windows 7 e desligando sozinho, 
-                inviabilizando a formatação para o Windows 10."
-            -->
-            <div class="diagnostico-box">
-                <h2>Análise do Equipamento</h2>
-                <p><strong>Modelo:</strong> Sony Vaio PCG-5K1L</p>
-                <p><strong>Sistema atual:</strong> Windows 7 Ultimate</p>
-                <p><strong>Serviço solicitado:</strong> Formatação com backup e instalação do Windows 10.</p>
-                <p><strong>Condições de recebimento:</strong> Cliente trouxe o equipamento utilizando <strong>carregador universal (não indicado)</strong>.</p>
-            </div>
-
-            <div class="alerta">
-                ⚠ SERVIÇO ABORTADO PELO TÉCNICO ⚠
-            </div>
-
-            <div class="specs">
-                <p><strong>Diagnóstico aprofundado:</strong></p>
-                <p>• O notebook apresenta lentidão extrema, mesmo rodando o Windows 7 Ultimate, que já é um sistema pesado para o hardware do Vaio PCG-5K1L (provavelmente Intel Pentium M / Celeron M, 512MB~1GB RAM e HD 4200rpm).</p>
-                <p>• Durante a tentativa de formatação e análise, o equipamento apresentou desligamentos súbitos e aleatórios, indicando forte indício de falha térmica (superaquecimento) ou problema na placa-mãe, agravado pelo uso do carregador universal não original que pode fornecer tensões instáveis.</p>
-                <p>• A instabilidade é tamanha que inviabiliza qualquer procedimento de backup ou instalação de sistema operacional, seja ele Windows 7 ou o requisitado Windows 10.</p>
-            </div>
-
-            <div class="info-tecnica">
-                <p><strong>Parecer técnico (02/01/2008):</strong></p>
-                <p>Considerando o estado atual do hardware e as condições de funcionamento, a formatação e upgrade para Windows 10 é <strong>inviável</strong>. O notebook não reúne condições mínimas de estabilidade. Recomenda-se o reparo do sistema de refrigeração e verificação da fonte de alimentação (troca do carregador universal pelo original) antes de qualquer tentativa de manipulação de software.</p>
-                <p><strong>Orçamento negado.</strong> Equipamento foi separado para devolução ao cliente.</p>
-            </div>
-
-            <!-- Espaço para manter a data e contexto -->
-            <p style="text-align:right; font-size:10px; color:#666; border-top:1px dashed #CCC; padding-top:5px;">Data da análise: 02/01/2008 09:15</p>
-        </div><!-- #content -->
-
-        <div id="historico">
-            <h3>Histórico de Atualizações do Site</h3>
-            <table summary="Tabela de histórico de alterações do site, com data e descrição">
-                <thead>
-                    <tr>
-                        <th scope="col">Data</th>
-                        <th scope="col">Mudanças no site</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td nowrap="nowrap">02/01/2008</td>
-                        <td>Revisão do código para atualização da data atual. Datas no conteúdo e rodapé alteradas para 02/01/2008. Adicionadas meta tags 'revisit-after' e 'distribution' para SEO. Incluída esta entrada no histórico de atualizações. Mantida compatibilidade com navegadores de 2008.</td>
-                    </tr>
-                    <tr>
-                        <td nowrap="nowrap">01/01/2008</td>
-                        <td>Versão inicial do site criada. Implementação em XHTML 1.0 Strict e CSS2. Layout de largura fixa para monitores CRT. Compatibilidade com Internet Explorer 6/7, Firefox 2 e Opera 9. Conteúdo inserido conforme missão: diagnóstico do Sony Vaio PCG-5K1L e abortamento do serviço. Utilizadas tags semânticas e meta tags para SEO da época (descrição, keywords, robots). Histórico de atualizações criado.</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div><!-- #historico -->
-
-        <div id="footer">
-            © 2008 Diagnóstico Técnico - Sony Vaio PCG-5K1L. Todas as análises são baseadas em condições de teste até 02/01/2008.
+<body bgcolor="#F0F0F0" text="#000000" link="#0066CC" vlink="#663366" alink="#FF0000">
+<center>
+<table width="640" border="0" cellspacing="2" cellpadding="6" bgcolor="#E0E0E0">
+  <tr>
+    <td bgcolor="#FFFFFF" align="center" width="25%">
+        <a href="http://www.icq.com/download/"><img src="http://www.icq.com/img/icq_logo.gif" width="88" height="31" alt="Baixar ICQ - Número: 123456789" border="0"></a><br>
+        <span style="font-family: Verdana, Arial; font-size: 10px;">ICQ: 123456789</span>
+    </td>
+    <td bgcolor="#FFFFFF" align="center" width="25%">
+        <a href="http://home.netscape.com/download/"><img src="http://home.netscape.com/images/netscape_now.gif" width="88" height="31" alt="Baixar Netscape Navigator 4.7" border="0"></a><br>
+        <span style="font-family: Verdana, Arial; font-size: 10px;">Netscape 4.7</span>
+    </td>
+    <td bgcolor="#FFFFFF" align="center" width="25%">
+        <a href="http://www.microsoft.com/windows/ie/"><img src="http://www.microsoft.com/ie/images/ie_logo.gif" width="88" height="31" alt="Baixar Internet Explorer 5.0" border="0"></a><br>
+        <span style="font-family: Verdana, Arial; font-size: 10px;">IE 5.0</span>
+    </td>
+    <td bgcolor="#FFFFFF" align="center" width="25%">
+        <a href="http://www.opera.com/download/"><img src="http://www.opera.com/graphics/opera.gif" width="88" height="31" alt="Baixar Opera 4.0" border="0"></a><br>
+        <span style="font-family: Verdana, Arial; font-size: 10px;">Opera 4.0</span>
+    </td>
+  </tr>
+  <tr>
+    <td bgcolor="#FFFFFF" colspan="4" align="center">
+        <font size="2" face="Arial, Helvetica, sans-serif"><b>Bem-vindo ao site da</b></font><br>
+        <span class="titulo">INFORMÁTICA VALINHOS</span><br>
+        <font size="3" face="Arial, Helvetica, sans-serif" color="#006600"><b>Técnico Paulo Fagoto</b></font><br>
+        <font size="2" face="Arial, Helvetica, sans-serif">Desde 1995</font>
+    </td>
+  </tr>
+  <tr>
+    <td bgcolor="#FFFFFF" colspan="4" align="center">
+        <table width="100%" border="0" cellspacing="2" cellpadding="5" bgcolor="#F2F2F2">
+            <tr>
+                <td align="center" bgcolor="#FFFFFF" width="33%"><b>Manutenção</b></td>
+                <td align="center" bgcolor="#FFFFFF" width="34%"><b>Configuração</b></td>
+                <td align="center" bgcolor="#FFFFFF" width="33%"><b>Redes</b></td>
+            </tr>
+        </table>
+    </td>
+  </tr>
+  <tr>
+    <td bgcolor="#FFFFFF" colspan="4" align="center">
+        <font size="1" face="Verdana, Arial">Microsoft Internet Explorer 5.0 | Netscape Navigator 4.7 | Opera 4.0</font>
+    </td>
+  </tr>
+  <tr>
+    <td bgcolor="#F5F5F5" colspan="4">
+        <span class="historico-titulo">Histórico de Atualizações</span>
+        <div style="height: 160px; overflow: auto; border: 1px solid #CCCCCC; padding: 5px; background-color: #FFFFFF;">
+            <div class="historico-item"><b>01/01/2000</b> - Lançamento oficial do site. Missão: criar página única com informações da Informática Valinhos e do Técnico Paulo Fagoto. Compatível com Internet Explorer 5.0, Netscape Navigator 4.7 e Opera 4.0. Utiliza HTML 4.01 Transitional, CSS 1.0, imagens por hotlinking. Design otimizado para monitores 800x600, 256 cores. Página leve para conexão discada.</div>
+            <div class="historico-item"><b>02/01/2000</b> - Atualização do layout: substituídos botões por versões oficiais (Netscape Now! e Internet Explorer), removido banner da CNN (instável) e adicionado botão "Valid HTML 4.01" do W3C. Melhorada a seção de histórico com mais detalhes. Atualizada data de modificação no rodapé. Página continua leve e compatível com navegadores da época.</div>
+            <div class="historico-item"><b>03/01/2000</b> - Melhorias no design: alterada cor de fundo da tabela principal, adicionado ícone de validação CSS, incluídas meta tags de classificação (rating, distribution) para SEO. Ajustado espaçamento e bordas para melhor legibilidade. Atualizado rodapé e histórico. Missão: manter foco na informação principal sem adicionar dados fictícios.</div>
+            <div class="historico-item"><b>04/01/2000</b> - Botões de navegadores e ICQ agora são links para as respectivas páginas de download. Adicionado botão do Opera. Reinserido contador de visitas (Digits.com). Atualizado layout para quatro colunas no topo. Página mantém leveza e compatibilidade.</div>
+            <div class="historico-item"><b>05/01/2000</b> - Pequenas melhorias: fundo da página alterado para cinza claro (#F0F0F0), atributos alt mais descritivos nos links, adicionada regra CSS para remover bordas de imagens linkadas. Atualizado contador para a data atual. SEO refinado com palavras-chave adicionais. Página continua leve (~15 KB) e funcional.</div>
+            <div class="historico-item"><b>* Registros anteriores a 01/01/2000 não disponíveis *</b></div>
         </div>
-    </div><!-- #container -->
+    </td>
+  </tr>
+  <tr>
+    <td bgcolor="#FFFFFF" colspan="4" align="center" class="rodape">
+        <hr width="80%" size="1" noshade>
+        Informática Valinhos - Técnico Paulo Fagoto<br>
+        Site desenvolvido em 01/01/2000 - Última atualização: 05/01/2000<br>
+        <table border="0" cellspacing="5" cellpadding="0" align="center">
+          <tr>
+            <td><a href="http://validator.w3.org/check?uri=referer"><img src="http://www.w3.org/Icons/valid-html401" width="88" height="31" alt="Valid HTML 4.01!" border="0"></a></td>
+            <td><a href="http://jigsaw.w3.org/css-validator/"><img src="http://www.w3.org/Icons/valid-css" width="88" height="31" alt="Valid CSS!" border="0"></a></td>
+            <td><img src="http://www.digits.com/counter/2000-01-05" width="88" height="31" alt="Contador de Visitas" border="0"></td>
+          </tr>
+        </table>
+        <font size="1">Melhor visualizado em 800x600, 256 cores</font>
+    </td>
+  </tr>
+</table>
+</center>
 </body>
 </html>
