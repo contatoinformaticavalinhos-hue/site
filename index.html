@@ -1,159 +1,1261 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="pt-BR">
 <head>
-<title>Informática Valinhos - Técnico Paulo Fagoto</title>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-<meta name="description" content="Informática Valinhos - Técnico Paulo Fagoto - Manutenção, Configuração e Redes">
-<meta name="keywords" content="informática, valinhos, técnico, paulo fagoto, manutenção de computadores, configuração, redes, assistência técnica">
-<meta name="author" content="Paulo Fagoto">
-<meta name="rating" content="general">
-<meta name="distribution" content="global">
-<meta name="robots" content="index, follow">
-<meta name="revisit-after" content="15 days">
-<style type="text/css">
-<!--
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #F0F0F0;
-    margin: 0;
-    padding: 0;
-    color: #000000;
-}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Título otimizado para SEO -->
+    <title>Paulo Fagoto - Técnico de Informática em Valinhos | Especialista em TI</title>
+    
+    <!-- Meta descrição aprimorada -->
+    <meta name="description" content="🔧 Técnico de informática em Valinhos: manutenção de computadores, formatação, redes e atendimento domiciliar. Paulo Fagoto, especialista em TI com +10 anos de experiência. Atendimento rápido e garantido.">
+    
+    <!-- Palavras-chave relevantes -->
+    <meta name="keywords" content="técnico informática Valinhos, manutenção computadores Valinhos, formatação PC Valinhos, assistência técnica Valinhos, suporte TI Valinhos, informática domiciliar Valinhos, conserto notebook Valinhos">
+    
+    <meta name="author" content="Paulo Fagoto">
+    <meta name="robots" content="index, follow">
+    <meta name="revisit-after" content="7 days">
+    <meta name="language" content="portuguese">
+    
+    <!-- Favicon moderno com suporte a múltiplos dispositivos -->
+    <link rel="icon" type="image/png" sizes="32x32" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💻</text></svg>">
+    <link rel="icon" type="image/png" sizes="16x16" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💻</text></svg>">
+    <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💻</text></svg>">
+    <link rel="manifest" crossorigin="use-credentials">
+    
+    <!-- Open Graph aprimorado para compartilhamento -->
+    <meta property="og:title" content="Paulo Fagoto - Técnico de Informática em Valinhos">
+    <meta property="og:description" content="🔧 Manutenção, formatação e suporte técnico em Valinhos com agilidade e qualidade. Atendimento domiciliar!">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://paulofagoto.com.br">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:site_name" content="Paulo Fagoto Técnico em Informática">
+    <meta property="og:image" content="https://paulofagoto.com.br/og-image.jpg">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Paulo Fagoto - Técnico de Informática">
+    <meta name="twitter:description" content="🔧 Especialista em TI em Valinhos com mais de 10 anos de experiência">
+    
+    <!-- Preconnect para otimização de carregamento -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Fontes otimizadas -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    
+    <!-- Preload de assets críticos -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap">
+    
+    <style>
+        /* Reset e variáveis aprimoradas com design system */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-table {
-    border: 1px solid #AAAAAA;
-}
+        :root {
+            /* Cores principais */
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --primary-light: #60a5fa;
+            --primary-soft: #dbeafe;
+            --secondary: #7c3aed;
+            --secondary-light: #c4b5fd;
+            --accent: #06b6d4;
+            --accent-soft: #cffafe;
+            
+            /* Tons neutros */
+            --dark: #0f172a;
+            --dark-light: #1e293b;
+            --gray-dark: #334155;
+            --gray: #475569;
+            --gray-medium: #64748b;
+            --gray-light: #94a3b8;
+            --light-gray: #e2e8f0;
+            --light: #f8fafc;
+            --white: #ffffff;
+            
+            /* Cores funcionais */
+            --success: #10b981;
+            --success-light: #d1fae5;
+            --warning: #f59e0b;
+            --warning-light: #fed7aa;
+            --error: #ef4444;
+            --error-light: #fee2e2;
+            
+            /* Sombras */
+            --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+            --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            --shadow-md: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+            --shadow-lg: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+            --shadow-xl: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+            --shadow-inner: inset 0 2px 4px 0 rgb(0 0 0 / 0.05);
+            --shadow-glow: 0 0 15px rgba(37, 99, 235, 0.5);
+            
+            /* Bordas */
+            --radius-full: 9999px;
+            --radius-xl: 32px;
+            --radius-lg: 24px;
+            --radius-md: 16px;
+            --radius-sm: 12px;
+            --radius-xs: 8px;
+            
+            /* Transições */
+            --transition-fast: all 0.15s ease;
+            --transition: all 0.25s ease;
+            --transition-slow: all 0.4s ease;
+            --transition-bounce: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            
+            /* Espaçamentos */
+            --space-xs: 4px;
+            --space-sm: 8px;
+            --space-md: 16px;
+            --space-lg: 24px;
+            --space-xl: 32px;
+            --space-2xl: 40px;
+            --space-3xl: 56px;
+        }
 
-td {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 12px;
-    color: #000000;
-}
+        body {
+            font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: radial-gradient(circle at 100% 0%, #2563eb 0%, #1e40af 35%, #6b21a5 70%, #7c3aed 100%);
+            background-attachment: fixed;
+            color: var(--dark);
+            line-height: 1.5;
+            min-height: 100vh;
+            padding: clamp(var(--space-md), 4vw, var(--space-2xl));
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
 
-.conteudo {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 14px;
-    font-weight: bold;
-    color: #0066CC;
-}
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.1) 0%, transparent 30%),
+                radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.1) 0%, transparent 30%);
+            pointer-events: none;
+            z-index: 0;
+        }
 
-.rodape {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 10px;
-    color: #666666;
-}
+        body::after {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" opacity="0.03"><path d="M40 40 L160 40 L160 160 L40 160 Z" fill="none" stroke="white" stroke-width="3"/><circle cx="60" cy="60" r="8" fill="white"/><circle cx="140" cy="140" r="8" fill="white"/></svg>');
+            background-size: 80px 80px;
+            pointer-events: none;
+            z-index: 0;
+        }
 
-.titulo {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 18px;
-    font-weight: bold;
-    color: #003366;
-}
+        /* Container principal com efeito glassmorphism aprimorado */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            padding: clamp(var(--space-xl), 6vw, var(--space-3xl));
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-xl), 0 0 0 1px rgba(255, 255, 255, 0.5);
+            animation: fadeInScale 0.6s ease-out;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            position: relative;
+            z-index: 1;
+            width: 100%;
+        }
 
-.historico-titulo {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 14px;
-    font-weight: bold;
-    color: #003366;
-    background-color: #F0F0F0;
-}
+        @keyframes fadeInScale {
+            from {
+                opacity: 0;
+                transform: translateY(30px) scale(0.98);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
 
-.historico-item {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 11px;
-    color: #333333;
-    border-bottom: 1px dotted #CCCCCC;
-    padding: 3px;
-}
+        /* Header estilizado */
+        .profile-header {
+            text-align: center;
+            margin-bottom: var(--space-2xl);
+            position: relative;
+        }
 
-hr {
-    color: #CCCCCC;
-    background-color: #CCCCCC;
-    height: 1px;
-    border: 0;
-}
+        .profile-header::after {
+            content: '';
+            position: absolute;
+            bottom: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(90deg, transparent, var(--primary), var(--secondary), transparent);
+            border-radius: var(--radius-full);
+        }
 
-a img {
-    border: 0;
-}
--->
-</style>
+        h1 {
+            color: var(--dark);
+            font-size: clamp(2.8rem, 7vw, 4.5rem);
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            line-height: 1.1;
+            margin-bottom: var(--space-xl);
+            text-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .highlight {
+            position: relative;
+            display: inline-block;
+            background: linear-gradient(145deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: gradientShift 8s ease infinite;
+        }
+
+        @keyframes gradientShift {
+            0%, 100% { filter: hue-rotate(0deg); }
+            50% { filter: hue-rotate(10deg); }
+        }
+
+        .subtitle {
+            font-size: 1.3rem;
+            font-weight: 400;
+            color: var(--gray);
+            margin-top: var(--space-xs);
+            letter-spacing: -0.01em;
+        }
+
+        .badge-container {
+            display: flex;
+            justify-content: center;
+            gap: var(--space-md);
+            flex-wrap: wrap;
+            margin-top: var(--space-xl);
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-sm);
+            background: var(--white);
+            color: var(--dark);
+            padding: var(--space-sm) var(--space-lg);
+            border-radius: var(--radius-full);
+            font-weight: 600;
+            font-size: 1rem;
+            box-shadow: var(--shadow-md);
+            border: 1px solid var(--light-gray);
+            transition: var(--transition);
+        }
+
+        .badge:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--primary-light);
+        }
+
+        .badge-icon {
+            font-size: 1.2rem;
+        }
+
+        /* Sobre / Introdução */
+        .intro-card {
+            background: linear-gradient(145deg, var(--primary-soft), var(--secondary-light));
+            padding: var(--space-xl);
+            border-radius: var(--radius-md);
+            margin-bottom: var(--space-2xl);
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            box-shadow: var(--shadow);
+        }
+
+        .intro-text {
+            color: var(--dark-light);
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.2rem;
+            line-height: 1.7;
+            font-weight: 500;
+        }
+
+        .intro-highlight {
+            color: var(--primary-dark);
+            font-weight: 700;
+        }
+
+        /* Grid de serviços com design mais refinado */
+        .services-section {
+            margin: var(--space-2xl) 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: var(--space-xl);
+            position: relative;
+        }
+
+        .section-title h2 {
+            font-size: 2rem;
+            color: var(--dark);
+            font-weight: 700;
+            display: inline-block;
+            background: var(--white);
+            padding: 0 var(--space-lg);
+            position: relative;
+            z-index: 1;
+        }
+
+        .section-title::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--primary-light), var(--secondary-light), transparent);
+            transform: translateY(-50%);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: var(--space-lg);
+            margin: var(--space-2xl) 0;
+        }
+
+        .service-card {
+            background: var(--white);
+            padding: var(--space-xl) var(--space-lg);
+            border-radius: var(--radius-sm);
+            box-shadow: var(--shadow);
+            transition: var(--transition-bounce);
+            border: 1px solid var(--light-gray);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: var(--space-md);
+            text-decoration: none;
+            color: var(--dark);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            transform: scaleX(0);
+            transition: var(--transition);
+        }
+
+        .service-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-lg);
+            border-color: transparent;
+        }
+
+        .service-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .service-icon {
+            font-size: 2.8rem;
+            line-height: 1;
+            margin-bottom: var(--space-xs);
+            filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.1));
+            transition: var(--transition);
+        }
+
+        .service-card:hover .service-icon {
+            transform: scale(1.1);
+        }
+
+        .service-text {
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: var(--dark);
+            line-height: 1.4;
+        }
+
+        .service-description {
+            font-size: 0.9rem;
+            color: var(--gray);
+            line-height: 1.4;
+        }
+
+        /* Cards de contato com design aprimorado */
+        .contact-section {
+            margin: var(--space-2xl) 0;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: var(--space-xl);
+            margin: var(--space-2xl) 0;
+        }
+
+        .contact-card {
+            background: linear-gradient(145deg, var(--primary), var(--secondary));
+            color: white;
+            padding: var(--space-2xl) var(--space-xl);
+            border-radius: var(--radius-md);
+            text-align: center;
+            transition: var(--transition-bounce);
+            box-shadow: var(--shadow-lg);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-card::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, transparent 50%);
+            opacity: 0;
+            transition: var(--transition);
+        }
+
+        .contact-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .contact-card:hover::after {
+            opacity: 1;
+        }
+
+        .contact-icon {
+            font-size: 3.2rem;
+            margin-bottom: var(--space-lg);
+            display: block;
+            filter: drop-shadow(0 8px 6px rgba(0, 0, 0, 0.2));
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
+        }
+
+        .contact-label {
+            font-size: 0.95rem;
+            opacity: 0.9;
+            margin-bottom: var(--space-xs);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-weight: 500;
+        }
+
+        .contact-value {
+            font-size: 1.4rem;
+            font-weight: 700;
+            word-break: break-word;
+            line-height: 1.4;
+        }
+
+        .contact-link {
+            color: white;
+            text-decoration: none;
+            border-bottom: 2px dashed rgba(255,255,255,0.3);
+            transition: var(--transition);
+            padding-bottom: 2px;
+        }
+
+        .contact-link:hover {
+            border-bottom-color: white;
+        }
+
+        /* Botão WhatsApp aprimorado */
+        .whatsapp-wrapper {
+            text-align: center;
+            margin: var(--space-xl) 0;
+        }
+
+        .whatsapp-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: var(--space-md);
+            background: linear-gradient(145deg, #25D366, #128C7E);
+            color: white;
+            text-decoration: none;
+            padding: var(--space-lg) var(--space-2xl);
+            border-radius: var(--radius-full);
+            font-weight: 700;
+            font-size: 1.4rem;
+            transition: var(--transition-bounce);
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            max-width: 520px;
+            box-shadow: 0 12px 24px rgba(37, 211, 102, 0.3);
+            letter-spacing: 0.5px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .whatsapp-btn::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+
+        .whatsapp-btn:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 32px rgba(18, 140, 126, 0.4);
+        }
+
+        .whatsapp-btn:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+
+        .whatsapp-btn:active {
+            transform: translateY(-2px);
+        }
+
+        .whatsapp-btn span:first-child {
+            font-size: 1.8rem;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        /* Schedule card aprimorado */
+        .schedule-card {
+            background: linear-gradient(145deg, var(--white), var(--light));
+            padding: var(--space-2xl);
+            border-radius: var(--radius-md);
+            margin: var(--space-2xl) 0;
+            border-left: 8px solid var(--primary);
+            box-shadow: var(--shadow-lg);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .schedule-card::before {
+            content: '📅';
+            position: absolute;
+            bottom: -20px;
+            right: -20px;
+            font-size: 8rem;
+            opacity: 0.03;
+            transform: rotate(-15deg);
+        }
+
+        .schedule-title {
+            display: flex;
+            align-items: center;
+            gap: var(--space-md);
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: var(--space-xl);
+        }
+
+        .schedule-detail {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--space-xl);
+            justify-content: flex-start;
+            color: var(--gray);
+            font-size: 1.2rem;
+        }
+
+        .schedule-item {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-xs);
+            background: var(--white);
+            padding: var(--space-md) var(--space-xl);
+            border-radius: var(--radius-sm);
+            box-shadow: var(--shadow-sm);
+            min-width: 200px;
+        }
+
+        .schedule-item strong {
+            color: var(--dark);
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .schedule-item span {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        /* Selos de garantia aprimorados */
+        .trust-badges {
+            display: flex;
+            justify-content: center;
+            gap: var(--space-xl);
+            margin: var(--space-2xl) 0;
+            flex-wrap: wrap;
+        }
+
+        .trust-badge {
+            display: flex;
+            align-items: center;
+            gap: var(--space-md);
+            color: var(--gray);
+            font-size: 1.1rem;
+            background: linear-gradient(145deg, var(--white), var(--light));
+            padding: var(--space-md) var(--space-xl);
+            border-radius: var(--radius-full);
+            box-shadow: var(--shadow-md);
+            border: 1px solid var(--light-gray);
+            transition: var(--transition);
+        }
+
+        .trust-badge:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--primary-light);
+        }
+
+        .trust-badge span:first-child {
+            color: var(--success);
+            font-size: 1.5rem;
+            filter: drop-shadow(0 2px 2px rgba(16, 185, 129, 0.3));
+        }
+
+        /* Botão back to top aprimorado */
+        .back-to-top {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: var(--space-sm);
+            margin-top: var(--space-2xl);
+            color: var(--gray);
+            text-decoration: none;
+            font-weight: 500;
+            padding: var(--space-md) var(--space-xl);
+            border-radius: var(--radius-full);
+            background: var(--white);
+            border: 1px solid var(--light-gray);
+            transition: var(--transition);
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .back-to-top:hover {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .back-to-top span {
+            font-size: 1.3rem;
+            transition: var(--transition);
+        }
+
+        .back-to-top:hover span {
+            transform: translateY(-2px);
+        }
+
+        /* Footer aprimorado */
+        footer {
+            text-align: center;
+            margin-top: var(--space-2xl);
+            color: rgba(255, 255, 255, 0.95);
+            font-size: 1rem;
+            position: relative;
+            z-index: 1;
+            padding: var(--space-lg) 0;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: var(--space-xl);
+            flex-wrap: wrap;
+            margin: var(--space-lg) 0 var(--space-md);
+        }
+
+        .footer-link {
+            color: white;
+            text-decoration: none;
+            border-bottom: 1px dotted rgba(255, 255, 255, 0.3);
+            transition: var(--transition);
+            padding-bottom: 2px;
+            font-weight: 500;
+        }
+
+        .footer-link:hover {
+            border-bottom-color: white;
+            transform: translateY(-1px);
+        }
+
+        .footer-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-xs);
+            background: rgba(255, 255, 255, 0.1);
+            padding: var(--space-xs) var(--space-md);
+            border-radius: var(--radius-full);
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        /* Acessibilidade aprimorada */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border-width: 0;
+        }
+
+        :focus-visible {
+            outline: 3px solid var(--primary);
+            outline-offset: 4px;
+            border-radius: var(--radius-xs);
+        }
+
+        ::selection {
+            background: var(--primary-soft);
+            color: var(--primary-dark);
+        }
+
+        /* Animações condicionais */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+
+        /* Responsivo refinado */
+        @media (max-width: 768px) {
+            :root {
+                --space-2xl: 32px;
+                --space-3xl: 40px;
+            }
+
+            .container {
+                padding: var(--space-lg);
+            }
+            
+            .badge-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .badge {
+                width: 100%;
+                justify-content: center;
+            }
+            
+            .contact-grid {
+                gap: var(--space-lg);
+            }
+            
+            .schedule-detail {
+                flex-direction: column;
+                gap: var(--space-md);
+            }
+            
+            .schedule-item {
+                width: 100%;
+            }
+            
+            .trust-badges {
+                gap: var(--space-md);
+            }
+            
+            .trust-badge {
+                width: 100%;
+                justify-content: center;
+            }
+            
+            .whatsapp-btn {
+                font-size: 1.2rem;
+                padding: var(--space-md) var(--space-lg);
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: var(--space-xs);
+            }
+            
+            .container {
+                padding: var(--space-md);
+                border-radius: var(--radius-md);
+            }
+            
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            .subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .service-card {
+                flex-direction: row;
+                text-align: left;
+                padding: var(--space-md);
+            }
+            
+            .service-icon {
+                font-size: 2.2rem;
+                margin-bottom: 0;
+            }
+            
+            .contact-card {
+                padding: var(--space-lg);
+            }
+            
+            .contact-value {
+                font-size: 1.2rem;
+            }
+        }
+
+        /* Scrollbar personalizada refinada */
+        ::-webkit-scrollbar {
+            width: 14px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: linear-gradient(to bottom, var(--light), var(--light-gray));
+            border-radius: var(--radius-full);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(145deg, var(--primary), var(--secondary));
+            border-radius: var(--radius-full);
+            border: 3px solid var(--light);
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(145deg, var(--primary-dark), var(--secondary));
+        }
+        
+        /* Scroll suave */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Loading state */
+        .loading {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: var(--white);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s;
+        }
+
+        .loading.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+    </style>
 </head>
 
-<body bgcolor="#F0F0F0" text="#000000" link="#0066CC" vlink="#663366" alink="#FF0000">
-<center>
-<table width="640" border="0" cellspacing="2" cellpadding="6" bgcolor="#E0E0E0">
-  <tr>
-    <td bgcolor="#FFFFFF" align="center" width="25%">
-        <a href="http://www.icq.com/download/"><img src="http://www.icq.com/img/icq_logo.gif" width="88" height="31" alt="Baixar ICQ - Número: 123456789" border="0"></a><br>
-        <span style="font-family: Verdana, Arial; font-size: 10px;">ICQ: 123456789</span>
-    </td>
-    <td bgcolor="#FFFFFF" align="center" width="25%">
-        <a href="http://home.netscape.com/download/"><img src="http://home.netscape.com/images/netscape_now.gif" width="88" height="31" alt="Baixar Netscape Navigator 4.7" border="0"></a><br>
-        <span style="font-family: Verdana, Arial; font-size: 10px;">Netscape 4.7</span>
-    </td>
-    <td bgcolor="#FFFFFF" align="center" width="25%">
-        <a href="http://www.microsoft.com/windows/ie/"><img src="http://www.microsoft.com/ie/images/ie_logo.gif" width="88" height="31" alt="Baixar Internet Explorer 5.0" border="0"></a><br>
-        <span style="font-family: Verdana, Arial; font-size: 10px;">IE 5.0</span>
-    </td>
-    <td bgcolor="#FFFFFF" align="center" width="25%">
-        <a href="http://www.opera.com/download/"><img src="http://www.opera.com/graphics/opera.gif" width="88" height="31" alt="Baixar Opera 4.0" border="0"></a><br>
-        <span style="font-family: Verdana, Arial; font-size: 10px;">Opera 4.0</span>
-    </td>
-  </tr>
-  <tr>
-    <td bgcolor="#FFFFFF" colspan="4" align="center">
-        <font size="2" face="Arial, Helvetica, sans-serif"><b>Bem-vindo ao site da</b></font><br>
-        <span class="titulo">INFORMÁTICA VALINHOS</span><br>
-        <font size="3" face="Arial, Helvetica, sans-serif" color="#006600"><b>Técnico Paulo Fagoto</b></font><br>
-        <font size="2" face="Arial, Helvetica, sans-serif">Desde 1995</font>
-    </td>
-  </tr>
-  <tr>
-    <td bgcolor="#FFFFFF" colspan="4" align="center">
-        <table width="100%" border="0" cellspacing="2" cellpadding="5" bgcolor="#F2F2F2">
-            <tr>
-                <td align="center" bgcolor="#FFFFFF" width="33%"><b>Manutenção</b></td>
-                <td align="center" bgcolor="#FFFFFF" width="34%"><b>Configuração</b></td>
-                <td align="center" bgcolor="#FFFFFF" width="33%"><b>Redes</b></td>
-            </tr>
-        </table>
-    </td>
-  </tr>
-  <tr>
-    <td bgcolor="#FFFFFF" colspan="4" align="center">
-        <font size="1" face="Verdana, Arial">Microsoft Internet Explorer 5.0 | Netscape Navigator 4.7 | Opera 4.0</font>
-    </td>
-  </tr>
-  <tr>
-    <td bgcolor="#F5F5F5" colspan="4">
-        <span class="historico-titulo">Histórico de Atualizações</span>
-        <div style="height: 160px; overflow: auto; border: 1px solid #CCCCCC; padding: 5px; background-color: #FFFFFF;">
-            <div class="historico-item"><b>01/01/2000</b> - Lançamento oficial do site. Missão: criar página única com informações da Informática Valinhos e do Técnico Paulo Fagoto. Compatível com Internet Explorer 5.0, Netscape Navigator 4.7 e Opera 4.0. Utiliza HTML 4.01 Transitional, CSS 1.0, imagens por hotlinking. Design otimizado para monitores 800x600, 256 cores. Página leve para conexão discada.</div>
-            <div class="historico-item"><b>02/01/2000</b> - Atualização do layout: substituídos botões por versões oficiais (Netscape Now! e Internet Explorer), removido banner da CNN (instável) e adicionado botão "Valid HTML 4.01" do W3C. Melhorada a seção de histórico com mais detalhes. Atualizada data de modificação no rodapé. Página continua leve e compatível com navegadores da época.</div>
-            <div class="historico-item"><b>03/01/2000</b> - Melhorias no design: alterada cor de fundo da tabela principal, adicionado ícone de validação CSS, incluídas meta tags de classificação (rating, distribution) para SEO. Ajustado espaçamento e bordas para melhor legibilidade. Atualizado rodapé e histórico. Missão: manter foco na informação principal sem adicionar dados fictícios.</div>
-            <div class="historico-item"><b>04/01/2000</b> - Botões de navegadores e ICQ agora são links para as respectivas páginas de download. Adicionado botão do Opera. Reinserido contador de visitas (Digits.com). Atualizado layout para quatro colunas no topo. Página mantém leveza e compatibilidade.</div>
-            <div class="historico-item"><b>05/01/2000</b> - Pequenas melhorias: fundo da página alterado para cinza claro (#F0F0F0), atributos alt mais descritivos nos links, adicionada regra CSS para remover bordas de imagens linkadas. Atualizado contador para a data atual. SEO refinado com palavras-chave adicionais. Página continua leve (~15 KB) e funcional.</div>
-            <div class="historico-item"><b>* Registros anteriores a 01/01/2000 não disponíveis *</b></div>
+<body>
+    <div class="container" role="main" id="topo">
+        <!-- Cabeçalho com perfil -->
+        <header class="profile-header">
+            <h1>
+                <span class="highlight">Paulo Fagoto</span>
+                <div class="subtitle">Técnico em Informática</div>
+            </h1>
+            
+            <div class="badge-container">
+                <div class="badge" role="status" aria-label="Área de atendimento">
+                    <span class="badge-icon" aria-hidden="true">📍</span>
+                    <span>Atendimento em Valinhos e região</span>
+                </div>
+                <div class="badge" role="status" aria-label="Experiência">
+                    <span class="badge-icon" aria-hidden="true">⭐</span>
+                    <span>Mais de 10 anos de experiência</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Sobre / Introdução -->
+        <div class="intro-card">
+            <p class="intro-text">
+                <span class="intro-highlight">🔧 Especialista em soluções de TI</span> com mais de 10 anos de experiência. 
+                Ofereço serviços profissionais com <strong>agilidade, transparência e garantia</strong>. 
+                Atendimento domiciliar e suporte remoto personalizado para toda Valinhos e região.
+            </p>
         </div>
-    </td>
-  </tr>
-  <tr>
-    <td bgcolor="#FFFFFF" colspan="4" align="center" class="rodape">
-        <hr width="80%" size="1" noshade>
-        Informática Valinhos - Técnico Paulo Fagoto<br>
-        Site desenvolvido em 01/01/2000 - Última atualização: 05/01/2000<br>
-        <table border="0" cellspacing="5" cellpadding="0" align="center">
-          <tr>
-            <td><a href="http://validator.w3.org/check?uri=referer"><img src="http://www.w3.org/Icons/valid-html401" width="88" height="31" alt="Valid HTML 4.01!" border="0"></a></td>
-            <td><a href="http://jigsaw.w3.org/css-validator/"><img src="http://www.w3.org/Icons/valid-css" width="88" height="31" alt="Valid CSS!" border="0"></a></td>
-            <td><img src="http://www.digits.com/counter/2000-01-05" width="88" height="31" alt="Contador de Visitas" border="0"></td>
-          </tr>
-        </table>
-        <font size="1">Melhor visualizado em 800x600, 256 cores</font>
-    </td>
-  </tr>
-</table>
-</center>
+
+        <!-- Seção de serviços -->
+        <section class="services-section" aria-labelledby="services-title">
+            <div class="section-title">
+                <h2 id="services-title">Serviços Especializados</h2>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card" tabindex="0" role="button" aria-label="Manutenção de computadores">
+                    <span class="service-icon" aria-hidden="true">🖥️</span>
+                    <span class="service-text">Manutenção de computadores</span>
+                    <span class="service-description">Diagnóstico e reparo profissional</span>
+                </div>
+                <div class="service-card" tabindex="0" role="button" aria-label="Formatação e limpeza">
+                    <span class="service-icon" aria-hidden="true">💿</span>
+                    <span class="service-text">Formatação e limpeza</span>
+                    <span class="service-description">Sistema otimizado e seguro</span>
+                </div>
+                <div class="service-card" tabindex="0" role="button" aria-label="Atendimento em domicílio">
+                    <span class="service-icon" aria-hidden="true">🏠</span>
+                    <span class="service-text">Atendimento em domicílio</span>
+                    <span class="service-description">Conforto e comodidade</span>
+                </div>
+                <div class="service-card" tabindex="0" role="button" aria-label="Configuração de redes">
+                    <span class="service-icon" aria-hidden="true">🌐</span>
+                    <span class="service-text">Configuração de redes</span>
+                    <span class="service-description">Wi-Fi e rede cabeada</span>
+                </div>
+                <div class="service-card" tabindex="0" role="button" aria-label="Recuperação de dados">
+                    <span class="service-icon" aria-hidden="true">💾</span>
+                    <span class="service-text">Recuperação de dados</span>
+                    <span class="service-description">Resgate de arquivos importantes</span>
+                </div>
+                <div class="service-card" tabindex="0" role="button" aria-label="Upgrade de hardware">
+                    <span class="service-icon" aria-hidden="true">⚡</span>
+                    <span class="service-text">Upgrade de hardware</span>
+                    <span class="service-description">Mais performance para seu PC</span>
+                </div>
+                <div class="service-card" tabindex="0" role="button" aria-label="Remoção de vírus">
+                    <span class="service-icon" aria-hidden="true">🛡️</span>
+                    <span class="service-text">Remoção de vírus</span>
+                    <span class="service-description">Proteção completa</span>
+                </div>
+                <div class="service-card" tabindex="0" role="button" aria-label="Backup de arquivos">
+                    <span class="service-icon" aria-hidden="true">📦</span>
+                    <span class="service-text">Backup de arquivos</span>
+                    <span class="service-description">Segurança dos seus dados</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de contato -->
+        <section class="contact-section" aria-labelledby="contact-title">
+            <div class="section-title">
+                <h2 id="contact-title">Fale Comigo</h2>
+            </div>
+            
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <span class="contact-icon" aria-hidden="true">📱</span>
+                    <div class="contact-label">WhatsApp / Telefone</div>
+                    <div class="contact-value">
+                        <a href="tel:+5519971014540" class="contact-link" aria-label="Ligar para (19) 97101-4540">
+                            (19) 97101-4540
+                        </a>
+                    </div>
+                    <div style="margin-top: var(--space-sm); font-size: 0.9rem; opacity: 0.8;">
+                        ⚡ Resposta rápida
+                    </div>
+                </div>
+                
+                <div class="contact-card">
+                    <span class="contact-icon" aria-hidden="true">📧</span>
+                    <div class="contact-label">E-mail</div>
+                    <div class="contact-value">
+                        <a href="mailto:adm@paulofagoto.com.br" class="contact-link" aria-label="Enviar e-mail para adm@paulofagoto.com.br">
+                            adm@paulofagoto.com.br
+                        </a>
+                    </div>
+                    <div style="margin-top: var(--space-sm); font-size: 0.9rem; opacity: 0.8;">
+                        📧 Respondo em até 24h
+                    </div>
+                </div>
+                
+                <div class="contact-card">
+                    <span class="contact-icon" aria-hidden="true">📍</span>
+                    <div class="contact-label">Localização</div>
+                    <div class="contact-value">Valinhos - SP</div>
+                    <div style="margin-top: var(--space-sm); font-size: 0.9rem; opacity: 0.8;">
+                        🏠 Atendimento em toda cidade
+                    </div>
+                </div>
+            </div>
+
+            <!-- Botão WhatsApp -->
+            <div class="whatsapp-wrapper">
+                <a href="https://wa.me/5519971014540?text=Olá!%20Gostaria%20de%20informações%20sobre%20seus%20serviços%20de%20informática%20em%20Valinhos." 
+                   class="whatsapp-btn"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   aria-label="Iniciar conversa no WhatsApp">
+                    <span aria-hidden="true">💬</span>
+                    <span>Falar no WhatsApp</span>
+                    <span aria-hidden="true">→</span>
+                </a>
+                <p style="margin-top: var(--space-sm); color: var(--gray); font-size: 0.95rem;">
+                    🔔 Clique e receba atendimento personalizado
+                </p>
+            </div>
+        </section>
+
+        <!-- Horário de atendimento -->
+        <div class="schedule-card" role="complementary" aria-label="Horários de funcionamento">
+            <div class="schedule-title">
+                <span aria-hidden="true">🕐</span>
+                <span>Horário de Atendimento</span>
+            </div>
+            <div class="schedule-detail">
+                <div class="schedule-item">
+                    <strong>Segunda a Sexta</strong>
+                    <span>8h às 18h</span>
+                </div>
+                <div class="schedule-item">
+                    <strong>Sábado</strong>
+                    <span>8h às 12h</span>
+                </div>
+                <div class="schedule-item">
+                    <strong>📌 Horário de Brasília</strong>
+                    <span>Atendimento flexível</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Selos de garantia -->
+        <div class="trust-badges">
+            <span class="trust-badge">
+                <span aria-hidden="true">✓</span> Atendimento rápido
+            </span>
+            <span class="trust-badge">
+                <span aria-hidden="true">✓</span> Orçamento sem compromisso
+            </span>
+            <span class="trust-badge">
+                <span aria-hidden="true">✓</span> Garantia nos serviços
+            </span>
+            <span class="trust-badge">
+                <span aria-hidden="true">✓</span> Profissional certificado
+            </span>
+        </div>
+        
+        <!-- Link de volta ao topo -->
+        <div style="text-align: center;">
+            <a href="#topo" class="back-to-top" aria-label="Voltar ao topo da página">
+                <span aria-hidden="true">↑</span> Voltar ao topo
+            </a>
+        </div>
+
+        <!-- Texto para leitores de tela -->
+        <div class="sr-only" aria-live="polite">
+            Página carregada. Técnico Paulo Fagoto disponível para serviços de informática em Valinhos.
+        </div>
+    </div>
+
+    <!-- Footer aprimorado -->
+    <footer role="contentinfo">
+        <div>
+            <small>&copy; 2024-2026 Paulo Fagoto - Todos os direitos reservados</small>
+        </div>
+        <div class="footer-links">
+            <a href="#" class="footer-link" onclick="abrirModal('privacidade'); return false;" aria-label="Política de privacidade">Privacidade</a>
+            <a href="#" class="footer-link" onclick="abrirModal('termos'); return false;" aria-label="Termos de uso">Termos</a>
+            <span class="footer-badge">
+                <span>⭐</span> Técnico certificado
+            </span>
+        </div>
+        <div style="margin-top: var(--space-md); font-size: 0.9rem; opacity: 0.8;">
+            CNPJ: 00.000.000/0000-00
+        </div>
+    </footer>
+
+    <!-- Schema.org para SEO local aprimorado -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Paulo Fagoto - Técnico em Informática",
+        "image": "https://paulofagoto.com.br/images/profile.jpg",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Valinhos",
+            "addressRegion": "SP",
+            "addressCountry": "BR",
+            "address": "Valinhos - SP"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "-22.9706",
+            "longitude": "-46.9958"
+        },
+        "url": "https://paulofagoto.com.br",
+        "telephone": "+5519971014540",
+        "email": "adm@paulofagoto.com.br",
+        "openingHoursSpecification": [
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                "opens": "08:00",
+                "closes": "18:00"
+            },
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": "Saturday",
+                "opens": "08:00",
+                "closes": "12:00"
+            }
+        ],
+        "priceRange": "R$",
+        "description": "Técnico de informática em Valinhos especializado em manutenção, formatação e suporte técnico.",
+        "areaServed": {
+            "@type": "City",
+            "name": "Valinhos"
+        },
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Serviços de Informática",
+            "itemListElement": [
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Manutenção de Computadores"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Formatação"
+                    }
+                }
+            ]
+        },
+        "sameAs": [
+            "https://wa.me/5519971014540"
+        ]
+    }
+    </script>
+    
+    <script>
+        // Função para abrir modal (simulada)
+        function abrirModal(tipo) {
+            const mensagens = {
+                privacidade: "📋 Política de Privacidade\n\nValorizamos sua privacidade. Todos os seus dados são tratados com segurança e confidencialidade. Para mais informações, entre em contato conosco.",
+                termos: "📜 Termos de Uso\n\nAo utilizar nossos serviços, você concorda com nossos termos e condições. Garantimos transparência e qualidade em todos os atendimentos."
+            };
+            
+            alert(mensagens[tipo]);
+        }
+
+        // Script principal para melhorar a experiência do usuário
+        document.addEventListener('DOMContentLoaded', function() {
+            // Smooth scroll para âncoras
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    const href = this.getAttribute('href');
+                    
+                    if (href === '#topo') {
+                        e.preventDefault();
+                        window.scrollTo({
+                            top: 0,
+                            behavior: 'smooth'
+                        });
+                    } else if (href === '#') {
+                        e.preventDefault();
+                    }
+                });
+            });
+            
+            // Suporte a teclado para cards de serviço
+            document.querySelectorAll('.service-card').forEach(card => {
+                card.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        // Rolar suavemente até o botão WhatsApp
+                        document.querySelector('.whatsapp-btn')?.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'center'
+                        });
+                        setTimeout(() => {
+                            document.querySelector('.whatsapp-btn')?.focus();
+                        }, 500);
+                    }
+                });
+            });
+            
+            // Animação de entrada para elementos quando aparecem na tela
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.animation = 'fadeInScale 0.5s ease-out';
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            document.querySelectorAll('.service-card, .contact-card, .schedule-card').forEach(el => {
+                observer.observe(el);
+            });
+            
+            // Loading state (opcional)
+            const loading = document.createElement('div');
+            loading.className = 'loading';
+            loading.innerHTML = '<div style="font-size: 3rem;">💻</div>';
+            document.body.appendChild(loading);
+            
+            setTimeout(() => {
+                loading.classList.add('hidden');
+                setTimeout(() => loading.remove(), 500);
+            }, 500);
+            
+            console.log('✅ Página carregada com sucesso!');
+        });
+    </script>
 </body>
 </html>
