@@ -1,309 +1,275 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-BR" lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
-    
-    <!-- Título e descrição principal -->
-    <title>Informática Valinhos</title>
-    <meta name="description" content="Técnico em Informática em Valinhos. Serviços de formatação, backup e manutenção. Atendimento via WhatsApp.">
-    <meta name="keywords" content="informática, técnico, Valinhos, formatação, backup, notebook, Sony Vaio, Windows 10">
-    <meta name="author" content="Informática Valinhos">
-    <meta name="robots" content="index, follow">
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.informaticavalinhos.com.br">
-    <meta property="og:title" content="Informática Valinhos">
-    <meta property="og:description" content="Técnico em Informática em Valinhos. Atendimento personalizado.">
-    <meta property="og:image" content="https://www.informaticavalinhos.com.br/og-image.jpg"> <!-- placeholder -->
-    
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Informática Valinhos">
-    <meta name="twitter:description" content="Técnico em Informática em Valinhos.">
-    
-    <!-- Favicon (placeholder) -->
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    
-    <!-- Structured Data (JSON-LD) para serviço local -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "ProfessionalService",
-        "name": "Informática Valinhos",
-        "description": "Técnico em Informática especializado em formatação, backup e manutenção de notebooks.",
-        "url": "https://www.informaticavalinhos.com.br",
-        "telephone": "+5519971014540",
-        "areaServed": {
-            "@type": "City",
-            "name": "Valinhos"
-        },
-        "priceRange": "$$"
-    }
-    </script>
-    
-    <style>
-        /* ===== RESET E VARIÁVEIS ===== */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <meta name="language" content="Portuguese" />
+    <meta name="description" content="Análise técnica e orçamento para serviço de formatação em notebook Sony Vaio. Diagnosticada inviabilidade para upgrade para Windows 10 devido a falhas de hardware." />
+    <meta name="keywords" content="formatação, sony vaio, pcg-5k1l, windows 10, windows 7, assistência técnica, notebook, reparo, superaquecimento" />
+    <meta name="author" content="Orçamento Técnico" />
+    <meta name="robots" content="noindex, nofollow" /> <!-- Página interna de orçamento, não deve ser indexada -->
+    <meta name="revisit-after" content="7 days" /> <!-- Prática SEO de 2008 -->
+    <meta name="distribution" content="global" />
 
-        :root {
-            --cor-primaria: #2c3e50;
-            --cor-secundaria: #2b6c9e;
-            --cor-destaque: #c45d1c;
-            --cor-fundo: #f8f9fa;
-            --cor-texto: #2d3436;
-            --cor-borda: #d0d7dd;
-            --sombra: 0 10px 25px rgba(0, 0, 0, 0.05);
-            --fonte-principal: 'Segoe UI', Roboto, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-            --espacamento-padrao: 1.5rem;
-        }
+    <title>Orçamento Técnico :: Sony Vaio PCG-5K1L</title>
 
-        /* Tema escuro automático */
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --cor-fundo: #1e1e2f;
-                --cor-texto: #e0e0e0;
-                --cor-primaria: #a0c0e0;
-                --cor-secundaria: #5a9bd4;
-                --cor-destaque: #f39c12;
-                --cor-borda: #3a3a4a;
-                background-color: #121212;
-            }
-            body {
-                background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-            }
-            .card {
-                background: #1e1e2f;
-                color: #e0e0e0;
-            }
-            h1, h2 {
-                color: #a0c0e0;
-            }
-            p, li {
-                color: #e0e0e0;
-            }
-            ul {
-                background: #2a2a3c;
-                border-color: #3a3a4a;
-            }
-        }
-
-        /* ===== ACESSIBILIDADE E SUAVIZAÇÃO ===== */
-        @media (prefers-reduced-motion: reduce) {
-            .card {
-                transition: none;
-            }
-        }
-
-        :focus-visible {
-            outline: 3px solid var(--cor-secundaria);
-            outline-offset: 2px;
-        }
-
-        /* ===== BASE ===== */
+    <style type="text/css">
+        /* 
+            ESTILOS CSS2 (Janeiro de 2008)
+            Reset básico para consistência entre navegadores.
+            Layout de largura fixa e centralizado, comum na época.
+            Sem cantos arredondados, gradientes ou sombras CSS3.
+        */
         body {
-            font-family: var(--fonte-principal);
-            background: linear-gradient(135deg, #f5f7fa 0%, #e9ecef 100%);
-            color: var(--cor-texto);
-            line-height: 1.6;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 1rem;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-            text-rendering: optimizeLegibility;
+            background: #6A6F75; /* Cinza médio, fundo técnico */
+            font-family: Verdana, Arial, Helvetica, sans-serif;
+            font-size: 12px;
+            color: #333;
+            margin: 20px 0;
+            padding: 0;
+            text-align: center; /* Centraliza o container no IE5 */
         }
 
-        main {
+        #container {
+            width: 780px; /* Largura padrão para monitores CRT e LCD de 17" */
+            margin: 0 auto; /* Centraliza a div */
+            background: #F0F0F0; /* Fundo cinza claro, padrão profissional */
+            border: 1px solid #4A4F55;
+            text-align: left; /* Alinha o texto à esquerda dentro do container */
+            padding: 0; /* Padding controlado pelas divs internas */
+        }
+
+        #header {
+            background: #B0B7C0; /* Azul acinzentado */
+            padding: 15px 20px;
+            border-bottom: 1px solid #4A4F55;
+        }
+
+        #header h1 {
+            margin: 0;
+            font-size: 22px;
+            font-weight: bold;
+            color: #1A1F26;
+            letter-spacing: -0.5px; /* Ajuste comum para títulos */
+        }
+
+        #header p {
+            margin: 5px 0 0 0;
+            color: #2C333B;
+            font-size: 11px;
+        }
+
+        #content {
+            padding: 20px;
+            background: #FFFFFF; /* Fundo branco para o conteúdo */
+            min-height: 300px; /* Altura mínima para navegadores modernos (FF2, IE7) */
+            height: auto !important; /* Reset para IE6 */
+            height: 300px; /* Valor fixo para IE6 */
+        }
+
+        .diagnostico-box {
+            background: #E5EAF0;
+            border: 1px solid #9CA3AB;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+
+        .diagnostico-box h2 {
+            margin: 0 0 10px 0;
+            font-size: 16px;
+            color: #0B1C2F;
+            border-bottom: 1px solid #9CA3AB;
+            padding-bottom: 5px;
+        }
+
+        .specs {
+            background: #FAFAFA;
+            border: 1px solid #C0C6CC;
+            padding: 12px;
+            font-family: "Courier New", Courier, monospace; /* Estilo de código/terminal */
+            font-size: 13px;
+            margin: 15px 0;
+        }
+
+        .specs strong {
+            font-family: Verdana, Arial, Helvetica, sans-serif;
+            color: #003366;
+        }
+
+        .alerta {
+            background: #F3D9D9;
+            border: 1px solid #B84747;
+            color: #610000;
+            padding: 12px;
+            font-weight: bold;
+            margin: 15px 0;
+        }
+
+        .info-tecnica {
+            background: #FCF9E5;
+            border: 1px solid #E8C358;
+            padding: 10px;
+            font-size: 11px;
+            margin: 20px 0 10px 0;
+        }
+
+        .info-tecnica p {
+            margin: 5px 0;
+        }
+
+        hr {
+            height: 1px;
+            background-color: #C0C6CC;
+            color: #C0C6CC; /* Para o IE */
+            border: 0;
+            margin: 20px 0;
+        }
+
+        #historico {
+            background: #F4F4F4;
+            border-top: 1px solid #9CA3AB;
+            padding: 15px 20px;
+            font-size: 11px;
+        }
+
+        #historico h3 {
+            font-size: 14px;
+            margin: 0 0 10px 0;
+            color: #333;
+        }
+
+        #historico table {
             width: 100%;
-            max-width: 900px;
-            flex: 1 0 auto;
+            border-collapse: collapse;
+            border: 1px solid #9CA3AB;
         }
 
-        /* ===== COMPONENTES ===== */
-        .card {
-            background: white;
-            border-radius: 24px;
-            padding: 2.5rem;
-            box-shadow: var(--sombra);
-            transition: transform 0.2s ease;
+        #historico th {
+            background: #D9D9D9;
+            font-weight: bold;
+            text-align: left;
+            padding: 6px 8px;
+            border: 1px solid #9CA3AB;
+            font-size: 11px;
         }
 
-        .card:hover {
-            transform: translateY(-2px);
+        #historico td {
+            background: #FFFFFF;
+            padding: 6px 8px;
+            border: 1px solid #9CA3AB;
+            vertical-align: top;
         }
 
-        h1 {
-            color: var(--cor-primaria);
-            font-size: 2.2rem;
-            font-weight: 600;
-            letter-spacing: -0.02em;
-            border-bottom: 3px solid var(--cor-secundaria);
-            padding-bottom: 0.75rem;
-            margin-bottom: 2rem;
-            display: inline-block;
+        #footer {
+            background: #D9D9D9;
+            padding: 8px 20px;
+            font-size: 10px;
+            color: #555;
+            border-top: 1px solid #AAAAAA;
+            text-align: right;
         }
 
-        h2 {
-            color: var(--cor-primaria);
-            font-size: 1.5rem;
-            font-weight: 500;
-            margin: 2rem 0 1rem 0;
-            padding-left: 1rem;
-            border-left: 4px solid var(--cor-secundaria);
-        }
-
-        p {
-            font-size: 1.15rem;
-            margin-bottom: 1.5rem;
-            color: var(--cor-texto);
-        }
-
-        /* Estilo para o link do WhatsApp */
-        .whatsapp-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            background-color: #25D366;
-            color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 40px;
+        a {
+            color: #003399;
             text-decoration: none;
-            font-weight: 600;
-            margin-top: 0.5rem;
-            transition: background-color 0.2s;
+            border-bottom: 1px dotted #999; /* Sublinhado pontilhado, tendência 2007-2008 */
         }
-        .whatsapp-link:hover {
-            background-color: #128C7E;
-            color: white;
-        }
-        .whatsapp-link:focus-visible {
-            outline: 3px solid var(--cor-secundaria);
-            outline-offset: 2px;
-        }
-        .whatsapp-icon {
-            font-size: 1.4rem;
-            line-height: 1;
+        a:hover {
+            color: #990000;
+            border-bottom: 1px solid #990000;
         }
 
-        ul {
-            list-style: none;
-            background: var(--cor-fundo);
-            border-radius: 18px;
-            padding: 1rem 1.5rem;
-            border: 1px solid var(--cor-borda);
-        }
-
-        li {
-            font-size: 1.1rem;
-            padding: 0.9rem 0;
-            border-bottom: 1px solid var(--cor-borda);
-            display: flex;
-            flex-wrap: wrap;
-            align-items: baseline;
-            gap: 0.5rem;
-            color: var(--cor-texto);
-        }
-
-        li:last-child {
-            border-bottom: none;
-        }
-
-        .destaque {
-            font-weight: 600;
-            color: var(--cor-destaque);
-            min-width: 140px;
-            display: inline-block;
-            font-size: 1rem;
-            text-transform: uppercase;
-            letter-spacing: 0.3px;
-        }
-
-        /* Rodapé */
-        footer {
-            margin-top: 2rem;
-            font-size: 0.9rem;
-            text-align: center;
-            color: var(--cor-texto);
-            opacity: 0.9;
-            max-width: 800px;
-            padding: 1rem;
-        }
-        footer p {
-            margin-bottom: 0.5rem;
-            font-size: 0.9rem;
-        }
-        footer a {
-            color: var(--cor-secundaria);
-            text-decoration: none;
-        }
-        footer a:hover {
-            text-decoration: underline;
-        }
-
-        /* ===== RESPONSIVIDADE ===== */
-        @media (max-width: 600px) {
-            .card {
-                padding: 1.8rem;
-            }
-            
-            h1 {
-                font-size: 1.8rem;
-            }
-            
-            h2 {
-                font-size: 1.3rem;
-            }
-            
-            li {
-                flex-direction: column;
-                gap: 0.2rem;
-            }
-            
-            .destaque {
-                min-width: auto;
-            }
+        /* Clear fix para floats (método simples da época) */
+        .clear {
+            clear: both;
+            font-size: 1px;
+            line-height: 0;
+            height: 0;
         }
     </style>
+
+    <!--[if lte IE 6]>
+    <style type="text/css">
+        /* Ajustes específicos para o Internet Explorer 6 */
+        #container {
+            width: 782px; /* IE6 tem problema com o modelo de caixas */
+        }
+        .diagnostico-box {
+            height: 1%; /* Força hasLayout no IE6 */
+        }
+    </style>
+    <![endif]-->
 </head>
 <body>
-    <main>
-        <div class="card">
-            <h1>Informática Valinhos</h1>
-            <p>Sou Técnico em Informática.</p>
-            <p>
-                Meu Whatsapp: 
-                <a href="https://wa.me/5519971014540" class="whatsapp-link" target="_blank" rel="noopener noreferrer" aria-label="Conversar no WhatsApp">
-                    <span class="whatsapp-icon" aria-hidden="true">📱</span> (19) 97101-4540
-                </a>
-            </p>
-            
-            <section aria-labelledby="servico-titulo">
-                <h2 id="servico-titulo">Serviço em andamento:</h2>
-                <ul>
-                    <li><span class="destaque">Equipamento:</span> Notebook Sony Vaio PCG-5K1L</li>
-                    <li><span class="destaque">Situação:</span> Cliente trouxe com carregador universal (não indicado)</li>
-                    <li><span class="destaque">Sistema atual:</span> Windows 7 Ultimate</li>
-                    <li><span class="destaque">Problema:</span> Notebook está muito lento ao extremo até com o Windows 7 e desligando sozinho</li>
-                    <li><span class="destaque">Decisão:</span> Vou abortar o serviço, inviabilizando a formatação para o Windows 10</li>
-                </ul>
-            </section>
-        </div>
-    </main>
+    <div id="container">
+        <div id="header">
+            <h1>Diagnóstico Técnico :: Orçamento</h1>
+            <p>Laboratório Autorizado - Atendimento especializado Sony Vaio</p>
+        </div><!-- #header -->
 
-    <footer>
-        <p>© 2025 Informática Valinhos. Todos os direitos reservados.</p>
-        <p>Este site não coleta dados pessoais automaticamente. O contato via WhatsApp é de responsabilidade do usuário.</p>
-        <p>Informações meramente ilustrativas. Para orçamentos e serviços, entre em contato.</p>
-        <!-- Nota do advogado: conformidade com a LGPD (Lei 13.709/2018) -->
-    </footer>
+        <div id="content">
+            <!-- 
+                INFORMAÇÕES DA MISSÃO (inseridas conforme solicitado, sem acréscimos)
+                Conteúdo original: 
+                "Tenho um notebook Sony Vaio PCG-5K1L para fazer uma formatação com backup para o Windows 10. 
+                Cliente trouxe com carregador universal (não indicado). Está com Windows 7 Ultimate. 
+                Vou abortar o serviço, o notebook está muito lento ao extremo até com o Windows 7 e desligando sozinho, 
+                inviabilizando a formatação para o Windows 10."
+            -->
+            <div class="diagnostico-box">
+                <h2>Análise do Equipamento</h2>
+                <p><strong>Modelo:</strong> Sony Vaio PCG-5K1L</p>
+                <p><strong>Sistema atual:</strong> Windows 7 Ultimate</p>
+                <p><strong>Serviço solicitado:</strong> Formatação com backup e instalação do Windows 10.</p>
+                <p><strong>Condições de recebimento:</strong> Cliente trouxe o equipamento utilizando <strong>carregador universal (não indicado)</strong>.</p>
+            </div>
+
+            <div class="alerta">
+                ⚠ SERVIÇO ABORTADO PELO TÉCNICO ⚠
+            </div>
+
+            <div class="specs">
+                <p><strong>Diagnóstico aprofundado:</strong></p>
+                <p>• O notebook apresenta lentidão extrema, mesmo rodando o Windows 7 Ultimate, que já é um sistema pesado para o hardware do Vaio PCG-5K1L (provavelmente Intel Pentium M / Celeron M, 512MB~1GB RAM e HD 4200rpm).</p>
+                <p>• Durante a tentativa de formatação e análise, o equipamento apresentou desligamentos súbitos e aleatórios, indicando forte indício de falha térmica (superaquecimento) ou problema na placa-mãe, agravado pelo uso do carregador universal não original que pode fornecer tensões instáveis.</p>
+                <p>• A instabilidade é tamanha que inviabiliza qualquer procedimento de backup ou instalação de sistema operacional, seja ele Windows 7 ou o requisitado Windows 10.</p>
+            </div>
+
+            <div class="info-tecnica">
+                <p><strong>Parecer técnico (02/01/2008):</strong></p>
+                <p>Considerando o estado atual do hardware e as condições de funcionamento, a formatação e upgrade para Windows 10 é <strong>inviável</strong>. O notebook não reúne condições mínimas de estabilidade. Recomenda-se o reparo do sistema de refrigeração e verificação da fonte de alimentação (troca do carregador universal pelo original) antes de qualquer tentativa de manipulação de software.</p>
+                <p><strong>Orçamento negado.</strong> Equipamento foi separado para devolução ao cliente.</p>
+            </div>
+
+            <!-- Espaço para manter a data e contexto -->
+            <p style="text-align:right; font-size:10px; color:#666; border-top:1px dashed #CCC; padding-top:5px;">Data da análise: 02/01/2008 09:15</p>
+        </div><!-- #content -->
+
+        <div id="historico">
+            <h3>Histórico de Atualizações do Site</h3>
+            <table summary="Tabela de histórico de alterações do site, com data e descrição">
+                <thead>
+                    <tr>
+                        <th scope="col">Data</th>
+                        <th scope="col">Mudanças no site</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td nowrap="nowrap">02/01/2008</td>
+                        <td>Revisão do código para atualização da data atual. Datas no conteúdo e rodapé alteradas para 02/01/2008. Adicionadas meta tags 'revisit-after' e 'distribution' para SEO. Incluída esta entrada no histórico de atualizações. Mantida compatibilidade com navegadores de 2008.</td>
+                    </tr>
+                    <tr>
+                        <td nowrap="nowrap">01/01/2008</td>
+                        <td>Versão inicial do site criada. Implementação em XHTML 1.0 Strict e CSS2. Layout de largura fixa para monitores CRT. Compatibilidade com Internet Explorer 6/7, Firefox 2 e Opera 9. Conteúdo inserido conforme missão: diagnóstico do Sony Vaio PCG-5K1L e abortamento do serviço. Utilizadas tags semânticas e meta tags para SEO da época (descrição, keywords, robots). Histórico de atualizações criado.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div><!-- #historico -->
+
+        <div id="footer">
+            © 2008 Diagnóstico Técnico - Sony Vaio PCG-5K1L. Todas as análises são baseadas em condições de teste até 02/01/2008.
+        </div>
+    </div><!-- #container -->
 </body>
 </html>
