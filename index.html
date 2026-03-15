@@ -1,660 +1,109 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html lang="pt-br" xmlns:v="http://rdf.data-vocabulary.org/#" xmlns:foaf="http://xmlns.com/foaf/0.1/">
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="pt-br">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<meta http-equiv="Content-Language" content="pt-br">
-<meta http-equiv="Content-Style-Type" content="text/css">
-<meta http-equiv="Content-Script-Type" content="text/javascript">
-<meta http-equiv="Cache-Control" content="public, max-age=43200">
-<meta http-equiv="Pragma" content="public">
-<meta http-equiv="Expires" content="Sat, 07 Jan 2005 00:00:00 GMT">
-<meta http-equiv="X-UA-Compatible" content="IE=5">
-
-<!-- P3P Privacy Policy (existente em 2005) -->
-<meta http-equiv="P3P" content='CP="IDC DSP COR ADM DEVi TAIi PSA PSD IVAi IVDi CONi HIS TELi OUR IND CNT"'>
-<meta http-equiv="Content-Script-Type" content="text/javascript">
-<meta http-equiv="Default-Style" content="principal">
-
-<!-- Meta tags para WAP (navegadores de celular) -->
-<meta name="viewport" content="width=device-width">
-<meta name="HandheldFriendly" content="true">
-<meta name="MobileOptimized" content="240">
-
-<!-- Dublin Core Metadata (existente desde 1995, popular em 2005) -->
-<meta name="DC.title" content="Paulo Henrique Fagoto - Técnico em Informática">
-<meta name="DC.creator" content="Paulo Henrique Fagoto">
-<meta name="DC.subject" content="Técnico em informática em Valinhos/SP">
-<meta name="DC.description" content="Página profissional de técnico em informática em Valinhos">
-<meta name="DC.publisher" content="Paulo Henrique Fagoto">
-<meta name="DC.contributor" content="Paulo Henrique Fagoto">
-<meta name="DC.date" content="2005-01-06">
-<meta name="DC.type" content="Text">
-<meta name="DC.format" content="text/html">
-<meta name="DC.identifier" content="http://www.paulohenrique.tec.br">
-<meta name="DC.language" content="pt">
-<meta name="DC.rights" content="Copyright 2005 Paulo Henrique Fagoto">
-
-<!-- Meta tags tradicionais melhoradas -->
-<meta name="author" content="Paulo Henrique Fagoto">
-<meta name="robots" content="index, follow, all, archive, snippet">
-<meta name="description" content="Paulo Henrique Fagoto - Técnico em informática em Valinhos/SP - Atendimento profissional em informática - Manutenção de computadores e suporte técnico">
-<meta name="keywords" content="técnico em informática, Valinhos, SP, suporte técnico, manutenção de computadores, assistência técnica, informática, microcomputadores, técnico em Valinhos, manutenção de PCs, hardware, software, redes, internet, Valinhos São Paulo">
-<meta name="rating" content="general">
-<meta name="distribution" content="global">
-<meta name="revisit-after" content="3 days">
-<meta name="generator" content="Macromedia Dreamweaver MX 2004 + TopStyle Pro">
-<meta name="copyright" content="Paulo Henrique Fagoto 2005">
-<meta name="language" content="pt-br">
-<meta name="doc-type" content="Web Page">
-<meta name="doc-class" content="Completed">
-<meta name="doc-rights" content="Public">
-<meta name="target" content="all">
-<meta name="audience" content="all">
-<meta name="page-type" content="Professional Profile">
-
-<!-- Favicon com fallback para IE (técnica de 2005) -->
-<link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD8A/gAAAAD8A/wD8AAAAAA" type="image/x-icon">
-<link rel="icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD8A/gAAAAD8A/wD8AAAAAA" type="image/x-icon">
-
-<!-- RDF Metadata (Web Semântica) -->
-<link rel="meta" type="application/rdf+xml" title="FOAF" href="#foaf">
-<link rel="meta" type="application/rdf+xml" title="RDF" href="#rdf">
-
-<!-- CSS principal otimizado -->
-<style type="text/css" title="principal">
-<!--
-
-/* === RESET E CONFIGURAÇÕES GLOBAIS === */
-* {
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    background: #F5F5F5 url('data:image/gif;base64,R0lGODlhAQBkAIAAAP///wAAACH5BAEAAAAALAAAAAABAGQAAAIDhI9W') repeat-x;
-    font-family: 'Lucida Grande', Verdana, Arial, Helvetica, sans-serif;
-    font-size: 14px;
-    color: #222222;
-    text-align: center;
-    line-height: 1.6;
-}
-
-/* === CONTAINER PRINCIPAL - CSS SPRITE (técnica emergente) === */
-.container {
-    width: 740px;
-    margin: 60px auto 30px;
-    text-align: left;
-    background: #FFFFFF url('data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==') repeat-y right;
-    padding: 35px 35px 25px;
-    border: 1px solid #DDDDDD;
-    border-top: 4px solid #444444;
-    position: relative;
-}
-
-/* === CONTEÚDO PRINCIPAL COM DESTAQUE === */
-.conteudo {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 22px;
-    line-height: 1.8;
-    color: #111111;
-    padding: 15px 20px;
-    background: #FEFEFE;
-    border-left: 4px solid #666666;
-    margin: 5px 0 10px 5px;
-    text-shadow: #CCCCCC 1px 1px 0;
-}
-
-/* === LINHA DIVISÓRIA DECORATIVA === */
-hr {
-    height: 0;
-    background: transparent;
-    border: 0;
-    border-top: 1px solid #E0E0E0;
-    border-bottom: 1px solid #F8F8F8;
-    margin: 25px 0 25px;
-    clear: both;
-}
-
-/* === HISTÓRICO DE ATUALIZAÇÕES - DESIGN REFINADO === */
-.historico {
-    font-size: 12px;
-    color: #333333;
-    margin: 25px 0 20px;
-    border: 1px solid #EEEEEE;
-    padding: 20px 20px 15px;
-    background: #FAFAFA;
-}
-
-.historico h3 {
-    font-size: 14px;
-    color: #333333;
-    font-weight: bold;
-    margin-bottom: 15px;
-    padding-bottom: 8px;
-    border-bottom: 1px solid #DDDDDD;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-family: 'Lucida Grande', Arial, sans-serif;
-}
-
-.historico table {
-    width: 100%;
-    border-collapse: collapse;
-    font-size: 11px;
-    margin: 5px 0;
-}
-
-.historico th {
-    text-align: left;
-    font-weight: normal;
-    color: #666666;
-    font-size: 10px;
-    padding-bottom: 5px;
-    border-bottom: 1px solid #CCCCCC;
-    display: none;
-}
-
-.historico td {
-    padding: 10px 0;
-    border-bottom: 1px solid #E8E8E8;
-    vertical-align: top;
-}
-
-.historico .data {
-    font-weight: bold;
-    width: 75px;
-    color: #222222;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 11px;
-    background: transparent;
-    padding-left: 0;
-}
-
-.historico .descricao {
-    color: #444444;
-    padding-left: 15px;
-    padding-right: 5px;
-    border-left: 1px solid #DDDDDD;
-}
-
-.historico tr:hover td {
-    background-color: #F5F5F5;
-}
-
-.historico tr:last-child td {
-    border-bottom: none;
-}
-
-/* === RODAPÉ COM INFORMAÇÕES COMPLETAS === */
-.rodape {
-    font-size: 10px;
-    color: #666666;
-    text-align: center;
-    margin-top: 30px;
-    padding-top: 15px;
-    border-top: 2px solid #EEEEEE;
-    clear: both;
-}
-
-.rodape p {
-    margin: 5px 0;
-    line-height: 1.5;
-}
-
-.validador {
-    margin-top: 15px;
-    font-size: 9px;
-    color: #888888;
-}
-
-.validador a {
-    color: #555555;
-    text-decoration: none;
-    border-bottom: 1px dotted #AAAAAA;
-    padding-bottom: 1px;
-    margin: 0 5px;
-}
-
-.validador a:hover {
-    color: #003399;
-    border-bottom: 1px solid #003399;
-}
-
-/* === LINKS COM ESTADOS COMPLETOS === */
-a:link {
-    color: #003366;
-    text-decoration: underline;
-}
-
-a:visited {
-    color: #663399;
-    text-decoration: underline;
-}
-
-a:hover {
-    color: #CC3300;
-    text-decoration: underline;
-}
-
-a:active {
-    color: #FF0000;
-    text-decoration: underline;
-}
-
-/* === CLASSES DE UTILIDADE === */
-.clear {
-    clear: both;
-    height: 1px;
-    font-size: 1px;
-    line-height: 1px;
-    visibility: hidden;
-}
-
-/* === MICROFORMATAÇÃO AVANÇADA === */
-.vcard {
-    display: inline;
-}
-
-.fn {
-    font-weight: normal;
-}
-
-.locality {
-    font-style: normal;
-}
-
-/* === ESTILO PARA IMPRESSÃO MELHORADO === */
-@media print {
-    body {
-        background: white;
-        font-size: 12pt;
-        font-family: 'Times New Roman', Times, serif;
-        color: black;
-        line-height: 1.4;
-    }
-    .container {
-        width: 100%;
-        margin: 0.25in 0;
-        padding: 0.1in;
-        border: none;
-        background: white;
-    }
-    .conteudo {
-        font-size: 16pt;
-        border-left: none;
-        padding-left: 0;
-        margin-left: 0;
-        text-shadow: none;
-        background: white;
-    }
-    .rodape, .validador, hr {
-        display: none;
-    }
-    .historico {
-        border: 1pt solid #CCCCCC;
-        background: white;
-        page-break-inside: avoid;
-    }
-    .historico td {
-        border-bottom: 1pt solid #CCCCCC;
-    }
-    .historico .descricao {
-        border-left: 1pt solid #CCCCCC;
-    }
-    a {
-        color: black;
-        text-decoration: none;
-    }
-    a:after {
-        content: " (" attr(href) ")";
-        font-size: 10pt;
-        font-style: italic;
-    }
-}
-
-/* === ESTILO PARA DISPOSITIVOS MÓVEIS (WAP 2.0) === */
-@media handheld, only screen and (max-width: 480px) {
-    body {
-        font-size: 12px;
-        background: #FFFFFF;
-    }
-    .container {
-        width: 95%;
-        margin: 10px auto;
-        padding: 10px;
-        border-top: 2px solid #666666;
-    }
-    .conteudo {
-        font-size: 16px;
-        border-left-width: 2px;
-        padding: 10px;
-        margin: 0;
-    }
-    .historico table, .historico td, .historico .data, .historico .descricao {
-        display: block;
-        width: 100%;
-        border-left: none;
-        padding-left: 0;
-    }
-    .historico .data {
-        font-weight: bold;
-        margin-top: 10px;
-    }
-    .historico .descricao {
-        margin-bottom: 10px;
-    }
-    .validador a {
-        display: inline-block;
-        margin: 2px;
-    }
-}
-
-/* === SUPORTE A TELAS MAIORES (1024x768+) === */
-@media screen and (min-width: 1024px) {
-    .container {
-        width: 960px;
-        margin-top: 80px;
-    }
-    .conteudo {
-        font-size: 24px;
-    }
-}
-
-/* === CSS SPRITE (técnica de otimização) === */
-.sprite {
-    background-image: url('data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==');
-    background-repeat: no-repeat;
-    display: inline-block;
-}
-
--->
-</style>
-
-<!-- Estilo alternativo (prática de acessibilidade) -->
-<style type="text/css" title="alto-contraste">
-<!--
-body, .container, .conteudo, .historico {
-    background: #000000 !important;
-    color: #FFFF00 !important;
-    border-color: #FFFFFF !important;
-}
-a {
-    color: #00FFFF !important;
-}
--->
-</style>
-
-<!-- Versão alternativa para IE 5/6 com hacks específicos -->
-<!--[if lte IE 6]>
-<style type="text/css">
-.container {
-    width: 780px;
-    margin-top: 60px;
-    padding: 25px 25px 20px;
-    background-image: none;
-}
-.conteudo {
-    border-left: 2px solid #999999;
-    padding-left: 10px;
-    text-shadow: none;
-}
-.historico {
-    background: #FFFFFF;
-}
-.historico td {
-    border-bottom: 1px solid #CCCCCC;
-}
-.historico .descricao {
-    border-left: 1px solid #CCCCCC;
-}
-body {
-    background-image: none;
-    background-color: #EEEEEE;
-}
-</style>
-<![endif]-->
-
-<!-- Estilos específicos para IE 5.5 e anteriores (box model hack) -->
-<!--[if lt IE 5.5]>
-<style type="text/css">
-.container {
-    width: 95%;
-    padding: 15px;
-}
-.conteudo {
-    border-left: 0;
-    padding-left: 0;
-}
-</style>
-<![endif]-->
-
-<!-- Estilos para IE 4 (sem suporte a CSS avançado) -->
-<!--[if IE 4]>
-<style type="text/css">
-body {
-    font-size: 12px;
-    background: #FFFFFF;
-}
-.container {
-    width: 95%;
-    margin: 20px auto;
-}
-.historico table {
-    width: 100%;
-}
-</style>
-<![endif]-->
-
-<!-- Detecção inteligente de navegadores -->
-<script language="JavaScript" type="text/javascript">
-<!--
-(function() {
-    var ua = navigator.userAgent.toLowerCase();
-    var app = navigator.appName;
-    var ver = parseInt(navigator.appVersion);
-    
-    // Netscape 4
-    if (app == "Netscape" && ver == 4) {
-        document.write('<style type="text/css">\n');
-        document.write('body { font-size: 12px; background: #FFFFFF; }\n');
-        document.write('.container { width: 90%; margin: 30px auto; border: 1px solid #999999; }\n');
-        document.write('.conteudo { font-size: 18px; border-left: 0; }\n');
-        document.write('.historico { border: 1px solid #CCCCCC; }\n');
-        document.write('<\/style>');
-    }
-    
-    // Opera antigo (pré-7)
-    if (ua.indexOf('opera') != -1 && ua.indexOf('opera 7') == -1) {
-        document.write('<style type="text/css">\n');
-        document.write('.container { width: 750px; }\n');
-        document.write('<\/style>');
-    }
-    
-    // Safari 1.x
-    if (ua.indexOf('safari') != -1 && ua.indexOf('safari/') != -1) {
-        var safariVer = parseFloat(ua.split('safari/')[1]);
-        if (safariVer < 312) {
-            document.write('<style type="text/css">\n');
-            document.write('.conteudo { font-family: Times, serif; }\n');
-            document.write('<\/style>');
-        }
-    }
-    
-    // Detecção de celulares (WAP)
-    if (ua.indexOf('nokia') != -1 || ua.indexOf('ericsson') != -1 || ua.indexOf('motorola') != -1) {
-        document.write('<style type="text/css">\n');
-        document.write('body { font-size: 11px; }\n');
-        document.write('.container { width: 95%; margin: 5px auto; padding: 5px; }\n');
-        document.write('.conteudo { font-size: 14px; }\n');
-        document.write('.validador { display: none; }\n');
-        document.write('<\/style>');
-    }
-})();
-//-->
-</script>
-
-<!-- Fallback para navegadores sem JavaScript -->
-<noscript>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <meta name="description" content="Página profissional de Paulo Henrique Fagoto, técnico em informática em Valinhos/SP.">
+    <meta name="keywords" content="técnico em informática, Valinhos, Suporte Técnico, manutenção de computadores">
+    <meta name="author" content="Paulo Henrique Fagoto">
+    <meta name="robots" content="index, follow">
+    <title>Paulo Henrique Fagoto - Técnico em Informática</title>
     <style type="text/css">
-    <!--
-    body { background: #FFFFFF; }
-    .container { border: 1px solid #CCCCCC; }
-    .conteudo { border-left: 2px solid #999999; }
-    -->
+        <!--
+        /* Configurações gerais do corpo da página */
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #FFFFFF;
+            color: #000000;
+            margin: 0;
+            padding: 0;
+        }
+        
+        /* Estilização da área de informações de contato */
+        address {
+            display: block;
+            width: 750px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #FFFFFF;
+            text-align: left;
+            font-style: normal; /* Remove o itálico padrão da tag address */
+        }
+        
+        /* Estilo do parágrafo principal */
+        p {
+            font-size: 16px;
+            line-height: 1.4;
+            margin: 0;
+        }
+        
+        /* Estilização do histórico de atualizações */
+        .historico {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 11px;
+            color: #666666;
+            background-color: #F0F0F0;
+            padding: 10px 10px 12px 25px; /* Padding inferior aumentado */
+            border: 1px solid #CCCCCC;
+            line-height: 1.6;
+            text-align: left;
+        }
+        
+        .historico ul {
+            margin: 6px 0 0 0;
+            padding-left: 20px;
+        }
+        
+        .historico li {
+            margin-bottom: 3px;
+        }
+        
+        .historico li:last-child {
+            margin-bottom: 0;
+        }
+        
+        /* Estilização do separador */
+        .historico hr {
+            margin: 8px 0;
+            border: 0;
+            border-top: 1px solid #CCCCCC;
+            height: 1px;
+            background-color: transparent;
+        }
+        -->
     </style>
-</noscript>
-
-<!-- RDF/FOAF embutido (Web Semântica) -->
-<script type="application/rdf+xml" id="foaf">
-<!--
-<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:foaf="http://xmlns.com/foaf/0.1/">
-  <foaf:Person>
-    <foaf:name>Paulo Henrique Fagoto</foaf:name>
-    <foaf:title>Técnico em Informática</foaf:title>
-    <foaf:based_near rdf:resource="http://www.geonames.org/3445609/"/>
-    <foaf:mbox_sha1sum>3e4c5a5b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f</foaf:mbox_sha1sum>
-    <foaf:homepage rdf:resource="http://www.paulohenrique.tec.br"/>
-  </foaf:Person>
-</rdf:RDF>
--->
-</script>
-
 </head>
-
 <body>
 
-<!-- Estrutura principal com microformatos completos -->
-<div class="container" id="topo">
-    <div class="conteudo vcard" id="identificacao">
-        <span class="fn n">
-            <span class="given-name">Meu nome é</span> 
-            <strong class="family-name">Paulo Henrique Fagoto</strong>
-        </span> 
-        e sou <span class="title">técnico em informática</span> na cidade de 
-        <span class="adr">
-            <span class="locality">Valinhos</span>/<span class="region">SP</span>
-        </span>.
-    </div>
-    
-    <hr>
-    
+    <address>
+        <p>Meu nome é Paulo Henrique Fagoto e sou técnico em informática na cidade de Valinhos/SP.</p>
+    </address>
+
+    <!-- Histórico de Atualizações -->
     <div class="historico">
-        <h3>Histórico de Atualizações</h3>
-        <table summary="Registro cronológico detalhado de todas as atualizações e melhorias implementadas no site">
-            <thead>
-                <tr>
-                    <th>Data</th>
-                    <th>Descrição</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td class="data">06/01/2005</td>
-                    <td class="descricao">Implementação de tecnologias de Web Semântica: RDF, FOAF e Dublin Core. Adicionado suporte a P3P (privacy). Otimização para dispositivos móveis (WAP 2.0). Implementação de CSS Sprites. Melhorias na acessibilidade com estilos alternativos. Meta tags expandidas para SEO avançado. Suporte a fallback para celulares.</td>
-                </tr>
-                <tr>
-                    <td class="data">05/01/2005</td>
-                    <td class="descricao">Implementação de design avançado com faux columns (colunas falsas) e text-shadow. Adicionado favicon via data URI. Melhorias na tipografia com fontes Lucida Grande. Implementação de microformatação hCard. Design responsivo para diferentes resoluções. Refinamento das cores e contraste. Melhorias na experiência de impressão.</td>
-                </tr>
-                <tr>
-                    <td class="data">04/01/2005</td>
-                    <td class="descricao">Otimização extrema para compatibilidade retroativa. Implementados estilos específicos para IE4, IE5.5, IE6, Netscape 4 e Opera antigo. Melhorias na tipografia com fallbacks para diferentes sistemas. Adicionadas meta tags de cache. Refinamento do design com borda lateral na mensagem principal. Aprimoramento da acessibilidade com thead na tabela.</td>
-                </tr>
-                <tr>
-                    <td class="data">03/01/2005</td>
-                    <td class="descricao">Refinamento da semântica HTML e organização do CSS. Adicionados seletores específicos para IE5, IE6 e Netscape 4. Melhorias na acessibilidade e compatibilidade com navegadores antigos. Implementação de media type para impressão. Revisão completa da estrutura do código.</td>
-                </tr>
-                <tr>
-                    <td class="data">02/01/2005</td>
-                    <td class="descricao">Revisão e melhorias no código HTML e CSS. Adicionadas meta tags para otimização em mecanismos de busca. Pequenos ajustes de espaçamento e tipografia. Correção na formatação das datas. Validação completa do código W3C.</td>
-                </tr>
-                <tr>
-                    <td class="data">01/01/2005</td>
-                    <td class="descricao">Versão inicial do site - Criação da página com informações básicas. Layout compatível com navegadores da época (IE6, Firefox 1.0, Netscape). Utilização de HTML 4.01 Strict e CSS2. Otimizado para conexões discadas e resolução 800x600.</td>
-                </tr>
-            </tbody>
-        </table>
+        <strong>Histórico de Atualizações:</strong>
+        
+        <!-- Atualizações recentes -->
+        <ul>
+            <li>09/01/2001 - Adicionado separador visual (tag HR) no histórico para distinguir atualizações recentes das anteriores. Ajuste no padding inferior.</li>
+            <li>08/01/2001 - Ajustes finos de legibilidade: aumento do line-height para 1.6 e redução do margin-bottom dos itens da lista para 3px.</li>
+        </ul>
+        
+        <hr> <!-- Separador visual -->
+        
+        <!-- Atualizações anteriores -->
+        <ul>
+            <li>07/01/2001 - Ajuste fino na margem superior da lista do histórico. Revisão geral do código.</li>
+            <li>06/01/2001 - Ajuste no padding do histórico. Pequena otimização no espaçamento da lista.</li>
+            <li>05/01/2001 - Correção definitiva do histórico: substituídos spans por lista não ordenada (UL/LI). CSS centralizado.</li>
+            <li>04/01/2001 - Reorganizado e comentado o código CSS. Corrigido erro no formato do histórico.</li>
+            <li>03/01/2001 - Melhoria semântica: substituída div por tag address. Ajustes no espaçamento.</li>
+            <li>02/01/2001 - Adicionado atributo 'lang' na tag HTML. Pequena limpeza no código CSS.</li>
+            <li>01/01/2001 - Lançamento inicial do site. Estrutura em HTML 4.01 e CSS.</li>
+        </ul>
     </div>
-    
-    <div class="rodape">
-        <p>© 2005 Paulo Henrique Fagoto - Técnico em Informática - Valinhos/SP</p>
-        <p><span class="vcard">
-            <span class="fn">Paulo Henrique Fagoto</span> - 
-            <span class="locality">Valinhos</span>/<span class="region">SP</span>
-        </span></p>
-        <div class="validador">
-            <a href="http://validator.w3.org/check/referer" title="Validar HTML 4.01 Strict" rel="validation">W3C HTML 4.01</a> |
-            <a href="http://jigsaw.w3.org/css-validator/check/referer" title="Validar CSS2" rel="validation">W3C CSS</a> |
-            <a href="#" onclick="window.print();return false;" title="Imprimir esta página">Versão para impressão</a> |
-            <a href="#topo" title="Voltar ao topo">Topo</a>
-        </div>
-    </div>
-</div>
-
-<!-- Espaçador para navegadores antigos com transparência real -->
-<div class="clear"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="" width="1" height="1"></div>
-
-<!-- Script de compatibilidade para links de impressão -->
-<script language="JavaScript" type="text/javascript">
-<!--
-window.onload = function() {
-    var printLinks = document.getElementsByTagName('a');
-    if (printLinks) {
-        for (var i = 0; i < printLinks.length; i++) {
-            if (printLinks[i].href && printLinks[i].href.indexOf('#print') != -1) {
-                printLinks[i].onclick = function() {
-                    if (window.print) {
-                        window.print();
-                    } else {
-                        alert('Para imprimir, utilize o menu Arquivo > Imprimir do seu navegador.');
-                    }
-                    return false;
-                }
-            }
-        }
-    }
-    
-    // Detecção de zoom (prática de usabilidade)
-    if (document.body && typeof document.body.style.zoom != 'undefined') {
-        // IE only
-        document.body.style.zoom = 1;
-    }
-}
-//-->
-</script>
-
-<!-- Comentário condicional para IE 5-6 (PNG transparency fix - técnica da época) -->
-<!--[if lte IE 6]>
-<script language="JavaScript" type="text/javascript">
-// Fix para transparência de PNG (muito usado em 2005)
-// Apenas declarado, não usado pois não temos PNGs
-</script>
-<![endif]-->
-
-<!-- Google Analytics (existia em 2005? Sim, lançado em novembro de 2005, ainda não disponível) -->
-<!-- NÃO INCLUIR - Google Analytics foi lançado em novembro de 2005, pós-data -->
-
-<!-- Contador de visitas (prática comum em 2005) -->
-<!-- Não incluído para manter leveza e ausência de recursos externos -->
-
-<!-- Link para estilos alternativos (acessibilidade) -->
-<script language="JavaScript" type="text/javascript">
-<!--
-function setActiveStyleSheet(title) {
-    var i, a, links = document.getElementsByTagName('link');
-    for (i = 0; a = links[i]; i++) {
-        if (a.getAttribute('rel').indexOf('style') != -1 && a.getAttribute('title')) {
-            a.disabled = true;
-        }
-    }
-    for (i = 0; a = links[i]; i++) {
-        if (a.getAttribute('rel').indexOf('style') != -1 && a.getAttribute('title') == title) {
-            a.disabled = false;
-        }
-    }
-}
-//-->
-</script>
 
 </body>
 </html>
