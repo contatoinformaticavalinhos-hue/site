@@ -2,9 +2,308 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    
+    <!-- Título e descrição principal -->
     <title>Informática Valinhos</title>
+    <meta name="description" content="Técnico em Informática em Valinhos. Serviços de formatação, backup e manutenção. Atendimento via WhatsApp.">
+    <meta name="keywords" content="informática, técnico, Valinhos, formatação, backup, notebook, Sony Vaio, Windows 10">
+    <meta name="author" content="Informática Valinhos">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.informaticavalinhos.com.br">
+    <meta property="og:title" content="Informática Valinhos">
+    <meta property="og:description" content="Técnico em Informática em Valinhos. Atendimento personalizado.">
+    <meta property="og:image" content="https://www.informaticavalinhos.com.br/og-image.jpg"> <!-- placeholder -->
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Informática Valinhos">
+    <meta name="twitter:description" content="Técnico em Informática em Valinhos.">
+    
+    <!-- Favicon (placeholder) -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    
+    <!-- Structured Data (JSON-LD) para serviço local -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "Informática Valinhos",
+        "description": "Técnico em Informática especializado em formatação, backup e manutenção de notebooks.",
+        "url": "https://www.informaticavalinhos.com.br",
+        "telephone": "+5519971014540",
+        "areaServed": {
+            "@type": "City",
+            "name": "Valinhos"
+        },
+        "priceRange": "$$"
+    }
+    </script>
+    
+    <style>
+        /* ===== RESET E VARIÁVEIS ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --cor-primaria: #2c3e50;
+            --cor-secundaria: #2b6c9e;
+            --cor-destaque: #c45d1c;
+            --cor-fundo: #f8f9fa;
+            --cor-texto: #2d3436;
+            --cor-borda: #d0d7dd;
+            --sombra: 0 10px 25px rgba(0, 0, 0, 0.05);
+            --fonte-principal: 'Segoe UI', Roboto, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+            --espacamento-padrao: 1.5rem;
+        }
+
+        /* Tema escuro automático */
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --cor-fundo: #1e1e2f;
+                --cor-texto: #e0e0e0;
+                --cor-primaria: #a0c0e0;
+                --cor-secundaria: #5a9bd4;
+                --cor-destaque: #f39c12;
+                --cor-borda: #3a3a4a;
+                background-color: #121212;
+            }
+            body {
+                background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            }
+            .card {
+                background: #1e1e2f;
+                color: #e0e0e0;
+            }
+            h1, h2 {
+                color: #a0c0e0;
+            }
+            p, li {
+                color: #e0e0e0;
+            }
+            ul {
+                background: #2a2a3c;
+                border-color: #3a3a4a;
+            }
+        }
+
+        /* ===== ACESSIBILIDADE E SUAVIZAÇÃO ===== */
+        @media (prefers-reduced-motion: reduce) {
+            .card {
+                transition: none;
+            }
+        }
+
+        :focus-visible {
+            outline: 3px solid var(--cor-secundaria);
+            outline-offset: 2px;
+        }
+
+        /* ===== BASE ===== */
+        body {
+            font-family: var(--fonte-principal);
+            background: linear-gradient(135deg, #f5f7fa 0%, #e9ecef 100%);
+            color: var(--cor-texto);
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-rendering: optimizeLegibility;
+        }
+
+        main {
+            width: 100%;
+            max-width: 900px;
+            flex: 1 0 auto;
+        }
+
+        /* ===== COMPONENTES ===== */
+        .card {
+            background: white;
+            border-radius: 24px;
+            padding: 2.5rem;
+            box-shadow: var(--sombra);
+            transition: transform 0.2s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-2px);
+        }
+
+        h1 {
+            color: var(--cor-primaria);
+            font-size: 2.2rem;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            border-bottom: 3px solid var(--cor-secundaria);
+            padding-bottom: 0.75rem;
+            margin-bottom: 2rem;
+            display: inline-block;
+        }
+
+        h2 {
+            color: var(--cor-primaria);
+            font-size: 1.5rem;
+            font-weight: 500;
+            margin: 2rem 0 1rem 0;
+            padding-left: 1rem;
+            border-left: 4px solid var(--cor-secundaria);
+        }
+
+        p {
+            font-size: 1.15rem;
+            margin-bottom: 1.5rem;
+            color: var(--cor-texto);
+        }
+
+        /* Estilo para o link do WhatsApp */
+        .whatsapp-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background-color: #25D366;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 40px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 0.5rem;
+            transition: background-color 0.2s;
+        }
+        .whatsapp-link:hover {
+            background-color: #128C7E;
+            color: white;
+        }
+        .whatsapp-link:focus-visible {
+            outline: 3px solid var(--cor-secundaria);
+            outline-offset: 2px;
+        }
+        .whatsapp-icon {
+            font-size: 1.4rem;
+            line-height: 1;
+        }
+
+        ul {
+            list-style: none;
+            background: var(--cor-fundo);
+            border-radius: 18px;
+            padding: 1rem 1.5rem;
+            border: 1px solid var(--cor-borda);
+        }
+
+        li {
+            font-size: 1.1rem;
+            padding: 0.9rem 0;
+            border-bottom: 1px solid var(--cor-borda);
+            display: flex;
+            flex-wrap: wrap;
+            align-items: baseline;
+            gap: 0.5rem;
+            color: var(--cor-texto);
+        }
+
+        li:last-child {
+            border-bottom: none;
+        }
+
+        .destaque {
+            font-weight: 600;
+            color: var(--cor-destaque);
+            min-width: 140px;
+            display: inline-block;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+        }
+
+        /* Rodapé */
+        footer {
+            margin-top: 2rem;
+            font-size: 0.9rem;
+            text-align: center;
+            color: var(--cor-texto);
+            opacity: 0.9;
+            max-width: 800px;
+            padding: 1rem;
+        }
+        footer p {
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+        }
+        footer a {
+            color: var(--cor-secundaria);
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* ===== RESPONSIVIDADE ===== */
+        @media (max-width: 600px) {
+            .card {
+                padding: 1.8rem;
+            }
+            
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            h2 {
+                font-size: 1.3rem;
+            }
+            
+            li {
+                flex-direction: column;
+                gap: 0.2rem;
+            }
+            
+            .destaque {
+                min-width: auto;
+            }
+        }
+    </style>
 </head>
 <body>
+    <main>
+        <div class="card">
+            <h1>Informática Valinhos</h1>
+            <p>Sou Técnico em Informática.</p>
+            <p>
+                Meu Whatsapp: 
+                <a href="https://wa.me/5519971014540" class="whatsapp-link" target="_blank" rel="noopener noreferrer" aria-label="Conversar no WhatsApp">
+                    <span class="whatsapp-icon" aria-hidden="true">📱</span> (19) 97101-4540
+                </a>
+            </p>
+            
+            <section aria-labelledby="servico-titulo">
+                <h2 id="servico-titulo">Serviço em andamento:</h2>
+                <ul>
+                    <li><span class="destaque">Equipamento:</span> Notebook Sony Vaio PCG-5K1L</li>
+                    <li><span class="destaque">Situação:</span> Cliente trouxe com carregador universal (não indicado)</li>
+                    <li><span class="destaque">Sistema atual:</span> Windows 7 Ultimate</li>
+                    <li><span class="destaque">Problema:</span> Notebook está muito lento ao extremo até com o Windows 7 e desligando sozinho</li>
+                    <li><span class="destaque">Decisão:</span> Vou abortar o serviço, inviabilizando a formatação para o Windows 10</li>
+                </ul>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2025 Informática Valinhos. Todos os direitos reservados.</p>
+        <p>Este site não coleta dados pessoais automaticamente. O contato via WhatsApp é de responsabilidade do usuário.</p>
+        <p>Informações meramente ilustrativas. Para orçamentos e serviços, entre em contato.</p>
+        <!-- Nota do advogado: conformidade com a LGPD (Lei 13.709/2018) -->
+    </footer>
 </body>
 </html>
