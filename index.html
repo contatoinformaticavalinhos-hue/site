@@ -170,12 +170,108 @@
             font-weight: bold;
             color: #000066;
         }
+        /* Estilo para a marquee (elemento típico dos anos 2000) */
+        marquee {
+            font-size: 14px;
+            color: #FF0000;
+            font-weight: bold;
+            background-color: #FFFFCC;
+            padding: 5px;
+            border: 2px inset #808080;
+            margin-top: 10px;
+        }
+        /* Estilo para o relógio digital (retrô) */
+        .relogio-digital {
+            background-color: #000000;
+            color: #00FF00;
+            font-family: 'Courier New', monospace;
+            font-size: 16px;
+            font-weight: bold;
+            padding: 4px 8px;
+            border: 2px inset #808080;
+            display: inline-block;
+            letter-spacing: 2px;
+            margin-top: 5px;
+        }
+        /* Estilo para o contador de dias no ar */
+        .dias-no-ar {
+            font-size: 10px;
+            color: #404040;
+            margin-top: 5px;
+        }
+        .dias-no-ar span {
+            font-weight: bold;
+            color: #000066;
+            background-color: #FFFFCC;
+            padding: 2px 4px;
+            border: 1px solid #808080;
+        }
+        /* Estilo para a tabela de serviços */
+        .servicos-table {
+            width: 100%;
+            border: 2px outset #808080;
+            background-color: #FFFFFF;
+        }
+        .servicos-table th {
+            background-color: #000066;
+            color: #FFFFFF;
+            padding: 7px;
+            text-align: left;
+            font-weight: bold;
+            border: 1px solid #808080;
+        }
+        .servicos-table td {
+            border: 1px solid #C0C0C0;
+            padding: 7px;
+            vertical-align: top;
+        }
+        .servicos-table tr:hover {
+            background-color: #FFFFCC;
+        }
+        /* Estilo para a enquete */
+        .enquete {
+            background-color: #E0E0E0;
+            border: 2px inset #808080;
+            padding: 10px;
+            margin-top: 15px;
+            font-size: 12px;
+        }
+        .enquete h3 {
+            margin: 0 0 8px 0;
+            color: #000066;
+            font-size: 14px;
+            border-bottom: 1px solid #808080;
+        }
+        .enquete input {
+            margin-right: 5px;
+        }
+        .enquete button {
+            background-color: #D4D0C8;
+            border: 2px outset #FFFFFF;
+            padding: 4px 10px;
+            font-weight: bold;
+            margin-top: 8px;
+            cursor: pointer;
+        }
+        .enquete button:hover {
+            background-color: #C0C0C0;
+        }
+        .resultado {
+            font-size: 11px;
+            margin-top: 8px;
+            padding-top: 5px;
+            border-top: 1px dashed #808080;
+        }
+        .resultado span {
+            display: inline-block;
+            width: 120px;
+        }
     </style>
 
     <script>
         // JavaScript simples (pré-DOM complexo) – funcional em IE5 e Netscape
         function mostrarSecao(idSecao) {
-            var secoes = ['inicio', 'historico'];
+            var secoes = ['inicio', 'historico', 'servicos'];
             for (var i = 0; i < secoes.length; i++) {
                 var elem = document.getElementById('sec_' + secoes[i]);
                 if (elem) {
@@ -188,30 +284,90 @@
             }
         }
 
-        // Inicialização: ao carregar a página, mostra a seção "inicio"
+        // Função para atualizar o relógio digital
+        function atualizarRelogio() {
+            var agora = new Date();
+            var horas = agora.getHours();
+            var minutos = agora.getMinutes();
+            var segundos = agora.getSeconds();
+            horas = horas < 10 ? '0' + horas : horas;
+            minutos = minutos < 10 ? '0' + minutos : minutos;
+            segundos = segundos < 10 ? '0' + segundos : segundos;
+            var horaString = horas + ':' + minutos + ':' + segundos;
+            var relogioElem = document.getElementById('relogio');
+            if (relogioElem) {
+                relogioElem.innerHTML = horaString;
+            }
+        }
+
+        // Variáveis da enquete
+        var votos = {
+            win98: 45,
+            win2000: 30,
+            linux: 15,
+            outros: 10
+        };
+        var totalVotos = 100;
+
+        function votar() {
+            var opcao = document.querySelector('input[name="so"]:checked');
+            if (!opcao) {
+                alert("Selecione uma opção!");
+                return;
+            }
+            var valor = opcao.value;
+            votos[valor]++;
+            totalVotos++;
+            atualizarResultados();
+            // Desabilita os botões de rádio e o botão para evitar múltiplos votos (simulação simples)
+            var radios = document.getElementsByName('so');
+            for (var i = 0; i < radios.length; i++) {
+                radios[i].disabled = true;
+            }
+            document.getElementById('btnVotar').disabled = true;
+            document.getElementById('btnVotar').style.backgroundColor = '#A0A0A0';
+        }
+
+        function atualizarResultados() {
+            var pct98 = ((votos.win98 / totalVotos) * 100).toFixed(1);
+            var pct2000 = ((votos.win2000 / totalVotos) * 100).toFixed(1);
+            var pctlinux = ((votos.linux / totalVotos) * 100).toFixed(1);
+            var pctoutros = ((votos.outros / totalVotos) * 100).toFixed(1);
+
+            document.getElementById('resWin98').innerHTML = votos.win98 + ' votos (' + pct98 + '%)';
+            document.getElementById('resWin2000').innerHTML = votos.win2000 + ' votos (' + pct2000 + '%)';
+            document.getElementById('resLinux').innerHTML = votos.linux + ' votos (' + pctlinux + '%)';
+            document.getElementById('resOutros').innerHTML = votos.outros + ' votos (' + pctoutros + '%)';
+        }
+
+        // Inicialização: mostra seção início, inicia relógio e atualiza resultados da enquete
         window.onload = function() {
             mostrarSecao('inicio');
+            atualizarRelogio();
+            setInterval(atualizarRelogio, 1000);
+            atualizarResultados(); // para exibir os números iniciais
         };
     </script>
 </head>
 <body>
 
 <div class="container">
-    <!-- CABEÇALHO – apenas o nome da assistência e data de fundação -->
+    <!-- CABEÇALHO -->
     <div class="header">
         <h1>INFORMÁTICA VALINHOS</h1>
         <p>Assistência Técnica em Informática ◆ Desde 01/01/2000</p>
     </div>
 
-    <!-- MENU SIMPLES: apenas Início e Histórico -->
+    <!-- MENU -->
     <div class="menu">
         <a href="#" onclick="mostrarSecao('inicio'); return false;">INÍCIO</a>
+        <a href="#" onclick="mostrarSecao('servicos'); return false;">SERVIÇOS</a>
         <a href="#" onclick="mostrarSecao('historico'); return false;">HISTÓRICO</a>
     </div>
 
-    <!-- CONTEÚDO PRINCIPAL -->
+    <!-- CONTEÚDO -->
     <div class="content">
-        <!-- SEÇÃO INÍCIO (conteúdo mínimo) -->
+        <!-- SEÇÃO INÍCIO -->
         <div id="sec_inicio" class="section">
             <div class="boas-vindas">
                 <h2>Bem‑vindo à INFORMÁTICA VALINHOS</h2>
@@ -220,18 +376,72 @@
                     <strong>Site em construção.</strong> Em breve mais informações.<br>
                     Acompanhe as atualizações diárias no <a href="#" onclick="mostrarSecao('historico'); return false;">histórico</a>.
                 </p>
-                <!-- data atual simulada -->
-                <p style="text-align:right; font-size:11px; color:#606060; margin-top:25px;">Data atual: 06/01/2000</p>
+                <marquee behavior="alternate">🚧 Site em construção... aguarde novidades! 🚧</marquee>
+
+                <!-- NOVO: ENQUETE -->
+                <div class="enquete">
+                    <h3>📊 Enquete: Qual seu sistema operacional favorito?</h3>
+                    <form onsubmit="return false;">
+                        <input type="radio" name="so" value="win98" id="win98" checked> <label for="win98">Windows 98</label><br>
+                        <input type="radio" name="so" value="win2000" id="win2000"> <label for="win2000">Windows 2000</label><br>
+                        <input type="radio" name="so" value="linux" id="linux"> <label for="linux">Linux</label><br>
+                        <input type="radio" name="so" value="outros" id="outros"> <label for="outros">Outros</label><br>
+                        <button id="btnVotar" onclick="votar()">Votar</button>
+                    </form>
+                    <div class="resultado">
+                        <span>Windows 98:</span> <span id="resWin98">45 votos (45.0%)</span><br>
+                        <span>Windows 2000:</span> <span id="resWin2000">30 votos (30.0%)</span><br>
+                        <span>Linux:</span> <span id="resLinux">15 votos (15.0%)</span><br>
+                        <span>Outros:</span> <span id="resOutros">10 votos (10.0%)</span>
+                    </div>
+                </div>
+
+                <!-- data atual simulada (11/01/2000) -->
+                <p style="text-align:right; font-size:11px; color:#606060; margin-top:25px;">Data atual: 11/01/2000</p>
             </div>
         </div>
 
-        <!-- SEÇÃO HISTÓRICO (obrigatório, com registros desde 01/01/2000) -->
+        <!-- SEÇÃO SERVIÇOS -->
+        <div id="sec_servicos" class="section">
+            <h2>🛠️ Nossos Serviços</h2>
+            <table class="servicos-table">
+                <tr><th>Serviço</th><th>Descrição</th><th>Preço (R$)</th></tr>
+                <tr><td>Formatação de PC</td><td>Formatação completa, instalação do Windows 98 e drivers</td><td>50,00</td></tr>
+                <tr><td>Limpeza interna</td><td>Limpeza de cooler, placa-mãe e fontes</td><td>30,00</td></tr>
+                <tr><td>Remoção de vírus</td><td>Varredura e limpeza com antivírus atualizado</td><td>25,00</td></tr>
+                <tr><td>Instalação de programas</td><td>Pacote Office, jogos, utilitários</td><td>20,00</td></tr>
+                <tr><td>Troca de peças</td><td>Substituição de HD, memória, placa-mãe (mão de obra)</td><td>35,00</td></tr>
+                <tr><td>Visita técnica (domicílio)</td><td>Atendimento externo em Valinhos</td><td>40,00 + deslocamento</td></tr>
+            </table>
+            <p style="font-size:10px; color:#404040; margin-top:10px;">* Preços sujeitos a alteração. Consulte disponibilidade.</p>
+        </div>
+
+        <!-- SEÇÃO HISTÓRICO -->
         <div id="sec_historico" class="section">
             <h2>📋 Histórico de atualizações do site</h2>
-            <!-- Tabela no estilo 2000, com as datas mais recentes primeiro -->
             <table class="infotable">
                 <tr><th width="110">Data</th><th>Descrição da atualização</th></tr>
-                <!-- ATUALIZAÇÕES EM ORDEM DECRESCENTE (MAIS RECENTE EM CIMA) -->
+                <!-- ATUALIZAÇÕES EM ORDEM DECRESCENTE -->
+                <tr>
+                    <td class="destaque-data">11/01/2000</td>
+                    <td><span class="atualizacao-dia">Atualização de hoje:</span> Adicionada enquete interativa na seção "Início" sobre sistemas operacionais favoritos, com votação simulada em JavaScript. Pequeno incremento no contador de visitas.</td>
+                </tr>
+                <tr>
+                    <td class="destaque-data">10/01/2000</td>
+                    <td><span class="atualizacao-dia">Atualização de hoje:</span> Criada a seção "Serviços" com tabela de serviços e preços, e adicionado o item correspondente no menu principal. Pequeno incremento no contador de visitas.</td>
+                </tr>
+                <tr>
+                    <td class="destaque-data">09/01/2000</td>
+                    <td><span class="atualizacao-dia">Atualização de hoje:</span> Adicionado contador de dias no ar no rodapé, informando há quantos dias o site está online (desde a inauguração em 01/01/2000). Pequeno incremento no contador de visitas.</td>
+                </tr>
+                <tr>
+                    <td class="destaque-data">08/01/2000</td>
+                    <td><span class="atualizacao-dia">Atualização de hoje:</span> Adicionado um relógio digital no rodapé, atualizado a cada segundo, trazendo um toque interativo típico da virada do milênio. Pequeno incremento no contador de visitas.</td>
+                </tr>
+                <tr>
+                    <td class="destaque-data">07/01/2000</td>
+                    <td><span class="atualizacao-dia">Atualização de hoje:</span> Adicionada uma tag <strong>&lt;marquee&gt;</strong> na seção "Início" com mensagem animada "Site em construção... aguarde novidades!", resgatando o estilo típico da virada do milênio. Pequeno incremento no contador de visitas.</td>
+                </tr>
                 <tr>
                     <td class="destaque-data">06/01/2000</td>
                     <td><span class="atualizacao-dia">Atualização de hoje:</span> Adicionadas informações de contato no rodapé: e-mail e telefone. Pequena melhoria na organização e aparência.</td>
@@ -259,12 +469,12 @@
             </table>
             <div class="historico-note">
                 * Todas as atualizações são registradas dia a dia, desde a fundação do site. 
-                Próxima atualização prevista para 07/01/2000.
+                Próxima atualização prevista para 12/01/2000.
             </div>
         </div>
     </div>
 
-    <!-- RODAPÉ COM DATA E COPYRIGHT SIMPLES -->
+    <!-- RODAPÉ -->
     <div class="footer">
         <table width="100%" border="0">
             <tr>
@@ -272,13 +482,22 @@
                 <td align="right">© 2000 – Criado em 01/01/2000</td>
             </tr>
         </table>
-        <p style="margin:4px 0 0; font-size:9px;">Última atualização: 06/01/2000 · Versão 1.07 (contato no rodapé)</p>
-        <!-- Contador de visitas estilo anos 90 -->
+        <p style="margin:4px 0 0; font-size:9px;">Última atualização: 11/01/2000 · Versão 1.12 (enquete)</p>
+        <!-- Contador de visitas -->
         <div style="margin-top:5px;">
             <span style="font-size:9px; color:#404040;">Visitantes:</span>
-            <span class="contador-visitas">001238</span>
+            <span class="contador-visitas">001254</span>
         </div>
-        <!-- Informações de contato adicionadas nesta atualização -->
+        <!-- Relógio digital -->
+        <div style="margin-top:5px;">
+            <span style="font-size:9px; color:#404040;">Horário:</span>
+            <span id="relogio" class="relogio-digital">00:00:00</span>
+        </div>
+        <!-- Contador de dias no ar -->
+        <div class="dias-no-ar" style="margin-top:5px;">
+            <span>📅 Dias no ar: <span>11</span></span> (desde 01/01/2000)
+        </div>
+        <!-- Informações de contato -->
         <div class="contato-info">
             <span>📞 (19) 97101-4540</span> | 
             <span>✉ adm@paulofagoto.com.br</span>
