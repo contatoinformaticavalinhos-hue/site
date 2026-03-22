@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informática Valinhos</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        header h1 {
+            font-size: 2rem;
+            color: #0056b3;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            color: #555;
+        }
+
+        nav {
+            max-width: 800px;
+            margin: 0 auto 30px auto;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            padding: 0;
+        }
+
+        nav li {
+            margin: 0;
+        }
+
+        nav a {
+            display: block;
+            padding: 12px 24px;
+            text-decoration: none;
+            color: #0056b3;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #e9ecef;
+        }
+
+        #main-content {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            min-height: 300px;
+        }
+
+        section h2 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            border-bottom: 2px solid #0056b3;
+            padding-bottom: 5px;
+            color: #0056b3;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 0.9rem;
+            color: #777;
+        }
+
+        /* Ícone flutuante de atendimento (headset) */
+        .support-float {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 60px;
+            height: 60px;
+            background-color: #0088cc;
+            border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            transition: transform 0.2s;
+            animation: pulse 1.5s infinite;
+        }
+
+        .support-float:hover {
+            transform: scale(1.1);
+        }
+
+        .support-float svg {
+            width: 32px;
+            height: 32px;
+            fill: white;
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(0, 136, 204, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 15px rgba(0, 136, 204, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(0, 136, 204, 0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .support-float {
+                width: 50px;
+                height: 50px;
+                bottom: 15px;
+                right: 15px;
+            }
+            .support-float svg {
+                width: 28px;
+                height: 28px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Informática Valinhos</h1>
+        <p>Assistência técnica especializada em acesso remoto</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#" data-section="sobre">Sobre</a></li>
+            <li><a href="#" data-section="servicos">Serviços</a></li>
+            <li><a href="#" data-section="contato">Contato</a></li>
+        </ul>
+    </nav>
+
+    <div id="main-content"></div>
+
+    <footer>
+        <p>&copy; 2026 Informática Valinhos</p>
+    </footer>
+
+    <!-- Ícone flutuante de atendente (headset) - abre Telegram -->
+    <a href="https://t.me/infovalinhos" class="support-float" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 1c-4.97 0-9 4.03-9 9v7c0 1.66 1.34 3 3 3h3v-8H5v-2c0-3.87 3.13-7 7-7s7 3.13 7 7v2h-4v8h3c1.66 0 3-1.34 3-3v-7c0-4.97-4.03-9-9-9z"/>
+            <path d="M12 3c-4.42 0-8 3.58-8 8v1h3v-1c0-2.76 2.24-5 5-5s5 2.24 5 5v1h3v-1c0-4.42-3.58-8-8-8z"/>
+        </svg>
+    </a>
+
+    <script>
+        const conteudo = {
+            sobre: `
+                <section id="sobre">
+                    <h2>Sobre</h2>
+                    <!-- Conteúdo a ser inserido posteriormente -->
+                </section>
+            `,
+            servicos: `
+                <section id="servicos">
+                    <h2>Serviços</h2>
+                    <!-- Conteúdo a ser inserido posteriormente -->
+                </section>
+            `,
+            contato: `
+                <section id="contato">
+                    <h2>Contato</h2>
+                    <p><strong>Técnico Responsável:</strong> Paulo Fagoto</p>
+                    <p><strong>E-mail:</strong> contatoinformaticavalinhos@gmail.com</p>
+                    <p><strong>Telegram:</strong> <a href="https://t.me/infovalinhos" target="_blank" rel="noopener noreferrer">t.me/infovalinhos</a></p>
+                </section>
+            `
+        };
+
+        function carregarSecao(secaoId) {
+            const mainContent = document.getElementById('main-content');
+            if (conteudo[secaoId]) {
+                mainContent.innerHTML = conteudo[secaoId];
+            } else {
+                mainContent.innerHTML = `<p>Seção não encontrada.</p>`;
+            }
+        }
+
+        const links = document.querySelectorAll('nav a');
+        links.forEach(link => {
+            link.addEventListener('click', function(event) {
+                event.preventDefault();
+                const secao = this.getAttribute('data-section');
+                if (secao) {
+                    carregarSecao(secao);
+                }
+            });
+        });
+
+        carregarSecao('sobre');
+    </script>
+</body>
+</html>
