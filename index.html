@@ -12,35 +12,46 @@
         }
 
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
-            color: #333;
-            background-color: #f9f9f9;
-            padding: 20px;
+            color: #2c3e50;
+            background-color: #e2e8f0;
+            padding: 30px 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
         }
 
         header {
             text-align: center;
-            margin-bottom: 20px;
+            margin-bottom: 40px;
+            padding: 20px;
+            background: #ffffff;
+            border-radius: 16px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
         }
 
         header h1 {
-            font-size: 2rem;
+            font-size: 2.5rem;
             color: #0056b3;
+            margin-bottom: 8px;
+            letter-spacing: -0.5px;
         }
 
         header p {
             font-size: 1.2rem;
-            color: #555;
+            color: #5a6e7c;
+            font-weight: 400;
         }
 
         nav {
-            max-width: 800px;
-            margin: 0 auto 30px auto;
-            background: #fff;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            overflow: hidden;
+            background: #ffffff;
+            border-radius: 60px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            margin-bottom: 40px;
+            overflow-x: auto;
         }
 
         nav ul {
@@ -48,6 +59,7 @@
             display: flex;
             justify-content: center;
             padding: 0;
+            min-width: 380px;
         }
 
         nav li {
@@ -56,69 +68,380 @@
 
         nav a {
             display: block;
-            padding: 12px 24px;
+            padding: 14px 28px;
             text-decoration: none;
             color: #0056b3;
-            font-weight: bold;
-            transition: background 0.3s;
+            font-weight: 600;
+            transition: all 0.2s ease;
+            border-radius: 60px;
+            margin: 4px;
         }
 
         nav a:hover {
-            background-color: #e9ecef;
+            background-color: #eef2f7;
+            color: #003d80;
         }
 
         #main-content {
-            max-width: 800px;
-            margin: 0 auto;
-            background: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            min-height: 300px;
+            background: #ffffff;
+            border-radius: 20px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+            padding: 30px;
+            transition: all 0.2s;
+        }
+
+        section {
+            animation: fadeIn 0.3s ease;
         }
 
         section h2 {
-            font-size: 1.5rem;
-            margin-bottom: 10px;
-            border-bottom: 2px solid #0056b3;
-            padding-bottom: 5px;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #0056b3;
+            display: inline-block;
+            color: #1e466e;
+        }
+
+        section p {
+            margin-bottom: 1rem;
+            line-height: 1.7;
+        }
+
+        section strong {
             color: #0056b3;
+        }
+
+        section a {
+            color: #0077cc;
+            text-decoration: none;
+            border-bottom: 1px dotted #0077cc;
+            transition: color 0.2s;
+        }
+
+        section a:hover {
+            color: #0056b3;
+            border-bottom-color: #0056b3;
+        }
+
+        /* Estilo para lista de serviços */
+        .service-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .service-item {
+            background: #f8fafc;
+            border-radius: 16px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .service-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+
+        .service-item h3 {
+            font-size: 1.3rem;
+            color: #0056b3;
+            margin-bottom: 10px;
+        }
+
+        .service-details {
+            margin-top: 10px;
+            padding-left: 20px;
+            border-left: 3px solid #0056b3;
+        }
+
+        .service-details p {
+            margin: 8px 0;
+        }
+
+        .service-details strong {
+            color: #2c3e50;
+        }
+
+        /* Grid de vídeos */
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 20px;
+        }
+
+        .video-card {
+            background: #f8fafc;
+            border-radius: 16px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .video-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+
+        .video-thumb {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* 16:9 */
+            background-color: #000;
+            overflow: hidden;
+        }
+
+        .video-thumb img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.2s;
+        }
+
+        .video-card:hover .video-thumb img {
+            transform: scale(1.05);
+        }
+
+        .play-icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 50px;
+            height: 50px;
+            background: rgba(0,0,0,0.7);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            backdrop-filter: blur(2px);
+            transition: all 0.2s;
+        }
+
+        .video-card:hover .play-icon {
+            background: #0056b3;
+            transform: translate(-50%, -50%) scale(1.1);
+        }
+
+        .video-info {
+            padding: 15px;
+        }
+
+        .video-info h3 {
+            font-size: 1.1rem;
+            color: #0056b3;
+            margin-bottom: 8px;
+        }
+
+        .video-info p {
+            font-size: 0.9rem;
+            color: #4a5568;
+            margin: 0;
+        }
+
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.9);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+            animation: fadeIn 0.2s;
+        }
+
+        .modal-content {
+            position: relative;
+            width: 90%;
+            max-width: 900px;
+            background: #fff;
+            border-radius: 16px;
+            overflow: hidden;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            color: #fff;
+            font-size: 30px;
+            font-weight: bold;
+            cursor: pointer;
+            z-index: 2001;
+            background: rgba(0,0,0,0.5);
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: 0.2s;
+        }
+
+        .modal-close:hover {
+            background: rgba(0,0,0,0.8);
+        }
+
+        .modal-video {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+        }
+
+        .modal-video iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
         }
 
         footer {
             text-align: center;
-            margin-top: 40px;
-            font-size: 0.9rem;
-            color: #777;
+            margin-top: 50px;
+            padding: 20px;
+            background: #ffffff;
+            border-radius: 16px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            color: #6c7a89;
+            font-size: 0.85rem;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(8px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         @media (max-width: 768px) {
-            /* Ajustes responsivos mantidos */
+            body {
+                padding: 20px 15px;
+            }
+            header h1 {
+                font-size: 2rem;
+            }
+            header p {
+                font-size: 1rem;
+            }
+            nav a {
+                padding: 10px 20px;
+                font-size: 0.9rem;
+            }
+            #main-content {
+                padding: 20px;
+            }
+            section h2 {
+                font-size: 1.5rem;
+            }
+            .video-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Informática Valinhos</h1>
-        <p>Assistência técnica especializada em acesso remoto</p>
-    </header>
+    <div class="container">
+        <header>
+            <h1>Informática Valinhos</h1>
+            <p>Assistência técnica especializada em acesso remoto</p>
+        </header>
 
-    <nav>
-        <ul>
-            <li><a href="#" data-section="sobre">Sobre</a></li>
-            <li><a href="#" data-section="servicos">Serviços</a></li>
-            <li><a href="#" data-section="contato">Contato</a></li>
-        </ul>
-    </nav>
+        <nav>
+            <ul>
+                <li><a href="#" data-section="sobre">Sobre</a></li>
+                <li><a href="#" data-section="servicos">Serviços</a></li>
+                <li><a href="#" data-section="tutoriais">Tutoriais</a></li>
+                <li><a href="#" data-section="contato">Contato</a></li>
+            </ul>
+        </nav>
 
-    <div id="main-content"></div>
+        <div id="main-content"></div>
 
-    <footer>
-        <p>&copy; 2026 Informática Valinhos</p>
-        <p style="font-size: 0.75rem; margin-top: 5px;">Hospedado no GitHub Pages</p>
-    </footer>
+        <footer>
+            <p>&copy; 2026 Informática Valinhos</p>
+            <p style="font-size: 0.75rem; margin-top: 5px;">Hospedado no GitHub Pages</p>
+        </footer>
+    </div>
+
+    <!-- Modal para vídeos -->
+    <div id="videoModal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <div class="modal-video">
+                <iframe id="modalIframe" src="" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
 
     <script>
+        // Dados dos vídeos (fácil de adicionar novos)
+        const videos = [
+            {
+                id: "DSbPg_rsvE0",
+                title: "📥 Como baixar e instalar o AnyDesk",
+                description: "Assista ao vídeo e siga as instruções para instalar o software que utilizamos no acesso remoto."
+            },
+            {
+                id: "vo1B7y0ZKAU",
+                title: "🗑️ Como desinstalar o AnyDesk",
+                description: "Após o atendimento, se preferir remover o programa do seu computador, este vídeo mostra o processo completo."
+            }
+            // Adicione mais vídeos aqui seguindo o mesmo formato
+        ];
+
+        // Função para gerar a thumbnail do YouTube
+        function getYouTubeThumbnail(videoId) {
+            return `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
+        }
+
+        // Função para renderizar a grade de vídeos
+        function renderTutoriais() {
+            return `
+                <section id="tutoriais">
+                    <h2>Tutoriais</h2>
+                    <p>Preparamos vídeos passo a passo para ajudar você a realizar procedimentos importantes. Clique em qualquer card para assistir ao tutorial completo.</p>
+                    <div class="video-grid">
+                        ${videos.map(video => `
+                            <div class="video-card" data-video-id="${video.id}">
+                                <div class="video-thumb">
+                                    <img src="${getYouTubeThumbnail(video.id)}" alt="${video.title}">
+                                    <div class="play-icon">▶</div>
+                                </div>
+                                <div class="video-info">
+                                    <h3>${video.title}</h3>
+                                    <p>${video.description}</p>
+                                </div>
+                            </div>
+                        `).join('')}
+                    </div>
+                </section>
+            `;
+        }
+
+        // Conteúdo das seções (a seção de tutoriais agora chama a função)
         const conteudo = {
             sobre: `
                 <section id="sobre">
@@ -126,21 +449,30 @@
                     <p>A <strong>Informática Valinhos</strong> é uma assistência técnica especializada em acesso remoto, sem endereço físico e sem atendimento presencial. Realizamos todo o suporte através de conexão remota, com agilidade e segurança.</p>
                     <p><strong>Técnico Responsável:</strong> Paulo Fagoto, profissional com experiência em soluções de TI e suporte especializado.</p>
                     <p>O acesso remoto é realizado através do software <strong><a href="https://anydesk.com/en/downloads/windows" target="_blank" rel="noopener noreferrer">AnyDesk</a></strong>.</p>
-                    <!-- Demais informações serão inseridas posteriormente -->
                 </section>
             `,
             servicos: `
                 <section id="servicos">
                     <h2>Serviços</h2>
-                    <!-- Conteúdo a ser inserido posteriormente -->
+                    <div class="service-list">
+                        <div class="service-item">
+                            <h3>🔧 Instalação do Windows 11</h3>
+                            <div class="service-details">
+                                <p><strong>Versão:</strong> 25H2</p>
+                                <p><strong>Idioma:</strong> Português Brasil</p>
+                                <p><strong>Forma de atendimento:</strong> Acesso remoto via AnyDesk. Você recebe o suporte completo sem sair de casa.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Demais serviços serão adicionados aqui -->
                 </section>
             `,
+            tutoriais: renderTutoriais(),
             contato: `
                 <section id="contato">
                     <h2>Contato</h2>
                     <p><strong>Técnico Responsável:</strong> Paulo Fagoto</p>
                     <p><strong>E-mail:</strong> contatoinformaticavalinhos@gmail.com</p>
-                    <!-- demais informações serão inseridas depois -->
                 </section>
             `
         };
@@ -149,11 +481,47 @@
             const mainContent = document.getElementById('main-content');
             if (conteudo[secaoId]) {
                 mainContent.innerHTML = conteudo[secaoId];
+
+                // Se for a seção de tutoriais, adicionar eventos de clique nos cards
+                if (secaoId === 'tutoriais') {
+                    const cards = document.querySelectorAll('.video-card');
+                    cards.forEach(card => {
+                        card.addEventListener('click', function() {
+                            const videoId = this.getAttribute('data-video-id');
+                            abrirModal(videoId);
+                        });
+                    });
+                }
             } else {
                 mainContent.innerHTML = `<p>Seção não encontrada.</p>`;
             }
         }
 
+        // Funções do modal
+        const modal = document.getElementById('videoModal');
+        const modalIframe = document.getElementById('modalIframe');
+        const closeModal = document.querySelector('.modal-close');
+
+        function abrirModal(videoId) {
+            modalIframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+            modal.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function fecharModal() {
+            modalIframe.src = '';
+            modal.style.display = 'none';
+            document.body.style.overflow = '';
+        }
+
+        closeModal.addEventListener('click', fecharModal);
+        window.addEventListener('click', (event) => {
+            if (event.target === modal) {
+                fecharModal();
+            }
+        });
+
+        // Navegação
         const links = document.querySelectorAll('nav a');
         links.forEach(link => {
             link.addEventListener('click', function(event) {
@@ -165,6 +533,7 @@
             });
         });
 
+        // Carrega a seção padrão
         carregarSecao('sobre');
     </script>
 </body>
