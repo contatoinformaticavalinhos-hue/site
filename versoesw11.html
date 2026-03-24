@@ -108,6 +108,26 @@
             box-shadow: 0 4px 12px rgba(0,0,0,0.08);
         }
 
+        /* Destaque para a versão atual (25H2) */
+        .version-card.current {
+            background: #fff9e6;
+            border-left: 5px solid #ffa500;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .version-badge {
+            display: inline-block;
+            background-color: #ffa500;
+            color: #fff;
+            font-size: 0.7rem;
+            font-weight: bold;
+            padding: 4px 10px;
+            border-radius: 20px;
+            margin-left: 12px;
+            vertical-align: middle;
+            text-transform: uppercase;
+        }
+
         .edition-card h4, .version-card h4 {
             font-size: 1.3rem;
             color: #0056b3;
@@ -215,13 +235,16 @@
             <!-- Seção 2: Histórico de versões (atualizações) -->
             <section>
                 <h2>Atualizações do Windows 11 (Versões por ano)</h2>
-                <p>O Windows 11 recebe atualizações anuais (H1 e H2) que trazem novos recursos, melhorias de desempenho e segurança. As versões mais recentes estão no topo.</p>
+                <p>O Windows 11 recebe atualizações anuais que trazem novos recursos, melhorias de desempenho e segurança. As versões mais recentes estão no topo.</p>
                 <div class="versions-list">
 
-                    <!-- 25H2 (mais recente) -->
-                    <div class="version-card">
-                        <div class="version-number">📌 Versão 25H2</div>
-                        <div class="version-date">Lançamento previsto para outubro de 2025</div>
+                    <!-- 25H2 (versão atual - destaque) -->
+                    <div class="version-card current">
+                        <div class="version-number">
+                            📌 Versão 25H2 
+                            <span class="version-badge">Versão atual</span>
+                        </div>
+                        <div class="version-date">Lançada em março de 2026</div>
                         <ul>
                             <li><strong>Novidades:</strong> Integração mais profunda com o Windows Copilot (IA), novo gerenciador de energia com inteligência artificial, recursos de acessibilidade aprimorados e melhorias no subsistema do Android.</li>
                             <li><strong>Melhorias:</strong> Interface redesenhada para o Explorador de Arquivos, suporte a Wi-Fi 7 nativo, e otimizações para processadores com arquitetura híbrida (Intel Core Ultra e AMD Ryzen AI).</li>
