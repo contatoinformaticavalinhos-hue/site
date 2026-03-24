@@ -92,57 +92,8 @@
             color: #777;
         }
 
-        /* Ícone flutuante de atendimento (headset) */
-        .support-float {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            width: 60px;
-            height: 60px;
-            background-color: #0088cc;
-            border-radius: 50%;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 1000;
-            transition: transform 0.2s;
-            animation: pulse 1.5s infinite;
-        }
-
-        .support-float:hover {
-            transform: scale(1.1);
-        }
-
-        .support-float svg {
-            width: 32px;
-            height: 32px;
-            fill: white;
-        }
-
-        @keyframes pulse {
-            0% {
-                box-shadow: 0 0 0 0 rgba(0, 136, 204, 0.7);
-            }
-            70% {
-                box-shadow: 0 0 0 15px rgba(0, 136, 204, 0);
-            }
-            100% {
-                box-shadow: 0 0 0 0 rgba(0, 136, 204, 0);
-            }
-        }
-
         @media (max-width: 768px) {
-            .support-float {
-                width: 50px;
-                height: 50px;
-                bottom: 15px;
-                right: 15px;
-            }
-            .support-float svg {
-                width: 28px;
-                height: 28px;
-            }
+            /* Ajustes responsivos mantidos */
         }
     </style>
 </head>
@@ -164,22 +115,18 @@
 
     <footer>
         <p>&copy; 2026 Informática Valinhos</p>
+        <p style="font-size: 0.75rem; margin-top: 5px;">Hospedado no GitHub Pages</p>
     </footer>
-
-    <!-- Ícone flutuante de atendente (headset) - abre Telegram -->
-    <a href="https://t.me/infovalinhos" class="support-float" target="_blank" rel="noopener noreferrer">
-        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 1c-4.97 0-9 4.03-9 9v7c0 1.66 1.34 3 3 3h3v-8H5v-2c0-3.87 3.13-7 7-7s7 3.13 7 7v2h-4v8h3c1.66 0 3-1.34 3-3v-7c0-4.97-4.03-9-9-9z"/>
-            <path d="M12 3c-4.42 0-8 3.58-8 8v1h3v-1c0-2.76 2.24-5 5-5s5 2.24 5 5v1h3v-1c0-4.42-3.58-8-8-8z"/>
-        </svg>
-    </a>
 
     <script>
         const conteudo = {
             sobre: `
                 <section id="sobre">
                     <h2>Sobre</h2>
-                    <!-- Conteúdo a ser inserido posteriormente -->
+                    <p>A <strong>Informática Valinhos</strong> é uma assistência técnica especializada em acesso remoto, sem endereço físico e sem atendimento presencial. Realizamos todo o suporte através de conexão remota, com agilidade e segurança.</p>
+                    <p><strong>Técnico Responsável:</strong> Paulo Fagoto, profissional com experiência em soluções de TI e suporte especializado.</p>
+                    <p>O acesso remoto é realizado através do software <strong><a href="https://anydesk.com/en/downloads/windows" target="_blank" rel="noopener noreferrer">AnyDesk</a></strong>.</p>
+                    <!-- Demais informações serão inseridas posteriormente -->
                 </section>
             `,
             servicos: `
@@ -193,7 +140,7 @@
                     <h2>Contato</h2>
                     <p><strong>Técnico Responsável:</strong> Paulo Fagoto</p>
                     <p><strong>E-mail:</strong> contatoinformaticavalinhos@gmail.com</p>
-                    <p><strong>Telegram:</strong> <a href="https://t.me/infovalinhos" target="_blank" rel="noopener noreferrer">t.me/infovalinhos</a></p>
+                    <!-- demais informações serão inseridas depois -->
                 </section>
             `
         };
