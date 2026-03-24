@@ -46,7 +46,6 @@
             font-weight: 400;
         }
 
-        /* Menu principal */
         nav {
             background: #ffffff;
             border-radius: 60px;
@@ -125,7 +124,6 @@
             border-bottom-color: #0056b3;
         }
 
-        /* Sub-menu de serviços (abas) */
         .services-subnav {
             margin: 20px 0 30px 0;
             display: flex;
@@ -156,7 +154,6 @@
             color: white;
         }
 
-        /* Container de serviços (cada aba) */
         .services-container {
             display: none;
             animation: fadeIn 0.3s ease;
@@ -166,7 +163,6 @@
             display: block;
         }
 
-        /* Estilo para lista de serviços */
         .service-list {
             list-style: none;
             padding: 0;
@@ -206,7 +202,6 @@
             color: #2c3e50;
         }
 
-        /* Grid de vídeos */
         .video-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -231,7 +226,7 @@
         .video-thumb {
             position: relative;
             width: 100%;
-            padding-bottom: 56.25%; /* 16:9 */
+            padding-bottom: 56.25%;
             background-color: #000;
             overflow: hidden;
         }
@@ -289,7 +284,6 @@
             margin: 0;
         }
 
-        /* Modal */
         .modal {
             display: none;
             position: fixed;
@@ -428,6 +422,7 @@
 
         <footer>
             <p>&copy; 2026 Informática Valinhos</p>
+            <p>CNPJ: 64.383.742/0001-26</p>
             <p style="font-size: 0.75rem; margin-top: 5px;">Hospedado no GitHub Pages</p>
         </footer>
     </div>
@@ -443,7 +438,7 @@
     </div>
 
     <script>
-        // Dados dos vídeos (fácil de adicionar novos)
+        // Lista de vídeos para a seção de tutoriais (incluindo o novo vídeo sobre licenciamento)
         const videos = [
             {
                 id: "DSbPg_rsvE0",
@@ -454,16 +449,18 @@
                 id: "vo1B7y0ZKAU",
                 title: "🗑️ Como desinstalar o AnyDesk",
                 description: "Após o atendimento, se preferir remover o programa do seu computador, este vídeo mostra o processo completo."
+            },
+            {
+                id: "1rykAw6CrEQ",
+                title: "🔑 Instalação do Windows 11: entenda o licenciamento",
+                description: "Vídeo explicativo sobre licenciamento digital, edições Home/Pro e como o Windows reconhece sua licença original."
             }
-            // Adicione mais vídeos aqui seguindo o mesmo formato
         ];
 
-        // Função para gerar a thumbnail do YouTube
         function getYouTubeThumbnail(videoId) {
             return `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
         }
 
-        // Função para renderizar a grade de vídeos
         function renderTutoriais() {
             return `
                 <section id="tutoriais">
@@ -487,7 +484,7 @@
             `;
         }
 
-        // Conteúdo das seções
+        // Conteúdo das seções com a alteração solicitada no serviço presencial
         const conteudo = {
             sobre: `
                 <section id="sobre">
@@ -508,7 +505,6 @@
 
                     <div id="servicos-remoto" class="services-container active">
                         <div class="service-list">
-                            <!-- Aqui serão listados os serviços remotos (futuramente) -->
                             <div class="service-item">
                                 <h3>🖥️ Suporte Técnico Remoto</h3>
                                 <div class="service-details">
@@ -516,7 +512,6 @@
                                     <p><strong>Disponibilidade:</strong> Segunda a Sexta, 09h às 18h.</p>
                                 </div>
                             </div>
-                            <!-- Novos serviços remotos podem ser adicionados aqui -->
                         </div>
                     </div>
 
@@ -525,9 +520,10 @@
                             <div class="service-item">
                                 <h3>🔧 Instalação do Windows 11</h3>
                                 <div class="service-details">
-                                    <p><strong>Versão:</strong> 25H2</p>
+                                    <p><strong>Versão:</strong> <a href="versoesw11.html" target="_blank" rel="noopener noreferrer">25H2</a></p>
                                     <p><strong>Idioma:</strong> Português Brasil</p>
-                                    <p><strong>Licenciamento:</strong> O cliente deve possuir uma licença digital vinculada ao equipamento (original de fábrica ou adquirida anteriormente). Durante a instalação, o Windows reconhecerá automaticamente essa licença, desde que seja instalada a mesma edição (Home ou Pro). Caso o equipamento não possua licença válida, o licenciamento fica por conta do cliente, que poderá adquiri-lo posteriormente diretamente com a Microsoft ou distribuidores autorizados. O serviço de instalação não inclui a compra de licença.</p>
+                                    <p><strong>Licenciamento:</strong> O cliente deve possuir uma licença digital vinculada ao equipamento (original de fábrica ou adquirida anteriormente). Durante a instalação, o Windows reconhecerá automaticamente essa licença, desde que seja instalada a mesma edição (Home ou Pro). Caso o equipamento não possua licença válida, o licenciamento fica por conta do cliente, que poderá adquiri-lo posteriormente diretamente com a Microsoft ou distribuidores autorizados. O serviço de instalação não inclui a compra de licença. Veja esse vídeo explicando: <a href="https://www.youtube.com/watch?v=1rykAw6CrEQ" target="_blank" rel="noopener noreferrer">Clique aqui para assistir</a>.</p>
+                                    
                                     <p><strong>Atenção:</strong> Este serviço é realizado <strong>exclusivamente de forma presencial</strong> e apenas em <strong>notebooks</strong>. Não realizamos instalação remota do sistema operacional.</p>
                                     <p><strong>Como funciona:</strong> Entre em contato para agendar o dia e horário. Você deve trazer o notebook com o carregador até a residência do técnico.</p>
                                     <p><strong>Importante:</strong> Não é feito backup dos dados. Recomenda-se que o cliente já tenha feito backup dos seus arquivos antes da entrega.</p>
@@ -554,7 +550,7 @@
             if (conteudo[secaoId]) {
                 mainContent.innerHTML = conteudo[secaoId];
 
-                // Se for a seção de tutoriais, adicionar eventos de clique nos cards
+                // Se for a seção de tutoriais, adicionar eventos de clique nos cards (abre modal)
                 if (secaoId === 'tutoriais') {
                     const cards = document.querySelectorAll('.video-card');
                     cards.forEach(card => {
@@ -574,16 +570,12 @@
                     };
                     
                     function switchTab(tabId) {
-                        // Remove active class de todos os botões
                         tabs.forEach(btn => btn.classList.remove('active'));
-                        // Esconde todos os containers
                         Object.values(containers).forEach(container => {
                             if (container) container.classList.remove('active');
                         });
-                        // Ativa o botão correspondente
                         const activeBtn = Array.from(tabs).find(btn => btn.dataset.serviceTab === tabId);
                         if (activeBtn) activeBtn.classList.add('active');
-                        // Mostra o container correspondente
                         if (containers[tabId]) containers[tabId].classList.add('active');
                     }
                     
@@ -599,7 +591,7 @@
             }
         }
 
-        // Funções do modal
+        // Modal de vídeo (para tutoriais)
         const modal = document.getElementById('videoModal');
         const modalIframe = document.getElementById('modalIframe');
         const closeModal = document.querySelector('.modal-close');
@@ -635,7 +627,7 @@
             });
         });
 
-        // Carrega a seção padrão
+        // Carrega a seção inicial (Sobre)
         carregarSecao('sobre');
     </script>
 </body>
