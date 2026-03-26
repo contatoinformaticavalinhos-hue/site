@@ -294,7 +294,7 @@
             border-color: #0056b3;
         }
 
-        /* Cabeçalho do serviço expansível (reutilizado para drivers) */
+        /* Cabeçalho do serviço expansível */
         .service-header {
             display: flex;
             align-items: center;
@@ -790,9 +790,16 @@
                     <div id="servicos-remoto" class="services-container active">
                         <div class="service-list">
                             <div class="service-item">
-                                <h3>🖥️ Suporte Técnico Remoto</h3>
-                                <div class="service-details" style="display: block; padding: 0 24px 24px 24px;">
-                                    <p><strong>Disponibilidade:</strong> Segunda a Sexta, 09h às 18h | Sábado: 09h às 14h</p>
+                                <div class="service-header">
+                                    <h3>🖨️ Instalação de Drivers de Impressoras</h3>
+                                    <span class="toggle-icon">+</span>
+                                </div>
+                                <div class="service-details">
+                                    <p><strong>Valor do Acesso:</strong> R$ 60,00</p>
+                                    <p><strong>Tempo Estimado de Acesso:</strong> 30 minutos</p>
+                                    <p><strong>Drivers Disponíveis:</strong> HP Deskjet F4100 (Série)</p>
+                                    <p><strong>Observação:</strong> Caso o técnico não tenha o driver disponível, irá buscar o mesmo junto ao site do fabricante.</p>
+                                    <p><strong>Forma de atendimento:</strong> Acesso remoto via AnyDesk. Realizamos a instalação do driver de forma rápida e segura.</p>
                                 </div>
                             </div>
                         </div>
@@ -903,33 +910,34 @@
                         });
                     });
 
-                    // Configurar expansão do serviço presencial
-                    const serviceHeader = document.querySelector('#servicos-presencial .service-header');
-                    const serviceDetails = document.querySelector('#servicos-presencial .service-details');
-                    const toggleIcon = document.querySelector('#servicos-presencial .toggle-icon');
+                    // Configurar expansão de todos os serviços expansíveis (tanto remoto quanto presencial)
+                    const allServiceItems = document.querySelectorAll('#servicos .service-item');
+                    allServiceItems.forEach(item => {
+                        const header = item.querySelector('.service-header');
+                        const details = item.querySelector('.service-details');
+                        const icon = header?.querySelector('.toggle-icon');
+                        if (header && details && icon) {
+                            // Inicialmente fechado
+                            details.classList.remove('open');
+                            header.classList.remove('open');
+                            icon.textContent = '+';
 
-                    if (serviceHeader && serviceDetails && toggleIcon) {
-                        // Inicialmente fechado
-                        serviceDetails.classList.remove('open');
-                        serviceHeader.classList.remove('open');
-                        toggleIcon.textContent = '+';
-
-                        serviceHeader.addEventListener('click', function() {
-                            serviceDetails.classList.toggle('open');
-                            serviceHeader.classList.toggle('open');
-                            toggleIcon.textContent = serviceDetails.classList.contains('open') ? '−' : '+';
-                        });
-                    }
+                            header.addEventListener('click', function() {
+                                details.classList.toggle('open');
+                                header.classList.toggle('open');
+                                icon.textContent = details.classList.contains('open') ? '−' : '+';
+                            });
+                        }
+                    });
                 }
 
-                // Configurar expansão dos drivers
+                // Configurar expansão dos drivers (já existente)
                 if (secaoId === 'drivers') {
                     const driverItems = document.querySelectorAll('#drivers .service-item');
                     driverItems.forEach(item => {
                         const header = item.querySelector('.service-header');
                         const details = item.querySelector('.service-details');
-                        const icon = header.querySelector('.toggle-icon');
-
+                        const icon = header?.querySelector('.toggle-icon');
                         if (header && details && icon) {
                             // Inicialmente fechado
                             details.classList.remove('open');
