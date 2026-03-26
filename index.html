@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Informática Valinhos</title>
+    <link rel="icon" type="image/png" href="favicon.png">
     <style>
         * {
             margin: 0;
@@ -127,6 +128,40 @@
         section a:hover {
             color: #0056b3;
             border-bottom-color: #0056b3;
+        }
+
+        /* Estilo para a seção Sobre com logo */
+        .about-wrapper {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .about-text {
+            flex: 2;
+        }
+
+        .about-logo {
+            flex: 1;
+            text-align: center;
+        }
+
+        .about-logo img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 16px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        @media (max-width: 768px) {
+            .about-wrapper {
+                flex-direction: column;
+                gap: 20px;
+            }
+            .about-logo {
+                order: -1;
+            }
         }
 
         /* Botão WhatsApp flutuante */
@@ -725,9 +760,16 @@
             sobre: `
                 <section id="sobre">
                     <h2>Sobre</h2>
-                    <p>A <strong>Informática Valinhos</strong> é uma assistência técnica especializada em acesso remoto, sem endereço físico e sem atendimento presencial. Realizamos todo o suporte através de conexão remota, com agilidade e segurança.</p>
-                    <p><strong>Técnico Responsável:</strong> Paulo Fagoto, profissional com experiência em soluções de TI e suporte especializado.</p>
-                    <p>O acesso remoto é realizado através do software <strong><a href="https://anydesk.com/en/downloads/windows" target="_blank" rel="noopener noreferrer">AnyDesk</a></strong>.</p>
+                    <div class="about-wrapper">
+                        <div class="about-text">
+                            <p>A <strong>Informática Valinhos</strong> é uma assistência técnica especializada em acesso remoto, sem endereço físico e sem atendimento presencial. Realizamos todo o suporte através de conexão remota, com agilidade e segurança.</p>
+                            <p><strong>Técnico Responsável:</strong> Paulo Fagoto, profissional com experiência em soluções de TI e suporte especializado.</p>
+                            <p>O acesso remoto é realizado através do software <strong><a href="https://anydesk.com/en/downloads/windows" target="_blank" rel="noopener noreferrer">AnyDesk</a></strong>.</p>
+                        </div>
+                        <div class="about-logo">
+                            <img src="https://i.imgur.com/UmEYmt6.png" alt="Logo Informática Valinhos">
+                        </div>
+                    </div>
                 </section>
             `,
             servicos: `
