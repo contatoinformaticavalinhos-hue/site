@@ -294,7 +294,7 @@
             border-color: #0056b3;
         }
 
-        /* Cabeçalho do serviço expansível */
+        /* Cabeçalho do serviço expansível (reutilizado para drivers) */
         .service-header {
             display: flex;
             align-items: center;
@@ -674,6 +674,7 @@
             <ul>
                 <li><a href="#" data-section="sobre">Sobre</a></li>
                 <li><a href="#" data-section="servicos">Serviços</a></li>
+                <li><a href="#" data-section="drivers">Programas e Drivers</a></li>
                 <li><a href="#" data-section="tutoriais">Tutoriais</a></li>
                 <li><a href="#" data-section="contato">Contato</a></li>
             </ul>
@@ -725,6 +726,11 @@
                 id: "1rykAw6CrEQ",
                 title: "🔑 Instalação do Windows 11: entenda o licenciamento",
                 description: "Vídeo explicativo sobre licenciamento digital, edições Home/Pro e como o Windows reconhece sua licença original."
+            },
+            {
+                id: "oCfNeOKnCn4",
+                title: "🖨️ Como instalar o driver da HP Deskjet F4180",
+                description: "Passo a passo para instalar corretamente o driver da impressora HP Deskjet F4180 (Série F4100) no Windows 10/11."
             }
         ];
 
@@ -755,7 +761,7 @@
             `;
         }
 
-        // Conteúdo das seções com serviço expansível
+        // Conteúdo das seções
         const conteudo = {
             sobre: `
                 <section id="sobre">
@@ -813,6 +819,28 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </section>
+            `,
+            drivers: `
+                <section id="drivers">
+                    <h2>Programas e Drivers</h2>
+                    <p>Aqui você encontra drivers e programas úteis que podemos fornecer para instalação. Entre em contato para receber o arquivo ou agendar a instalação remota.</p>
+                    <div class="service-list">
+                        <div class="service-item">
+                            <div class="service-header">
+                                <h3>🖨️ HP Deskjet F4180 (Série F4100)</h3>
+                                <span class="toggle-icon">+</span>
+                            </div>
+                            <div class="service-details">
+                                <p><strong>Driver:</strong> Pacote completo de drivers e software para impressora multifuncional HP Deskjet F4180 (compatível com toda a série F4100).</p>
+                                <p><strong>Sistemas:</strong> Windows 10, Windows 11 (32 e 64 bits).</p>
+                                <p><strong>Forma de entrega:</strong> Podemos enviar o arquivo para você instalar por conta própria ou realizar a instalação remotamente via AnyDesk.</p>
+                                <p><strong>Vídeo de Instalação:</strong> Aprenda a instalar o driver dessa impressora, <a href="https://www.youtube.com/watch?v=oCfNeOKnCn4" target="_blank" rel="noopener noreferrer">assistir ao vídeo</a>.</p>
+                                <p><strong>Contato:</strong> <a href="https://wa.me/5519971540808?text=Olá%2C%20vim%20pelo%20site%20e%20gostaria%20do%20driver%20da%20impressora%20HP%20F4180" target="_blank">Solicitar via WhatsApp</a> ou pelo e-mail <a href="mailto:contatoinformaticavalinhos@gmail.com">contatoinformaticavalinhos@gmail.com</a>.</p>
+                            </div>
+                        </div>
+                        <!-- Mais drivers podem ser adicionados aqui no futuro -->
                     </div>
                 </section>
             `,
@@ -892,6 +920,29 @@
                             toggleIcon.textContent = serviceDetails.classList.contains('open') ? '−' : '+';
                         });
                     }
+                }
+
+                // Configurar expansão dos drivers
+                if (secaoId === 'drivers') {
+                    const driverItems = document.querySelectorAll('#drivers .service-item');
+                    driverItems.forEach(item => {
+                        const header = item.querySelector('.service-header');
+                        const details = item.querySelector('.service-details');
+                        const icon = header.querySelector('.toggle-icon');
+
+                        if (header && details && icon) {
+                            // Inicialmente fechado
+                            details.classList.remove('open');
+                            header.classList.remove('open');
+                            icon.textContent = '+';
+
+                            header.addEventListener('click', function() {
+                                details.classList.toggle('open');
+                                header.classList.toggle('open');
+                                icon.textContent = details.classList.contains('open') ? '−' : '+';
+                            });
+                        }
+                    });
                 }
             } else {
                 mainContent.innerHTML = `<p>Seção não encontrada.</p>`;
