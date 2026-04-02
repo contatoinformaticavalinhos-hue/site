@@ -2,26 +2,326 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>Informática Valinhos</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Informática Valinhos | Suporte Técnico</title>
+    <!-- Google Fonts + ícones simples -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Inter', sans-serif;
+            background: #f2f5f9;
+            color: #1a2c3e;
+            line-height: 1.4;
+        }
+
+        .page {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 1.2rem 1.2rem 2rem;
+        }
+
+        /* cartão principal */
+        .card {
+            background: white;
+            border-radius: 2rem;
+            padding: 1.8rem 1.8rem 2rem;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+            margin-bottom: 1rem;
+            border: 1px solid #e9edf2;
+        }
+
+        /* cabeçalho enxuto */
+        .topo {
             text-align: center;
-            padding-top: 100px;
-            background-color: #f2f2f2;
+            margin-bottom: 1.5rem;
         }
+
+        .nome-tecnico {
+            background: #eef2f7;
+            display: inline-block;
+            padding: 0.2rem 1rem;
+            border-radius: 40px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: #1e6f5c;
+            margin-bottom: 0.8rem;
+        }
+
         h1 {
-            font-size: 40px;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #0f2b3d;
+            letter-spacing: -0.3px;
         }
-        p {
-            font-size: 20px;
-            color: #555;
+
+        .subtitulo {
+            color: #4a627a;
+            font-size: 0.95rem;
+            margin-top: 0.3rem;
+        }
+
+        /* lista de serviços rápida */
+        .lista-servicos {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.8rem;
+            margin: 1.5rem 0 1.8rem;
+        }
+
+        .item-servico {
+            background: #f8fafc;
+            padding: 0.5rem 1rem;
+            border-radius: 60px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: #1f6e8c;
+            border: 1px solid #e2e8f0;
+        }
+
+        .item-servico i {
+            margin-right: 6px;
+            font-size: 0.8rem;
+        }
+
+        /* bloco principal chamada */
+        .chamada {
+            text-align: center;
+            margin: 1rem 0;
+        }
+
+        .preco-destaque {
+            background: #eef2fc;
+            display: inline-block;
+            padding: 0.3rem 1.2rem;
+            border-radius: 60px;
+            font-weight: 700;
+            font-size: 1rem;
+            color: #0b5e7c;
+            margin-bottom: 1rem;
+        }
+
+        .preco-grande {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #1a5d6c;
+            line-height: 1;
+        }
+
+        .preco-grande small {
+            font-size: 1rem;
+            font-weight: 500;
+        }
+
+        .tempo {
+            font-size: 0.9rem;
+            color: #2c6e49;
+            background: #e3f5ec;
+            display: inline-block;
+            padding: 0.2rem 1rem;
+            border-radius: 30px;
+            margin: 0.5rem 0;
+        }
+
+        .botao-wpp {
+            background: #25D366;
+            color: white;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.2rem;
+            padding: 0.9rem 1.8rem;
+            border-radius: 60px;
+            margin: 1.2rem 0 0.8rem;
+            transition: 0.15s;
+            width: 100%;
+            max-width: 320px;
+            box-shadow: 0 4px 12px rgba(37,211,102,0.25);
+            border: none;
+        }
+
+        .botao-wpp i {
+            font-size: 1.5rem;
+        }
+
+        .botao-wpp:hover {
+            background: #20b359;
+            transform: scale(1.01);
+        }
+
+        .obs {
+            font-size: 0.8rem;
+            background: #fff7e5;
+            padding: 0.7rem;
+            border-radius: 1rem;
+            margin: 1rem 0 0;
+            color: #8a6e3b;
+            text-align: left;
+            border-left: 3px solid #f5b042;
+        }
+
+        .msg-box {
+            background: #f0f4f9;
+            padding: 0.8rem 1rem;
+            border-radius: 1.2rem;
+            margin: 1.2rem 0 0;
+            font-size: 0.85rem;
+            border: 1px solid #dce5ec;
+        }
+
+        .msg-box i {
+            color: #075e54;
+        }
+
+        .codigo-msg {
+            font-family: monospace;
+            background: white;
+            padding: 0.25rem 0.7rem;
+            border-radius: 30px;
+            font-weight: 500;
+            font-size: 0.8rem;
+            display: inline-block;
+            margin-top: 6px;
+            color: #075e54;
+        }
+
+        hr {
+            margin: 1.2rem 0;
+            border: 0;
+            height: 1px;
+            background: #e2e8f0;
+        }
+
+        .contato-rapido {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            font-size: 0.85rem;
+            background: #ffffffd0;
+            border-radius: 60px;
+            padding: 0.5rem 1.2rem;
+            width: fit-content;
+            margin: 0 auto;
+        }
+
+        footer {
+            text-align: center;
+            font-size: 0.7rem;
+            color: #7c8ea0;
+            margin-top: 1.5rem;
+        }
+
+        @media (max-width: 480px) {
+            .page {
+                padding: 0.8rem;
+            }
+            .card {
+                padding: 1.2rem;
+            }
+            h1 {
+                font-size: 1.5rem;
+            }
+            .preco-grande {
+                font-size: 2rem;
+            }
+            .botao-wpp {
+                font-size: 1rem;
+                padding: 0.8rem 1rem;
+            }
         }
     </style>
 </head>
 <body>
-    <h1>Informática Valinhos</h1>
-    <p>Estamos em manutenção.</p>
-    <p>Voltamos em breve.</p>
+<div class="page">
+    <div class="card">
+        <!-- topo simples -->
+        <div class="topo">
+            <div class="nome-tecnico">
+                <i class="fas fa-user-check"></i> Técnico: Paulo Fagoto
+            </div>
+            <h1>💻 Informática Valinhos</h1>
+            <div class="subtitulo">Suporte direto • Rápido • Sem enrolação</div>
+        </div>
+
+        <!-- itens diretos: o que você precisa? -->
+        <div class="lista-servicos">
+            <span class="item-servico"><i class="fas fa-microchip"></i> Driver</span>
+            <span class="item-servico"><i class="fas fa-cog"></i> Programa</span>
+            <span class="item-servico"><i class="fas fa-lightbulb"></i> Dica</span>
+            <span class="item-servico"><i class="fas fa-life-ring"></i> Ajuda</span>
+        </div>
+
+        <!-- chamada principal objetiva -->
+        <div class="chamada">
+            <div class="preco-destaque">
+                <i class="fab fa-whatsapp"></i> Atendimento personalizado
+            </div>
+            <div class="preco-grande">
+                R$40,00 <small>/ até 30min</small>
+            </div>
+            <div class="tempo">
+                ⏱️ Suporte via WhatsApp com Paulo
+            </div>
+            <p style="margin: 0.8rem 0 0; font-weight: 500;">
+                Precisa de um driver, programa, dica ou ajuda técnica?<br>
+                Eu te ajudo a encontrar o que você precisa!
+            </p>
+
+            <!-- botão WhatsApp com mensagem pronta -->
+            <a href="https://wa.me/5519971540808?text=Ol%C3%A1%20Paulo%2C%20vim%20pelo%20site%20e%20preciso%20de%20um%20atendimento%20pelo%20Whatsapp%20com%20voc%C3%AA%21" 
+               target="_blank" rel="noopener noreferrer" class="botao-wpp">
+                <i class="fab fa-whatsapp"></i> Falar com Paulo agora
+            </a>
+
+            <!-- observação clara sobre pagamento e disponibilidade -->
+            <div class="obs">
+                <i class="fas fa-hand-holding-usd"></i> <strong>Você paga pelo meu atendimento e disponibilidade, não pela solução.</strong><br>
+                Mas garanto: farei o possível para ajudar você com o que precisa!
+            </div>
+        </div>
+
+        <!-- mensagem personalizada já embutida (transparente) -->
+        <div class="msg-box">
+            <i class="fas fa-comment-dots"></i> <strong>Mensagem automática no WhatsApp:</strong><br>
+            <span class="codigo-msg">📱 "Olá Paulo, vim pelo site e preciso de um atendimento pelo Whatsapp com você!"</span>
+            <p style="margin-top: 0.4rem; font-size: 0.75rem;">🔹 Clique no botão verde e essa mensagem já será enviada. Simples e rápido.</p>
+        </div>
+
+        <hr>
+
+        <!-- contato direto numérico -->
+        <div class="contato-rapido">
+            <i class="fab fa-whatsapp" style="color:#25D366;"></i> 
+            <span><strong>(19) 97154-0808</strong></span>
+            <span style="color:#b9c3cf;">|</span>
+            <span><i class="fas fa-headset"></i> Paulo Fagoto</span>
+        </div>
+    </div>
+
+    <!-- rodapé minimalista -->
+    <footer>
+        Informática Valinhos • Atendimento remoto • Suporte técnico especializado
+    </footer>
+</div>
+
+<!-- simples script sem peso -->
+<script>
+    // garantir que os links do WhatsApp abram de forma confiável
+    document.querySelectorAll('a[href^="https://wa.me/"]').forEach(link => {
+        link.setAttribute('rel', 'noopener noreferrer');
+        link.setAttribute('target', '_blank');
+    });
+</script>
 </body>
 </html>
